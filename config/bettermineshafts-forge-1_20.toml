@@ -1,0 +1,106 @@
+
+["YUNG's Better Mineshafts"]
+	# 是否禁用原版废弃矿井
+	# 默认值: true
+	"Disable Vanilla Mineshafts" = true
+	# 废弃矿井可生成的最低高度
+	# 默认值: -55
+	"Minimum y-coordinate" = -55
+	# 废弃矿井可生成的最高高度
+	# 默认值: 30
+	#
+	"Maximum y-coordinate" = 30
+
+	###########################################################################################################
+	## 矿石堆积设置
+	###########################################################################################################
+	["YUNG's Better Mineshafts"."Ore Deposits"]
+		"Enable Ore Deposits" = true
+		# 矿石堆积为纯圆石（空矿脉）的几率
+		# 默认值: 50
+		#Range: 0 ~ 100
+		"Cobble Spawn Chance (Empty Deposit)" = 50
+		# 矿石堆积包含煤矿的几率
+		# 默认值: 20
+		#Range: 0 ~ 100
+		"Coal Spawn Chance" = 20
+		# 矿石堆积包含铁矿的几率
+		# 默认值: 9
+		#Range: 0 ~ 100
+		"Iron Spawn Chance" = 9
+		# 矿石堆积包含红石矿的几率
+		# 默认值: 7
+		#Range: 0 ~ 100
+		"Redstone Spawn Chance" = 7
+		# 矿石堆积包含金矿的几率
+		# 默认值: 7
+		#Range: 0 ~ 100
+		"Gold Spawn Chance" = 7
+		# 矿石堆积包含青金石矿的几率
+		# 默认值: 3
+		#Range: 0 ~ 100
+		"Lapis Spawn Chance" = 3
+		# 矿石堆积包含绿宝石矿的几率
+		# 默认值: 3
+		#Range: 0 ~ 100
+		"Emerald Spawn Chance" = 3
+		# 矿石堆积包含钻石矿的几率
+		# 默认值: 1
+		#Range: 0 ~ 100
+		"Diamond Spawn Chance" = 1
+
+	###########################################################################################################
+	## 矿井各部分和装饰的生成率
+	###########################################################################################################
+	["YUNG's Better Mineshafts"."Spawn Rates & More"]
+		# 主矿道灯笼生成率
+		# 默认值: .0067
+		#Range: 0.0 ~ 1.0
+		"Lantern Spawn Rate" = 0.0067
+		# 小矿道火把生成率
+		# 默认值: .02
+		#Range: 0.0 ~ 1.0
+		"Torch Spawn Rate" = 0.02
+		# 主矿道旁工作站房间的生成率
+		# 默认值: .025
+		#Range: 0.0 ~ 1.0
+		"Workstation Spawn Rate" = 0.025
+		# 主矿道工作站下方地窖的生成率
+		# 默认值: .25
+		#Range: 0.0 ~ 1.0
+		"Workstation Cellar Spawn Rate" = 0.25
+		# 沿主矿道生成的小隧道生成率
+		# 默认值: .07
+		#Range: 0.0 ~ 1.0
+		"Small Shaft Spawn Rate" = 0.07
+		# 蜘蛛网生成率
+		# 默认值: .15
+		#Range: 0.0 ~ 1.0
+		"Cobweb Spawn Rate" = 0.15
+		# 小矿道箱子矿车生成率
+		# 默认值: .00125
+		#Range: 0.0 ~ 1.0
+		"Small Shaft Chest Minecart Spawn Rate" = 0.00125
+		# 小矿道TNT矿车生成率
+		# 默认值: .0025
+		#Range: 0.0 ~ 1.0
+		"Small Shaft TNT Minecart Spawn Rate" = 0.0025
+		# 主矿道箱子矿车生成率
+		# 默认值: .01
+		#Range: 0.0 ~ 1.0
+		"Main Shaft Chest Minecart Spawn Rate" = 0.01
+		# 主矿道TNT矿车生成率
+		# 默认值: .0025
+		#Range: 0.0 ~ 1.0
+		"Main Shaft TNT Minecart Spawn Rate" = 0.0025
+		# 小矿道隧道末端生成废弃矿工营地的百分比几率
+		# 默认值: 2
+		#Range: 0 ~ 100
+		"Abandoned Miners' Outpost Spawn Chance" = 2
+		# 单个小矿道的"组件"数量（如直线、转弯、梯子、交叉口等）
+		# 这决定了小矿道的整体长度
+		# 默认值: 9
+		#
+		#Range: 0 ~ 1000
+		"Small Shaft Piece Chain Length" = 9
+

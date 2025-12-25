@@ -1,0 +1,662 @@
+{
+  "securitycraft": {
+    "source": "模组自带",
+    "en_keys": 1401,
+    "zh_keys": 1396,
+    "missing": 6
+  },
+  "alexsmobs": {
+    "source": "模组自带",
+    "en_keys": 1076,
+    "zh_keys": 1081,
+    "missing": 1
+  },
+  "animalium": {
+    "source": "CN资源包",
+    "en_keys": 24,
+    "zh_keys": 24,
+    "missing": 0
+  },
+  "ae2": {
+    "source": "模组自带",
+    "en_keys": 1003,
+    "zh_keys": 996,
+    "missing": 21
+  },
+  "baguettelib": {
+    "source": "无翻译",
+    "en_keys": 3,
+    "zh_keys": 0,
+    "missing": 3
+  },
+  "balm": {
+    "source": "无翻译",
+    "en_keys": 35,
+    "zh_keys": 0,
+    "missing": 35
+  },
+  "biomesoplenty": {
+    "source": "模组自带",
+    "en_keys": 546,
+    "zh_keys": 587,
+    "missing": 3
+  },
+  "bonsaitrees3": {
+    "source": "模组自带",
+    "en_keys": 21,
+    "zh_keys": 16,
+    "missing": 6
+  },
+  "chisel": {
+    "source": "CN资源包",
+    "en_keys": 2774,
+    "zh_keys": 2776,
+    "missing": 0
+  },
+  "chiselsandbits": {
+    "source": "CN资源包",
+    "en_keys": 399,
+    "zh_keys": 400,
+    "missing": 0
+  },
+  "citadel": {
+    "source": "社区翻译",
+    "en_keys": 24,
+    "zh_keys": 1,
+    "missing": 23
+  },
+  "cloth-config2": {
+    "source": "模组自带",
+    "en_keys": 49,
+    "zh_keys": 48,
+    "missing": 1
+  },
+  "codechickenlib": {
+    "source": "社区翻译",
+    "en_keys": 18,
+    "zh_keys": 8,
+    "missing": 10
+  },
+  "cofh_core": {
+    "source": "模组自带",
+    "en_keys": 215,
+    "zh_keys": 215,
+    "missing": 2
+  },
+  "configured": {
+    "source": "CN资源包",
+    "en_keys": 62,
+    "zh_keys": 62,
+    "missing": 0
+  },
+  "constructionwand": {
+    "source": "模组自带",
+    "en_keys": 59,
+    "zh_keys": 59,
+    "missing": 0
+  },
+  "controlling": {
+    "source": "模组自带",
+    "en_keys": 12,
+    "zh_keys": 12,
+    "missing": 0
+  },
+  "cookingforblockheads": {
+    "source": "模组自带",
+    "en_keys": 158,
+    "zh_keys": 106,
+    "missing": 53
+  },
+  "corpse": {
+    "source": "模组自带",
+    "en_keys": 20,
+    "zh_keys": 20,
+    "missing": 0
+  },
+  "cosmeticarmorreworked": {
+    "source": "模组自带",
+    "en_keys": 5,
+    "zh_keys": 5,
+    "missing": 0
+  },
+  "cosmeticcorpsecompat": {
+    "source": "无翻译",
+    "en_keys": 3,
+    "zh_keys": 0,
+    "missing": 3
+  },
+  "create": {
+    "source": "模组自带",
+    "en_keys": 3646,
+    "zh_keys": 3635,
+    "missing": 11
+  },
+  "createfood": {
+    "source": "模组自带",
+    "en_keys": 1085,
+    "zh_keys": 942,
+    "missing": 144
+  },
+  "create_connected": {
+    "source": "模组自带",
+    "en_keys": 307,
+    "zh_keys": 307,
+    "missing": 0
+  },
+  "create_hypertube": {
+    "source": "模组自带",
+    "en_keys": 27,
+    "zh_keys": 27,
+    "missing": 0
+  },
+  "ratatouille": {
+    "source": "模组自带",
+    "en_keys": 124,
+    "zh_keys": 124,
+    "missing": 1
+  },
+  "createaddition": {
+    "source": "模组自带",
+    "en_keys": 255,
+    "zh_keys": 255,
+    "missing": 4
+  },
+  "createdieselgenerators": {
+    "source": "模组自带",
+    "en_keys": 286,
+    "zh_keys": 302,
+    "missing": 0
+  },
+  "createtransmission": {
+    "source": "CN资源包",
+    "en_keys": 4,
+    "zh_keys": 4,
+    "missing": 0
+  },
+  "creativecore": {
+    "source": "模组自带",
+    "en_keys": 44,
+    "zh_keys": 37,
+    "missing": 8
+  },
+  "crust": {
+    "source": "CN资源包",
+    "en_keys": 91,
+    "zh_keys": 91,
+    "missing": 0
+  },
+  "curios": {
+    "source": "模组自带",
+    "en_keys": 48,
+    "zh_keys": 43,
+    "missing": 5
+  },
+  "dragonseeker": {
+    "source": "无翻译",
+    "en_keys": 10,
+    "zh_keys": 0,
+    "missing": 10
+  },
+  "dummmmmmy": {
+    "source": "模组自带",
+    "en_keys": 7,
+    "zh_keys": 7,
+    "missing": 0
+  },
+  "embeddium": {
+    "source": "模组自带",
+    "en_keys": 7,
+    "zh_keys": 2,
+    "missing": 5
+  },
+  "sodium": {
+    "source": "模组自带",
+    "en_keys": 65,
+    "zh_keys": 4,
+    "missing": 61
+  },
+  "enderio": {
+    "source": "模组自带",
+    "en_keys": 559,
+    "zh_keys": 543,
+    "missing": 16
+  },
+  "enderstorage": {
+    "source": "模组自带",
+    "en_keys": 8,
+    "zh_keys": 8,
+    "missing": 0
+  },
+  "exnihilomekanism": {
+    "source": "社区翻译",
+    "en_keys": 1,
+    "zh_keys": 2,
+    "missing": 1
+  },
+  "exnihilosequentia": {
+    "source": "CN资源包",
+    "en_keys": 213,
+    "zh_keys": 213,
+    "missing": 0
+  },
+  "explorerscompass": {
+    "source": "社区翻译",
+    "en_keys": 66,
+    "zh_keys": 66,
+    "missing": 0
+  },
+  "factory_blocks": {
+    "source": "CN资源包",
+    "en_keys": 101,
+    "zh_keys": 101,
+    "missing": 0
+  },
+  "farmersdelight": {
+    "source": "模组自带",
+    "en_keys": 323,
+    "zh_keys": 289,
+    "missing": 34
+  },
+  "fluxnetworks": {
+    "source": "模组自带",
+    "en_keys": 123,
+    "zh_keys": 123,
+    "missing": 0
+  },
+  "fossil": {
+    "source": "模组自带",
+    "en_keys": 1021,
+    "zh_keys": 1017,
+    "missing": 4
+  },
+  "ftbchunks": {
+    "source": "模组自带",
+    "en_keys": 282,
+    "zh_keys": 268,
+    "missing": 14
+  },
+  "ftblibrary": {
+    "source": "模组自带",
+    "en_keys": 99,
+    "zh_keys": 53,
+    "missing": 46
+  },
+  "ftbquests": {
+    "source": "模组自带",
+    "en_keys": 550,
+    "zh_keys": 204,
+    "missing": 398
+  },
+  "ftbteams": {
+    "source": "社区翻译",
+    "en_keys": 89,
+    "zh_keys": 89,
+    "missing": 0
+  },
+  "ftbultimine": {
+    "source": "社区翻译",
+    "en_keys": 46,
+    "zh_keys": 16,
+    "missing": 30
+  },
+  "geckolib": {
+    "source": "无翻译",
+    "en_keys": 31,
+    "zh_keys": 0,
+    "missing": 31
+  },
+  "guideme": {
+    "source": "无翻译",
+    "en_keys": 36,
+    "zh_keys": 0,
+    "missing": 36
+  },
+  "iceandfire": {
+    "source": "模组自带",
+    "en_keys": 1322,
+    "zh_keys": 1316,
+    "missing": 6
+  },
+  "immersiveengineering": {
+    "source": "模组自带",
+    "en_keys": 1405,
+    "zh_keys": 1345,
+    "missing": 60
+  },
+  "immersivepetroleum": {
+    "source": "模组自带",
+    "en_keys": 222,
+    "zh_keys": 224,
+    "missing": 13
+  },
+  "inventorysorter": {
+    "source": "CN资源包",
+    "en_keys": 25,
+    "zh_keys": 25,
+    "missing": 0
+  },
+  "ironchest": {
+    "source": "模组自带",
+    "en_keys": 36,
+    "zh_keys": 25,
+    "missing": 15
+  },
+  "itemphysic": {
+    "source": "社区翻译",
+    "en_keys": 3,
+    "zh_keys": 2,
+    "missing": 1
+  },
+  "jade": {
+    "source": "模组自带",
+    "en_keys": 280,
+    "zh_keys": 280,
+    "missing": 0
+  },
+  "jecharacters": {
+    "source": "模组自带",
+    "en_keys": 5,
+    "zh_keys": 5,
+    "missing": 0
+  },
+  "jei": {
+    "source": "模组自带",
+    "en_keys": 132,
+    "zh_keys": 129,
+    "missing": 3
+  },
+  "jeresources": {
+    "source": "模组自带",
+    "en_keys": 144,
+    "zh_keys": 146,
+    "missing": 0
+  },
+  "laserio": {
+    "source": "模组自带",
+    "en_keys": 90,
+    "zh_keys": 71,
+    "missing": 19
+  },
+  "libnonymous": {
+    "source": "无翻译",
+    "en_keys": 3,
+    "zh_keys": 0,
+    "missing": 3
+  },
+  "libraryferret": {
+    "source": "无翻译",
+    "en_keys": 38,
+    "zh_keys": 0,
+    "missing": 38
+  },
+  "mantle": {
+    "source": "模组自带",
+    "en_keys": 52,
+    "zh_keys": 48,
+    "missing": 4
+  },
+  "mekanism": {
+    "source": "模组自带",
+    "en_keys": 1656,
+    "zh_keys": 1655,
+    "missing": 1
+  },
+  "mekanismgenerators": {
+    "source": "模组自带",
+    "en_keys": 202,
+    "zh_keys": 202,
+    "missing": 0
+  },
+  "midnightlib": {
+    "source": "无翻译",
+    "en_keys": 12,
+    "zh_keys": 0,
+    "missing": 12
+  },
+  "mobsunscreen": {
+    "source": "无翻译",
+    "en_keys": 6,
+    "zh_keys": 0,
+    "missing": 6
+  },
+  "moonlight": {
+    "source": "模组自带",
+    "en_keys": 9,
+    "zh_keys": 1686,
+    "missing": 1
+  },
+  "mowziesmobs": {
+    "source": "模组自带",
+    "en_keys": 404,
+    "zh_keys": 384,
+    "missing": 51
+  },
+  "mysterious_mountain_lib": {
+    "source": "模组自带",
+    "en_keys": 3,
+    "zh_keys": 3,
+    "missing": 0
+  },
+  "naturescompass": {
+    "source": "模组自带",
+    "en_keys": 43,
+    "zh_keys": 43,
+    "missing": 0
+  },
+  "iris": {
+    "source": "模组自带",
+    "en_keys": 72,
+    "zh_keys": 67,
+    "missing": 5
+  },
+  "patchouli": {
+    "source": "模组自带",
+    "en_keys": 90,
+    "zh_keys": 89,
+    "missing": 2
+  },
+  "pipez": {
+    "source": "模组自带",
+    "en_keys": 83,
+    "zh_keys": 83,
+    "missing": 0
+  },
+  "sakura": {
+    "source": "模组自带",
+    "en_keys": 691,
+    "zh_keys": 681,
+    "missing": 30
+  },
+  "searchables": {
+    "source": "模组自带",
+    "en_keys": 1,
+    "zh_keys": 1,
+    "missing": 0
+  },
+  "sereneseasons": {
+    "source": "模组自带",
+    "en_keys": 36,
+    "zh_keys": 15,
+    "missing": 21
+  },
+  "sophisticatedbackpacks": {
+    "source": "模组自带",
+    "en_keys": 255,
+    "zh_keys": 255,
+    "missing": 0
+  },
+  "sophisticatedcore": {
+    "source": "模组自带",
+    "en_keys": 297,
+    "zh_keys": 281,
+    "missing": 16
+  },
+  "spartanfire": {
+    "source": "无翻译",
+    "en_keys": 285,
+    "zh_keys": 0,
+    "missing": 285
+  },
+  "spartantwilight": {
+    "source": "无翻译",
+    "en_keys": 102,
+    "zh_keys": 0,
+    "missing": 102
+  },
+  "specialai": {
+    "source": "无翻译",
+    "en_keys": 5,
+    "zh_keys": 0,
+    "missing": 5
+  },
+  "railways": {
+    "source": "模组自带",
+    "en_keys": 1293,
+    "zh_keys": 1293,
+    "missing": 0
+  },
+  "storagedrawers": {
+    "source": "模组自带",
+    "en_keys": 148,
+    "zh_keys": 148,
+    "missing": 0
+  },
+  "tacz": {
+    "source": "模组自带",
+    "en_keys": 278,
+    "zh_keys": 278,
+    "missing": 0
+  },
+  "tconstruct": {
+    "source": "模组自带",
+    "en_keys": 2875,
+    "zh_keys": 2874,
+    "missing": 2
+  },
+  "terrablender": {
+    "source": "无翻译",
+    "en_keys": 2,
+    "zh_keys": 0,
+    "missing": 2
+  },
+  "tgears": {
+    "source": "模组自带",
+    "en_keys": 167,
+    "zh_keys": 167,
+    "missing": 0
+  },
+  "thermal_dynamics": {
+    "source": "无翻译",
+    "en_keys": 43,
+    "zh_keys": 0,
+    "missing": 43
+  },
+  "thermal_foundation": {
+    "source": "模组自带",
+    "en_keys": 119,
+    "zh_keys": 116,
+    "missing": 3
+  },
+  "tleveling": {
+    "source": "社区翻译",
+    "en_keys": 66,
+    "zh_keys": 66,
+    "missing": 0
+  },
+  "torcherino": {
+    "source": "模组自带",
+    "en_keys": 18,
+    "zh_keys": 18,
+    "missing": 0
+  },
+  "toughasnails": {
+    "source": "CN资源包",
+    "en_keys": 89,
+    "zh_keys": 89,
+    "missing": 0
+  },
+  "trashcans": {
+    "source": "模组自带",
+    "en_keys": 32,
+    "zh_keys": 32,
+    "missing": 0
+  },
+  "trashslot": {
+    "source": "模组自带",
+    "en_keys": 24,
+    "zh_keys": 8,
+    "missing": 16
+  },
+  "twilightforest": {
+    "source": "模组自带",
+    "en_keys": 1488,
+    "zh_keys": 1458,
+    "missing": 30
+  },
+  "xaerobetterpvp": {
+    "source": "模组自带",
+    "en_keys": 77,
+    "zh_keys": 77,
+    "missing": 0
+  },
+  "xaerominimap": {
+    "source": "模组自带",
+    "en_keys": 611,
+    "zh_keys": 533,
+    "missing": 83
+  },
+  "xaeroworldmap": {
+    "source": "社区翻译",
+    "en_keys": 272,
+    "zh_keys": 272,
+    "missing": 0
+  },
+  "bettercaves": {
+    "source": "社区翻译",
+    "en_keys": 5,
+    "zh_keys": 2,
+    "missing": 5
+  },
+  "betterdeserttemples": {
+    "source": "社区翻译",
+    "en_keys": 7,
+    "zh_keys": 13,
+    "missing": 6
+  },
+  "betterdungeons": {
+    "source": "模组自带",
+    "en_keys": 86,
+    "zh_keys": 69,
+    "missing": 17
+  },
+  "bettermineshafts": {
+    "source": "无翻译",
+    "en_keys": 60,
+    "zh_keys": 0,
+    "missing": 60
+  },
+  "betterfortresses": {
+    "source": "社区翻译",
+    "en_keys": 4,
+    "zh_keys": 4,
+    "missing": 3
+  },
+  "betteroceanmonuments": {
+    "source": "无翻译",
+    "en_keys": 4,
+    "zh_keys": 0,
+    "missing": 4
+  },
+  "betterstrongholds": {
+    "source": "社区翻译",
+    "en_keys": 18,
+    "zh_keys": 1,
+    "missing": 17
+  },
+  "zombieawareness": {
+    "source": "无翻译",
+    "en_keys": 3,
+    "zh_keys": 0,
+    "missing": 3
+  }
+}

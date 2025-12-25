@@ -1,0 +1,4 @@
+{
+  "commands.terrablender.biomeparams.failed": "[待翻译] Could not determine parameters",
+  "commands.terrablender.biomeparams.success": "[待翻译] Parameters at position %s %s %s: %s"
+}

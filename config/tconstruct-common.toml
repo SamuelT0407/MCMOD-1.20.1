@@ -1,0 +1,112 @@
+
+#与游戏玩法相关的所有内容
+[gameplay]
+	#设为false可禁止新玩家出生时获得匠魂手册
+	shouldSpawnWithTinkersBook = true
+	#如果为true，扩展火焰保护附魔的适用槽位以更好地与盾牌配合。不会影响原版附魔的玩法
+	#如果为false，盾牌上的火焰保护将不会减少着火时间
+	extendFireProtectionSlots = true
+	#如果为true，扩展爆炸保护附魔的适用槽位以更好地与盾牌配合。不会影响原版附魔的玩法
+	#如果为false，盾牌上的爆炸保护将不会减少爆炸击退
+	extendBlastProtectionSlots = true
+	#修复工具包恢复的耐久值（以锭为单位）。不影响制作工具包的成本，成本由JSON控制
+	#Range: 0.0 ~ 32767.0
+	repairKitAmount = 2.0
+
+#与配方相关的选项，选项有限因为数据包允许修改大多数配方
+[recipes]
+	#添加一个用3个砂砾合成燧石的配方
+	addGravelToFlintRecipe = true
+	#使冶炼厂合成下界合金只需每锭2金。如果为false则使用原版4金每锭的比例。如果有合成复制BUG请禁用
+	cheaperNetheriteAlloy = true
+	#凋灵骷髅掉落坏死骨头
+	witherBoneDrop = true
+	#史莱姆球无法在需要史莱姆球的原版配方中使用。提供此配置选项以便在此修复与其他模组冲突时轻松禁用
+	slimeRecipeFix = true
+	#透明玻璃无法在需要玻璃的原版配方中使用。提供此配置选项以便在此修复与其他模组冲突时轻松禁用
+	glassRecipeFix = true
+
+	[recipes.ore_rates]
+
+		#在熔岩炉中熔炼的矿石产出率
+		[recipes.ore_rates.melter]
+			#每单位金属矿石熔炼产生的粒数。9粒=1锭
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 12
+			#每单位宝石矿石熔炼产生的碎片数。4碎片=1宝石
+			#Range: 1 ~ 20
+			shardsPerGem = 8
+
+		#在冶炼厂中熔炼的矿石产出率
+		[recipes.ore_rates.smeltery]
+			#每单位金属矿石熔炼产生的粒数。9粒=1锭
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 12
+			#每单位宝石矿石熔炼产生的碎片数。4碎片=1宝石
+			#Range: 1 ~ 20
+			shardsPerGem = 8
+
+		#在铸造厂中熔炼的矿石产出率
+		[recipes.ore_rates.foundry]
+			#每单位金属矿石熔炼产生的粒数。9粒=1锭
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 9
+			#每单位宝石矿石熔炼产生的碎片数。4碎片=1宝石
+			#Range: 1 ~ 20
+			shardsPerGem = 4
+
+		#在铸造厂中熔炼的副产物产出率
+		[recipes.ore_rates.foundry_byproduct]
+			#每单位金属矿石熔炼产生的粒数。9粒=1锭
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 3
+			#每单位宝石矿石熔炼产生的碎片数。4碎片=1宝石
+			#Range: 1 ~ 20
+			shardsPerGem = 4
+
+	#被高压苦力怕击杀时的实体头颅掉落
+	[recipes.heads]
+		blaze = true
+		enderman = true
+		stray = true
+		husk = true
+		drowned = true
+		spider = true
+		cave_spider = true
+		piglin_brute = true
+		zombified_piglin = true
+
+#与战利品表注入相关的选项。注意某些更改通过全局战利品管理器完成，这些仅控制向战利品池注入战利品
+#如果你的整合包进行了大量战利品表更改，其中许多可能会自动禁用。你也可以手动设置表以获得更多控制
+[loot]
+	#将粘液树苗和种子添加到各种战利品箱中。对没有史莱姆岛的世界有帮助
+	slimy_loot = true
+	#如果为true，末影龙被爆炸伤害时会掉落鳞片
+	drop_dragon_Scales = true
+	#流浪商人古代工具交易的权重。所有商人随机选择1个稀有交易，所以这大致是与原版选项（共6个）相比该交易出现的几率
+	#Range: 0 ~ 100
+	wanderer_ancient_tool_weight = 6
+
+#与其他模组集成相关的配置
+[compatability]
+	#沉浸工程化学喷射器每发子弹的流体量对匠魂流体效果注册表的价值
+	#IE每刻发射8发子弹同时消耗配置中的值，所以除以8使其与匠魂的子弹相当
+	#但是，保持为单独的配置选项可让整合包制作者对匠魂在化学喷射器中的强度有更多控制
+	#Range: 0.0 ~ 2.147483647E9
+	immersive_engineering_chemthrower_shot_value = 1.25
+
+#用于调试游戏玩法和机制的功能，通常不应在整合包中启用
+[debug]
+	#如果为true，即使缺少相关金属也强制启用集成材料。用于测试材料平衡
+	#不为它们提供任何配方，只能在创造模式中作弊获取
+	forceIntegrationMaterials = false
+	#如果你希望测试侧边物品栏是否有效而不用不断重载数据包，请设为true
+	#一旦发现物品栏有效，将其添加到方块实体标签`tconstruct:side_inventories`并禁用此选项；保持启用会导致崩溃和复制BUG
+	disableSideInventoryWhitelist = false
+	#如果为true，管理员在生存模式下右键点击可以将修改器水晶和创造槽位应用于背包中的工具。如果为false，这仅适用于创造模式玩家
+	#此选项使工具和修改器的测试更容易，但可能导致对非管理员这些物品如何运作的误解
+	quickApplyToolModifiersSurvival = false
+	#如果为STACKTRACE，当从不可修改物品创建工具堆栈时记录堆栈跟踪。如果为WARNING（默认），记录更短但更高效的错误。如果为IGNORE，禁用日志（在报告问题后对整合包/玩家有用）。堆栈跟踪有助于调试是哪个模组导致的，但在它们大量发生时相当昂贵
+	#允许值: STACKTRACE, WARNING, IGNORED
+	logInvalidToolStack = "WARNING"
+

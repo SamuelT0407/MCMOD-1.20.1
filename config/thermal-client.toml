@@ -1,0 +1,13 @@
+
+[Sounds]
+	#如果为TRUE，一些"热力系列"方块将有环境音效。
+	"Ambient Block Sounds" = true
+	#如果为TRUE，一些"热力系列"怪物将有环境音效。
+	"Ambient Mob Sounds" = true
+
+[Holidays]
+	#如果为TRUE，某些怪物在特定日期会戴上节日帽子。禁用此项将对所有怪物禁用，包括原版。可能需要重启客户端。
+	"Festive Mobs" = true
+	#如果为TRUE，某些原版怪物在特定日期也会戴上节日帽子。可能需要重启客户端。
+	"Festive Vanilla Mobs" = true
+

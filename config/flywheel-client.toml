@@ -1,0 +1,14 @@
+#选择要使用的后端。设为"DEFAULT"让Flywheel自动决定。
+backend = "DEFAULT"
+#启用或禁用基于距离的实例更新限制。
+limitUpdates = true
+#要使用的工作线程数。设为-1让Flywheel自动决定。设为0禁用并行处理。需要重启游戏才能生效。
+#Range: -1 ~ 12
+workerThreads = -1
+
+#Flywheel内置后端的配置选项。
+[flw_backends]
+	#Flywheel基于着色器的光照应该有多平滑。可能对性能有较大影响。
+	#Allowed Values: FLAT, TRI_LINEAR, SMOOTH, SMOOTH_INNER_FACE_CORRECTED
+	lightSmoothness = "SMOOTH"
+

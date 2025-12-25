@@ -1,0 +1,35 @@
+
+#模组通用设置
+[general]
+	#生成声音感知源供怪物追踪
+	awareness_Sound = true
+	#生成气味/血液感知源供怪物追踪
+	awareness_Scent = true
+	#怪物看到玩家附近的光源并向其移动
+	awareness_Light = true
+	#嘈杂的僵尸会吸引其他僵尸
+	noisyZombies = true
+	#活塞会产生吸引怪物的声音感知源
+	noisyPistons = true
+	#使怪物成群结队在地表游荡到随机点
+	wanderingHordes = false
+	#每隔多少秒在玩家周围设置一个随机点供远处怪物游荡，使怪物移动更多，如有TPS性能问题请勿使用
+	#Range: > -2147483648
+	frequencyOfWanderingHordesPerPlayer = 30
+	#提示你有怪物正在调查附近区域时的声音音量
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	soundVolumeInvestigate = 0.5
+	#怪物锁定你时的声音音量
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	soundVolumeAlertTarget = 0.5
+	#增强怪物锁定你时会发出声音
+	soundAlerts = true
+	#任何攻击你的敌对怪物都会发出声音，即使未被增强
+	soundAlertsForAllAttackingMobs = false
+	#增强怪物调查你附近的感知源时会发出声音
+	soundInvestigates = true
+	#使用另一种怪物警报噪音，可能会略微破坏沉浸感 ;)
+	soundUseAlternateAlertNoise = false
+	#仅在主世界生成声音感知实体
+	awareness_Sound_OverworldOnly = false
+

@@ -1,0 +1,6 @@
+{
+  "attack.death.createaddition.barbed_wire": "[待翻译] %1$s tried to cross barbed wire",
+  "attack.death.createaddition.barbed_wire.player": "[待翻译] %1$s tried to cross barbed wire while fighting %2$s",
+  "attack.death.createaddition.tesla_coil": "[待翻译] %1$s received a lethal electric shock",
+  "attack.death.createaddition.tesla_coil.player": "[待翻译] %1$s received a lethal electric shock while fighting %2$s"
+}

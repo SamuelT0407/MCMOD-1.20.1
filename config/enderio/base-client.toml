@@ -1,0 +1,5 @@
+
+[visual]
+	#启用机械粒子效果
+	machineParticles = true
+

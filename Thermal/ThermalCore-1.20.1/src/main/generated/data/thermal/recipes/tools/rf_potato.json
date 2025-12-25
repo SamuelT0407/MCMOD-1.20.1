@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "tag": "forge:dusts/redstone"
+    },
+    "L": {
+      "tag": "forge:nuggets/lead"
+    },
+    "P": {
+      "tag": "forge:crops/potato"
+    },
+    "R": {
+      "item": "thermal:cured_rubber"
+    }
+  },
+  "pattern": [
+    "LDL",
+    "RPR",
+    "DLD"
+  ],
+  "result": {
+    "item": "thermal:rf_potato"
+  },
+  "show_notification": true
+}

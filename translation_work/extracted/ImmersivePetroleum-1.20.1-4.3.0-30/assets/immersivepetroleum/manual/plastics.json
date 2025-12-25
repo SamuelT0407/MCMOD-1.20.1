@@ -1,0 +1,11 @@
+{
+	"plastics0":{
+		"type":"item_display",
+		"items":[{"item":"immersiveengineering:phenolic_resin_bucket"}, {"item":"immersiveengineering:plate_duroplast"}, {"item":"immersiveengineering:duroplast"}]},
+	"plastics1":{
+		"type":"item_display",
+		"items":[{"item":"immersivepetroleum:petroleum_gas_bucket"}]},
+	"plastics2":{"type":"item_display",
+		"type":"item_display",
+		"items":[{"item":"immersivepetroleum:benzol_bucket"}, {"item":"immersivepetroleum:petroleum_gas_bucket"}]}
+}

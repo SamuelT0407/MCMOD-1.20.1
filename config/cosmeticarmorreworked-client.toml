@@ -1,0 +1,28 @@
+
+#这些设置仅影响客户端
+[Client]
+	#是否隐藏打开外观盔甲背包的按钮
+	CosArmorGuiButton_Hidden = false
+	#相对于玩家背包GUI原点的水平像素距离
+	#Range: > -2147483648
+	CosArmorGuiButton_Left = 65
+	#相对于玩家背包GUI原点的垂直像素距离
+	#Range: > -2147483648
+	CosArmorGuiButton_Top = 67
+	#是否隐藏在客户端临时切换模组的按钮
+	CosArmorToggleButton_Hidden = false
+	#相对于玩家背包GUI原点的水平像素距离
+	#Range: > -2147483648
+	CosArmorToggleButton_Left = 59
+	#相对于玩家背包GUI原点的垂直像素距离
+	#Range: > -2147483648
+	CosArmorToggleButton_Top = 72
+	#是否在创造模式背包中隐藏打开外观盔甲背包的按钮
+	CosArmorCreativeGuiButton_Hidden = false
+	#相对于创造模式背包GUI原点的水平像素距离
+	#Range: > -2147483648
+	CosArmorCreativeGuiButton_Left = 95
+	#相对于创造模式背包GUI原点的垂直像素距离
+	#Range: > -2147483648
+	CosArmorCreativeGuiButton_Top = 38
+

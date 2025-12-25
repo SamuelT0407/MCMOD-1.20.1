@@ -1,0 +1,29 @@
+
+["The Blaze Burner Factors(temperature = 800 * factor, rate = 10 * factor)"]
+	#烈焰燃烧器熄灭时的系数
+	extinguished_factor = 0.5
+	#烈焰燃烧器点燃时的系数
+	kindled_factor = 1.0
+	#烈焰燃烧器沸腾时的系数
+	seething_factor = 2.0
+
+["The Polishing Percentages"]
+	#抛光时对物品的损耗
+	polishing_damage = 0.1
+	#抛光时提供的护盾值
+	polishing_shield = 0.1
+
+["The Crushing"]
+	#带有粉碎修改器的工具造成的伤害
+	crushing_damage = 5
+
+["The Tinker's Machines"]
+	#相对于普通风扇的范围比例
+	fan_range = 1.5
+	#相对于普通钻头的速度比例
+	drill_speed = 2.0
+	#精准采集钻头对实体造成的伤害
+	silk_touch_drill_damage = 1.0
+	#时运钻头的时运等级
+	fortune_drill_level = 3
+

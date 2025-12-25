@@ -1,0 +1,23 @@
+{
+  "ae2.emi_integration.category_charger": "[待翻译] Charger",
+  "ae2.emi_integration.category_condenser": "[待翻译] Condenser",
+  "ae2.emi_integration.category_entropy_manipulator": "[待翻译] Entropy Manipulator",
+  "ae2.emi_integration.category_inscriber": "[待翻译] Inscriber",
+  "block.ae2.crystal_resonance_generator": "[待翻译] Crystal Resonance Generator",
+  "chat.ae2.TestWorldNotInSuperflat": "[待翻译] A test world can only be set up in a Superflat world!",
+  "dimension.ae2.spatial_storage": "[待翻译] Spatial Storage",
+  "entity.minecraft.villager.ae2.fluix_researcher": "[待翻译] Fluix Researcher",
+  "gui.ae2.CantFitInsideStorageCell": "[待翻译] This item does not fit in other storage cells",
+  "gui.ae2.EnergyGenerationCapacity": "[待翻译] Generation Capacity: %s",
+  "gui.ae2.NoChannel": "[待翻译] Missing Channel",
+  "gui.ae2.SearchTooltipToolTips": "[待翻译] Use # to search in tooltips (#looting)",
+  "gui.ae2.TransformTypeExplode": "[待翻译] Explode",
+  "gui.ae2.TransformTypeThrowInFluid": "[待翻译] Throw in %s",
+  "gui.ae2.units.fe": "[待翻译] FE",
+  "gui.ae2.units.rf": "[待翻译] RF",
+  "gui.tooltips.ae2.InscriberBufferHigh": "[待翻译] Stack to 64",
+  "gui.tooltips.ae2.InscriberBufferLow": "[待翻译] Stack to 4",
+  "gui.tooltips.ae2.InscriberBufferSize": "[待翻译] Input Slot Stack Size",
+  "key.ae2.guide": "[待翻译] Open Guide for Items",
+  "waila.ae2.Suppressed": "[待翻译] Suppressed"
+}

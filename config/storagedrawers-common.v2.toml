@@ -1,0 +1,387 @@
+
+# 模组通用配置
+[General]
+	# 启用模组某些部分的详细日志。
+	# 除非开发者要求，可以忽略。
+	debugTrace = false
+	#
+	# 带有UI组件的方块是否允许打开它们。
+	# 禁用UI将限制某些模组功能。
+	enableUI = true
+	#
+	# 是否记录添加规则或拒绝列表条目等操作。
+	# 如果添加了很多此类条目，可能需要禁用。
+	logStartupActivity = true
+	#
+	# 内部使用，记录配置文件首次写入时的版本。
+	configVersion = 2
+
+# 抽屉存储方块配置
+[Drawers]
+	# 应用于所有抽屉槽位存储大小的基础值倍数。
+	# 修改此值可统一增加所有存储量
+	baseStackStorage = 1
+
+	# 单个抽屉配置。
+	# 单位是应用基础堆叠存储值倍数前，每槽位可容纳的堆叠数。
+	[Drawers.Blocks]
+
+		[Drawers.Blocks.FullStorage1x1]
+			unitsPerSlot = 32
+
+		[Drawers.Blocks.FullStorage1x2]
+			unitsPerSlot = 16
+
+		[Drawers.Blocks.FullStorage2x2]
+			unitsPerSlot = 8
+
+		[Drawers.Blocks.FullCompacting]
+			unitsPerSlot = 32
+
+		[Drawers.Blocks.HalfStorage1x1]
+			unitsPerSlot = 16
+
+		[Drawers.Blocks.HalfStorage1x2]
+			unitsPerSlot = 8
+
+		[Drawers.Blocks.HalfStorage2x2]
+			unitsPerSlot = 4
+
+		[Drawers.Blocks.HalfCompacting]
+			unitsPerSlot = 16
+
+	# 自动压缩功能配置
+	[Drawers.Compacting]
+		# 是否支持压缩功能。禁用不会移除方块。
+		enabled = true
+		#
+		# 为某些Minecraft物品（如石英、砖块和粘土）启用额外规则。
+		# 查看日志获取添加的完整规则集。
+		enableExtraCompactingRules = true
+		#
+		# 压缩抽屉需要双向2x2或3x3配方来关联物品。
+		# 在此添加额外规则，格式: <大物品>, <小物品>, <数量>
+		compactingRules = ["minecraft:clay, minecraft:clay_ball, 4"]
+
+	# 分离抽屉配置，即从抽屉方块中取出的单个抽屉槽位。
+	[Drawers.Detached]
+		# 允许从抽屉方块中取出单个抽屉槽位。
+		enable = true
+		#
+		# 如果启用，在背包中携带装有物品的抽屉会获得缓慢效果。
+		# 可通过便携升级减轻（如果已启用）。
+		heavyDrawers = false
+		#
+		# 抽屉会追踪其来源方块的容量升级。
+		# 启用后，抽屉只能放回具有相同或更低最大容量的方块。
+		# 抽屉仍然只能插入具有足够容量存放其物品的方块。
+		forceMaxCapacityCheck = false
+		#
+		# 允许分离的抽屉存放在容器中（如收纳袋和潜影盒）。
+		# 由于当前限制，此规则也适用于将空抽屉存放在这些容器中。
+		canStoreInContainers = false
+
+	# 掉落的装有物品的抽屉方块配置。
+	[Drawers.Filled]
+		# 如果启用，在背包中携带装有物品的抽屉会获得缓慢效果。
+		# 可通过便携升级减轻（如果已启用）。
+		heavyDrawers = false
+		#
+		# 允许装有物品的抽屉存放在其他抽屉方块中。
+		canStoreInDrawers = false
+		#
+		# 允许装有物品的抽屉存放在容器中（如收纳袋和潜影盒）。
+		# 由于当前限制，此规则也适用于将空抽屉存放在这些容器中。
+		canStoreInContainers = false
+
+	# 框架抽屉配置，可从其他方块作为材料获得外观。
+	[Drawers.Framed]
+		# 允许合成框架抽屉。禁用不会移除现有框架抽屉。
+		enable = true
+		#
+		# 尝试只允许实心、完整方块作为材料。
+		# 如果方块属性表明应该是实心但实际不是，此检查可能仍允许非实心方块。
+		# 某些非实心方块也被视为非不透明，可能受该设置限制。
+		enforceSolidMaterials = true
+		#
+		# 尝试只允许完全不透明的方块作为材料。
+		# 如果方块属性表明应该不透明但实际不是，此检查可能仍允许非不透明方块。
+		enforceOpaqueMaterials = false
+		#
+		# 每个条目应该是命名空间或完整命名空间方块，如 minecraft:cobblestone
+		# 拒绝列表中的物品将被禁止用作任何抽屉材料。
+		materialDenyList = []
+
+	# 物品存储配置。
+	[Drawers.Storage]
+		#
+		# 每个条目应该是命名空间或完整命名空间物品，如 minecraft:cobblestone
+		# 拒绝列表中的物品将被禁止存放在抽屉中
+		storeDenyList = ["storagedrawers:creative_vending_upgrade"]
+		#
+		# 抽屉被破坏时如何处理其物品。可接受的值：
+		# KEEP: 抽屉保留掉落物品中的所有物品，类似潜影盒。这是默认行为。
+		# DROP: 抽屉将物品掉落到世界中，最多dropStackLimit值。超过限制的存储物品将被销毁。
+		# VOID: 抽屉掉落时销毁所有物品。
+		#允许值: KEEP, DROP, VOID
+		dropMode = "KEEP"
+		#
+		# 如果dropMode设置为DROP，这是从整个方块可以掉落到世界中的最大堆叠数。
+		# 默认设置为原版箱子可以掉落的数量。
+		dropStackLimit = 32
+
+# 控制器和抽屉网络配置。
+[Controller]
+	# 控制器范围定义抽屉可以在X、Y或Z平面上连接多远。
+	# 建议的最大范围约为75，或预期的区块加载距离。
+	# 如果设置更高的值，当区块未加载时抽屉将不可用。
+	controllerRange = 50
+
+# 可插入抽屉方块的升级物品配置。
+[Upgrades]
+
+	# 存储升级将存储容量乘以给定倍数。
+	# 当多个存储升级一起使用时，它们的倍数会先相加再应用。
+	[Upgrades.StorageTiers]
+
+		[Upgrades.StorageTiers.Obsidian]
+			enableUpgrade = true
+			storageMultiplier = 2
+
+		[Upgrades.StorageTiers.Copper]
+			enableUpgrade = true
+			storageMultiplier = 4
+
+		[Upgrades.StorageTiers.Iron]
+			enableUpgrade = true
+			storageMultiplier = 8
+
+		[Upgrades.StorageTiers.Gold]
+			enableUpgrade = true
+			storageMultiplier = 16
+
+		[Upgrades.StorageTiers.Emerald]
+			enableUpgrade = true
+			storageMultiplier = 64
+
+		[Upgrades.StorageTiers.Diamond]
+			enableUpgrade = true
+			storageMultiplier = 256
+
+		[Upgrades.StorageTiers.Netherite]
+			enableUpgrade = true
+			storageMultiplier = 2048
+
+	# 允许同类物品槽位在物品添加或移除时平衡数量。
+	# 通过控制器操作时可跨网络工作。
+	[Upgrades.Balance]
+		enableUpgrade = true
+
+	# 允许根据配置自动转换同类物品。
+	[Upgrades.Conversion]
+		enableUpgrade = true
+		#
+		# 每种类型将与每种材料组合创建一组允许列表条目。
+		# 主要是常见矿石材料的便利设置。
+		oreTypeAllowList = ["forge:storage_blocks", "forge:ingots", "forge:nuggets"]
+		#
+		# 每种类型将与每种材料组合创建一组允许列表条目。
+		# 主要是常见矿石材料的便利设置。
+		oreMaterialAllowList = ["aluminum", "constantan", "steel", "uranium", "invar", "tin", "lead", "silver", "platinum", "nickel", "osmium", "bronze", "electrum"]
+		#
+		# 每个允许列表条目应该是完整命名空间标签，如 c:ingots/copper
+		tagAllowList = []
+		#
+		# 每个拒绝列表条目应该是完整命名空间标签，如 c:ingots/copper。
+		# 不在允许列表中的所有物品将被隐式拒绝。这可用于排除
+		# 从矿石允许列表集创建的特定条目。
+		tagDenyList = []
+		#
+		# 每个条目是分号分隔的完整命名空间物品列表。同一条目中的所有物品
+		# 被视为等效且可转换/互换。
+		# 例如: ["thermal:nickel_ore;immersiveengineering:ore_nickel"]
+		itemEquivalenceGroups = []
+
+	# 允许在每个抽屉槽位存储约21亿（MAX_INT）个物品。
+	[Upgrades.CreativeStorage]
+		enableUpgrade = true
+
+	# 允许无限发放每个抽屉槽位中的物品。
+	[Upgrades.CreativeVending]
+		enableUpgrade = true
+
+	# 在抽屉正面添加填充条。
+	[Upgrades.FillLevel]
+		enableUpgrade = true
+
+	# 使抽屉标签渲染得比周围环境允许的更亮。
+	[Upgrades.Illumination]
+		enableUpgrade = true
+		#
+		# 以0-15之间的最低光照级别渲染标签
+		#Range: 0 ~ 15
+		illuminationLevel = 13
+		#
+		# 无升级时以0-15之间的最低光照级别渲染标签
+		#Range: 0 ~ 15
+		minIlluminationLevel = 1
+
+	# 像原版漏斗一样从顶部收集匹配物品。
+	[Upgrades.Hopper]
+		enableUpgrade = true
+
+	# 通过将附近匹配物品瞬移到抽屉来收集
+	[Upgrades.Magnet]
+		#
+		# 当使用多个磁铁升级时，它们的范围会相加。
+		additiveRange = true
+		#
+		# 范围是从抽屉向外的方块数: [水平, 上, 下]
+		# 如果多个升级的范围相加，它们不允许超过这些值。
+		maxRange = [24, 8, 0]
+
+		[Upgrades.Magnet.Level1]
+			enableUpgrade = true
+			#
+			# 范围是从抽屉向外的方块数: [水平, 上, 下]
+			range = [1, 1, 0]
+			#
+			# 作为最高升级等级时主动收集的游戏刻间隔。
+			activeSpeed = 20
+			#
+			# 作为最高升级等级时收集检查的游戏刻间隔。
+			# 当在上一个idleSpeed间隔内未收集到物品时进入空闲状态。
+			idleSpeed = 20
+
+		[Upgrades.Magnet.Level2]
+			enableUpgrade = true
+			#
+			# 范围是从抽屉向外的方块数: [水平, 上, 下]
+			range = [4, 2, 0]
+			#
+			# 作为最高升级等级时主动收集的游戏刻间隔。
+			activeSpeed = 10
+			#
+			# 作为最高升级等级时收集检查的游戏刻间隔。
+			# 当在上一个idleSpeed间隔内未收集到物品时进入空闲状态。
+			idleSpeed = 20
+
+		[Upgrades.Magnet.Level3]
+			enableUpgrade = true
+			#
+			# 范围是从抽屉向外的方块数: [水平, 上, 下]
+			range = [8, 3, 0]
+			#
+			# 作为最高升级等级时主动收集的游戏刻间隔。
+			activeSpeed = 5
+			#
+			# 作为最高升级等级时收集检查的游戏刻间隔。
+			# 当在上一个idleSpeed间隔内未收集到物品时进入空闲状态。
+			idleSpeed = 20
+
+	# 将抽屉容量限制为一组。
+	[Upgrades.OneStack]
+		enableUpgrade = true
+
+	# 启用重型抽屉时允许自由携带装有内容物的抽屉。
+	[Upgrades.Portability]
+		enableUpgrade = true
+
+	# 让抽屉根据填充级别发出红石信号。
+	[Upgrades.Redstone]
+		enableUpgrade = true
+		#
+		# 最小红石升级输出方块中所有抽屉的最小信号。
+		enableMinUpgrade = true
+		#
+		# 最大红石升级输出方块中所有抽屉的最大信号。
+		enableMaxUpgrade = true
+		#
+		# 红石升级是否应该发出模拟红石信号，
+		# 需要使用比较器来读取。
+		analogOutput = true
+
+	# 让抽屉无线连接到控制器。
+	[Upgrades.Remote]
+		enableUpgrade = true
+		#
+		# 组变体连接所有连接到升级方块的抽屉。
+		enableGroupUpgrade = true
+		#
+		# 设置单变体远程升级的最大范围。
+		# 范围受控制器范围限制。设为0则匹配控制器范围。
+		maxRange = 0
+		#
+		# 设置组变体远程升级的最大范围。
+		# 范围受控制器范围限制。设为0则匹配控制器范围。
+		maxGroupRange = 0
+
+	# 使抽屉在装满容量时接受但销毁兼容物品。
+	[Upgrades.Void]
+		enableUpgrade = true
+
+# 工具配置，即可在抽屉上使用的各种"钥匙"。
+[Tools]
+
+	# 抽屉钥匙用于锁定抽屉以保持当前物品。
+	[Tools.DrawerKey]
+		enable = true
+
+	# 数量钥匙用于显示或隐藏抽屉正面的物品计数。
+	[Tools.QuantifyKey]
+		enable = true
+		#
+		# 新放置的抽屉是否默认显示标签。
+		showDefault = false
+
+	# 隐藏钥匙用于显示或隐藏抽屉正面的物品标签。
+	# 此钥匙的主要用途是通过禁用更昂贵的动态渲染来提高性能。
+	[Tools.ConcealmentKey]
+		enable = true
+
+	# 个人钥匙允许将抽屉锁定给其所有者，只有他们可以放置或取出物品。
+	[Tools.PersonalKey]
+		enable = true
+
+	# 优先级钥匙更改抽屉在查找兼容槽位插入物品时的优先级。
+	[Tools.PriorityKey]
+		enable = true
+
+	# 暂停钥匙停止外部交互，如来自漏斗或磁铁升级。
+	[Tools.PauseKey]
+		enable = true
+
+# 与第三方模组集成的配置。
+[Integration]
+
+	# CoFH Core模组配置。
+	# 添加对CoFH组个人钥匙的支持。
+	[Integration.CoFHCore]
+		# 如果模组存在则启用CoFH Core集成。
+		enable = true
+
+	# FTB Chunks模组配置。
+	# 改进对领地区块的支持。
+	[Integration.FTBChunks]
+		# 如果模组存在则启用FTB Chunks集成。
+		enable = true
+
+	# FTB Teams模组配置。
+	# 添加对团队个人钥匙的支持。
+	[Integration.FTBTeams]
+		# 如果模组存在则启用FTB Teams集成。
+		enable = true
+		#
+		# 启用从工作台中另一个支持的个人钥匙转换的配方。
+		enableCycleRecipe = true
+
+	# WAILA/HWYLA/Jade方块检查模组家族配置。
+	[Integration.WAILA]
+		# 如果模组存在则启用Jade集成。
+		enable = true
+		# 为true时，显示数量为NxS + R（按堆叠大小）而非计数
+		stackRemainder = true
+		#
+		# 为true时，除非使用了数量钥匙，否则不显示当前数量
+		respectQuantifyKey = false
+

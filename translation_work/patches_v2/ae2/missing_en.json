@@ -1,0 +1,23 @@
+{
+  "ae2.emi_integration.category_charger": "Charger",
+  "ae2.emi_integration.category_condenser": "Condenser",
+  "ae2.emi_integration.category_entropy_manipulator": "Entropy Manipulator",
+  "ae2.emi_integration.category_inscriber": "Inscriber",
+  "block.ae2.crystal_resonance_generator": "Crystal Resonance Generator",
+  "chat.ae2.TestWorldNotInSuperflat": "A test world can only be set up in a Superflat world!",
+  "dimension.ae2.spatial_storage": "Spatial Storage",
+  "entity.minecraft.villager.ae2.fluix_researcher": "Fluix Researcher",
+  "gui.ae2.CantFitInsideStorageCell": "This item does not fit in other storage cells",
+  "gui.ae2.EnergyGenerationCapacity": "Generation Capacity: %s",
+  "gui.ae2.NoChannel": "Missing Channel",
+  "gui.ae2.SearchTooltipToolTips": "Use # to search in tooltips (#looting)",
+  "gui.ae2.TransformTypeExplode": "Explode",
+  "gui.ae2.TransformTypeThrowInFluid": "Throw in %s",
+  "gui.ae2.units.fe": "FE",
+  "gui.ae2.units.rf": "RF",
+  "gui.tooltips.ae2.InscriberBufferHigh": "Stack to 64",
+  "gui.tooltips.ae2.InscriberBufferLow": "Stack to 4",
+  "gui.tooltips.ae2.InscriberBufferSize": "Input Slot Stack Size",
+  "key.ae2.guide": "Open Guide for Items",
+  "waila.ae2.Suppressed": "Suppressed"
+}

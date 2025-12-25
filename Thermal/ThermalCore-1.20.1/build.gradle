@@ -1,0 +1,220 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
+    id 'com.modrinth.minotaur' version "2.+"
+
+    id 'net.neoforged.gradle' version '[6.0.18,6.2)'
+    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of("${java_version}")
+java.withSourcesJar()
+
+sourceSets.main.resources.srcDirs += "src/main/generated"
+
+group = 'com.teamcofh'
+archivesBaseName = "${mod_id}_core"
+def buildVersion = "${mod_version}." + (System.getenv("BUILD_NUMBER") ?: '0')
+version = "${mc_version}-${buildVersion}"
+
+def signProps = [:]
+if (System.getenv('KEY_STORE')) {
+    println 'Using Env variables for jar signing.'
+    signProps['keyStore'] = System.getenv('KEY_STORE')
+    file(System.getenv('KEY_STORE_PROPS')).withReader {
+        def props = new Properties()
+        props.load(it)
+        signProps.putAll(props)
+    }
+} else if (project.hasProperty('keyStore')) {
+    println 'Using Project properties for jar signing.'
+    signProps['keyStore'] = project.getProperty('keyStore')
+    signProps['storePass'] = project.getProperty('keyStorePass')
+    signProps['alias'] = project.getProperty('keyStoreAlias')
+    signProps['keyPass'] = project.getProperty('keyStoreKeyPass')
+} else {
+    println 'No signing secrets found, build will not be signed.'
+}
+
+//if (System.getenv('CURSEFORGE_KEY') || project.hasProperty('curseforgeKey')) {
+//    println "Enabling CurseForge config."
+//    tasks.named('curseforge').configure { dependsOn(jar) }
+//
+//    curseforge {
+//        apiKey = System.getenv("CURSEFORGE_KEY") ?: project.findProperty("curseforgeKey")
+//
+//        project {
+//            id = ''
+//            changelogType = 'markdown'
+//            changelog = "[Changelog on GitHub - ${version}](https://raw.githubusercontent.com/cofh/version/main/${mod_id}/changelog.md)"
+//            releaseType = "${release_type}"
+//            mainArtifact(jar)
+//            addGameVersion "Java ${java_version}"
+//            addGameVersion "${mc_version}"
+//        }
+//    }
+//}
+//
+//if (System.getenv('MODRINTH_TOKEN') || project.hasProperty('modrinthToken')) {
+//    println "Enabling Modrinth config."
+//    tasks.named('modrinth').configure { dependsOn(jar) }
+//
+//    modrinth {
+//        token = System.getenv("MODRINTH_TOKEN") ?: project.findProperty("modrinthToken")
+//        projectId = ''
+//        versionNumber = "${mod_version}"
+//        versionType = "${release_type}"
+//        changelog = "[Changelog on GitHub - ${version}](https://raw.githubusercontent.com/cofh/version/main/${mod_id}/changelog.md)"
+//        uploadFile = jar
+//        gameVersions = ["${mc_version}"]
+//    }
+//}
+
+minecraft {
+    mappings channel: 'official', version: "${mc_version}"
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+}
+
+processResources {
+    filesMatching('META-INF/mods.toml') {
+        expand 'file': ['jarVersion': mod_version],
+                'mc_version': mc_version,
+                'forge_version': forge_version,
+                'forge_major_version': forge_version.split('\\.')[0],
+                'cofh_core_version_range': "[${cofh_core_version.replace(".+", "")},${cofh_core_max_version})"
+    }
+}
+
+configurations {
+    annotationProcessor.extendsFrom minecraft
+}
+
+repositories {
+    mavenLocal()
+    maven { url 'https://maven.covers1624.net/' }
+    maven { url 'https://maven.tterrag.com/' }
+    maven { url 'https://dvs1.progwml6.com/files/maven/' }
+    maven { url 'https://maven.blamejared.com/' }
+    maven { url 'https://maven.theillusivec4.top/' }
+}
+
+dependencies {
+    minecraft "net.neoforged:forge:${mc_version}-${neoforge_version}"
+
+    implementation fg.deobf("com.teamcofh:cofh_core:${mc_version}-${cofh_core_version}.+")
+
+    // compile against the JEI API but do not include it at runtime
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
+
+    // at runtime, use the full JEI
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
+
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
+
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
+}
+
+jar {
+    manifest {
+        attributes([
+                'Specification-Title'     : "${mod_name}",
+                'Specification-Vendor'    : 'Team CoFH',
+                'Specification-Version'   : "${mc_version}",
+                'Implementation-Title'    : "${mod_id}",
+                'Implementation-Vendor'   : 'Team CoFH',
+                'Implementation-Version'  : "${mod_version}",
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+
+    doFirst {
+        exclude 'cofh/thermal/core/data/**'
+        exclude '.cache/**'
+    }
+}
+
+tasks.register("signJar") {
+    dependsOn("jar")
+    dependsOn("reobfJar")
+
+    doFirst {
+        def args = [:]
+        args['jar'] = jar.archiveFile.get().asFile
+        if (System.getenv("KEY_STORE")) {
+            args['keyStore'] = System.getenv("KEY_STORE")
+            file(System.getenv("KEY_STORE_PROPS")).withReader {
+                def props = new Properties()
+                props.load(it)
+                args.addAll(props)
+            }
+        } else if (project.hasProperty('keyStore')) {
+            args['keyStore'] = project.getProperty('keyStore')
+            args['alias'] = project.getProperty('keyStoreAlias')
+            args['storePass'] = project.getProperty('keyStorePass')
+            args['keyPass'] = project.getProperty('keyStoreKeyPass')
+        } else {
+            println "No signing properties."
+            state.setOutcome(org.gradle.api.internal.tasks.TaskExecutionOutcome.UP_TO_DATE)
+            didWork = false
+            return
+        }
+        project.ant.invokeMethod('signjar', args)
+    }
+}
+
+publishing {
+    repositories {
+        if (System.getenv('MAVEN_PASS')) {
+            maven {
+                url 'https://nexus.covers1624.net/repository/cofh-releases/'
+                credentials {
+                    username 'kinglemming'
+                    password System.getenv('MAVEN_PASS')
+                }
+            }
+        }
+    }
+    publications {
+        mod(MavenPublication) {
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
+            artifact jar
+            artifact sourcesJar
+
+            pom {
+                name = archivesBaseName
+                description = archivesBaseName
+                url = "https://github.com/CoFH/${project.name}"
+                scm {
+                    url = "https://github.com/CoFH/${project.name}"
+                    connection = "scm:git:git://github.com/CoFH/${project.name}.git"
+                    connection = "scm:git:git@github.com:CoFH/${project.name}.git"
+                }
+
+                issueManagement {
+                    system = 'discord'
+                    url = 'https://discord.gg/uRKrnbH'
+                }
+                licenses {
+                    license {
+                        name = 'Don\'t Be a Jerk v2'
+                        url = "https://github.com/CoFH/${project.name}/blob/main/README.md"
+                        distribution = 'repo'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'teamcofh'
+                        name = 'Team CoFH'
+                    }
+                }
+            }
+        }
+    }
+}

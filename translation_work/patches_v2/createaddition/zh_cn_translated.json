@@ -1,0 +1,6 @@
+{
+  "attack.death.createaddition.barbed_wire": "%1$s试图穿越铁丝网",
+  "attack.death.createaddition.barbed_wire.player": "%1$s在与%2$s战斗时试图穿越铁丝网",
+  "attack.death.createaddition.tesla_coil": "%1$s遭受了致命电击",
+  "attack.death.createaddition.tesla_coil.player": "%1$s在与%2$s战斗时遭受了致命电击"
+}

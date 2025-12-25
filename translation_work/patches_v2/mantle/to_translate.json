@@ -1,0 +1,6 @@
+{
+  "command.mantle.item.not_found": "[待翻译] Unknown item '%s'",
+  "command.mantle.remove_recipes": "[待翻译] Successfully removed %s recipes in %s seconds. Run /reload to activate pack at %s",
+  "command.mantle.remove_recipes.preset_not_found": "[待翻译] Recipe removal preset '%s' was missing or invalid. Check the log for more information.",
+  "item.mantle.book.click_to_open": "[待翻译] Right click to open"
+}

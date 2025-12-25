@@ -1,0 +1,11 @@
+
+["Common Config"]
+	#需要流体的工具容量（mB）
+	"Capacity of Tools requiring Fluids" = 200
+	#工具容量附魔的额外容量（mB）
+	"Capacity Addition of Tools with Capacity Enchantment" = 100
+	#油桶容量（mB）
+	"Capacity of Canisters" = 4000
+	#油桶容量附魔的额外容量（mB）
+	"Capacity Addition of Capacity Enchantment in Canisters" = 1000
+

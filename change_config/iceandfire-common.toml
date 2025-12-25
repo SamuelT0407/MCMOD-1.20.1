@@ -1,0 +1,398 @@
+
+[Generation]
+
+	[Generation.Dragon]
+		#是否生成龙骨架
+		"Generate Dragon Skeletons" = true
+		#每区块生成龙骨架的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Generate Dragon Skeleton Chance" = 300
+		#每区块生成龙穴的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Generate Dragon Cave Chance" = 180
+		#每区块生成龙巢的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Generate Dragon Roost Chance" = 360
+		#龙巢中每方块生成黄金的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Dragon Den Gold Amount" = 4
+		#龙穴中石头与矿石的比例（此数值:1）
+		#Range: 1 ~ 10000
+		"Dragon Cave Ore Ratio" = 45
+
+	[Generation.Structures-Features]
+		#危险结构（龙巢、独眼巨人洞穴等）距出生点的最小距离
+		#Range: 1 ~ 10000
+		"Dangerous World Gen Dist From Spawn" = 800
+		#危险结构之间的最小间隔距离
+		#Range: 1 ~ 10000
+		"Dangerous World Gen Dist Seperation" = 300
+		#是否生成冰川群系
+		"Generate Glaciers" = true
+		#冰川生成权重。数值越大越常见
+		#Range: 1 ~ 10000
+		"Glacier Spawn Weight" = 4
+		#是否允许生成冰龙陵墓
+		"Generate Mausoleums" = true
+		#是否生成墓地
+		"Generate Graveyards" = true
+		#是否允许生成戈耳工神殿
+		"Generate Gorgon Temple" = true
+
+[Dragons]
+
+	[Dragons.Griefing]
+		#龙的破坏行为 - 2=不破坏, 1=只破坏弱方块, 0=默认。此值也受Minecraft生物破坏规则影响
+		#Range: 0 ~ 2
+    --------------------------Change--------------------------------
+		"Dragon Griefing" = 1
+		#驯服的龙是否遵循破坏规则
+		"Tamed Dragon Griefing" = true
+		#龙破坏方块时掉落物品的几率
+		#Range: 0.0 ~ 1.0
+    --------------------------Change--------------------------------
+		"Dragon Block Breaking Drop Chance" = 0.1
+
+	[Dragons.Attributes]
+		#龙蛋孵化所需时间（游戏刻，7200刻=6分钟）
+		#Range: > 1
+		"Dragon Egg Hatch Time" = 7200
+		#龙拍翅声音距离 - 数值越大，听到声音的距离越远
+		#Range: 0 ~ 10000
+		"Dragon Flap Noise Distance" = 4
+		#龙笛有效距离（区块数）
+		#Range: 0 ~ 10000
+		"Dragon Flute Distance" = 4
+		#龙的最大生命值，生命值按此数值缩放
+		#Range: 1.0 ~ 100000.0
+		"Dragon Health" = 500.0
+		#龙的最大攻击力，攻击力按此数值缩放
+		#Range: 1 ~ 10000
+		"Dragon Attack Damage" = 17
+		#火焰吐息伤害。按年龄缩放，5阶段龙造成此值5倍伤害
+		#Range: 0.0 ~ 10000.0
+		"Dragon Attack Damage(Fire breath)" = 2.0
+		#冰霜吐息伤害。按年龄缩放，5阶段龙造成此值5倍伤害
+		#Range: 0.0 ~ 10000.0
+		"Dragon Attack Damage(Ice breath)" = 2.5
+		#闪电吐息伤害。按年龄缩放，5阶段龙造成此值5倍伤害
+		#Range: 0.0 ~ 10000.0
+		"Dragon Attack Damage(Lightning breath)" = 3.5
+		#修改此值可减慢或加快龙/双足飞龙的飞行速度
+		#Range: 0.0 ~ 2.0
+		"Dragon Flight Speed Modifier" = 1.0
+		#如果服务器被"moved wrongly"或"moved too fast"消息轰炸，请启用。需要重启！
+    --------------------------Change--------------------------------
+		"Dragon Moved Wrongly Error Fix" = true
+
+	[Dragons.Behaviour]
+		#龙能飞行的最大高度（Y坐标）
+		#Range: > 100
+		"Max Dragon Flight Height" = 256
+		#龙探测黄金被破坏或箱子被打开的距离
+		#Range: 0 ~ 10000
+		"Dragon Gold Search Length" = 30
+		#龙的撕咬攻击是否能治愈自己
+		"Dragon Bite Heal" = true
+		#龙是否可以消失。注意：设为false可能导致严重卡顿
+		"Dragons Despawn" = true
+		#驯服的龙是否在夜间睡觉
+		"Tamed Dragons Sleep" = true
+		#龙被卡住时是否可以破坏方块。如果龙随机爆炸请关闭此选项
+		"Dragons Dig When Stuck" = true
+		#龙死亡时是否掉落头颅
+		"Dragons Drop Skull" = true
+		#龙死亡时是否掉落龙心
+		"Dragons Drop Heart" = true
+		#龙死亡时是否掉落龙血
+		"Dragons Drop Blood" = true
+		#龙的火焰/冰霜弹是否产生发射方块的二次爆炸。喜欢不公平爆炸或卡顿请设为true
+		"Explosive Dragon Breath" = false
+		#龙发现猎物的距离。增加此值可能导致卡顿
+		#Range: 1 ~ 10000
+		"Dragon Target Search Length" = 128
+		#龙能从"家"游荡的距离
+		#Range: 1 ~ 10000
+		"Dragon Wander From Home Distance" = 40
+		#龙饥饿值减少的间隔（游戏刻）
+		#Range: 1 ~ 10000
+		"Dragon Hunger Tick Rate" = 3000
+		#龙破坏方块的冷却时间（游戏刻）
+		#Range: 0 ~ 10000
+		"Dragon Block Break Cooldown" = 5
+		#村民是否会逃离龙和其他冰与火敌对生物
+		"Villagers Fear Dragons" = true
+		#动物是否会逃离龙和其他冰与火敌对生物
+		"Animals Fear Dragons" = true
+		#更智能的龙寻路系统，但更耗性能。如果觉得龙太笨请开启
+		"Intelligent Dragon Pathfinding" = false
+
+[Mobs]
+
+	[Mobs.Pixies]
+		#每区块生成精灵村的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Pixies Chance" = 60
+		#精灵村大小
+		#Range: 1 ~ 10000
+		"Pixie Village Size" = 5
+		#精灵是否可以偷玩家的东西
+		"Pixies Steal Items" = true
+
+	[Mobs.Cyclops]
+		#每区块生成独眼巨人洞穴的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Cyclops Cave Chance" = 100
+		#每区块生成流浪独眼巨人的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Wandering Cyclops Chance" = 100
+		#独眼巨人最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Cyclops Max Health" = 150.0
+		#独眼巨人探测绵羊的距离。增加此值可能导致卡顿
+		#Range: 1 ~ 10000
+		"Cyclopes Sheep Search Length" = 17
+		#独眼巨人攻击力
+		#Range: 1.0 ~ 10000.0
+		"Cyclops Attack Strength" = 15.0
+		#独眼巨人撕咬伤害
+		#Range: 1.0 ~ 10000.0
+		"Cyclops Bite Strength" = 40.0
+		#独眼巨人是否可破坏路上的原木或树叶
+		"Cyclops Griefing" = true
+
+	[Mobs.Sirens]
+		#海妖最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Siren Max Health" = 50.0
+		#海妖吸引玩家时屏幕是否变粉
+		"Use Siren Shader" = true
+		#每区块生成海妖的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Sirens Chance" = 400
+		#海妖对玩家使用歌声效果的最长时间（游戏刻），之后进入冷却
+		#Range: 100 ~ 24000
+		"Siren Max Sing Time" = 12000
+		#海妖引诱失败后的等待时间（游戏刻）
+		#Range: 100 ~ 24000
+		"Siren Time Between Songs" = 2000
+
+	[Mobs.DeathWorms]
+		#死亡蠕虫发现猎物的距离。增加此值可能导致卡顿
+		#Range: 1 ~ 10000
+		"Death Worm Target Search Length" = 64
+		#死亡蠕虫基础生命值，按大小缩放
+		#Range: 1.0 ~ 10000.0
+		"Death Worm Base Health" = 10.0
+		#死亡蠕虫基础攻击力，按大小缩放
+		#Range: 1.0 ~ 10000.0
+		"Death Worm Base Attack Strength" = 3.0
+		#野生死亡蠕虫是否可攻击怪物
+		"Death Worms Target Monsters" = true
+		#死亡蠕虫生成权重。数值越大越少见
+		#Range: 1 ~ 10000
+		"Death Worm Spawn Weight" = 30
+
+	[Mobs.Cockatrice]
+		#鸡蛇最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Cockatrice Health" = 40.0
+		#每6000刻鸡下鸡蛇蛋的几率（1/此数值）
+		#Range: > 1
+		"Cockatrice chicken Search Length" = 30
+		#鸡是否会下腐烂蛋
+		"Chickens Lay Rotten Eggs" = true
+		#是否允许鸡蛇生成
+		"Spawn Cockatrices" = true
+		#鸡蛇生成权重。数值越小越少见
+		#Range: 1 ~ 10000
+		"Cockatrice Spawn Weight" = 4
+
+	[Mobs.Stymphalians]
+		#铁翼鸟发现猎物的距离。增加此值可能导致卡顿
+		#Range: 1 ~ 10000
+		"Stymphalian Bird Target Search Length" = 64
+		#铁翼鸟羽毛消失前变成物品的几率（1/此数值）。0=永不
+		#Range: 0 ~ 10000
+		"Stymphalian Bird Feather Drop Chance" = 25
+		#铁翼鸟羽毛攻击伤害
+		#Range: 0.0 ~ 10000.0
+		"Stymphalian Bird Feather Attack Strength" = 1.0
+		#铁翼鸟认为其他鸟在同一群的距离
+		#Range: 1 ~ 10000
+		"Stymphalian Bird Flock Length" = 40
+		#铁翼鸟最大飞行高度（Y坐标）
+		#Range: > 10
+		"Max Stymphalian Bird Flight Height" = 80
+		#铁翼鸟是否可掉落铜/青铜锭和粒
+		"Stymphalian Birds drop ore dict items" = true
+		#铁翼鸟是否可攻击动物
+		"Stymphalian Birds Target Animals" = false
+		#每区块生成铁翼鸟的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Stymhphalian Bird Chance" = 100
+
+	[Mobs.Trolls]
+		#是否允许巨魔生成
+		"Spawn Trolls" = true
+		#巨魔死亡时是否掉落武器
+		"Trolls Drop Weapon" = true
+		#巨魔生成权重。数值越小越少见
+		#Range: 1 ~ 10000
+		"Troll Spawn Weight" = 40
+		#巨魔最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Troll Max Health" = 50.0
+		#巨魔攻击力
+		#Range: 1.0 ~ 10000.0
+		"Troll Attack Strength" = 10.0
+
+	[Mobs.Myrmex]
+		#蚁人女王产蛋所需时间（游戏刻）
+		#Range: 1 ~ 10000
+		"Myrmex Gestation Length" = 2500
+		#蚁人从幼虫到蛹、蛹到成虫的时间（游戏刻）
+		#Range: 1 ~ 100000
+		"Myrmex Hatch Length" = 35000
+		#每区块生成蚁人巢穴的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Myrmex Colony Gen Chance" = 150
+		#蚁人殖民地最大个体数量
+		#Range: 10 ~ 10000
+		"Myrmex Colony Max Size" = 80
+		#蚁人（工蚁）基础攻击力
+		#Range: 1.0 ~ 10000.0
+		"Myrmex Base Attack Strength" = 3.0
+		#蚁人可游荡/觅食的最大半径
+		#Range: 25 ~ 4000
+		"Myrmex Maximum Wander Radius" = 50
+		#蚁人巢穴是否忽略白天
+		"Myrmex Hive Ignore Daytime" = false
+
+	[Mobs.Amphitheres]
+		#是否允许羽蛇生成
+		"Spawn Amphitheres" = true
+		#羽蛇生成权重。数值越小越少见
+		#Range: 1 ~ 10000
+		"Amphithere Spawn Weight" = 50
+		#羽蛇探测村民受伤的距离。增加此值可能导致卡顿
+		#Range: 1 ~ 10000
+		"Amphithere Villager Search Length" = 64
+		#骑乘未驯服羽蛇的驯服时间（游戏刻）
+		#Range: 1 ~ 10000
+		"Amphithere Tame Time" = 400
+		#羽蛇飞行速度
+		#Range: 0.0 ~ 3.0
+		"Amphithere Flight Speed" = 1.75
+		#羽蛇最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Amphithere Max Health" = 50.0
+		#羽蛇攻击力
+		#Range: 1.0 ~ 10000.0
+		"Amphithere Attack Strength" = 7.0
+
+	[Mobs.SeaSerpents]
+		#每区块生成海蛇的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Sea Serpent Chance" = 250
+		#海蛇是否可破坏路上的弱方块
+		"Sea Serpent Griefing" = true
+		#海蛇基础生命值，按大小缩放
+		#Range: 1.0 ~ 10000.0
+		"Sea Serpent Base Health" = 20.0
+		#海蛇基础攻击力，按大小缩放
+		#Range: 1.0 ~ 10000.0
+		"Sea Serpent Base Attack Strength" = 4.0
+
+	[Mobs.Hippocampus]
+		#每区块生成海马的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Spawn Hippocampus Chance" = 40
+		#修改此值可减慢或加快海马游泳速度
+		#Range: 0.0 ~ 2.0
+		"Hippocampus Swim Speed Modifier" = 1.0
+
+	[Mobs.Hippogryph]
+		#是否允许狮鹫生成
+		"Spawn Hippogryphs" = true
+		#狮鹫生成权重。数值越小越少见
+		#Range: 1 ~ 10000
+		"Hippogryph Spawn Weight" = 2
+		#修改此值可减慢或加快狮鹫飞行速度
+		#Range: 0.0 ~ 2.0
+		"Hippogryph Flight Speed Modifier" = 1.0
+
+	[Mobs.Gorgons]
+		#戈耳工最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Gorgon Max Health" = 100.0
+
+	[Mobs.Others]
+		#是否允许恐惧巫妖生成
+		"Spawn Liches" = true
+		#恐惧巫妖生成权重。数值越小越少见
+		#Range: 1 ~ 10000
+		"Lich Spawn Weight" = 2
+		#恐惧巫妖生成几率。数值越大越少见
+		#Range: 1 ~ 10000
+		"Lich Spawn Chance" = 30
+		#许德拉最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Hydra Max Health" = 250.0
+		#每区块生成许德拉洞穴的几率（1/此数值）
+		#Range: 1 ~ 10000
+		"Hydra Caves Gen Chance" = 60
+		#幽灵最大生命值
+		#Range: 1.0 ~ 10000.0
+		"Ghost Max Health" = 30.0
+		#幽灵攻击力
+		#Range: 0.0 ~ 10000.0
+		"Ghost Attack Strength" = 3.0
+		#幽灵是否可从残忍PvP死亡中罕见生成
+		"Ghost Spawn from PvP deaths" = true
+		#村庄抄写员房屋生成权重。数值越小越少见
+		#Range: 0 ~ 10000
+		"Villager Scribe House Weight" = 5
+		#允许通过配置覆盖生物属性。如果其他模组修改生物属性可能需禁用
+		"Allow Attribute Overriding" = true
+
+[Items]
+	#龙钢剑默认攻击力
+	#Range: 5.0 ~ 2.147483647E9
+	"Dragonsteel Sword Base Attack Strength" = 25.0
+	#龙钢胸甲默认护甲值
+	#Range: > 7
+	"Dragonsteel Base Armor" = 12
+	#龙钢默认护甲韧性值
+	#Range: 0.0 ~ 1.7976931348623157E308
+	"Dragonsteel Base Armor Toughness" = 6.0
+	#龙钢工具默认耐久值
+	#Range: > 1
+	"Dragonsteel Base Durability" = 8000
+	#龙钢装备默认耐久值
+	#Range: > 1
+	"Dragonsteel Base Durability Equipment" = 8000
+	#禁用可移除与匠魂整合的彩蛋
+	Weezer = true
+	#使用匠魂彩蛋材料时暴击缴械几率
+	#Range: 0.0 ~ 1.0
+	"Easter Egg Tinkers Tool Disarm chance" = 0.20000000298023224
+	#召唤水晶是否可加载区块寻找龙
+	"Chunk Load Summon Crystal" = true
+	#龙骨火焰剑是否点燃攻击者
+	"Dragon Bone Fire Abilities" = true
+	#龙骨冰霜剑是否冻结攻击者
+	"Dragon Bone Ice Abilities" = true
+	#龙骨闪电剑是否雷击攻击者
+	"Dragon Bone Lightning Abilities" = true
+
+[Pathfinding]
+	#龙/蚁人寻路使用的最大线程数。寻路慢且核心多可增加
+	#Range: > 1
+	"Dragon Pathfinding Threads" = 3
+	#龙/蚁人寻路最大节点数。寻路太慢或耗资源请减少
+	#Range: > 1
+	"Dragon Max Pathfinding Nodes" = 5000
+	#启用绘制寻路节点（用木棍点击实体）
+	"Debug Pathfinding Mode" = false
+

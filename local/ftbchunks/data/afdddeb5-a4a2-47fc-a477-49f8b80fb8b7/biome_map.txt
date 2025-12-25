@@ -1,0 +1,15 @@
+#7F9 twilightforest:dark_forest
+#4A1 twilightforest:dark_forest_center
+#430 twilightforest:dense_forest
+#08A twilightforest:fire_swamp
+#712 twilightforest:firefly_forest
+#310 twilightforest:forest
+#279 twilightforest:highlands
+#0D7 twilightforest:mushroom_forest
+#679 twilightforest:oak_savannah
+#3DC minecraft:plains
+#419 twilightforest:snowy_forest
+#673 twilightforest:stream
+#7D3 twilightforest:swamp
+#144 twilightforest:thornlands
+#152 twilightforest:underground

@@ -1,0 +1,9 @@
+#.
+#为不存在的模组注册集成轨道
+#[@cui:RequiresReload:both]
+registerMissingTracks = false
+#.
+#禁用Steam 'n' Rails数据修复器。如果你的世界包含Create 0.5.1之前的单转向架，请不要启用此配置，否则它们将被摧毁
+#[@cui:RequiresReload:both]
+disableDatafixer = false
+

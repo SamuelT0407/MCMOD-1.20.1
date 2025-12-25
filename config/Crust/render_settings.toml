@@ -1,0 +1,15 @@
+# crust:render_settings.toml
+# 与世界渲染相关的杂项设置。
+
+# 类别: block_entity_BB_rendering
+# Crust 区块实体边界框渲染器的选项。
+
+  # 若为 true，则当玩家附近支持 Crust 边界框轮廓渲染的区块实体满足条件时，
+  #   在启用 ‘显示实体碰撞框’ 时将绘制其边界框。此功能主要用于调试。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  block_entity_BB_rendering.enabled = true
+
+  # 若启用方块实体边界框渲染，此值决定玩家周围用于搜索渲染边界框的方块范围半径。值为1表示仅渲染玩家所在区块。
+  # 此值同时受有效渲染距离限制。
+  # <整数> 范围：≥ 1，默认：3
+  block_entity_BB_rendering.distance = 3

@@ -1,0 +1,220 @@
+{
+  "variants": {
+    "connection_side=bottom,connection_type=belt,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=belt,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=belt,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=belt,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=belt,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=belt,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=chain,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=chain,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=chain,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=chain,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=chain,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=chain,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=none,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=none,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=none,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=none,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=none,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=bottom,connection_type=none,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=belt,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=belt,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=belt,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=belt,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=belt,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=belt,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=chain,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=chain,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=chain,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=chain,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=chain,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=chain,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=none,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=none,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=none,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=none,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=none,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=left,connection_type=none,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=belt,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=belt,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=belt,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=belt,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=belt,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=belt,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=chain,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=chain,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=chain,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=chain,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=chain,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=chain,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=none,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=none,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=none,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=none,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=none,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=right,connection_type=none,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=belt,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=belt,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=belt,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=belt,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=belt,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=belt,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=chain,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=chain,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=chain,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=chain,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=chain,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=chain,facing=west": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=none,facing=down": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=none,facing=east": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=none,facing=north": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=none,facing=south": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=none,facing=up": {
+      "model": "create:block/belt/particle"
+    },
+    "connection_side=top,connection_type=none,facing=west": {
+      "model": "create:block/belt/particle"
+    }
+  }
+}

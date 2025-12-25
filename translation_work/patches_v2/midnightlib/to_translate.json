@@ -1,0 +1,14 @@
+{
+  "midnightlib.curseforge": "[待翻译] CurseForge",
+  "midnightlib.midnightconfig.background_texture": "[待翻译] Texture of config screen backgrounds",
+  "midnightlib.midnightconfig.config_screen_list": "[待翻译] Enable Config Screen List",
+  "midnightlib.midnightconfig.enum.ConfigButton.FALSE": "[待翻译] §cNo",
+  "midnightlib.midnightconfig.enum.ConfigButton.MODMENU": "[待翻译] §bModMenu",
+  "midnightlib.midnightconfig.enum.ConfigButton.TRUE": "[待翻译] §aYes",
+  "midnightlib.midnightconfig.title": "[待翻译] MidnightLib Config",
+  "midnightlib.modrinth": "[待翻译] Modrinth",
+  "midnightlib.overview.title": "[待翻译] MidnightConfig Overview",
+  "midnightlib.wiki": "[待翻译] Wiki",
+  "modmenu.descriptionTranslation.midnightlib": "[待翻译] Common Library for Team MidnightDust's mods.\nProvides a config api, automatic integration with other mods, common utils, and cosmetics.",
+  "modmenu.summaryTranslation.midnightlib": "[待翻译] Common Library for Team MidnightDust's mods."
+}

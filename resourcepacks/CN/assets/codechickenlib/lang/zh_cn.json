@@ -1,0 +1,12 @@
+{
+  "ccl.commands.killall.fail.player": "你不能使用此命令杀死玩家。",
+  "ccl.energy_bar.capacity": "容量：",
+  "ccl.energy_bar.energy_storage": "能量存储",
+  "ccl.energy_bar.rf": "RF",
+  "ccl.energy_bar.stored": "已存储：",
+  "ccl.fluid_tank.capacity": "容量：",
+  "ccl.fluid_tank.contains": "包含：",
+  "ccl.fluid_tank.fluid_storage": "流体存储",
+  "ccl.fluid_tank.mb": "mB",
+  "ccl.fluid_tank.stored": "已存储："
+}

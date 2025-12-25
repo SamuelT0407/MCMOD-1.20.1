@@ -1,0 +1,16 @@
+{
+  "ftbchunks.team_prop_defaults": "[待翻译] Team Property Defaults",
+  "ftbchunks.team_prop_defaults.def_allow_explosions": "[待翻译] Allow Explosion Damage",
+  "ftbchunks.team_prop_defaults.def_block_edit": "[待翻译] Block Edit Mode",
+  "ftbchunks.team_prop_defaults.def_block_edit_interact": "[待翻译] Block Edit/Interact Mode",
+  "ftbchunks.team_prop_defaults.def_block_interact": "[待翻译] Block Interact Mode",
+  "ftbchunks.team_prop_defaults.def_claim_visibility": "[待翻译] Claim Visibility",
+  "ftbchunks.team_prop_defaults.def_entity_attack": "[待翻译] Non-living Entity Attack Mode",
+  "ftbchunks.team_prop_defaults.def_entity_interact": "[待翻译] Entity Interact Mode",
+  "ftbchunks.team_prop_defaults.def_fake_player_ids": "[待翻译] Allow Fake Players by ID",
+  "ftbchunks.team_prop_defaults.def_fake_players": "[待翻译] Allow All Fake Players",
+  "ftbchunks.team_prop_defaults.def_mob_griefing": "[待翻译] Allow Mob Griefing Actions",
+  "ftbchunks.team_prop_defaults.def_named_fake_players": "[待翻译] Named Fake Players",
+  "ftbchunks.team_prop_defaults.def_player_visibility": "[待翻译] Location Visibility",
+  "ftbchunks.team_prop_defaults.def_pvp": "[待翻译] Allow PvP Combat"
+}

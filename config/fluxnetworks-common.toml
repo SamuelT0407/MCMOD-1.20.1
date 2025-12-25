@@ -1,0 +1,22 @@
+#大多数配置已移至 /serverconfig/fluxnetworks-server.toml
+#复制到 /defaultconfig/fluxnetworks-server.toml 用于整合包
+placeholder = true
+
+#The One Probe集成
+[OneProbe]
+	#显示：网络名称、实时传输速率和内部缓冲区
+	enableOneProbeBasicInfo = true
+	#显示：传输限制和优先级等
+	enableOneProbeAdvancedInfo = true
+	#仅在潜行时显示高级信息
+	enableOneProbeSneaking = true
+
+#集成
+[integration]
+	#是否在安装了GregTech CE Unofficial Modern时启用GTCEU集成。
+	#4 FE = 1 GTEU，不可配置。
+	#注意EU到FE的转换由GTCEU提供，而非Flux Networks。
+	#确保已启用GTCEU的nativeEUToPlatformNative且euToPlatformRatio = 4。
+	#需要重启游戏/服务器才能重载此设置。
+	enableGTCEU = true
+

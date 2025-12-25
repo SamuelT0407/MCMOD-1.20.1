@@ -1,0 +1,65 @@
+#.
+#当仿制方块收到方块更新时将其迁移到Create: Copycats+
+migrateCopycatsOnBlockUpdate = true
+#.
+#当仿制方块实体初始化时将其迁移到Create: Copycats+
+migrateCopycatsOnInitialize = true
+
+#.
+#启用/禁用功能。服务器的值会覆盖客户端
+[features]
+	#.
+	kinetic_bridge = true
+	fluid_vessel = true
+	cross_connector = true
+	item_silo = true
+	inverted_clutch = true
+	empty_fan_catalyst = true
+	parallel_gearbox = true
+	redstone_link_wildcard = true
+	kinetic_battery = true
+	inventory_access_port = true
+	centrifugal_clutch = true
+	copycat_slab = true
+	overstress_clutch = true
+	brake = true
+	copycat_block = true
+	copycat_fence_gate = true
+	copycat_stairs = true
+	large_crank_wheel = true
+	brass_gearbox = true
+	copycat_vertical_step = true
+	copycat_wall = true
+	six_way_gearbox = true
+	crank_wheel = true
+	encased_chain_cogwheel = true
+	sequenced_pulse_generator = true
+	freewheel_clutch = true
+	shear_pin = true
+	inverted_gearshift = true
+	linked_transmitter = true
+	copycat_beam = true
+	copycat_board = true
+	inventory_bridge = true
+	copycat_fence = true
+
+#.
+#启用/禁用功能类别。禁用类别会隐藏所有相关功能。服务器的值会覆盖客户端
+[feature_categories]
+	#.
+	#.
+	#所有动力组件，如齿轮箱和手摇曲柄
+	kinetic = true
+	#.
+	#所有红石组件，如链接发射器和序列脉冲发生器
+	redstone = true
+	#.
+	#所有与物品和流体运输相关的组件
+	logistics = true
+	#.
+	#所有仿制方块（安装Create: Copycats+以升级）
+	copycats = true
+	#.
+	#所有建筑调色板方块
+	palette = true
+

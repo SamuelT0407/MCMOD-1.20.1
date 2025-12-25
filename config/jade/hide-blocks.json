@@ -1,0 +1,6 @@
+{
+  "__comment": "这是Jade的方块黑名单。可以在\"values\"列表中添加注册ID。重启游戏以应用更改。",
+  "values": [
+    "minecraft:barrier"
+  ]
+}

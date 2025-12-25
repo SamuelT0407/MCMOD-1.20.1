@@ -1,0 +1,21 @@
+{
+  "block.laserio.laser_connector_advanced": "高级激光连接器",
+  "item.laserio.card_cloner": "卡片克隆器",
+  "item.laserio.filter_nbt": "NBT过滤器",
+  "laserio.tooltip.item.card.Filter": "过滤器：",
+  "laserio.tooltip.item.card.None": "无",
+  "laserio.tooltip.item.card.Overclockers": "超频器：",
+  "laserio.tooltip.item.card.mode.SENSOR": "传感器",
+  "screen.laserio.alpha": "透明度",
+  "screen.laserio.and": "与",
+  "screen.laserio.apply": "应用",
+  "screen.laserio.blue": "蓝色",
+  "screen.laserio.channel": "频道：",
+  "screen.laserio.green": "绿色",
+  "screen.laserio.or": "或",
+  "screen.laserio.red": "红色",
+  "screen.laserio.redstonechannel": "红石频道：",
+  "screen.laserio.sensor": "传感器",
+  "screen.laserio.settings": "设置",
+  "screen.laserio.wrench": "扳手透明度"
+}

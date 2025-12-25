@@ -1,0 +1,13 @@
+
+[Client]
+	#即使聊天窗口打开时也在HUD上显示探险家指南针信息。
+	displayWithChatOpen = true
+	#尝试在修复未本地化名称之前翻译结构名称。并非所有结构都有可用的翻译。
+	translateStructureNames = true
+	#HUD上渲染信息的行偏移量。
+	#Range: 0 ~ 50
+	overlayLineOffset = 1
+	#HUD上渲染信息的位置。例如：LEFT（左），RIGHT（右）
+	#Allowed Values: LEFT, RIGHT
+	overlaySide = "LEFT"
+

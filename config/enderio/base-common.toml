@@ -1,0 +1,93 @@
+
+[blocks]
+	#防爆方块的爆炸抗性
+	explosionResistance = 1200.0
+	#玄钢梯子提供的速度加成
+	darkSteelLadderBoost = 0.15
+
+	[blocks.brokenSpawner]
+		#刷怪笼掉落破碎刷怪笼的几率
+		dropChance = 1.0
+
+[enchantments]
+
+	[enchantments.autoSmelt]
+		maxCost = 60
+		minCost = 15
+
+	[enchantments.repellent]
+		maxLevel = 4
+		maxCostBase = 10
+		maxCostPerLevel = 10
+		minCostBase = 10
+		minCostPerLevel = 5
+		chanceBase = 0.35
+		chancePerLevel = 0.1
+		rangeBase = 8.0
+		rangePerLevel = 8.0
+		nonPlayerChance = 0.75
+
+	[enchantments.shimmer]
+		maxCost = 100
+		minCost = 1
+
+	[enchantments.soulBound]
+		maxCost = 60
+		minCost = 16
+
+	[enchantments.witheringBlade]
+		maxCost = 100
+		minCost = 1
+
+	[enchantments.witheringArrow]
+		maxCost = 100
+		minCost = 1
+
+	[enchantments.witheringBolt]
+		maxCost = 100
+		minCost = 1
+
+	[enchantments.xpBoost]
+		maxCostBase = 30
+		maxCostPerLevel = 10
+		minCostBase = 1
+		minCostPerLevel = 10
+
+[items]
+
+	[items.food]
+		#末影零食传送玩家的几率
+		enderioChance = 0.3
+		#末影零食传送的范围
+		enderioRange = 16.0
+
+	[items.electromagnet]
+		energyUse = 1
+		maxEnergy = 100000
+		range = 5
+		maxItems = 20
+
+	[items.levitationstaff]
+		energyUse = 1
+		maxEnergy = 10000
+
+	[items.travelling]
+		#Range: 4 ~ 512
+		blinkRange = 24
+		#Range: 0 ~ 1200
+		disabledTime = 5
+		energyUse = 1000
+		maxEnergy = 100000
+		#以下配置值仅在加载EIOMachines时使用
+		#Range: 4 ~ 512
+		itemToBlockRange = 192
+		#Range: 4 ~ 512
+		blockToBlockRange = 96
+
+[grainsOfInfinity]
+	#火焰掉落无限之粒时是否发出声音？
+	makesSound = true
+	#火焰需要存在多久（游戏刻）才能生成无限之粒？
+	#Range: 1 ~ 1000
+	fireMinAge = 260
+

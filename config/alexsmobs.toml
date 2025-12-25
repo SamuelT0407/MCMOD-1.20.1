@@ -1,0 +1,448 @@
+[general]
+	#玩家首次进入世界时是否自动获得一本《动物词典》。
+	giveBookOnStartup = true
+	#熔岩视觉药水的熔岩透明度。
+	#范围: 0.01 ~ 1.0
+	lavaVisionOpacity = 0.65
+	#是否禁用熔岩视觉药水的某些特性。如果开启着色器（Shaders）时出现画面问题，请启用此项。
+	shadersCompat = false
+	#香蕉是否会从带有 #alexsmobs:drops_bananas 标签的方块中掉落。
+	bananasDropFromLeaves = true
+	#破坏叶子时掉落香蕉的概率（1/该数值）。时运附魔会自动计入概率。
+	#范围: > 0
+	bananaChance = 200
+	#蜘蛛是否会攻击苍蝇。
+	spidersAttackFlies = true
+	#狼是否会攻击驼鹿。
+	wolvesAttackMoose = true
+	#北极熊是否会攻击海豹。
+	polarBearsAttackSeals = true
+	#猫、豹猫和狐狸是否会攻击跳鼠。
+	catsAndFoxesAttackJerboas = true
+	#海豚是否会攻击飞鱼。
+	dolphinsAttackFlyingFish = true
+	#是否允许通过右键点击熔岩源来装入玻璃瓶。
+	lavaBottleEnabled = true
+	#骨蛇是中立的还是敌对的。
+	neutralBoneSerpents = false
+	#拟态魔方（Mimicubes）的生成是仅限于末地城结构，还是根据其生物群系配置在指定群系生成。
+	mimicubeSpawnInEndCity = true
+	#拟态奶油（Mimicream）是否可以用于复制物品。
+	mimicreamRepair = true
+	#拟态奶油无法复制的物品黑名单。例如："minecraft:stone_sword", "alexsmobs:blood_sprayer"
+	mimicreamBlacklist = ["alexsmobs:blood_sprayer", "alexsmobs:hemolymph_blaster"]
+	#野生浣熊是否会从箱子中偷取食物。
+	raccoonStealFromChests = true
+	#野生乌鸦是否会从耕地中偷取农作物。
+	crowsStealCrops = true
+	#鱼油是否给予玩家特殊的漂浮（Meme级别）效果。
+	fishOilMeme = true
+	#灵魂秃鹫（Soul Vulture）的生成是仅限于下界化石结构，还是根据其生物群系配置在指定群系生成。
+	soulVultureSpawnOnFossil = true
+	#金合欢花是否会从带有 #alexsmobs:drops_acacia_blossoms 标签的方块中掉落。
+	acaciaBlossomsDropFromLeaves = true
+	#破坏叶子时掉落金合欢花的概率（1/该数值）。时运附魔会自动计入概率。
+	#范围: > 0
+	acaciaBlossomChance = 130
+	#流浪商人是否会出售金合欢花、蚊子幼虫、鳄鱼蛋等物品。
+	wanderingTraderOffers = true
+	#角菇（Mungus）对环境的改变类型：0 = 不改变。1 = 仅改变方块，不改变区块群系。2 = 同时改变方块和区块群系。
+	#范围: 0 ~ 2
+	mungusBiomeTransformationType = 2
+	#角菇对应的蘑菇种类、群系转换和表面方块列表。每组以 | 分隔。格式：蘑菇注册名|群系注册名|地表方块注册名。
+	mungusBiomeMatches = ["minecraft:red_mushroom|minecraft:mushroom_fields|minecraft:mycelium", "minecraft:brown_mushroom|minecraft:mushroom_fields|minecraft:mycelium", "minecraft:crimson_fungus|minecraft:crimson_forest|minecraft:crimson_nylium", "minecraft:warped_fungus|minecraft:warped_forest|minecraft:warped_nylium"]
+	#古斯特（Guster）的生成是否仅限于雨天/雷雨天。
+	limitGusterSpawnsToWeather = true
+	#绯红蚊子在攻击角菇或指定生物后是否会变异为诡异莫斯科（Warped Moscos）。
+	warpedMoscoTransformation = true
+	#除了角菇之外，能触发绯红蚊子变异的额外生物列表。例如："minecraft:mooshroom", "alexsmobs:warped_toad"
+	warpedMoscoMobTriggers = [""]
+	#是否启用踏浪板（Straddleboard）的附魔。
+	straddleboardEnchants = true
+	#鸸鹋是否会攻击骷髅。
+	emuTargetSkeletons = true
+	#鸸鹋护腿闪避弹射物攻击的百分比概率。
+	#范围: 0.0 ~ 1.0
+	emuPantsDodgeChance = 0.45
+	#抹香鲸在愤怒时是否可以破坏木质方块。
+	cachalotDestruction = true
+	#抹香鲸相对于其他动物的音量。注：在现实中它们是声音最大的动物。如果你觉得它们的咔哒声很吵，请调低此项。
+	#范围: 0.0 ~ 10.0
+	cachalotVolume = 3.0
+	#切叶蚁每带回一片叶子，真菌生长的百分比概率。
+	#范围: 0.0 ~ 1.0
+	leafcutterAntFungusGrowChance = 0.3
+	#当切叶蚁群成员少于最大数量的一半时，需要喂食多少次叶子才能补充一只工蚁。
+	#范围: 2 ~ 100000
+	leafcutterAntRepopulateFeedings = 25
+	#切叶蚁巢穴内允许存在的蚂蚁实体最大数量。
+	#范围: 2 ~ 100000
+	leafcutterAntColonySize = 10
+	#切叶蚁收割时破坏叶子方块的百分比概率。设置为0则它们不会破坏任何方块。
+	#范围: 0.0 ~ 1.0
+	leafcutterAntBreakLeavesChance = 0.2
+	#如果老鹰在受控飞行期间卡住，使其传送到主人身边。在使用 Optifine 时非常有用，因为该模组常导致驯鹰系统出错。
+	falconryTeleportsBack = false
+	#使蛛蜂（Tarantula Hawks）免疫火伤害，如果你想让它们在下界生成，这项设置非常完美。
+	fireproofTarantulaHawk = false
+	#允许通过“神秘蠕虫”物品召唤虚空蠕虫（Void Worm）的维度列表。
+	voidWormSpawnDimensions = ["minecraft:the_end"]
+	#虚空蠕虫的所有伤害缩放系数。
+	#范围: 0.0 ~ 100.0
+	voidWormDamageModifier = 1.0
+	#虚空蠕虫 Boss 的最大生命值。
+	#范围: 0.0 ~ 1000000.0
+	voidWormMaxHealth = 160.0
+	#虚空蠕虫 Boss 是否可以通过“神秘蠕虫”召唤。
+	voidWormSummonable = true
+	#海鸥是否会从玩家的快捷栏中偷取食物。
+	seagullStealing = true
+	#海鸥无法从玩家手中偷取的物品黑名单。
+	seagullStealingBlacklist = []
+	#悬挂药水（Clinging Potion）效果是否会导致屏幕翻转。警告：可能引起晕眩感。
+	clingingFlipEffect = false
+	#通过猪灵交易获得猪灵靴子（Pigshoes）的百分比概率。设置为0禁用。
+	#范围: 0.0 ~ 1.0
+	tusklinShoesBarteringChance = 0.02500000037252903
+	#彩虹玻璃方块上彩虹图案的视觉缩放。数值越大 = 图案越大。
+	#范围: 1.0 ~ 10000.0
+	rainbowGlassFidelity = 16.0
+	#兔子在喂食角菇孢子后是否会变异为兔角菇（Bunfungus）。
+	bunfungusTransformation = true
+	#是否将 Alex's Mobs 的物品添加到原版的战利品箱子中。
+	addLootToChests = true
+	#无法放入嬗变台（Transmuting Table）的物品黑名单。
+	transmutationBlacklist = ["minecraft:beacon"]
+	#如果为 true，嬗变台将无法学习新物品，只能提供战利品表中的选项。
+	limitTransmutingToLootTables = false
+	#嬗变台在被破坏时是否会发生爆炸。
+	transmutingTableExplodes = true
+	#在嬗变台中每次嬗变一组（stack）物品所需的经验等级。
+	#范围: 0 ~ 100000
+	transmutingExperienceCost = 3
+	#嬗变物品时基于堆叠大小对数计算的步进值，用于决定其在未来嬗变候选中出现的权重。数字越大 = 越容易再次出现。
+	#范围: 1.0 ~ 10000.0
+	transmutingWeightAddStep = 3.0
+	#当一个物品被选为嬗变结果时失去的权重步进值。为了平衡，请保持此数值高于上方数值。数字越大 = 多次嬗变后该物品出现的概率越低。
+	#范围: 1.0 ~ 10000.0
+	transmutingWeightRemoveStep = 4.0
+	#监守者哨兵（Skreechers）在适当时是否可以召唤新的监守者。
+	skreechersSummonWarden = true
+	#当地底挖掘者（Underminer）被玩家接近时，导致其消失的距离（方块单位）。
+	#范围: 1.0 ~ 10000.0
+	underminerDisappearDistance = 8.0
+
+[spawning]
+	#生成权重，添加到每个生物群系的生物池中。数字越大 = 生成几率越高。0 = 禁用生成。
+	#范围: 0 ~ 1000
+	grizzlyBearSpawnWeight = 8
+	#开启生物生成的随机判定机会。数字越大 = 生成几率越低。
+	#范围: > 0
+	grizzlyBearSpawnRolls = 0
+	#走鹃生成权重
+	roadrunnerSpawnWeight = 9
+	roadrunnerSpawnRolls = 1
+	#骨蛇生成权重
+	boneSerpentSpawnWeight = 8
+	boneSeprentSpawnRolls = 40
+	#瞪羚生成权重
+	gazelleSpawnWeight = 40
+	gazelleSpawnRolls = 0
+	#鳄鱼生成权重
+	crocodileSpawnWeight = 20
+	crocSpawnRolls = 1
+	#苍蝇生成权重
+	flySpawnWeight = 3
+	flySpawnRolls = 1
+	#蜂鸟生成权重
+	hummingbirdSpawnWeight = 19
+	hummingbirdSpawnRolls = 1
+	#虎鲸生成权重
+	orcaSpawnWeight = 2
+	orcaSpawnRolls = 6
+	#太阳鸟生成权重
+	sunbirdSpawnWeight = 5
+	sunbirdSpawnRolls = 6
+	#大猩猩生成权重
+	gorillaSpawnWeight = 25
+	gorillaSpawnRolls = 0
+	#绯红蚊子生成权重
+	crimsonMosquitoSpawnWeight = 15
+	crimsonMosquitoSpawnRolls = 0
+	#响尾蛇生成权重
+	rattlesnakeSpawnWeight = 12
+	rattlesnakeSpawnRolls = 0
+	#末影熊虫生成权重
+	endergradeSpawnWeight = 10
+	endergradeSpawnRolls = 0
+	#锤头鲨生成权重
+	hammerheadSharkSpawnWeight = 8
+	hammerheadSharkSpawnRolls = 1
+	#龙虾生成权重
+	lobsterSpawnWeight = 7
+	lobsterSpawnRolls = 0
+	#科莫多巨蜥生成权重
+	komodoDragonSpawnWeight = 16
+	komodoDragonSpawnRolls = 1
+	#卷尾猴生成权重
+	capuchinMonkeySpawnWeight = 28
+	capuchinMonkeySpawnRolls = 0
+	#穴居蜈蚣生成权重
+	caveCentipedeSpawnWeight = 8
+	caveCentipedeSpawnRolls = 1
+	#诡异蟾蜍生成权重
+	warpedToadSpawnWeight = 30
+	warpedToadSpawnRolls = 0
+	#驼鹿生成权重
+	mooseSpawnWeight = 9
+	mooseSpawnRolls = 0
+	#拟态魔方生成权重
+	mimicubeSpawnWeight = 40
+	mimicubeSpawnRolls = 0
+	#浣熊生成权重
+	raccoonSpawnWeight = 10
+	raccoonSpawnRolls = 0
+	#水滴鱼生成权重
+	blobfishSpawnWeight = 30
+	blobfishSpawnRolls = 0
+	#海豹生成权重
+	sealSpawnWeight = 20
+	sealSpawnRolls = 0
+	#蟑螂生成权重
+	cockroachSpawnWeight = 4
+	cockroachSpawnRolls = 0
+	#鲸头鹳生成权重
+	shoebillSpawnWeight = 10
+	shoebillSpawnRolls = 0
+	#大象生成权重
+	elephantSpawnWeight = 30
+	elephantSpawnRolls = 0
+	#灵魂秃鹫生成权重
+	soulVultureSpawnWeight = 30
+	soulVultureSpawnRolls = 0
+	#雪豹生成权重
+	snowLeopardSpawnWeight = 18
+	snowLeopardSpawnRolls = 0
+	#幽灵生成权重
+	spectreSpawnWeight = 10
+	spectreSpawnRolls = 5
+	#乌鸦生成权重
+	crowSpawnWeight = 10
+	crowSpawnRolls = 0
+	#大鳄龟生成权重
+	alligatorSnappingTurtleSpawnWeight = 20
+	alligatorSnappingTurtleSpawnRolls = 1
+	#角菇生成权重
+	mungusSpawnWeight = 4
+	mungusSpawnRolls = 1
+	#雀尾螳螂虾生成权重
+	mantisShrimpSpawnWeight = 15
+	mantisShrimpSpawnRolls = 0
+	#古斯特生成权重
+	gusterSpawnWeight = 35
+	gusterSpawnRolls = 0
+	#诡异莫斯科生成权重。注意：默认情况下它不在任何群系自然生成。
+	warpedMoscoSpawnWeight = 1
+	warpedMoscoSpawnRolls = 1000
+	#炽足兽骑手生成权重
+	straddlerSpawnWeight = 70
+	straddlerSpawnRolls = 0
+	#炽足小兽生成权重
+	stradpoleSpawnWeight = 10
+	stradpoleSpawnRolls = 3
+	#鸸鹋生成权重
+	emuSpawnWeight = 20
+	emuSpawnRolls = 0
+	#鸭嘴兽生成权重
+	platypusSpawnWeight = 20
+	platypusSpawnRolls = 0
+	#掉头熊生成权重
+	dropbearSpawnWeight = 19
+	dropbearSpawnRolls = 1
+	#袋獾生成权重
+	tasmanianDevilSpawnWeight = 10
+	tasmanianDevilSpawnRolls = 0
+	#袋鼠生成权重
+	kangarooSpawnWeight = 25
+	kangarooSpawnRolls = 0
+	#抹香鲸生成权重
+	cachalotWhaleSpawnWeight = 2
+	cachalotWhaleSpawnRolls = 0
+	#末影噬菌体生成权重
+	enderiophageSpawnWeight = 4
+	enderiophageSpawnRolls = 2
+	#白头海雕生成权重
+	baldEagleSpawnWeight = 15
+	baldEagleSpawnRolls = 0
+	#老虎生成权重
+	tigerSpawnWeight = 30
+	tigerSpawnRolls = 0
+	#蛛蜂生成权重
+	tarantulaHawkSpawnWeight = 6
+	tarantulaHawkSpawnRolls = 1
+	#虚空蠕虫生成权重
+	voidWormSpawnWeight = 0
+	voidWormSpawnRolls = 0
+	#皱鳃鲨生成权重
+	frilledSharkSpawnWeight = 11
+	frilledSharkSpawnRolls = 0
+	#拟态章鱼生成权重
+	mimicOctopusSpawnWeight = 9
+	mimicOctopusSpawnRolls = 0
+	#海鸥生成权重
+	seagullSpawnWeight = 21
+	seagullSpawnRolls = 0
+	#霜行者生成权重
+	froststalkerSpawnWeight = 20
+	froststalkerSpawnRolls = 0
+	#獠牙猪生成权重
+	tusklinSpawnWeight = 18
+	tusklinSpawnRolls = 0
+	#熔岩巨兽生成权重
+	laviathanSpawnWeight = 15
+	laviathanSpawnRolls = 1
+	#宇宙之口生成权重
+	cosmawSpawnWeight = 9
+	cosmawSpawnRolls = 0
+	#巨嘴鸟生成权重
+	toucanSpawnWeight = 23
+	toucanSpawnRolls = 0
+	#鬃狼生成权重
+	manedWolfSpawnWeight = 8
+	manedWolfSpawnRolls = 0
+	#森蚺生成权重
+	anacondaSpawnWeight = 12
+	anacondaSpawnRolls = 0
+	#食蚁兽生成权重
+	anteaterSpawnWeight = 7
+	anteaterSpawnRolls = 0
+	#滚石甲虫生成权重
+	rockyRollerSpawnWeight = 60
+	rockyRollerSpawnRolls = 0
+	#扶郎花灵生成权重
+	flutterSpawnWeight = 13
+	flutterSpawnRolls = 0
+	#狮尾猴生成权重
+	geladaMonkeySpawnWeight = 5
+	geladaMonkeySpawnRolls = 0
+	#跳鼠生成权重
+	jerboaSpawnWeight = 12
+	jerboaSpawnRolls = 2
+	#泥龟生成权重
+	terrapinSpawnWeight = 4
+	terrapinSpawnRolls = 0
+	#栉水母生成权重
+	combJellySpawnWeight = 5
+	combJellySpawnRolls = 1
+	#宇宙鳕鱼生成权重
+	cosmicCodSpawnWeight = 5
+	cosmicCodSpawnRolls = 0
+	#兔角菇生成权重
+	bunfungusSpawnWeight = 3
+	bunfungusSpawnRolls = 0
+	#野牛生成权重
+	bisonSpawnWeight = 9
+	bisonSpawnRolls = 0
+	#大王乌贼生成权重
+	giantSquidSpawnWeight = 3
+	giantSquidSpawnRolls = 0
+	#魔鳉生成权重。注意：此生物默认仅限一个区块生成。
+	devilsHolePupfishSpawnWeight = 23
+	devilsHolePupfishSpawnRolls = 0
+	#鲶鱼生成权重
+	catfishSpawnWeight = 4
+	catfishSpawnRolls = 2
+	#飞鱼生成权重
+	flyingFishSpawnWeight = 8
+	flyingFishSpawnRolls = 0
+	#骷髅海盗生成权重
+	skelewagSpawnWeight = 15
+	skelewagSpawnRolls = 0
+	#馒头蛙生成权重
+	rainFrogSpawnWeight = 10
+	rainFrogSpawnRolls = 0
+	#林鸱生成权重
+	potooSpawnWeight = 15
+	potooSpawnRolls = 0
+	#弹涂鱼生成权重
+	mudskipperSpawnWeight = 28
+	mudskipperSpawnRolls = 0
+	#犀牛生成权重
+	rhinocerosSpawnWeight = 24
+	rhinocerosSpawnRolls = 0
+	#蜜袋鼯生成权重
+	sugarGliderSpawnWeight = 15
+	sugarGliderSpawnRolls = 0
+	#远见者生成权重
+	farseerSpawnWeight = 30
+	farseerSpawnRolls = 0
+	#监守者哨兵生成权重
+	skreecherSpawnWeight = 10
+	skreecherSpawnRolls = 1
+	#地底挖掘者生成权重
+	underminerSpawnWeight = 50
+	underminerSpawnRolls = 1
+	#低语者生成权重
+	murmurSpawnWeight = 5
+	murmurSpawnRolls = 1
+	#臭鼬生成权重
+	skunkSpawnWeight = 7
+	skunkSpawnRolls = 0
+	#香蕉蛞蝓生成权重
+	bananaSlugSpawnWeight = 14
+	bananaSlugSpawnRolls = 0
+	#冠蓝鸦生成权重
+	blueJaySpawnWeight = 16
+	blueJaySpawnRolls = 0
+	#凯门鳄生成权重
+	caimanSpawnWeight = 29
+	caimanSpawnRolls = 0
+	#鲎生成权重
+	triopsSpawnWeight = 8
+	triopsSpawnRolls = 0
+
+[uniqueSpawning]
+	#穴居蜈蚣可以生成的最大高度
+	#范围: -64 ~ 320
+	caveCentipedeSpawnHeight = 0
+	#水滴鱼可以生成的最大高度
+	#范围: -64 ~ 320
+	blobfishSpawnHeight = 25
+	#是否允许搁浅的抹香鲸在雷雨天出现在沙滩上。
+	beachedCachalotWhales = true
+	#每次尝试生成搁浅抹香鲸失败后，增加的百分比概率。数值越高 = 生成越多。
+	#范围: 0 ~ 100
+	beachedCachalotWhaleSpawnChance = 5
+	#尝试生成搁浅抹香鲸之间的延迟（以游戏刻为单位）。默认是一个游戏日。机制类似于流浪商人。
+	#范围: > 0
+	beachedCachalotWhaleSpawnDelay = 24000
+	#每个区块生成切叶蚁巢穴的百分比概率。设置为0禁用。
+	#范围: 0.0 ~ 1.0
+	leafcutterAnthillSpawnChance = 0.004999999888241291
+	#狮尾猴可以生成的最小高度
+	#范围: -64 ~ 320
+	geladaMonkeySpawnRolls = 0
+	#是否将所有魔鳉的生成限制在一个区块内（类似于现实生活），还是只遵循其普通生成配置。
+	restrictPupfishSpawns = true
+	#魔鳉生成区块距离世界出生点(0, 0)的最大距离（方块单位）。
+	#范围: 2 ~ 1000000000
+	pupfishChunkSpawnDistance = 2000
+	#是否将所有骷髅海盗的生成限制在沉船结构。
+	restrictSkelewagSpawns = true
+	#是否将所有远见者的生成限制在世界边界附近。
+	restrictFarseerSpawns = true
+	#是否将所有地底挖掘者的生成限制在废弃矿井。
+	restrictUnderminerSpawns = true
+	#远见者在距离世界边界多少范围内可以生成。
+	#范围: 2 ~ 1000000000
+	farseerBorderSpawnDistance = 100
+	#低语者可以生成的最大高度
+	#范围: -64 ~ 320
+	murmurSpawnHeight = -30
+
+[dangerZone]
+	#已经过了这么久...（彩蛋设置）
+	superSecretSettings = false
+	#某些生物（大象、切叶蚁、野牛等）在寻路时应使用的 CPU 核心数。数字越大 = 对 TPS 的影响越小。
+	#范围: 1 ~ 100
+	pathfindingThreads = 5

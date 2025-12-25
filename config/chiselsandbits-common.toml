@@ -1,0 +1,22 @@
+
+[help]
+	#是否在提示中启用帮助
+	enabled-in-tooltips = true
+
+[performance]
+
+	[performance.caches]
+
+		[performance.caches.sizes]
+			#碰撞箱缓存大小
+			#Range: 0 ~ 9223372036854775807
+			collision-boxes = 10000
+			#类元数据缓存大小
+			#Range: 0 ~ 9223372036854775807
+			class-metadata = 10000
+
+	[performance.saving]
+		#保存所用线程数
+		#Range: 1 ~ 12
+		thread-count = 6
+

@@ -1,0 +1,10 @@
+
+[general]
+	#是否在主菜单显示龙
+	# ----------------Change----------------
+	"Custom main menu" = false
+	#如果为true，骑乘龙时自动切换到第三人称视角。
+	"Auto 3rd person when riding dragon" = true
+	#是否在图鉴中使用原版字体
+	"Use Vanilla Font" = false
+

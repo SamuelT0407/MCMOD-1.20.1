@@ -1,0 +1,123 @@
+{
+  "general": {
+    "unsupportedDeveloperTools": false,
+    "matterCannonBlockDamage_comment": "允许物质炮破坏方块",
+    "matterCannonBlockDamage": true,
+    "tinyTntBlockDamage_comment": "允许小型TNT破坏方块",
+    "tinyTntBlockDamage": true,
+    "channels_comment": "更改AE2中线缆提供的频道容量",
+    "channels": "default",
+    "spatialAnchorEnableRandomTicks_comment": "空间锚是否强制随机区块刻和实体生成",
+    "spatialAnchorEnableRandomTicks": true
+  },
+  "automation": {
+    "formationPlaneEntityLimit": 128
+  },
+  "facades": {
+    "allowBlockEntities_comment": "不支持：允许将方块实体作为包层白名单。可能正常工作、有渲染问题或损坏存档。风险自负！",
+    "allowBlockEntities": false
+  },
+  "craftingCPU": {
+    "craftingCalculationTimePerTick": 5,
+    "craftingSimulatedExtraction_comment": "true时：开始合成任务计算时模拟提取网络的所有内容。false时：使用缓存的可用内容列表（与终端相同）。启用可能效果更好，但会显著降低性能",
+    "craftingSimulatedExtraction": false
+  },
+  "crafting": {
+    "disassemblyCrafting_comment": "允许手持合成单元按Shift右键拆解",
+    "disassemblyCrafting": true,
+    "growthAccelerator_comment": "水晶催生器两次加速之间的刻数",
+    "growthAccelerator": 10
+  },
+  "spatialio": {
+    "spatialPowerMultiplier": 1250.0,
+    "spatialPowerExponent": 1.35
+  },
+  "logging": {
+    "blockUpdateLog": false,
+    "packetLog": false,
+    "craftingLog": false,
+    "debugLog": false,
+    "gridLog": false,
+    "chunkLoggerTrace_comment": "为区块加载调试命令启用堆栈跟踪日志",
+    "chunkLoggerTrace": false
+  },
+  "battery": {
+    "chargerChargeRate_comment": "充电器充电速率因子，应用于被充电物品的充电速率。2表示充电速度加倍，0.5表示减半",
+    "chargerChargeRate": 1.0,
+    "wirelessTerminal": 1600000,
+    "chargedStaff": 8000,
+    "entropyManipulator": 200000,
+    "portableCell": 20000,
+    "colorApplicator": 20000,
+    "matterCannon": 200000
+  },
+  "worldGen": {
+    "spawnPressesInMeteorites": true,
+    "spawnFlawlessOnly": false
+  },
+  "wireless": {
+    "wirelessBaseCost": 8.0,
+    "wirelessCostMultiplier": 1.0,
+    "wirelessBaseRange": 16.0,
+    "wirelessBoosterRangeMultiplier": 1.0,
+    "wirelessBoosterExp": 1.5,
+    "wirelessHighWirelessCount": 64.0,
+    "wirelessTerminalDrainMultiplier": 1.0
+  },
+  "PortableCells": {
+    "allowDisassembly_comment": "允许使用Shift+右键将便携式单元拆解为配方原料",
+    "allowDisassembly": true
+  },
+  "PowerRatios": {
+    "ForgeEnergy": 0.5,
+    "UsageMultiplier": 1.0,
+    "GridEnergyStoragePerNode_comment": "每个连接到网络的节点可以在内部网格缓冲中存储多少能量",
+    "GridEnergyStoragePerNode": 25.0,
+    "CrystalResonanceGeneratorRate_comment": "水晶共振发电机每刻产生多少能量",
+    "CrystalResonanceGeneratorRate": 20.0,
+    "p2pTunnelEnergyTax_comment": "通过能量P2P隧道传输能量的成本，以传输能量的比例表示",
+    "p2pTunnelEnergyTax": 0.025,
+    "p2pTunnelTransportTax_comment": "通过P2P隧道传输物品/流体等的成本，以每次等效I/O总线操作的AE能量表示（物品=每1个，流体=每125mB）",
+    "p2pTunnelTransportTax": 0.025
+  },
+  "Condenser": {
+    "MatterBalls": 256,
+    "Singularity": 256000
+  },
+  "tickRates": {
+    "_comment": "动态刻的最小/最大刻率，大多数组件也使用休眠防止持续刻，请谨慎调整，非标准刻率不受支持或测试",
+    "InterfaceMin": 5,
+    "InterfaceMax": 120,
+    "ImportBusMin": 5,
+    "ImportBusMax": 40,
+    "ExportBusMin": 5,
+    "ExportBusMax": 60,
+    "AnnihilationPlaneMin": 2,
+    "AnnihilationPlaneMax": 120,
+    "METunnelMin": 5,
+    "METunnelMax": 20,
+    "InscriberMin": 1,
+    "InscriberMax": 20,
+    "ChargerMin": 10,
+    "ChargerMax": 10,
+    "IOPortMin": 1,
+    "IOPortMax": 5,
+    "VibrationChamberMin": 10,
+    "VibrationChamberMax": 40,
+    "StorageBusMin": 5,
+    "StorageBusMax": 60,
+    "ItemTunnelMin": 5,
+    "ItemTunnelMax": 60,
+    "LightTunnelMin": 5,
+    "LightTunnelMax": 60
+  },
+  "vibrationChamber": {
+    "_comment": "振动仓设置",
+    "baseEnergyPerFuelTick_comment": "每燃料燃烧刻产生的AE能量（提示：煤=1600，煤炭块=16000，熔岩桶=20000燃烧刻）",
+    "baseEnergyPerFuelTick": 5.0,
+    "minEnergyPerGameTick_comment": "能量浪费时振动仓可减速到的最小AE/t",
+    "minEnergyPerGameTick": 4,
+    "baseMaxEnergyPerGameTick_comment": "产生的能量被完全消耗时振动仓可加速到的最大AE/t",
+    "baseMaxEnergyPerGameTick": 40
+  }
+}

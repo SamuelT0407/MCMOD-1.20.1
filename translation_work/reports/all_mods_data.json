@@ -1,0 +1,742 @@
+{
+  "alexsmobs": {
+    "jar_name": "alexsmobs-1.22.9",
+    "mod_id": "alexsmobs",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\alexsmobs-1.22.9\\assets\\alexsmobs\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\alexsmobs-1.22.9\\assets\\alexsmobs\\lang\\zh_cn.json"
+  },
+  "animalium": {
+    "jar_name": "Animalium-1.0.0",
+    "mod_id": "animalium",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Animalium-1.0.0\\assets\\animalium\\lang\\en_us.json"
+  },
+  "ae2": {
+    "jar_name": "appliedenergistics2-forge-15.4.10",
+    "mod_id": "ae2",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\appliedenergistics2-forge-15.4.10\\assets\\ae2\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\appliedenergistics2-forge-15.4.10\\assets\\ae2\\lang\\zh_cn.json"
+  },
+  "baguettelib": {
+    "jar_name": "baguettelib-1.20.1-Forge-1.1.1",
+    "mod_id": "baguettelib",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\baguettelib-1.20.1-Forge-1.1.1\\assets\\baguettelib\\lang\\en_us.json"
+  },
+  "balm": {
+    "jar_name": "balm-forge-1.20.1-7.3.37-all",
+    "mod_id": "balm",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\balm-forge-1.20.1-7.3.37-all\\assets\\balm\\lang\\en_us.json"
+  },
+  "biomesoplenty": {
+    "jar_name": "BiomesOPlenty-forge-1.20.1-19.0.0.96",
+    "mod_id": "biomesoplenty",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\BiomesOPlenty-forge-1.20.1-19.0.0.96\\assets\\biomesoplenty\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\BiomesOPlenty-forge-1.20.1-19.0.0.96\\assets\\biomesoplenty\\lang\\zh_cn.json"
+  },
+  "bonsaitrees3": {
+    "jar_name": "BonsaiTrees3-1.20.1-3.3.2",
+    "mod_id": "bonsaitrees3",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\BonsaiTrees3-1.20.1-3.3.2\\assets\\bonsaitrees3\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\BonsaiTrees3-1.20.1-3.3.2\\assets\\bonsaitrees3\\lang\\zh_cn.json"
+  },
+  "chisel": {
+    "jar_name": "chisel-forge-2.0.0+mc1.20.1",
+    "mod_id": "chisel",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\chisel-forge-2.0.0+mc1.20.1\\assets\\chisel\\lang\\en_us.json"
+  },
+  "chiselsandbits": {
+    "jar_name": "chisels-and-bits-forge-1.4.148",
+    "mod_id": "chiselsandbits",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\chisels-and-bits-forge-1.4.148\\assets\\chiselsandbits\\lang\\en_us.json"
+  },
+  "citadel": {
+    "jar_name": "citadel-2.6.2-1.20.1",
+    "mod_id": "citadel",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\citadel-2.6.2-1.20.1\\assets\\citadel\\lang\\en_us.json"
+  },
+  "cloth-config2": {
+    "jar_name": "cloth-config-11.1.136-forge",
+    "mod_id": "cloth-config2",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cloth-config-11.1.136-forge\\assets\\cloth-config2\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cloth-config-11.1.136-forge\\assets\\cloth-config2\\lang\\zh_cn.json"
+  },
+  "codechickenlib": {
+    "jar_name": "CodeChickenLib-1.20.1-4.4.0.516-universal",
+    "mod_id": "codechickenlib",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\CodeChickenLib-1.20.1-4.4.0.516-universal\\assets\\codechickenlib\\lang\\en_us.json"
+  },
+  "cofh_core": {
+    "jar_name": "cofh_core-1.20.1-11.0.2.56",
+    "mod_id": "cofh_core",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cofh_core-1.20.1-11.0.2.56\\assets\\cofh_core\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cofh_core-1.20.1-11.0.2.56\\assets\\cofh_core\\lang\\zh_cn.json"
+  },
+  "configured": {
+    "jar_name": "configured-forge-1.20.1-2.2.3",
+    "mod_id": "configured",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\configured-forge-1.20.1-2.2.3\\assets\\configured\\lang\\en_us.json"
+  },
+  "constructionwand": {
+    "jar_name": "constructionwand-1.20.1-2.11",
+    "mod_id": "constructionwand",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\constructionwand-1.20.1-2.11\\assets\\constructionwand\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\constructionwand-1.20.1-2.11\\assets\\constructionwand\\lang\\zh_cn.json"
+  },
+  "controlling": {
+    "jar_name": "Controlling-forge-1.20.1-12.0.2",
+    "mod_id": "controlling",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Controlling-forge-1.20.1-12.0.2\\assets\\controlling\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Controlling-forge-1.20.1-12.0.2\\assets\\controlling\\lang\\zh_cn.json"
+  },
+  "cookingforblockheads": {
+    "jar_name": "cookingforblockheads-forge-1.20.1-16.0.14",
+    "mod_id": "cookingforblockheads",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cookingforblockheads-forge-1.20.1-16.0.14\\assets\\cookingforblockheads\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cookingforblockheads-forge-1.20.1-16.0.14\\assets\\cookingforblockheads\\lang\\zh_cn.json"
+  },
+  "corpse": {
+    "jar_name": "corpse-forge-1.20.1-1.0.23",
+    "mod_id": "corpse",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\corpse-forge-1.20.1-1.0.23\\assets\\corpse\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\corpse-forge-1.20.1-1.0.23\\assets\\corpse\\lang\\zh_cn.json"
+  },
+  "cosmeticarmorreworked": {
+    "jar_name": "cosmeticarmorreworked-1.20.1-v1a",
+    "mod_id": "cosmeticarmorreworked",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cosmeticarmorreworked-1.20.1-v1a\\assets\\cosmeticarmorreworked\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cosmeticarmorreworked-1.20.1-v1a\\assets\\cosmeticarmorreworked\\lang\\zh_cn.json"
+  },
+  "cosmeticcorpsecompat": {
+    "jar_name": "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0",
+    "mod_id": "cosmeticcorpsecompat",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0\\assets\\cosmeticcorpsecompat\\lang\\en_us.json"
+  },
+  "create": {
+    "jar_name": "create-1.20.1-6.0.8",
+    "mod_id": "create",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create-1.20.1-6.0.8\\assets\\create\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create-1.20.1-6.0.8\\assets\\create\\lang\\zh_cn.json"
+  },
+  "createfood": {
+    "jar_name": "create-food-1.20.1-1.1.11-forge",
+    "mod_id": "createfood",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create-food-1.20.1-1.1.11-forge\\assets\\createfood\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create-food-1.20.1-1.1.11-forge\\assets\\createfood\\lang\\zh_cn.json"
+  },
+  "createaddition": {
+    "jar_name": "createaddition-1.20.1-1.3.2",
+    "mod_id": "createaddition",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\createaddition-1.20.1-1.3.2\\assets\\createaddition\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\createaddition-1.20.1-1.3.2\\assets\\createaddition\\lang\\zh_cn.json"
+  },
+  "createdieselgenerators": {
+    "jar_name": "createdieselgenerators-1.20.1-1.3.5",
+    "mod_id": "createdieselgenerators",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\createdieselgenerators-1.20.1-1.3.5\\assets\\createdieselgenerators\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\createdieselgenerators-1.20.1-1.3.5\\assets\\createdieselgenerators\\lang\\zh_cn.json"
+  },
+  "createtransmission": {
+    "jar_name": "createtransmission-1.0.4+forge-create6-1.20.1",
+    "mod_id": "createtransmission",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\createtransmission-1.0.4+forge-create6-1.20.1\\assets\\createtransmission\\lang\\en_us.json"
+  },
+  "create_connected": {
+    "jar_name": "create_connected-1.1.9-mc1.20.1-all",
+    "mod_id": "create_connected",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create_connected-1.1.9-mc1.20.1-all\\assets\\create_connected\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create_connected-1.1.9-mc1.20.1-all\\assets\\create_connected\\lang\\zh_cn.json"
+  },
+  "create_hypertube": {
+    "jar_name": "create_hypertube-0.2.6-hotfix-FORGE",
+    "mod_id": "create_hypertube",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create_hypertube-0.2.6-hotfix-FORGE\\assets\\create_hypertube\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create_hypertube-0.2.6-hotfix-FORGE\\assets\\create_hypertube\\lang\\zh_cn.json"
+  },
+  "ratatouille": {
+    "jar_name": "create_ratatouille-1.20.1-1.3.6 for Create6.0.7~",
+    "mod_id": "ratatouille",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create_ratatouille-1.20.1-1.3.6 for Create6.0.7~\\assets\\ratatouille\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\create_ratatouille-1.20.1-1.3.6 for Create6.0.7~\\assets\\ratatouille\\lang\\zh_cn.json"
+  },
+  "creativecore": {
+    "jar_name": "CreativeCore_FORGE_v2.12.32_mc1.20.1",
+    "mod_id": "creativecore",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\CreativeCore_FORGE_v2.12.32_mc1.20.1\\assets\\creativecore\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\CreativeCore_FORGE_v2.12.32_mc1.20.1\\assets\\creativecore\\lang\\zh_cn.json"
+  },
+  "crust": {
+    "jar_name": "crust-1.20.1-4.8.14",
+    "mod_id": "crust",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\crust-1.20.1-4.8.14\\assets\\crust\\lang\\en_us.json"
+  },
+  "curios": {
+    "jar_name": "curios-forge-5.14.1+1.20.1",
+    "mod_id": "curios",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\curios-forge-5.14.1+1.20.1\\assets\\curios\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\curios-forge-5.14.1+1.20.1\\assets\\curios\\lang\\zh_cn.json"
+  },
+  "dragonseeker": {
+    "jar_name": "dragonseeker-1.2.0-1.20.1",
+    "mod_id": "dragonseeker",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\dragonseeker-1.2.0-1.20.1\\assets\\dragonseeker\\lang\\en_us.json"
+  },
+  "dummmmmmy": {
+    "jar_name": "dummmmmmy-1.20-2.0.9",
+    "mod_id": "dummmmmmy",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\dummmmmmy-1.20-2.0.9\\assets\\dummmmmmy\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\dummmmmmy-1.20-2.0.9\\assets\\dummmmmmy\\lang\\zh_cn.json"
+  },
+  "embeddium": {
+    "jar_name": "embeddium-0.3.31+mc1.20.1",
+    "mod_id": "embeddium",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\embeddium-0.3.31+mc1.20.1\\assets\\embeddium\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\embeddium-0.3.31+mc1.20.1\\assets\\embeddium\\lang\\zh_cn.json"
+  },
+  "sodium": {
+    "jar_name": "embeddium-0.3.31+mc1.20.1",
+    "mod_id": "sodium",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\embeddium-0.3.31+mc1.20.1\\assets\\sodium\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\embeddium-0.3.31+mc1.20.1\\assets\\sodium\\lang\\zh_cn.json"
+  },
+  "enderio": {
+    "jar_name": "EnderIO-1.20.1-6.2.16-beta-all",
+    "mod_id": "enderio",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\EnderIO-1.20.1-6.2.16-beta-all\\assets\\enderio\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\EnderIO-1.20.1-6.2.16-beta-all\\assets\\enderio\\lang\\zh_cn.json"
+  },
+  "enderstorage": {
+    "jar_name": "EnderStorage-1.20.1-2.11.0.188-universal",
+    "mod_id": "enderstorage",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\EnderStorage-1.20.1-2.11.0.188-universal\\assets\\enderstorage\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\EnderStorage-1.20.1-2.11.0.188-universal\\assets\\enderstorage\\lang\\zh_cn.json"
+  },
+  "exnihilomekanism": {
+    "jar_name": "exnihilomekanism-1.20.1-5.0.0-build.2-beta",
+    "mod_id": "exnihilomekanism",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\exnihilomekanism-1.20.1-5.0.0-build.2-beta\\assets\\exnihilomekanism\\lang\\en_us.json"
+  },
+  "exnihilosequentia": {
+    "jar_name": "exnihilosequentia-1.20.1-5.0.0-build.8",
+    "mod_id": "exnihilosequentia",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\exnihilosequentia-1.20.1-5.0.0-build.8\\assets\\exnihilosequentia\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\exnihilosequentia-1.20.1-5.0.0-build.8\\assets\\exnihilosequentia\\lang\\zh_cn.json"
+  },
+  "explorerscompass": {
+    "jar_name": "ExplorersCompass-1.20.1-1.3.3-forge",
+    "mod_id": "explorerscompass",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ExplorersCompass-1.20.1-1.3.3-forge\\assets\\explorerscompass\\lang\\en_us.json"
+  },
+  "factory_blocks": {
+    "jar_name": "factory_blocks-forge-1.4.0+mc1.20.1",
+    "mod_id": "factory_blocks",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\factory_blocks-forge-1.4.0+mc1.20.1\\assets\\factory_blocks\\lang\\en_us.json"
+  },
+  "farmersdelight": {
+    "jar_name": "FarmersDelight-1.20.1-1.2.9",
+    "mod_id": "farmersdelight",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\FarmersDelight-1.20.1-1.2.9\\assets\\farmersdelight\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\FarmersDelight-1.20.1-1.2.9\\assets\\farmersdelight\\lang\\zh_cn.json"
+  },
+  "fluxnetworks": {
+    "jar_name": "FluxNetworks-1.20.1-7.2.1.15",
+    "mod_id": "fluxnetworks",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\FluxNetworks-1.20.1-7.2.1.15\\assets\\fluxnetworks\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\FluxNetworks-1.20.1-7.2.1.15\\assets\\fluxnetworks\\lang\\zh_cn.json"
+  },
+  "fossil": {
+    "jar_name": "fossil-forge-1.20.1-9.3.0.2",
+    "mod_id": "fossil",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\fossil-forge-1.20.1-9.3.0.2\\assets\\fossil\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\fossil-forge-1.20.1-9.3.0.2\\assets\\fossil\\lang\\zh_cn.json"
+  },
+  "ftbchunks": {
+    "jar_name": "ftb-chunks-forge-2001.3.6",
+    "mod_id": "ftbchunks",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-chunks-forge-2001.3.6\\assets\\ftbchunks\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-chunks-forge-2001.3.6\\assets\\ftbchunks\\lang\\zh_cn.json"
+  },
+  "ftblibrary": {
+    "jar_name": "ftb-library-forge-2001.2.10",
+    "mod_id": "ftblibrary",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-library-forge-2001.2.10\\assets\\ftblibrary\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-library-forge-2001.2.10\\assets\\ftblibrary\\lang\\zh_cn.json"
+  },
+  "ftbquests": {
+    "jar_name": "ftb-quests-forge-2001.4.14",
+    "mod_id": "ftbquests",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-quests-forge-2001.4.14\\assets\\ftbquests\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-quests-forge-2001.4.14\\assets\\ftbquests\\lang\\zh_cn.json"
+  },
+  "ftbteams": {
+    "jar_name": "ftb-teams-forge-2001.3.1",
+    "mod_id": "ftbteams",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-teams-forge-2001.3.1\\assets\\ftbteams\\lang\\en_us.json"
+  },
+  "ftbultimine": {
+    "jar_name": "ftb-ultimine-forge-2001.1.7",
+    "mod_id": "ftbultimine",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ftb-ultimine-forge-2001.1.7\\assets\\ftbultimine\\lang\\en_us.json"
+  },
+  "geckolib": {
+    "jar_name": "geckolib-forge-1.20.1-4.8.2",
+    "mod_id": "geckolib",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\geckolib-forge-1.20.1-4.8.2\\assets\\geckolib\\lang\\en_us.json"
+  },
+  "guideme": {
+    "jar_name": "guideme-20.1.14",
+    "mod_id": "guideme",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\guideme-20.1.14\\assets\\guideme\\lang\\en_us.json"
+  },
+  "iceandfire": {
+    "jar_name": "iceandfire-2.1.13-1.20.1-beta-5",
+    "mod_id": "iceandfire",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\iceandfire-2.1.13-1.20.1-beta-5\\assets\\iceandfire\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\iceandfire-2.1.13-1.20.1-beta-5\\assets\\iceandfire\\lang\\zh_cn.json"
+  },
+  "immersiveengineering": {
+    "jar_name": "ImmersiveEngineering-1.20.1-10.2.0-183",
+    "mod_id": "immersiveengineering",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ImmersiveEngineering-1.20.1-10.2.0-183\\assets\\immersiveengineering\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ImmersiveEngineering-1.20.1-10.2.0-183\\assets\\immersiveengineering\\lang\\zh_cn.json"
+  },
+  "immersivepetroleum": {
+    "jar_name": "ImmersivePetroleum-1.20.1-4.3.0-30",
+    "mod_id": "immersivepetroleum",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ImmersivePetroleum-1.20.1-4.3.0-30\\assets\\immersivepetroleum\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ImmersivePetroleum-1.20.1-4.3.0-30\\assets\\immersivepetroleum\\lang\\zh_cn.json"
+  },
+  "inventorysorter": {
+    "jar_name": "inventorysorter-1.20.1-23.0.11",
+    "mod_id": "inventorysorter",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\inventorysorter-1.20.1-23.0.11\\assets\\inventorysorter\\lang\\en_us.json"
+  },
+  "ironchest": {
+    "jar_name": "ironchest-1.20.1-14.4.4",
+    "mod_id": "ironchest",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ironchest-1.20.1-14.4.4\\assets\\ironchest\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ironchest-1.20.1-14.4.4\\assets\\ironchest\\lang\\zh_cn.json"
+  },
+  "itemphysic": {
+    "jar_name": "ItemPhysic_FORGE_v1.8.8_mc1.20.1",
+    "mod_id": "itemphysic",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ItemPhysic_FORGE_v1.8.8_mc1.20.1\\assets\\itemphysic\\lang\\en_us.json"
+  },
+  "jade": {
+    "jar_name": "Jade-1.20.1-Forge-11.13.2",
+    "mod_id": "jade",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Jade-1.20.1-Forge-11.13.2\\assets\\jade\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Jade-1.20.1-Forge-11.13.2\\assets\\jade\\lang\\zh_cn.json"
+  },
+  "jecharacters": {
+    "jar_name": "jecharacters-1.20.1-forge-4.6.1",
+    "mod_id": "jecharacters",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\jecharacters-1.20.1-forge-4.6.1\\assets\\jecharacters\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\jecharacters-1.20.1-forge-4.6.1\\assets\\jecharacters\\lang\\zh_cn.json"
+  },
+  "jei": {
+    "jar_name": "jei-1.20.1-forge-15.20.0.118",
+    "mod_id": "jei",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\jei-1.20.1-forge-15.20.0.118\\assets\\jei\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\jei-1.20.1-forge-15.20.0.118\\assets\\jei\\lang\\zh_cn.json"
+  },
+  "jeresources": {
+    "jar_name": "JustEnoughResources-1.20.1-1.4.0.247",
+    "mod_id": "jeresources",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\JustEnoughResources-1.20.1-1.4.0.247\\assets\\jeresources\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\JustEnoughResources-1.20.1-1.4.0.247\\assets\\jeresources\\lang\\zh_cn.json"
+  },
+  "laserio": {
+    "jar_name": "laserio-1.6.8",
+    "mod_id": "laserio",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\laserio-1.6.8\\assets\\laserio\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\laserio-1.6.8\\assets\\laserio\\lang\\zh_cn.json"
+  },
+  "libnonymous": {
+    "jar_name": "libnonymous-1.20.1-2.3.1",
+    "mod_id": "libnonymous",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\libnonymous-1.20.1-2.3.1\\assets\\libnonymous\\lang\\en_us.json"
+  },
+  "libraryferret": {
+    "jar_name": "libraryferret-forge-1.20.1-4.0.0",
+    "mod_id": "libraryferret",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\libraryferret-forge-1.20.1-4.0.0\\assets\\libraryferret\\lang\\en_us.json"
+  },
+  "mantle": {
+    "jar_name": "Mantle-1.20.1-1.11.79",
+    "mod_id": "mantle",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Mantle-1.20.1-1.11.79\\assets\\mantle\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Mantle-1.20.1-1.11.79\\assets\\mantle\\lang\\zh_cn.json"
+  },
+  "mekanism": {
+    "jar_name": "Mekanism-1.20.1-10.4.16.80",
+    "mod_id": "mekanism",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Mekanism-1.20.1-10.4.16.80\\assets\\mekanism\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Mekanism-1.20.1-10.4.16.80\\assets\\mekanism\\lang\\zh_cn.json"
+  },
+  "mekanismgenerators": {
+    "jar_name": "MekanismGenerators-1.20.1-10.4.16.80",
+    "mod_id": "mekanismgenerators",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\MekanismGenerators-1.20.1-10.4.16.80\\assets\\mekanismgenerators\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\MekanismGenerators-1.20.1-10.4.16.80\\assets\\mekanismgenerators\\lang\\zh_cn.json"
+  },
+  "midnightlib": {
+    "jar_name": "midnightlib-forge-1.4.2",
+    "mod_id": "midnightlib",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\midnightlib-forge-1.4.2\\assets\\midnightlib\\lang\\en_us.json"
+  },
+  "mobsunscreen": {
+    "jar_name": "mobsunscreen-forge-1.20.1-3.1.1",
+    "mod_id": "mobsunscreen",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\mobsunscreen-forge-1.20.1-3.1.1\\assets\\mobsunscreen\\lang\\en_us.json"
+  },
+  "moonlight": {
+    "jar_name": "moonlight-1.20-2.16.16-forge",
+    "mod_id": "moonlight",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\moonlight-1.20-2.16.16-forge\\assets\\moonlight\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\moonlight-1.20-2.16.16-forge\\assets\\moonlight\\lang\\zh_cn.json"
+  },
+  "mowziesmobs": {
+    "jar_name": "mowziesmobs-1.7.3",
+    "mod_id": "mowziesmobs",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\mowziesmobs-1.7.3\\assets\\mowziesmobs\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\mowziesmobs-1.7.3\\assets\\mowziesmobs\\lang\\zh_cn.json"
+  },
+  "mysterious_mountain_lib": {
+    "jar_name": "mysterious_mountain_lib-1.6.30-1.20.1",
+    "mod_id": "mysterious_mountain_lib",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\mysterious_mountain_lib-1.6.30-1.20.1\\assets\\mysterious_mountain_lib\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\mysterious_mountain_lib-1.6.30-1.20.1\\assets\\mysterious_mountain_lib\\lang\\zh_cn.json"
+  },
+  "naturescompass": {
+    "jar_name": "NaturesCompass-1.20.1-1.11.2-forge",
+    "mod_id": "naturescompass",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\NaturesCompass-1.20.1-1.11.2-forge\\assets\\naturescompass\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\NaturesCompass-1.20.1-1.11.2-forge\\assets\\naturescompass\\lang\\zh_cn.json"
+  },
+  "iris": {
+    "jar_name": "oculus-mc1.20.1-1.8.0",
+    "mod_id": "iris",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\oculus-mc1.20.1-1.8.0\\assets\\iris\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\oculus-mc1.20.1-1.8.0\\assets\\iris\\lang\\zh_cn.json"
+  },
+  "patchouli": {
+    "jar_name": "Patchouli-1.20.1-84.1-FORGE",
+    "mod_id": "patchouli",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Patchouli-1.20.1-84.1-FORGE\\assets\\patchouli\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Patchouli-1.20.1-84.1-FORGE\\assets\\patchouli\\lang\\zh_cn.json"
+  },
+  "pipez": {
+    "jar_name": "pipez-forge-1.20.1-1.2.26",
+    "mod_id": "pipez",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\pipez-forge-1.20.1-1.2.26\\assets\\pipez\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\pipez-forge-1.20.1-1.2.26\\assets\\pipez\\lang\\zh_cn.json"
+  },
+  "sakura": {
+    "jar_name": "Sakura-1.1.16-1.20.1",
+    "mod_id": "sakura",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Sakura-1.1.16-1.20.1\\assets\\sakura\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Sakura-1.1.16-1.20.1\\assets\\sakura\\lang\\zh_cn.json"
+  },
+  "searchables": {
+    "jar_name": "Searchables-forge-1.20.1-1.0.3",
+    "mod_id": "searchables",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Searchables-forge-1.20.1-1.0.3\\assets\\searchables\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Searchables-forge-1.20.1-1.0.3\\assets\\searchables\\lang\\zh_cn.json"
+  },
+  "sereneseasons": {
+    "jar_name": "SereneSeasons-forge-1.20.1-9.1.0.2",
+    "mod_id": "sereneseasons",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\SereneSeasons-forge-1.20.1-9.1.0.2\\assets\\sereneseasons\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\SereneSeasons-forge-1.20.1-9.1.0.2\\assets\\sereneseasons\\lang\\zh_cn.json"
+  },
+  "sophisticatedbackpacks": {
+    "jar_name": "sophisticatedbackpacks-1.20.1-3.24.12.1411",
+    "mod_id": "sophisticatedbackpacks",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\sophisticatedbackpacks-1.20.1-3.24.12.1411\\assets\\sophisticatedbackpacks\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\sophisticatedbackpacks-1.20.1-3.24.12.1411\\assets\\sophisticatedbackpacks\\lang\\zh_cn.json"
+  },
+  "sophisticatedcore": {
+    "jar_name": "sophisticatedcore-1.20.1-1.2.107.1240",
+    "mod_id": "sophisticatedcore",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\sophisticatedcore-1.20.1-1.2.107.1240\\assets\\sophisticatedcore\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\sophisticatedcore-1.20.1-1.2.107.1240\\assets\\sophisticatedcore\\lang\\zh_cn.json"
+  },
+  "spartanfire": {
+    "jar_name": "spartanfire-1.20.1-2.1.0",
+    "mod_id": "spartanfire",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\spartanfire-1.20.1-2.1.0\\assets\\spartanfire\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\spartanfire-1.20.1-2.1.0\\assets\\spartanfire\\lang\\zh_cn.json"
+  },
+  "spartantwilight": {
+    "jar_name": "spartantwilight-1.20.1-3.1.1",
+    "mod_id": "spartantwilight",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\spartantwilight-1.20.1-3.1.1\\assets\\spartantwilight\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\spartantwilight-1.20.1-3.1.1\\assets\\spartantwilight\\lang\\zh_cn.json"
+  },
+  "spartanweaponry": {
+    "jar_name": "SpartanWeaponry-1.20.1-forge-3.2.1-all",
+    "mod_id": "spartanweaponry",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\SpartanWeaponry-1.20.1-forge-3.2.1-all\\assets\\spartanweaponry\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\SpartanWeaponry-1.20.1-forge-3.2.1-all\\assets\\spartanweaponry\\lang\\zh_cn.json"
+  },
+  "specialai": {
+    "jar_name": "specialai-1.20.1-3.0.3",
+    "mod_id": "specialai",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\specialai-1.20.1-3.0.3\\assets\\specialai\\lang\\en_us.json"
+  },
+  "railways": {
+    "jar_name": "Steam_Rails-1.6.14-beta+forge-mc1.20.1",
+    "mod_id": "railways",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Steam_Rails-1.6.14-beta+forge-mc1.20.1\\assets\\railways\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Steam_Rails-1.6.14-beta+forge-mc1.20.1\\assets\\railways\\lang\\zh_cn.json"
+  },
+  "storagedrawers": {
+    "jar_name": "StorageDrawers-forge-1.20.1-12.14.3",
+    "mod_id": "storagedrawers",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\StorageDrawers-forge-1.20.1-12.14.3\\assets\\storagedrawers\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\StorageDrawers-forge-1.20.1-12.14.3\\assets\\storagedrawers\\lang\\zh_cn.json"
+  },
+  "tacz": {
+    "jar_name": "tacz-1.20.1-1.1.7-release",
+    "mod_id": "tacz",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\tacz-1.20.1-1.1.7-release\\assets\\tacz\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\tacz-1.20.1-1.1.7-release\\assets\\tacz\\lang\\zh_cn.json"
+  },
+  "tconstruct": {
+    "jar_name": "TConstruct-1.20.1-3.10.2.92",
+    "mod_id": "tconstruct",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\TConstruct-1.20.1-3.10.2.92\\assets\\tconstruct\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\TConstruct-1.20.1-3.10.2.92\\assets\\tconstruct\\lang\\zh_cn.json"
+  },
+  "terrablender": {
+    "jar_name": "TerraBlender-forge-1.20.1-3.0.1.10",
+    "mod_id": "terrablender",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\TerraBlender-forge-1.20.1-3.0.1.10\\assets\\terrablender\\lang\\en_us.json"
+  },
+  "tgears": {
+    "jar_name": "tgears-0.4.1-for-create-6.0.6",
+    "mod_id": "tgears",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\tgears-0.4.1-for-create-6.0.6\\assets\\tgears\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\tgears-0.4.1-for-create-6.0.6\\assets\\tgears\\lang\\zh_cn.json"
+  },
+  "thermal_dynamics": {
+    "jar_name": "thermal_dynamics-1.20.1-11.0.1.23",
+    "mod_id": "thermal_dynamics",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\thermal_dynamics-1.20.1-11.0.1.23\\assets\\thermal_dynamics\\lang\\en_us.json"
+  },
+  "thermal_foundation": {
+    "jar_name": "thermal_foundation-1.20.1-11.0.6.70",
+    "mod_id": "thermal_foundation",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\thermal_foundation-1.20.1-11.0.6.70\\assets\\thermal_foundation\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\thermal_foundation-1.20.1-11.0.6.70\\assets\\thermal_foundation\\lang\\zh_cn.json"
+  },
+  "tleveling": {
+    "jar_name": "tleveling-0.2.5-1.20.1",
+    "mod_id": "tleveling",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\tleveling-0.2.5-1.20.1\\assets\\tleveling\\lang\\en_us.json"
+  },
+  "torcherino": {
+    "jar_name": "Torcherino-forge-1.20.1-20.0.0",
+    "mod_id": "torcherino",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Torcherino-forge-1.20.1-20.0.0\\assets\\torcherino\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Torcherino-forge-1.20.1-20.0.0\\assets\\torcherino\\lang\\zh_cn.json"
+  },
+  "toughasnails": {
+    "jar_name": "ToughAsNails-forge-1.20.1-9.2.0.171",
+    "mod_id": "toughasnails",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ToughAsNails-forge-1.20.1-9.2.0.171\\assets\\toughasnails\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\ToughAsNails-forge-1.20.1-9.2.0.171\\assets\\toughasnails\\lang\\zh_cn.json"
+  },
+  "trashcans": {
+    "jar_name": "trashcans-1.0.18b-forge-mc1.20",
+    "mod_id": "trashcans",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\trashcans-1.0.18b-forge-mc1.20\\assets\\trashcans\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\trashcans-1.0.18b-forge-mc1.20\\assets\\trashcans\\lang\\zh_cn.json"
+  },
+  "trashslot": {
+    "jar_name": "trashslot-forge-1.20-15.1.2",
+    "mod_id": "trashslot",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\trashslot-forge-1.20-15.1.2\\assets\\trashslot\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\trashslot-forge-1.20-15.1.2\\assets\\trashslot\\lang\\zh_cn.json"
+  },
+  "twilightforest": {
+    "jar_name": "twilightforest-1.20.1-4.3.2508-universal",
+    "mod_id": "twilightforest",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\twilightforest-1.20.1-4.3.2508-universal\\assets\\twilightforest\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\twilightforest-1.20.1-4.3.2508-universal\\assets\\twilightforest\\lang\\zh_cn.json"
+  },
+  "xaeroworldmap": {
+    "jar_name": "XaerosWorldMap_1.39.12_Forge_1.20",
+    "mod_id": "xaeroworldmap",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\XaerosWorldMap_1.39.12_Forge_1.20\\assets\\xaeroworldmap\\lang\\en_us.json"
+  },
+  "xaerobetterpvp": {
+    "jar_name": "Xaeros_Minimap_25.2.10_Forge_1.20",
+    "mod_id": "xaerobetterpvp",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Xaeros_Minimap_25.2.10_Forge_1.20\\assets\\xaerobetterpvp\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Xaeros_Minimap_25.2.10_Forge_1.20\\assets\\xaerobetterpvp\\lang\\zh_cn.json"
+  },
+  "xaerominimap": {
+    "jar_name": "Xaeros_Minimap_25.2.10_Forge_1.20",
+    "mod_id": "xaerominimap",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Xaeros_Minimap_25.2.10_Forge_1.20\\assets\\xaerominimap\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\Xaeros_Minimap_25.2.10_Forge_1.20\\assets\\xaerominimap\\lang\\zh_cn.json"
+  },
+  "bettercaves": {
+    "jar_name": "YungsBetterCaves-1.20.1-Forge-2.0.5",
+    "mod_id": "bettercaves",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterCaves-1.20.1-Forge-2.0.5\\assets\\bettercaves\\lang\\en_us.json"
+  },
+  "betterdeserttemples": {
+    "jar_name": "YungsBetterDesertTemples-1.20-Forge-3.0.3",
+    "mod_id": "betterdeserttemples",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterDesertTemples-1.20-Forge-3.0.3\\assets\\betterdeserttemples\\lang\\en_us.json"
+  },
+  "betterdungeons": {
+    "jar_name": "YungsBetterDungeons-1.20-Forge-4.0.4",
+    "mod_id": "betterdungeons",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterDungeons-1.20-Forge-4.0.4\\assets\\betterdungeons\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterDungeons-1.20-Forge-4.0.4\\assets\\betterdungeons\\lang\\zh_cn.json"
+  },
+  "bettermineshafts": {
+    "jar_name": "YungsBetterMineshafts-1.20-Forge-4.0.4",
+    "mod_id": "bettermineshafts",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterMineshafts-1.20-Forge-4.0.4\\assets\\bettermineshafts\\lang\\en_us.json"
+  },
+  "betterfortresses": {
+    "jar_name": "YungsBetterNetherFortresses-1.20-Forge-2.0.6",
+    "mod_id": "betterfortresses",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterNetherFortresses-1.20-Forge-2.0.6\\assets\\betterfortresses\\lang\\en_us.json"
+  },
+  "betteroceanmonuments": {
+    "jar_name": "YungsBetterOceanMonuments-1.20-Forge-3.0.4",
+    "mod_id": "betteroceanmonuments",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterOceanMonuments-1.20-Forge-3.0.4\\assets\\betteroceanmonuments\\lang\\en_us.json"
+  },
+  "betterstrongholds": {
+    "jar_name": "YungsBetterStrongholds-1.20-Forge-4.0.3",
+    "mod_id": "betterstrongholds",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\YungsBetterStrongholds-1.20-Forge-4.0.3\\assets\\betterstrongholds\\lang\\en_us.json"
+  },
+  "zombieawareness": {
+    "jar_name": "zombieawareness-1.20.1-1.13.1",
+    "mod_id": "zombieawareness",
+    "has_zh_cn": false,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\zombieawareness-1.20.1-1.13.1\\assets\\zombieawareness\\lang\\en_us.json"
+  },
+  "securitycraft": {
+    "jar_name": "[1.20.1] SecurityCraft v1.10.1",
+    "mod_id": "securitycraft",
+    "has_zh_cn": true,
+    "en_us_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\[1.20.1] SecurityCraft v1.10.1\\assets\\securitycraft\\lang\\en_us.json",
+    "zh_cn_path": "c:\\Users\\SamuelT0407\\Documents\\ShitServerMCMOD 1.20.1\\translation_work\\extracted\\[1.20.1] SecurityCraft v1.10.1\\assets\\securitycraft\\lang\\zh_cn.json"
+  }
+}

@@ -1,0 +1,13 @@
+
+[Client]
+	#即使聊天窗口打开时也显示自然指南针信息。
+	displayWithChatOpen = true
+	#通过添加缺失的空格来修复生物群系名称。例如：ForestHills变为Forest Hills
+	fixBiomeNames = true
+	#HUD上渲染信息的行偏移量。
+	#Range: 0 ~ 50
+	overlayLineOffset = 1
+	#HUD上渲染信息的位置。例如：LEFT（左），RIGHT（右）
+	#Allowed Values: LEFT, RIGHT
+	overlaySide = "LEFT"
+

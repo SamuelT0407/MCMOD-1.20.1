@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "thermal:flag",
+      "flag": "device_collector"
+    }
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:hopper"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "I": {
+      "tag": "forge:ingots/tin"
+    },
+    "P": {
+      "item": "thermal:redstone_servo"
+    },
+    "X": {
+      "tag": "forge:ender_pearls"
+    }
+  },
+  "pattern": [
+    "IXI",
+    "GCG",
+    "IPI"
+  ],
+  "result": {
+    "item": "thermal:device_collector"
+  },
+  "show_notification": true
+}

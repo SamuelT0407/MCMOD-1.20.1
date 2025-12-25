@@ -1,0 +1,20 @@
+#加入世界时发送包含提示的欢迎消息
+sayThanksMessage = false
+#强化方块的纹理是否应该比原版方块稍微深一些？如果服务器配置设置"force_reinforced_block_tint"设为true，服务器可以强制客户端使用此设置。
+reinforced_block_tint = true
+#如果启用此调试功能，SecurityCraft会尝试查找并报告阻止安全摄像头查看功能正常工作的模组（当它们立即重置玩家的相机实体时）。
+debug_camera_reset_tracing = false
+#设置reinforced_block_tint启用时强化方块纹理的颜色。这不能被服务器覆盖，并且对所有方块应用相同的颜色。灰度值效果最好。
+#格式: 0xRRGGBB
+#Range: 0 ~ 16777215
+reinforced_block_tint_color = 10066329
+#设置框架摄像头画面中应从服务器请求和渲染的区块半径。如果此配置的值高于原版"渲染距离"选项或"view-distance"服务器属性，将使用较小的值。
+#Range: 2 ~ 32
+frame_feed_render_distance = 16
+#设置框架摄像头画面的分辨率。这始终是正方形分辨率。较小的值会较不清晰，较高的值可能带来递减的回报。
+#Range: 1 ~ 16384
+frame_feed_resolution = 512
+#框架摄像头画面渲染的最大每秒帧数。较高的值会导致更差的性能。
+#Range: 10 ~ 260
+frame_feed_fps_limit = 30
+

@@ -1,0 +1,22 @@
+#启用/禁用调试模式
+debug = false
+
+[SmokeContainers]
+	#烟雾或气体传输的通风管道最大长度
+	#Range: 1 ~ 64
+	maxVentPipeLength = 32
+	#通风口到被吸入气体方块的最大距离
+	#Range: 1 ~ 16
+	ventReachDistance = 4
+	#搜索多方块结构边界时检查的最大方块数
+	#Range: 1 ~ 512
+	maxBlocksInMultiblock = 81
+	#连接排气泵的烟囱内产生的气流强度
+	#Range: 0 ~ 10
+	pumpedChimneyAirflow = 1
+	#漏斗列表，格式：方块ID, 吸力范围
+	#吸力范围是漏斗上方圆柱形区域的半径，污染物将在此范围内被吸入
+	#此区域的高度始终为3个方块
+	#Range: 1 ~ 64
+	suctionHoppers = ["minecraft:hopper, 8", "brickhopper:brick_hopper, 6", "goldenhopper:golden_hopper, 12", "littlelogistics:rapid_hopper, 12"]
+

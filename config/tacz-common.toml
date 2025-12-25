@@ -1,0 +1,55 @@
+
+[gun]
+	#默认开枪声音范围（方块）
+	#Range: > 0
+	DefaultGunFireSoundDistance = 64
+	#消音器默认开枪声音范围（方块）
+	#Range: > 0
+	DefaultGunSilenceSoundDistance = 16
+	#其他枪声范围（方块），如换弹声音等
+	#Range: > 0
+	DefaultGunOtherSoundDistance = 16
+	#创造模式玩家是否消耗弹药
+	CreativePlayerConsumeAmmo = true
+	#自动重新装填玩家背包中的所有枪支，对PVP服务器有用
+	AutoReloadWhenRespawn = false
+
+[ammo]
+	#警告：具有爆炸属性的弹药可以破坏方块
+	ExplosiveAmmoDestroysBlock = true
+	#警告：具有爆炸属性的弹药可以点燃周围环境
+	ExplosiveAmmoFire = false
+	#具有爆炸属性的弹药可以添加击退效果
+	ExplosiveAmmoKnockBack = true
+	#可以看到爆炸效果的距离
+	#Range: > 0
+	ExplosiveAmmoVisibleDistance = 192
+	#弹药可以穿透的方块
+	PassThroughBlocks = []
+	#弹药是否可以打破玻璃
+	DestroyGlass = true
+	#弹药是否可以点燃方块
+	IgniteBlock = true
+	#弹药是否可以点燃实体
+	IgniteEntity = true
+	#全局子弹速度修正，子弹初始速度将乘以此值，默认为2.0
+	#这是为了补偿修复射手变量输入问题时引入的副作用
+	#Range: 0.01 ~ 20.0
+	GlobalBulletSpeedModifier = 2.0
+
+[other]
+	#已弃用：现在移至 .minecraft/tacz/tacz-pre.toml 或 <你的版本>/tacz/tacz-pre.toml
+	#启用后，reload命令不会覆盖config下的默认模型文件
+	DefaultPackDebug = false
+	#靶标（包括矿车类型）的最远声音距离
+	#Range: > 0
+	TargetSoundDistance = 128
+	#开发用：服务器碰撞箱偏移（如果碰撞箱超前，填负数）
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	ServerHitboxOffset = 3.0
+	#服务器碰撞箱延迟修复
+	ServerHitboxLatencyFix = true
+	#服务器碰撞箱延迟修复保存的最大延迟（毫秒）
+	#Range: 250.0 ~ 1.7976931348623157E308
+	ServerHitboxLatencyMaxSaveMs = 1000.0
+

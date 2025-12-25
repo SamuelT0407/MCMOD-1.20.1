@@ -1,0 +1,10 @@
+{
+  "gui.config.reset": "r",
+  "gui.day": "d",
+  "gui.hour": "h",
+  "gui.ingredient.latest": "Recent ingredients:",
+  "gui.minute": "m",
+  "gui.second": "s",
+  "minecraft.blocks": "Blocks",
+  "minecraft.blocks.counting": "%s Block(s)"
+}

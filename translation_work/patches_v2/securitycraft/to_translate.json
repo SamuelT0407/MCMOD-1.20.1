@@ -1,0 +1,8 @@
+{
+  "help.securitycraft.incognito_mask.info": "[待翻译] The incognito mask is an item that can be used for testing the ownership mechanics of SecurityCraft blocks. If a player is wearing such a mask, blocks owned by that player will not recognize them as their owner anymore. This means that all of these blocks will behave as if a non-owner was interacting with them, and Allowlist and Denylist Modules listing the player will ignore them. If the mask is renamed in an anvil, all of the wearer's blocks and list modules will act as if the player whose name the mask has been renamed to is trying to use the block.",
+  "item.securitycraft.incognito_mask": "[待翻译] Incognito Mask",
+  "messages.securitycraft:frame.error": "[待翻译] An unexpected error occurred while trying to display the camera feed. This is most likely caused by a mod incompatibility. More information can be found in the game log.",
+  "messages.securitycraft:frame.forceloadingLimitReached": "[待翻译] The frame feed chunk forceloading limit of this dimension has been reached, so this frame feed cannot load additional chunks in its surroundings. This may lead to display issues if these chunks aren't already loaded.",
+  "messages.securitycraft:notEnoughKeyPanels": "[待翻译] You need %s key panels to convert this block!",
+  "messages.securitycraft:security_camera.camera_reset_detected": "[待翻译] Detected camera entity reset %sms after the camera was mounted. If this time interval is very short, a mod incompatibility could be at fault. More information can be found in the game log."
+}

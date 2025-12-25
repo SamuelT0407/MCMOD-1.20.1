@@ -1,0 +1,93 @@
+# crust:default_game_rules.toml
+# 此配置文件允许修改世界创建的默认游戏规则。许多规则能简化测试流程，因此当需要反复生成新世界时尤为实用。
+#
+# 有关游戏规则的详细说明，请参阅游戏内“创建新世界”菜单中的描述或Minecraft
+#  维基文章（https://minecraft.fandom.com/wiki/Game_rule）。
+
+
+# 是否启用此配置文件。
+#  * 需重启游戏方可生效 *
+# <布尔值> 有效值：{ true, false }，默认：false
+config_enabled = false
+
+
+# 分类：玩家
+# '玩家'类别的默认游戏规则设置。
+
+  player.disable_elytra_movement_check = false
+  player.do_immediate_respawn = false
+  player.do_limited_crafting = false
+  player.drowning_damage = true
+  player.fall_damage = true
+  player.fire_damage = true
+  玩家.冻结伤害 = true
+  玩家.保留物品栏 = false
+  玩家.自然再生 = true
+  玩家.睡眠百分比 = 100
+  玩家.出生半径 = 10
+  玩家.旁观者生成区块 = true
+
+
+# 分类: 生物
+# '生物'类别的默认游戏规则设置。
+
+  mobs.disable_raids = false
+  mobs.forgive_dead_players = true
+  mobs.max_entity_cramming = 24
+  mobs.mob_griefing = true
+  mobs.universal_anger = false
+
+
+# 分类：生物生成
+# '生物生成'类别的默认游戏规则设置。
+
+  spawning.do_insomnia = true
+  spawning.do_mob_spawning = true
+  spawning.do_patrol_spawning = true
+  spawning.do_trader_spawning = true
+  spawning.do_warden_spawning = true
+
+
+# 分类：掉落
+# '掉落'类别的默认游戏规则设置。
+
+  drops.block_explosion_drop_decay = true
+  drops.do_entity_drops = true
+  drops.do_mob_loot = true
+  drops.do_tile_drops = true
+  drops.mob_explosion_drop_decay = true
+  drops.tnt_爆炸掉落衰减 = false
+
+
+# 分类: 更新
+# '更新'类别的默认游戏规则设置。
+
+  updates.执行昼夜循环 = true
+  updates.执行火焰滴算 = true
+  updates.执行季节循环 = true
+  updates.执行藤蔓蔓延 = true
+  更新.执行天气循环 = true
+  更新.熔岩源转化 = false
+  更新.随机 tick 速度 = 3
+  更新.积雪高度 = 1
+  更新.强制进度推进 = true
+  更新.水源转化 = true
+
+
+# 分类: 聊天
+# '聊天'类别的默认游戏规则设置。
+
+  聊天.成就公告 = true
+  聊天.命令方块输出 = true
+  聊天.管理员命令日志 = true
+  聊天.发送命令反馈 = true
+  聊天.显示死亡消息 = true
+
+
+# 分类: 杂项
+# '杂项'类别的默认游戏规则设置。
+
+  misc.command_modification_block_limit = 32768
+  misc.global_sound_events = true
+  misc.max_command_chain_length = 65536
+  misc.reduced_debug_info = false

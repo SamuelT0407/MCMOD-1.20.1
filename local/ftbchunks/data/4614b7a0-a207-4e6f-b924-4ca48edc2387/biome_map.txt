@@ -1,0 +1,11 @@
+#4DF biomesoplenty:aspen_glade
+#735 biomesoplenty:coniferous_forest
+#6D4 biomesoplenty:field
+#67F biomesoplenty:fir_clearing
+#251 biomesoplenty:forested_field
+#467 biomesoplenty:highland
+#056 biomesoplenty:maple_woods
+#28B biomesoplenty:pumpkin_patch
+#5FF minecraft:river
+#108 biomesoplenty:seasonal_forest
+#14C biomesoplenty:spider_nest

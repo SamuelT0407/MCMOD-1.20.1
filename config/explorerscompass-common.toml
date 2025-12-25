@@ -1,0 +1,15 @@
+
+[General]
+	#允许创造模式、管理员或作弊模式的玩家传送到定位的结构
+	allowTeleport = true
+	#允许玩家在HUD上查看定位结构的精确坐标和距离，而非仅依赖指南针指向的方向
+	displayCoordinates = true
+	#搜索结构的最大半径。提高此值会增加搜索精度，但可能使过程更消耗资源
+	#Range: 0 ~ 1000000
+	maxRadius = 10000
+	#指南针不会在GUI中显示且无法搜索的结构列表。通配符*可匹配任意数量字符，?可匹配单个字符。例如: ["minecraft:stronghold", "minecraft:endcity", "minecraft:*village*"]
+	structureBlacklist = []
+	#搜索结构时采样的最大次数
+	#Range: 0 ~ 100000000
+	maxSamples = 100000
+

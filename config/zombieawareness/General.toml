@@ -1,0 +1,67 @@
+
+#模组通用设置
+[general]
+	#僵尸的最大感知范围
+	#Range: > -2147483648
+	maxPFRangeSense = 64
+	#阻止非僵尸被光源吸引
+	awareness_Light_OnlyZombies = true
+	#在原版视野锁定基础上的自定义锁定视野范围
+	#Range: > -2147483648
+	sightRange = 16
+	#总是锁定最近的玩家 [影响性能]
+	omniscient = false
+	#跳过锁定时的视线检查 [影响性能]
+	seeThroughWalls = false
+	#影响怪物感知气味的距离
+	#Range: > -2147483648
+	scentStrength = 60
+	#影响怪物感知声源的距离
+	#Range: > -2147483648
+	soundStrength = 60
+	#生成声源的最大频率（毫秒）
+	#Range: > -2147483648
+	frequentSoundThreshold = 1000
+	#给僵尸额外生成和复制时的随机速度加成范围，例如：0=无加成，1=最多双倍速度（仅对本模组额外生成的怪物有效）
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	zombieRandSpeedBoost = 0.3
+	#处理增强AI怪物的游戏刻延迟，数值越小处理越频繁 [影响性能]
+	#Range: > -2147483648
+	tickRateAILoop = 5
+	#模组迭代所有玩家的频率，影响处理速率，数值越小越频繁
+	#Range: > -2147483648
+	tickRatePlayerLoop = 20
+	#怪物再次移动追踪光源、气味或声音前需要等待的时间，如需降低模组性能影响可增加此值
+	#Range: > -2147483648
+	tickCooldownBetweenPathfinds = 300
+	#嘈杂的僵尸吸引其他僵尸的几率，数值越高几率越低，0=每次发出声音都会吸引
+	#Range: > -2147483648
+	noisyZombiesReinforceOddsTo1 = 5
+	#-
+	debugConsole = false
+	#-
+	debugConsoleOmniscient = false
+	#-
+	debugConsoleSuperDetailed = false
+	#活跃感知源之间的最小距离，防止感知源堆积 [影响性能]
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	extraScentCutoffRange = 3.0
+	#感知的最大强度，以防感知获得超高基础强度或大量增益
+	#Range: > -2147483648
+	senseMaxStrength = 300
+	#激活所有模组功能前需要经过的天数
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	daysBeforeFeaturesActivate = 0.0
+	#方块破坏会产生声音感知源
+	blockBreakEvent_Active = true
+	#方块被挖掘（破坏前）会产生声音感知源
+	blockHittingEvent_Active = true
+	#敲击方块产生声音感知的几率，每刻判定一次
+	#Range: > -2147483648
+	blockHittingEvent_OddsTo1 = 20
+	#仅为玩家生成声音感知源，如果为false，机器和其他东西也会产生
+	blockBreakEvent_PlayersOnly = false
+	#每2秒，怪物寻找范围内活跃感知源的百分比几率，100=几乎立即，10=缓慢寻找，影响性能的设置，数值越高寻路尝试越频繁
+	#Range: > -2147483648
+	findSense_PercentChance = 10
+

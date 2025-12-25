@@ -1,0 +1,18 @@
+{
+  "block.enderio.aversion_obelisk": "[待翻译] Aversion Obelisk",
+  "gui.enderio.conduit.priority": "[待翻译] Priority",
+  "gui.enderio.conduit_probe.message.copied": "[待翻译] Copied data: %s",
+  "gui.enderio.conduit_probe.message.pasted": "[待翻译] Pasted data: %s",
+  "gui.enderio.conduit_probe.mode.switched": "[待翻译] Switched conduit probe mode to %s",
+  "item.enderio.conduit.chemical.multi": "[待翻译] Allows multiple chemical types to be transported on the same line",
+  "item.enderio.conduit_probe": "[待翻译] Conduit Probe",
+  "item.enderio.entity_filter": "[待翻译] Soul Filter",
+  "keybinding.enderio.category": "[待翻译] EnderIO",
+  "keybinding.enderio.probe_mode": "[待翻译] Change Probe Mode",
+  "tooltip.enderio.conduit.fluid.multi": "[待翻译] Allows multiple fluids to be transported on the same line",
+  "tooltip.enderio.conduit.fluid.rate": "[待翻译] Transfer Rate %s mB/t",
+  "tooltip.enderio.conduit_probe.mode": "[待翻译] Mode: %s",
+  "tooltip.enderio.conduit_probe.mode.contains_copied": "[待翻译] Contains copied conduit data:",
+  "tooltip.enderio.conduit_probe.mode.copy_paste": "[待翻译] Copy/Paste",
+  "tooltip.enderio.conduit_probe.mode.probe": "[待翻译] Probe"
+}

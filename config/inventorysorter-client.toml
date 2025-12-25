@@ -1,0 +1,8 @@
+
+#背包整理模块
+[modules]
+	#排序模块
+	sortingmodule = true
+	#滚轮移动模块
+	wheelmovemodule = true
+

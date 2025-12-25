@@ -1,0 +1,19 @@
+
+[Gameplay]
+	#如果为TRUE，拆解的方块将尽可能放入拆解玩家的背包中
+	"Return Dismantle Drops" = false
+
+	[Gameplay.Fishing]
+		#如果为TRUE，钓鱼会导致疲劳
+		"Fishing Exhaustion" = false
+		#此选项设置钓鱼造成的疲劳量（如果启用）
+		#Range: 0.0 ~ 10.0
+		"Fishing Exhaustion Amount" = 0.125
+
+	[Gameplay.World]
+		#如果为TRUE，树苗生长将按可配置因子减慢
+		"Sapling Growth Reduction" = false
+		#此选项设置树苗的生长因子 - 它们只会在N次中生长1次
+		#Range: > 1
+		"Sapling Growth Reduction Factor" = 4
+

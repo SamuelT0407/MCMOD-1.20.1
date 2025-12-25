@@ -1,0 +1,5 @@
+#要创建或修改的槽位列表。
+#语法参见文档: https://docs.illusivesoulworks.com/curios/configuration#slot-configuration
+#
+slots = []
+

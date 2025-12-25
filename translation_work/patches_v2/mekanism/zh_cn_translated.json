@@ -1,0 +1,3 @@
+{
+  "constants.mekanism.recipe_warning": "检测到Mekanism配方中存在损坏的标签，请查看服务器日志了解详情。您可能会缺少一些配方，并且机器可能无法接受预期的输入。"
+}

@@ -1,0 +1,10 @@
+
+#这些设置同时影响服务器和客户端
+[Common]
+	#玩家死亡时是否保留装饰盔甲槽中的物品
+	CosArmorKeepThroughDeath = false
+	#是否禁用装饰盔甲物品栏中的配方书
+	CosArmorDisableRecipeBook = false
+	#是否禁用coshat命令
+	CosArmorDisableCosHatCommand = false
+

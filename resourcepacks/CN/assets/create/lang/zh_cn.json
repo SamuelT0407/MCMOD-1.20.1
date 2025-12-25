@@ -1,0 +1,13 @@
+{
+  "create.schematic.tool.flip.description.2": "",
+  "create.schematic.tool.flip.description.3": "",
+  "create.schematic.tool.move.description.2": "",
+  "create.schematic.tool.move.description.3": "",
+  "create.schematic.tool.move_y.description.2": "",
+  "create.schematic.tool.move_y.description.3": "",
+  "create.schematic.tool.print.description.3": "",
+  "create.schematic.tool.rotate.description.2": "",
+  "create.schematic.tool.rotate.description.3": "",
+  "create.track_signal.mode_controlled_by_computer": "信号灯模式由计算机控制",
+  "tag.item.create.casing": "外壳"
+}

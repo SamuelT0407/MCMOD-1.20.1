@@ -1,0 +1,11 @@
+#垃圾槽首次关闭或可在支持的界面中启用时将显示提示。设为false禁用
+enableHints = true
+#不推荐，但此选项将允许你即使垃圾槽隐藏时也能使用删除物品的快捷键
+allowDeletionWhileTrashSlotIsInvisible = false
+#无法删除的物品列表，格式为逗号分隔的"modid:name"
+deletionDenyList = []
+#这将使删除槽立即删除物品，类似创造模式
+instantDeletion = false
+#如果想让删除快捷键在创造模式中也生效，请设为true。注意：无论instantDeletion设置如何，创造模式中物品将被永久删除！
+enableDeleteKeysInCreative = true
+

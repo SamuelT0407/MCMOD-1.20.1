@@ -1,0 +1,15 @@
+
+[nether]
+	#BOP群系在下界的区域权重
+	bop_nether_region_weight = 13
+	#BOP稀有群系在下界的区域权重
+	bop_nether_rare_region_weight = 2
+
+[overworld]
+	#BOP主要群系在主世界的区域权重
+	bop_primary_overworld_region_weight = 10
+	#BOP稀有群系在主世界的区域权重
+	bop_overworld_rare_region_weight = 2
+	#BOP次要群系在主世界的区域权重
+	bop_secondary_overworld_region_weight = 8
+

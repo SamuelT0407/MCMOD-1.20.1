@@ -1,0 +1,275 @@
+
+#Mekanism的世界生成设置。此配置从服务器同步到客户端
+[world_generation]
+	#允许区块重新生成Mekanism矿石方块。
+	enableRegeneration = false
+	#更改此值可使Mekanism在所有已加载区块中重新生成其矿石。
+	#Range: > 0
+	userWorldGenVersion = 0
+
+	#锡矿生成设置。
+	[world_generation.tin]
+		#是否将锡矿添加到世界生成中。
+		shouldGenerate = true
+
+		#小型锡矿脉生成设置。
+		[world_generation.tin.small]
+			#是否将小型锡矿脉添加到世界生成中。注意：需要启用锡矿生成。
+			shouldGenerate = true
+			#小型锡矿脉在区块中生成的几率。
+			#Range: 1 ~ 256
+			perChunk = 14
+			#小型锡矿脉的最大方块数。
+			#Range: 1 ~ 64
+			maxVeinSize = 4
+			#小型锡矿脉中直接暴露于空气的方块不被放置的几率。
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			#放置小型锡矿脉的分布形状。
+			#允许值: TRAPEZOID(梯形), UNIFORM(均匀)
+			shape = "TRAPEZOID"
+			#梯形短边的一半长度，仅在形状为TRAPEZOID时使用。值为0表示形状为三角形。
+			plateau = 0
+
+			#小型锡矿脉的最小（包含）高度锚点。
+			[world_generation.tin.small.minInclusive]
+				#锚点类型。
+				#Absolute -> y = value
+				#Above Bottom -> y = minY + value
+				#Below Top -> y = depth - 1 + minY - value
+				#允许值: ABSOLUTE, ABOVE_BOTTOM, BELOW_TOP
+				type = "ABSOLUTE"
+				#根据类型计算y值。
+				value = -20
+
+			#小型锡矿脉的最大（包含）高度锚点。
+			[world_generation.tin.small.maxInclusive]
+				#锚点类型。
+				type = "ABSOLUTE"
+				value = 94
+
+		#大型锡矿脉生成设置。
+		[world_generation.tin.large]
+			#是否将大型锡矿脉添加到世界生成中。注意：需要启用锡矿生成。
+			shouldGenerate = true
+			#大型锡矿脉在区块中生成的几率。
+			#Range: 1 ~ 256
+			perChunk = 12
+			#大型锡矿脉的最大方块数。
+			#Range: 1 ~ 64
+			maxVeinSize = 9
+			#大型锡矿脉中直接暴露于空气的方块不被放置的几率。
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			#放置大型锡矿脉的分布形状。
+			shape = "TRAPEZOID"
+			plateau = 0
+
+			[world_generation.tin.large.minInclusive]
+				type = "ABSOLUTE"
+				value = -32
+
+			[world_generation.tin.large.maxInclusive]
+				type = "ABSOLUTE"
+				value = 72
+
+	#锇矿生成设置。
+	[world_generation.osmium]
+		#是否将锇矿添加到世界生成中。
+		shouldGenerate = true
+
+		#上层锇矿脉生成设置。
+		[world_generation.osmium.upper]
+			#是否将上层锇矿脉添加到世界生成中。注意：需要启用锇矿生成。
+			shouldGenerate = true
+			#上层锇矿脉在区块中生成的几率。
+			#Range: 1 ~ 256
+			perChunk = 65
+			#上层锇矿脉的最大方块数。
+			#Range: 1 ~ 64
+			maxVeinSize = 7
+			#上层锇矿脉中直接暴露于空气的方块不被放置的几率。
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			shape = "TRAPEZOID"
+			plateau = 8
+
+			[world_generation.osmium.upper.minInclusive]
+				type = "ABSOLUTE"
+				value = 72
+
+			[world_generation.osmium.upper.maxInclusive]
+				type = "BELOW_TOP"
+				value = -24
+
+		#中层锇矿脉生成设置。
+		[world_generation.osmium.middle]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 6
+			#Range: 1 ~ 64
+			maxVeinSize = 9
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			shape = "TRAPEZOID"
+			plateau = 0
+
+			[world_generation.osmium.middle.minInclusive]
+				type = "ABSOLUTE"
+				value = -32
+
+			[world_generation.osmium.middle.maxInclusive]
+				type = "ABSOLUTE"
+				value = 56
+
+		#小型锇矿脉生成设置。
+		[world_generation.osmium.small]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 8
+			#Range: 1 ~ 64
+			maxVeinSize = 4
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			shape = "UNIFORM"
+			plateau = 0
+
+			[world_generation.osmium.small.minInclusive]
+				type = "ABOVE_BOTTOM"
+				value = 0
+
+			[world_generation.osmium.small.maxInclusive]
+				type = "ABSOLUTE"
+				value = 64
+
+	#铀矿生成设置。
+	[world_generation.uranium]
+		#是否将铀矿添加到世界生成中。
+		shouldGenerate = true
+
+		#小型铀矿脉生成设置。
+		[world_generation.uranium.small]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 4
+			#Range: 1 ~ 64
+			maxVeinSize = 4
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			shape = "TRAPEZOID"
+			plateau = 0
+
+			[world_generation.uranium.small.minInclusive]
+				type = "ABOVE_BOTTOM"
+				value = 0
+
+			[world_generation.uranium.small.maxInclusive]
+				type = "ABSOLUTE"
+				value = 8
+
+		#埋藏铀矿脉生成设置。
+		[world_generation.uranium.buried]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 7
+			#Range: 1 ~ 64
+			maxVeinSize = 9
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.75
+			shape = "TRAPEZOID"
+			plateau = 16
+
+			[world_generation.uranium.buried.minInclusive]
+				type = "ABOVE_BOTTOM"
+				value = -24
+
+			[world_generation.uranium.buried.maxInclusive]
+				type = "ABOVE_BOTTOM"
+				value = 56
+
+	#萤石矿生成设置。
+	[world_generation.fluorite]
+		#是否将萤石矿添加到世界生成中。
+		shouldGenerate = true
+
+		#普通萤石矿脉生成设置。
+		[world_generation.fluorite.normal]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 5
+			#Range: 1 ~ 64
+			maxVeinSize = 5
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.0
+			shape = "UNIFORM"
+			plateau = 0
+
+			[world_generation.fluorite.normal.minInclusive]
+				type = "ABOVE_BOTTOM"
+				value = 0
+
+			[world_generation.fluorite.normal.maxInclusive]
+				type = "ABSOLUTE"
+				value = 23
+
+		#埋藏萤石矿脉生成设置。
+		[world_generation.fluorite.buried]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 3
+			#Range: 1 ~ 64
+			maxVeinSize = 13
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 1.0
+			shape = "TRAPEZOID"
+			plateau = 0
+
+			[world_generation.fluorite.buried.minInclusive]
+				type = "ABOVE_BOTTOM"
+				value = 0
+
+			[world_generation.fluorite.buried.maxInclusive]
+				type = "ABSOLUTE"
+				value = 4
+
+	#铅矿生成设置。
+	[world_generation.lead]
+		#是否将铅矿添加到世界生成中。
+		shouldGenerate = true
+
+		#普通铅矿脉生成设置。
+		[world_generation.lead.normal]
+			shouldGenerate = true
+			#Range: 1 ~ 256
+			perChunk = 8
+			#Range: 1 ~ 64
+			maxVeinSize = 9
+			#Range: 0.0 ~ 1.0
+			discardChanceOnAirExposure = 0.25
+			shape = "TRAPEZOID"
+			plateau = 0
+
+			[world_generation.lead.normal.minInclusive]
+				type = "ABOVE_BOTTOM"
+				value = -24
+
+			[world_generation.lead.normal.maxInclusive]
+				type = "ABSOLUTE"
+				value = 64
+
+	#盐生成设置。
+	[world_generation.salt]
+		#是否将盐添加到世界生成中。
+		shouldGenerate = true
+		#盐在区块中生成的几率。
+		#Range: 1 ~ 256
+		perChunk = 2
+		#盐矿脉的基础半径。
+		#Range: 1 ~ 4
+		minRadius = 2
+		#盐矿脉半径的扩展变化（扩散）。
+		maxRadius = 3
+		#放置盐矿脉时向上和向下扩展的方块数。
+		#Range: 0 ~ 2031
+		halfHeight = 1
+

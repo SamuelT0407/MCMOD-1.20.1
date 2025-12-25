@@ -1,0 +1,5 @@
+{
+  "text.autoconfig.betterfortresses-fabric-1_20.option.general.disableVanillaFortresses": "Disable Vanilla Nether Fortresses",
+  "text.autoconfig.betterfortresses-fabric-1_20.option.general.disableVanillaFortresses.@Tooltip": "Whether vanilla Nether Fortresses should be disabled.",
+  "text.autoconfig.betterfortresses-fabric-1_20.title": "YUNG's Better Nether Fortresses"
+}

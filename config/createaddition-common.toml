@@ -1,0 +1,150 @@
+
+#电线
+[wires]
+	#小型连接器最大输出 FE/t（能量传输）
+	#Range: > 0
+	small_connector_max_output = 1000
+	#小型连接器最大输入 FE/t（能量传输）
+	#Range: > 0
+	small_connector_max_input = 1000
+	#带灯小型连接器能量消耗 FE/t
+	#Range: > 0
+	small_light_connector_consumption = 1
+	#大型连接器最大电线长度（方块）
+	#Range: 0 ~ 256
+	large_connector_wire_length = 32
+	#小型连接器最大电线长度（方块）
+	#Range: 0 ~ 256
+	small_connector_wire_length = 16
+	#大型连接器最大输入 FE/t（能量传输）
+	#Range: > 0
+	large_connector_max_input = 5000
+	#允许连接到连接器的方块自由地向连接器网络传入和传出能量
+	connector_allow_passive_io = true
+	#大型连接器最大输出 FE/t（能量传输）
+	#Range: > 0
+	large_connector_max_output = 5000
+	#忽略检查方块面是否能支撑连接器
+	connector_ignore_face_check = true
+
+#确保在运行专用服务器时，客户端和服务器的配置更改保持同步，
+#因为配置不会在客户端和服务器之间同步。
+#通用设置
+[general]
+	#交流发电机和电动机的最大应力（在256 RPM时的SU）
+	#Range: > 0
+	max_stress = 16384
+	#Forge能量转换率（在256 RPM时的FE/t，此值为256rpm时生成和消耗的FE/t）
+	#Range: > 0
+	fe_at_max_rpm = 480
+	#是否启用音频
+	audio_enabled = true
+
+#便携式能量接口
+[portable_energy_interface]
+	#PEI最大输出 FE/t（能量传输）
+	#Range: > 0
+	pei_max_output = 5000
+	#PEI最大输入 FE/t（能量传输）
+	#Range: > 0
+	pei_max_input = 5000
+
+#电动机
+[electric_motor]
+	#电动机内部容量（FE）
+	#Range: > 0
+	motor_capacity = 5000
+	#电动机最低能量消耗 FE/t
+	#Range: > 0
+	motor_min_consumption = 8
+	#电动机最大输入 FE（能量传输，非消耗）
+	#Range: > 0
+	motor_max_input = 5000
+	#电动机最小/最大转速
+	#Range: > 1
+	motor_rpm_range = 256
+
+#特斯拉线圈
+[tesla_coil]
+	#特斯拉线圈充电速率 FE/t
+	#Range: > 0
+	tesla_coil_charge_rate = 5000
+	#特斯拉线圈发射间隔（游戏刻）
+	#Range: > 0
+	tesla_coil_fire_cooldown = 20
+	#伤害范围（方块/米）
+	#Range: > 0
+	tesla_coil_hurt_range = 3
+	#特斯拉线圈内部容量（FE）
+	#Range: > 0
+	tesla_coil_capacity = 40000
+	#特斯拉线圈发射时消耗的能量（FE）
+	#Range: > 0
+	tesla_coil_hurt_energy_required = 1000
+	#生物的电击效果持续时间（游戏刻）
+	#Range: > 0
+	tesla_coil_effect_time_mob = 20
+	#玩家的电击效果持续时间（游戏刻）
+	#Range: > 0
+	tesla_coil_effect_time_player = 20
+	#特斯拉线圈最大输入 FE/t（能量传输）
+	#Range: > 0
+	tesla_coil_max_input = 10000
+	#特斯拉线圈配方充电速率 FE/t
+	#Range: > 0
+	tesla_coil_recipe_charge_rate = 2000
+	#特斯拉线圈对生物造成的伤害（半心）
+	#Range: > 0
+	tesla_coil_hurt_mob = 3
+	#特斯拉线圈对玩家造成的伤害（半心）
+	#Range: > 0
+	tesla_coil_hurt_player = 2
+
+#交流发电机
+[alternator]
+	#交流发电机效率（相对于基础转换率）
+	#Range: 0.01 ~ 1.0
+	generator_efficiency = 0.75
+	#交流发电机内部容量（FE）
+	#Range: > 0
+	generator_capacity = 5000
+	#交流发电机最大输出 FE（能量传输，非发电）
+	#Range: > 0
+	generator_max_output = 5000
+
+#蓄电池
+[accumulator]
+	#蓄电池每方块内部容量（FE）
+	#Range: > 0
+	accumulator_capacity = 2000000
+	#蓄电池最大输出 FE/t（能量传输）
+	#Range: > 0
+	accumulator_max_output = 5000
+	#蓄电池最大输入 FE/t（能量传输）
+	#Range: > 0
+	accumulator_max_input = 5000
+	#蓄电池多方块结构最大高度
+	#Range: 1 ~ 8
+	accumulator_max_height = 5
+	#蓄电池多方块结构最大宽度
+	#Range: 1 ~ 8
+	accumulator_max_width = 3
+
+#轧机
+[rolling_mill]
+	#轧机加工持续时间（游戏刻）
+	#Range: > 0
+	rolling_mill_processing_duration = 120
+	#轧机基础应力影响
+	#Range: 0 ~ 1024
+	rolling_mill_stress = 8
+
+#杂项
+[misc]
+	#钻石砂纸耐久度（使用次数）
+	#Range: > 3
+	diamond_grit_sandpaper_uses = 1024
+	#铁丝网伤害
+	#Range: 0.0 ~ 3.4028234663852886E38
+	barbed_wire_damage = 2.0
+

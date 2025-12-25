@@ -1,0 +1,6 @@
+
+#通用设置
+[general]
+	#是否启用欢迎信息。
+	welcome_info = false
+

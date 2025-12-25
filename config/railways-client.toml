@@ -1,0 +1,66 @@
+
+#.
+#仅客户端设置 - 如果你在寻找通用设置，请查看你的世界serverconfig文件夹！
+[client]
+	#.
+	#在连接器护目镜覆盖层中显示扩展调试信息
+	showExtendedCouplerDebug = false
+	#.
+	#跳过客户端火车脱轨。这可以防止火车铺设轨道时的卡顿，但火车撞毁时不会显示脱轨效果
+	skipClientDerailing = false
+	#.
+	#通过列车长监控时使用扫描线着色器
+	useConductorSpyShader = true
+	#.
+	#轨道覆盖层的垂直偏移
+	#Range: -256.0 ~ 256.0
+	trackOverlayOffset = 0.0
+	#.
+	#是否实际应用开发者披风（非开发者忽略此项）
+	#此设置可能需要重新登录才能生效
+	useDevCape = true
+	#.
+	#是否在列车长现有帽子上方渲染普通的Create列车长帽？
+	renderNormalCap = true
+	#.
+	#当飞轮和继承FlywheelBlock类的方块作为火车一部分时是否显示动画？
+	animatedFlywheels = true
+
+	#.
+	#烟雾设置
+	[client.smoke]
+		#.
+		#烟雾粒子样式
+		#Allowed Values: VANILLA, OLD, CARTOON
+		smokeType = "CARTOON"
+
+		#.
+		#旧式烟雾设置
+		[client.smoke.old]
+			#.
+			#[单位：刻]
+			#装置发出的烟雾粒子的生命周期
+			#Range: 20 ~ 1000
+			smokeLifetime = 500
+			#.
+			#装置上的烟雾发射率
+			#Range: 0.0 ~ 10.0
+			smokePercentage = 0.75
+			#.
+			#烟雾纹理质量
+			#Allowed Values: LOW, MEDIUM, HIGH, ULTRA
+			smokeQuality = "HIGH"
+			#.
+			#更浓的烟雾（每个粒子渲染额外2层）
+			thickerSmoke = true
+
+		#.
+		#卡通式烟雾设置
+		[client.smoke.cartoon]
+			#.
+			#定期生成上升更快的小烟雾团
+			spawnFasterPuffs = true
+			#.
+			#定期生成蒸汽
+			spawnSteam = false
+

@@ -1,0 +1,61 @@
+
+#仅客户端设置
+[client]
+	#实验性功能。如果为true，使用动态模型渲染储罐中的流体，在储罐静止时更高效
+	#如果为false，使用TESR渲染储罐中的流体，在储罐内容变化时更高效
+	tankFluidModel = false
+	#如果为true，游戏会记录资源包中不存在但可以添加的所有材料纹理，对模组开发者或资源包制作者很有帮助
+	logMissingMaterialTextures = false
+	#如果为true，游戏会记录资源包中不存在但可以添加的所有强化纹理，对模组开发者或资源包制作者很有帮助
+	logMissingModifierTextures = false
+	#冶炼炉中物品渲染的最大四边形数。大多数方块约6个四边形，像锭这样的物品约26个。
+	#设置得更低会导致渲染更少的物品（但永远不会是部分物品）。设为-1允许无限四边形，设为0禁用物品渲染器。
+	#Range: -1 ~ 32767
+	maxSmelteryItemQuads = 3500
+	#如果为true，在工具和工具部件的高级提示中显示强化ID。
+	#它们比大多数高级提示内容更突兀，所以提供此选项以防某些模组做出糟糕的设计决定把重要游戏信息放在提示中，或者给不需要强化信息的整合包制作者。
+	modifiersIDsInAdvancedTooltips = true
+
+	#JEI配置
+	[client.jei]
+		#如果为true，强化将添加到JEI物品列表中。如果为false，它们只在强化配方标签页中可见。
+		showModifiers = true
+		#如果非空，JEI中的工具只显示此材料（如果该材料对工具无效则显示第一个有效材料）。
+		#如果为空，显示所有材料
+		showOnlyToolMaterial = ""
+		#如果非空，JEI中的部件只显示此材料（如果该材料对部件无效则显示第一个有效材料）。
+		#如果为空，显示所有材料
+		showOnlyPartMaterial = ""
+		#如果为true，部件构建器和匠魂工作站等工作台会在JEI中显示所有变体。如果为false，变体只在工作台标签页中显示
+		showAllTableVariants = false
+		#如果为true，铁砧会在JEI中显示所有金属变体。如果为false，变体只在工作台标签页中显示
+		showAllAnvilVariants = true
+		#如果为true，冶炼炉和铸造厂控制器、排水口、管道和滑槽会在JEI中显示所有变体。如果为false，变体只在冶炼炉标签页中显示
+		showAllSmelteryVariants = false
+		#如果为true，装满的铜罐和流体计量器会在JEI中显示。如果为false，只显示空的
+		showFilledFluidTanks = false
+		#如果为true，每种药水的药水流体变体会在JEI中显示。如果为false，它将被隐藏，但仍可使用。
+		showPotionFluid = true
+
+	#与强化相关的设置
+	[client.modifiers]
+		#如果为true，护盾槽护腿强化会在副手槽上方渲染下一个副手物品。
+		renderShieldSlotItem = true
+
+		#与框架头盔强化相关的设置
+		[client.modifiers.itemFrame]
+			#如果为true，头盔的物品框架强化会渲染其物品。将此设为false会使该强化无用。
+			render = true
+			#框架物品在X方向的偏移。
+			#Range: -32768 ~ 32767
+			xOffset = 0
+			#框架物品在Y方向的偏移。
+			#Range: -32768 ~ 32767
+			yOffset = 0
+			#框架在屏幕上的位置。
+			#Allowed Values: TOP_LEFT, TOP, TOP_RIGHT, LEFT, RIGHT, BOTTOM_LEFT, BOTTOM, BOTTOM_RIGHT
+			location = "TOP_LEFT"
+			#物品框架每行显示的物品数量。
+			#Range: 0 ~ 100
+			itemsPerRow = 5
+

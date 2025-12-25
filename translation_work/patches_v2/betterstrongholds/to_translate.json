@@ -1,0 +1,19 @@
+{
+  "Use /locate structure betterstrongholds:stronghold instead!": "[待翻译] Use /locate structure betterstrongholds:stronghold instead!",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds": "[待翻译] YUNG's Better Strongholds",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general": "[待翻译] General Settings",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.@Tooltip": "[待翻译] General settings.",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceNormal": "[待翻译] Cobweb Spawn Rate (NORMAL)",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceNormal.@Tooltip[0]": "[待翻译] The rate at which cobwebs will spawn in various parts of the stronghold.",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceNormal.@Tooltip[1]": "[待翻译] Default: 0.1",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceSpawner": "[待翻译] Cobweb Spawn Rate (SPAWNER)",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceSpawner.@Tooltip[0]": "[待翻译] The rate at which cobwebs will spawn around spider spawners in libraries.",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.cobwebReplacementChanceSpawner.@Tooltip[1]": "[待翻译] Default: 0.3",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.lanternSpawnRate": "[待翻译] Lantern Spawn Rate",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.lanternSpawnRate.@Tooltip[0]": "[待翻译] The rate at which lanterns spawn throughout the stronghold.",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.lanternSpawnRate.@Tooltip[1]": "[待翻译] Default: 0.2",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.torchSpawnRate": "[待翻译] Torch Spawn Rate",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.torchSpawnRate.@Tooltip[0]": "[待翻译] The rate at which torches spawn throughout the stronghold.",
+  "text.autoconfig.betterstrongholds-fabric-1_20.option.betterStrongholds.general.torchSpawnRate.@Tooltip[1]": "[待翻译] Default: 0.1",
+  "text.autoconfig.betterstrongholds-fabric-1_20.title": "[待翻译] YUNG's Better Strongholds"
+}

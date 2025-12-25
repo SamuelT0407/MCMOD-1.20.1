@@ -1,0 +1,133 @@
+
+#.
+#仅客户端设置 - 如果你在寻找通用设置，请查看你的世界serverconfig文件夹！
+[client]
+	#.
+	#按Shift显示物品描述，按Ctrl显示控制信息。
+	enableTooltips = true
+	#.
+	#查看超载组件时显示提示。
+	enableOverstressedTooltip = true
+	#.
+	#当移动装置内发生渲染问题时记录堆栈跟踪。
+	explainRenderErrors = false
+	#.
+	#更高的密度意味着生成更多粒子。
+	#Range: 0.0 ~ 1.0
+	fanParticleDensity = 0.5
+	#.
+	#[单位：方块]
+	#方块过滤槽中物品显示的最大距离
+	#Range: 1.0 ~ 3.4028234663852886E38
+	filterItemRenderDistance = 10.0
+	#.
+	#选择Create配置按钮在主菜单中出现的行
+	#设为0完全禁用该按钮
+	#Range: 0 ~ 4
+	mainMenuConfigButtonRow = 2
+	#.
+	#将主菜单中的Create配置按钮在X轴上偏移此像素数
+	#此值的符号（-/+）决定按钮出现在行的哪一侧（左/右）
+	#Range: > -2147483648
+	mainMenuConfigButtonOffsetX = -4
+	#.
+	#选择Create配置按钮在游戏内菜单中出现的行
+	#设为0完全禁用该按钮
+	#Range: 0 ~ 5
+	ingameMenuConfigButtonRow = 3
+	#.
+	#将游戏内菜单中的Create配置按钮在X轴上偏移此像素数
+	#此值的符号（-/+）决定按钮出现在行的哪一侧（左/右）
+	#Range: > -2147483648
+	ingameMenuConfigButtonOffsetX = -4
+	#.
+	#设为true将阻止Create在启用极佳图形时向你发送警告
+	ignoreFabulousWarning = false
+	#.
+	#禁用此项可防止坐在移动装置上时被旋转
+	rotateWhenSeated = true
+
+	#.
+	#配置你在Create自定义流体中的视野范围
+	[client.fluidFogSettings]
+		#.
+		#蜂蜜中的视野范围将乘以此系数
+		#Range: 0.125 ~ 256.0
+		honey = 1.0
+		#.
+		#巧克力中的视野范围将乘以此系数
+		#Range: 0.125 ~ 256.0
+		chocolate = 1.0
+
+	#.
+	#护目镜覆盖层设置
+	[client.goggleOverlay]
+		#.
+		#将护目镜和悬停信息的覆盖层在相应轴上偏移此像素数；使用 /create overlay
+		#Range: > -2147483648
+		overlayOffsetX = 20
+		#.
+		#将护目镜和悬停信息的覆盖层在相应轴上偏移此像素数；使用 /create overlay
+		#Range: > -2147483648
+		overlayOffsetY = 0
+		#.
+		#启用此项以使用自定义颜色用于护目镜和悬停覆盖层
+		customColorsOverlay = false
+		#.
+		#用于护目镜和悬停覆盖层的自定义背景颜色（如果启用）
+		#[十六进制: #AaRrGgBb]
+		#[@cui:IntDisplay:#]
+		#Range: > -2147483648
+		customBackgroundOverlay = -267386864
+		#.
+		#用于护目镜和悬停覆盖层的边框渐变自定义顶部颜色（如果启用）
+		#[十六进制: #AaRrGgBb]
+		#[@cui:IntDisplay:#]
+		#Range: > -2147483648
+		customBorderTopOverlay = 1347420415
+		#.
+		#用于护目镜和悬停覆盖层的边框渐变自定义底部颜色（如果启用）
+		#[十六进制: #AaRrGgBb]
+		#[@cui:IntDisplay:#]
+		#Range: > -2147483648
+		customBorderBotOverlay = 1344798847
+
+	#.
+	#声音设置
+	[client.sound]
+		#.
+		#使齿轮发出隆隆声，机器发出咔嗒声。
+		enableAmbientSounds = true
+		#.
+		#环境噪音的最大音量系数
+		#Range: 0.0 ~ 1.0
+		ambientVolumeCap = 0.10000000149011612
+
+	#.
+	#模组集成和JEI
+	[client.jeiIntegration]
+		#.
+		#在仓库管理员UI中搜索时是否自动更新JEI搜索
+		syncJeiSearch = true
+
+	#.
+	#铁路相关设置
+	[client.trains]
+		#.
+		#坐在火车上时相机缩放的距离
+		#Range: 0.0 ~ 3.4028234663852886E38
+		mountedZoomMultiplier = 3.0
+		#.
+		#在F3调试模式激活时显示铁路网络的节点和边
+		showTrackGraphOnF3 = false
+		#.
+		#在F3调试模式激活时额外显示铁路网络的材料
+		showExtendedTrackGraphOnF3 = false
+		#.
+		#在支持的地图模组上显示铁轨网络和火车
+		showTrainMapOverlay = true
+		#.
+		#地图上的铁轨网络颜色
+		#Allowed Values: RED, GREY, WHITE
+		trainMapColorTheme = "RED"
+

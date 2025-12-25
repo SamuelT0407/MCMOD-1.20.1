@@ -1,0 +1,12 @@
+
+#Mekanism通用配置。此配置不会在服务器和客户端之间同步。
+[common]
+	#Mekanism GUI和网络读取器中显示的能量类型。
+	#允许值: JOULES(焦耳), FORGE_ENERGY(FE), ELECTRICAL_UNITS(EU)
+	energyType = "FORGE_ENERGY"
+	#Mekanism GUI和网络读取器中显示的温度单位。
+	#允许值: KELVIN(开尔文), CELSIUS(摄氏度), RANKINE(兰氏度), FAHRENHEIT(华氏度), AMBIENT(环境温度)
+	temperatureUnit = "KELVIN"
+	#当辐射读数高于安全水平时显示衰减时间。客户端设为false可禁用MekaSuit盖革计数器和剂量计单元定时器。服务端设为false可禁用手持盖革计数器和剂量计定时器。
+	enableDecayTimers = true
+

@@ -1,0 +1,117 @@
+
+#游戏设置
+[settings]
+	#农夫乐事为原版作物添加了板条箱（3x3），类似于Quark和Thermal Cultivation。是否可合成？
+	enableVanillaCropCrates = true
+	#新手和学徒农民是否会购买此模组的作物？（可能降低其他交易出现的几率）
+	farmersBuyFDCrops = true
+	#流浪商人是否出售此模组的部分物品？（目前包括作物种子和洋葱）
+	wanderingTraderSellsFDItems = true
+	#沃土每次随机刻成功促进植物生长的几率（百分比）。设为0.0可禁用
+	#Range: 0.0 ~ 1.0
+	richSoilBoostChance = 0.2
+	#时运附魔每级对砧板几率的加成（百分比）。设为0.0可禁用
+	#Range: 0.0 ~ 1.0
+	cuttingBoardFortuneBonus = 0.1
+	#玩家是否可以潜行+空手右键来从下往上收回绳子？
+	enableRopeReeling = true
+	#以这些染料颜色作为画布告示牌背景时，默认使用白色文字
+	#染料: ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
+	canvasSignDarkBackgroundList = ["gray", "purple", "blue", "brown", "green", "red", "black"]
+
+#农业
+[farming]
+	#手动采摘番茄藤时留下的绳子类型
+	defaultTomatoVineRope = "farmersdelight:rope"
+	#番茄藤是否可以攀爬任何带有farmersdelight:ropes标签的绳子？
+	#注意：这会将这些方块转换为defaultTomatoVineRope指定的方块
+	enableTomatoVineClimbingTaggedRopes = true
+
+#配方书
+[recipe_book]
+	#烹饪锅界面是否有配方书可用？
+	enableRecipeBookCookingPot = true
+
+#原版物品覆盖
+[overrides]
+	#原版Minecraft的汤和炖菜是否获得额外效果，类似此模组的餐食？
+	vanillaSoupExtraEffects = true
+	#兔肉煲食用后是否获得兔子的跳跃能力？
+	rabbitStewJumpBoost = true
+	#发射器是否可以操作其面前的砧板？
+	dispenserUsesToolsOnCuttingBoard = true
+
+	#堆叠数量覆盖
+	[overrides.stack_size]
+		#以下列表中的碗类食物是否可堆叠到16个，类似农夫乐事的餐食？
+		enableStackableSoupItems = true
+		#碗类食物列表。必须继承此类才能生效。默认：原版汤和炖菜
+		soupItemList = ["minecraft:mushroom_stew", "minecraft:beetroot_soup", "minecraft:rabbit_stew"]
+
+#世界生成
+[world]
+	#此模组是否在Minecraft各处的箱子中添加额外战利品（绳子、种子、小刀、餐食等）？
+	generateFDChestLoot = true
+	#农夫乐事是否在所有村庄群系生成堆肥堆？
+	genVillageCompostHeaps = true
+	#农夫乐事的作物是否随机种植在各种村庄农田中？
+	genFDCropsOnVillageFarms = true
+
+	#野生卷心菜生成
+	[world.wild_cabbages]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 30
+
+	#野生甜菜生成
+	[world.wild_beetroots]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 30
+
+	#野生土豆生成
+	[world.wild_potatoes]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 100
+
+	#野生胡萝卜生成
+	[world.wild_carrots]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 120
+
+	#野生洋葱生成
+	[world.wild_onions]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 120
+
+	#野生番茄藤生成
+	[world.wild_tomatoes]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 100
+
+	#野生稻米生成
+	[world.wild_rice]
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 20
+
+	#棕色蘑菇群落生成
+	[world.brown_mushroom_colonies]
+		#在蘑菇岛生成棕色蘑菇群落
+		genBrownMushroomColony = true
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 15
+
+	#红色蘑菇群落生成
+	[world.red_mushroom_colonies]
+		#在蘑菇岛生成红色蘑菇群落
+		genRedMushroomColony = true
+		#生成群落的几率。数值越小越频繁
+		#Range: > 0
+		chance = 15
+

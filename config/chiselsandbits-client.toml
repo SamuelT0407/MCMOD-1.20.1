@@ -1,0 +1,114 @@
+
+[settings]
+	#反转拾取方块行为
+	invert-pick-block-behaviour = false
+
+	[settings.bit-bag]
+		#反转耐久条指示
+		invert-durability-bar-indication = false
+
+	[settings.placement]
+
+		[settings.placement.render-mode]
+			#放置成功时的渲染模式
+			#Allowed Values: GHOST_BLOCK_MODEL, GHOST_BLOCK_MODEL_SOLID_COLOR, WIREFRAME
+			success = "GHOST_BLOCK_MODEL"
+			#放置失败时的渲染模式
+			#Allowed Values: GHOST_BLOCK_MODEL, GHOST_BLOCK_MODEL_SOLID_COLOR, WIREFRAME
+			failed = "GHOST_BLOCK_MODEL_SOLID_COLOR"
+
+		[settings.placement.color]
+			#放置成功时的颜色
+			success = [0.1882352977991104, 0.47058823704719543, 0.7882353067398071, 0.7058823704719543]
+			#不适合时的颜色
+			not-fitting = [0.7176470756530762, 0.2549019753932953, 0.054901961237192154, 0.7058823704719543]
+			#缺少凿子位或空间时的颜色
+			missing-bits-or-space = [1.0, 0.8588235378265381, 0.3450980484485626, 0.7058823704719543]
+
+	[settings.chiseling-previews]
+		#凿刻预览渲染器
+		renderer = "chiselsandbits:default"
+
+		[settings.chiseling-previews.default]
+
+			[settings.chiseling-previews.default.colors]
+				#凿刻时的颜色
+				chiseling = [0.8500000238418579, 0.0, 0.0, 0.6499999761581421]
+				#放置时的颜色
+				placement = [0.0, 0.8500000238418579, 0.0, 0.6499999761581421]
+
+		[settings.chiseling-previews.debug]
+			#启用调试模式
+			enabled = false
+
+			[settings.chiseling-previews.debug.mutator]
+
+				[settings.chiseling-previews.debug.mutator.colors]
+					#调试凿刻颜色
+					chiseling = [0.0, 0.0, 0.8500000238418579, 0.6499999761581421]
+					#调试放置颜色
+					placement = [0.8500000238418579, 0.8500000238418579, 0.0, 0.6499999761581421]
+
+	[settings.selected-tool-mode-icons]
+		#选中工具模式图标渲染器
+		renderer = "chiselsandbits:group"
+
+	[settings.clipboard]
+		#剪贴板大小
+		#Range: 0 ~ 64
+		size = 64
+		#添加破坏的方块到剪贴板
+		add-broken-blocks = true
+		#添加拾取的方块到剪贴板
+		add-picked-blocks = true
+
+	[settings.patterns]
+		#图案导出路径
+		export-path = "./chiselsandbits/patterns"
+
+	[settings.warnings]
+		#显示冷却错误提示
+		show-cool-down-error = false
+
+	[settings.interactions]
+		#滚动切换模式
+		scrolling-changes-mode = true
+
+[performance]
+
+	[performance.caches]
+
+		[performance.caches.sizes]
+			#凿子位存储内容模型缓存大小
+			#Range: 0 ~ 9223372036854775807
+			bit-storage-content-models = 100
+			#方块模型缓存大小
+			#Range: 3500 ~ 20000
+			block-models = 3500
+			#方块面缓存大小
+			#Range: 350000 ~ 2000000
+			block-faces = 1000000
+			#剔除测试缓存大小
+			#Range: 3500 ~ 200000
+			cull-testing = 3500
+			#物品堆模型缓存大小
+			#Range: 0 ~ 9223372036854775807
+			stack-models = 100
+
+	[performance.lighting]
+		#从面提取光照值
+		extract-lighting-values-from-faces = true
+		#从方块状态提取光照值
+		extract-lighting-values-from-blockstates = false
+
+	[performance.model-building]
+		#模型构建线程数
+		#Range: 1 ~ 12
+		thread-count = 6
+
+[gui]
+
+	[gui.radial-menu]
+		#显示鼠标指示器
+		display-mouse-indicator = false
+

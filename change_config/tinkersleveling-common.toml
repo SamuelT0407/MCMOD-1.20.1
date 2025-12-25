@@ -1,0 +1,19 @@
+
+["Client Configs for Tinker's Tool Leveling 2"]
+	#挖掘工具每次破坏方块获得的经验倍数。默认为1.0
+	"Exp Per Block" = 1.0
+	#近战武器每次击杀获得的经验倍数。默认为1.0
+	"Exp Per Melee Kill" = 1.0
+	#护甲每次受击获得的经验倍数。默认为1.0
+	"Exp Per Armor Hit" = 1.0
+	#破坏基岩是否给挖掘工具100,000经验。主要用于管理员目的。默认为true
+	"Admin Exp" = true
+	#每获得多少级获得一个额外修改器。设为0禁用额外修改器。默认为3
+	#Range: 0 ~ 11
+  # ----------------Change----------------
+	"Levels Between Bonus Modifiers" = 0
+	#升级工具所需的基础经验。默认为500
+	#Range: > 1
+  # ----------------Change----------------
+	"Exp Required" = 500
+

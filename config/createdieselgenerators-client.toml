@@ -1,0 +1,9 @@
+
+["Client Configs"]
+	#桶上显示燃料类型提示
+	"Fuel tooltips" = true
+	#柴油发动机是否显示在JEI中
+	"Diesel Engine JEI Config" = true
+	#柴油发动机在火车上发出声音
+	"Diesel Engines emit sounds on trains" = true
+

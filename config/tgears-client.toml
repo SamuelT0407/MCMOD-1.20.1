@@ -1,0 +1,5 @@
+
+["The Client Settings"]
+	#查看匠魂方块时启用护目镜功能
+	is_goggles_enabled = true
+

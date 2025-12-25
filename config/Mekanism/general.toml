@@ -1,0 +1,232 @@
+
+#通用配置。此配置从服务器同步到客户端。
+[general]
+	#记录Mekanism数据包名称。调试设置。
+	logPackets = false
+	#禁用可使锚升级失效。
+	allowChunkloading = true
+	#启用此项可允许从JEI拖动物品到数字采矿机过滤器的目标槽位。
+	easyMinerFilters = false
+	#方块活跃状态快速变化时，与客户端同步需要经过多少刻。
+	#Range: 0 ~ 1200
+	blockDeactivationDelay = 60
+	#添加到此列表的任何模组ID将无法让其任何方块被纸箱拾取。例如: ["mekanism"]
+	cardboardModBlacklist = []
+	#允许右键点击电缆/管道/导管用合金升级等级。
+	transmitterAlloyUpgrade = true
+	#使用升级计算机器性能的基础因子 - UpgradeModifier * (UpgradesInstalled/UpgradesPossible)。
+	#Range: > 1
+	maxUpgradeMultiplier = 10
+	#锅炉热量中可立即用于将水转换为蒸汽的比例。
+	#Range: 0.01 ~ 1.0
+	boilerWaterConductivity = 0.7
+	#燃木加热器中每燃料刻产生的热量。
+	#Range: 0.1 ~ 4000000.0
+	heatPerFuelTick = 400.0
+	#燃木加热器中物品燃烧的刻数。使用此选项可有效使燃木加热器燃烧更快但每物品产生相同热量。
+	#Range: 1 ~ 1000
+	fuelwoodTickMultiplier = 1
+	#电阻加热器中每焦耳常规能量产生多少热能。
+	#Range: 0.0 ~ 1.0
+	resistiveHeaterEfficiency = 0.6
+	#每个锅炉加热元件产生的热量。
+	#Range: 0.1 ~ 1.024E9
+	superheatingHeatTransfer = 1.6E7
+	#太阳能中子活化器的峰值处理速率。注意：在某些极端环境下可以超过此值。
+	#Range: 1 ~ 1024
+	maxSolarNeutronActivatorRate = 64
+
+	#动态储罐设置
+	[general.dynamic_tank]
+		#动态储罐每个方块对容积贡献的流体量(mB)。最大 = 体积 * fluidPerTank
+		#Range: 1 ~ 368224
+		fluidPerTank = 350000
+		#动态储罐每个方块对容积贡献的化学品量(mB)。最大 = 体积 * chemicalPerTank
+		#Range: 1 ~ 1581510980256305
+		chemicalPerTank = 16000000
+
+	#自动弹出设置
+	[general.auto_eject]
+		#方块自动弹出流体的速率。
+		#Range: > 1
+		fluid = 1024
+		#方块自动弹出化学品的速率。
+		#Range: 1 ~ 9223372036854775807
+		chemical = 1024
+		#设置为倾倒过量时储罐容量中保留内容物的百分比。
+		#Range: 0.001 ~ 1.0
+		dumpExcessKeepRatio = 0.9
+
+	#预填充储罐
+	[general.prefilled]
+		#在创造模式/JEI中添加填满的创造流体储罐。
+		fluidTanks = true
+		#在创造模式/JEI中添加填满的创造气体储罐。
+		gasTanks = true
+		#在创造模式/JEI中添加填满的创造灌注储罐。
+		infusionTanks = true
+		#在创造模式/JEI中添加填满的创造颜料储罐。
+		pigmentTanks = true
+		#在创造模式/JEI中添加填满的创造泥浆储罐。
+		slurryTanks = true
+
+	#能量转换率设置
+	[general.energy_conversion]
+		#禁用IC2能量集成。需要重启世界（多人游戏中为服务器端选项）。
+		blacklistIC2 = false
+		#EU到焦耳的转换倍数 (EU * euConversionRate = 焦耳)
+		euConversionRate = "10"
+		#禁用Forge能量(FE,RF,IF,uF,CF)集成。需要重启世界（多人游戏中为服务器端选项）。
+		blacklistForge = false
+		#Forge能量到焦耳的转换倍数 (FE * feConversionRate = 焦耳)
+		feConversionRate = "2.5000"
+		#禁用Flux Networks更高吞吐量的Forge能量(FE,RF,IF,uF,CF)集成。需要重启世界。注意：禁用Forge能量集成也会禁用此项。
+		blacklistFluxNetworks = false
+		#每mB氢气产生多少能量，也影响电解分离器用量、乙烯燃烧率和气体发电机能量容量。
+		HydrogenEnergyDensity = "200"
+		#每mB蒸汽的最大焦耳。也影响热电锅炉。
+		maxEnergyPerSteam = "10"
+
+	#辐射设置
+	[general.radiation]
+		#启用全球辐射效果。别扫兴，别禁用这个。
+		radiationEnabled = true
+		#运行辐射计算时检查的区块半径。算法很高效，但别把这个设得太疯狂。
+		#Range: 1 ~ 100
+		chunkCheckRadius = 5
+		#辐射源大约每秒乘以此常数以表示其衰减。默认速率下，移除1000 Sv/h（超高）的源大约需要10小时。
+		#Range: 0.0 ~ 1.0
+		sourceDecayRate = 0.9995
+		#被辐射的物体和实体大约每秒乘以此常数以表示其剂量衰减。
+		#Range: 0.0 ~ 1.0
+		targetDecayRate = 0.9995
+		#定义可产生负面效果的最小辐射剂量严重程度（0到1的比例）。设为1可完全禁用负面效果。
+		#Range: 0.0 ~ 1.0
+		negativeEffectsMinSeverity = 0.1
+		#放射性废料桶可存储的气体量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		radioactiveWasteBarrelMaxGas = 512000
+		#放射性废料桶中的放射性气体衰减radioactiveWasteBarrelDecayAmount mB所需的刻数。
+		#Range: > 1
+		radioactiveWasteBarrelProcessTicks = 20
+		#存储在放射性废料桶中时每radioactiveWasteBarrelProcessTicks刻衰减的气体mB数。设为0可完全禁用衰减。（mekanism:waste_barrel_decay_blacklist标签中的气体不会衰减）。
+		#Range: 0 ~ 9223372036854775807
+		radioactiveWasteBarrelDecayAmount = 1
+
+	#数字采矿机设置
+	[general.digital_miner]
+		#使用精准采集模式时的能量倍数。
+		#Range: > 1
+		silkMultiplier = 12
+		#数字采矿机可达到的最大方块半径。（增加此值可能对稳定性和/或性能产生负面影响。我们强烈建议保持默认值）。
+		#Range: > 1
+		maxRadius = 32
+		#数字采矿机挖掘单个方块所需的刻数（无任何升级）。
+		#Range: > 1
+		ticksPerMine = 80
+
+	#激光设置
+	[general.laser]
+		#如果启用，激光可以破坏方块，火焰喷射器可以点火。
+		aestheticWorldDamage = true
+		#激光可以传播的距离（方块）。
+		#Range: 1 ~ 1024
+		range = 64
+		#用激光破坏或吸引方块所需的能量（每方块硬度等级）。
+		energyNeededPerHardness = "100000"
+		#每半心伤害传递给实体所用的能量。
+		energyPerDamage = "2500"
+
+	#矿石词典转换器设置
+	[general.oredictionificator]
+		#矿石词典转换器的有效标签前缀列表。注意：强烈建议只包含众所周知/定义明确的标签前缀，否则很容易可能添加实际上不等效物品的意外转换。
+		validItemFilters = ["forge:dusts/", "forge:ingots/", "forge:nuggets/", "forge:ores/", "forge:raw_materials/", "forge:storage_blocks/"]
+
+	#泵设置
+	[general.pump]
+		#电动泵抽取流体的最大方块距离。
+		#Range: 1 ~ 512
+		maxPumpRange = 80
+		#如果启用，水和重水方块在被泵抽取时会从世界中移除。
+		pumpWaterSources = false
+		#带过滤器升级的电动泵每水方块提取的重水量(mB)。
+		#Range: 1 ~ 1000
+		pumpHeavyWaterAmount = 10
+		#流体补充器在这么多方块后停止。
+		#Range: 1 ~ 1000000
+		maxPlenisherNodes = 4000
+
+	#量子纠缠传送器设置
+	[general.quantum_entangloporter]
+		#纠缠传送器频率的最大能量缓冲（Mekanism焦耳）- 即每频率每刻的最大传输。默认为终极能量方块容量。
+		energyBuffer = "256000000"
+		#纠缠传送器频率的最大流体缓冲(mB) - 即每频率每刻的最大传输。默认为终极储罐容量。
+		#Range: > 1
+		fluidBuffer = 256000
+		#纠缠传送器频率的最大化学品缓冲(mB) - 即每频率每刻的最大传输。默认为终极储罐容量。
+		#Range: 1 ~ 9223372036854775807
+		chemicalBuffer = 8192000
+
+	#方块安全/保护设置
+	[general.security]
+		#启用安全系统以防止其他玩家访问机器。不影响频率。
+		allowProtection = true
+		#如果启用，拥有'mekanism.bypass_security'权限的玩家（默认管理员）可以绕过方块和物品安全限制。
+		opsBypassRestrictions = false
+
+	#营养膏设置
+	[general.nutritional_paste]
+		#食用营养膏时的饱和度等级。
+		#Range: 0.0 ~ 100.0
+		saturation = 0.8
+		#多少mB营养膏相当于一个'半食物'。
+		#Range: > 1
+		mbPerFood = 50
+
+	#锅炉设置
+	[general.boiler]
+		#锅炉水部分每个方块对容积贡献的流体量(mB)。最大 = 体积 * waterPerTank
+		#Range: 1 ~ 368224
+		waterPerTank = 16000
+		#锅炉蒸汽部分每个方块对容积贡献的蒸汽量(mB)。最大 = 体积 * steamPerTank
+		#Range: 10 ~ 1581510980256305
+		steamPerTank = 160000
+		#锅炉加热冷却液部分每个方块对容积贡献的量(mB)。最大 = 体积 * heatedCoolantPerTank
+		#Range: 1 ~ 1581510980256305
+		heatedCoolantPerTank = 256000
+		#锅炉冷却后冷却液部分每个方块对容积贡献的量(mB)。最大 = 体积 * cooledCoolantPerTank
+		#Range: 1 ~ 1581510980256305
+		cooledCoolantPerTank = 256000
+
+	#热力蒸发塔设置
+	[general.thermal_evaporation]
+		#热力蒸发塔每刻热量损失。
+		#Range: 0.001 ~ 1000.0
+		heatDissipation = 0.02
+		#热力蒸发塔的温度与产量比。
+		#Range: 0.001 ~ 1000000.0
+		tempMultiplier = 0.4
+		#热力蒸发塔每个太阳能板阵列吸收的热量。
+		#Range: 0.001 ~ 1000000.0
+		solarMultiplier = 0.2
+		#热力蒸发塔层的热容量（增加温度所需的能量）。
+		#Range: 1.0 ~ 1000000.0
+		heatCapacity = 100.0
+		#蒸发塔每个方块对输入储罐容量贡献的流体量(mB)。最大 = 体积 * fluidPerTank
+		#Range: 1 ~ 29826161
+		fluidPerTank = 64000
+		#蒸发塔可存储的输出流体量(mB)。
+		#Range: > 1
+		outputTankCapacity = 10000
+
+	#SPS设置
+	[general.sps]
+		#制造1mB反物质需要处理多少输入气体(钋)(mB)。输入储罐容量是此值的2倍。
+		#Range: > 1
+		inputPerAntimatter = 1000
+		#SPS可存储的输出气体量(mB，反物质)。
+		#Range: 1 ~ 9223372036854775807
+		outputTankCapacity = 1000
+		#处理1mB输入所需的能量 (inputPerAntimatter * energyPerInput = 生产1mB反物质所需能量)。
+		energyPerInput = "1000000"
+

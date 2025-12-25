@@ -1,0 +1,57 @@
+{
+  "client": {
+    "disableColoredCableRecipesInJEI": true,
+    "enableFacadesInJEI_comment": "在JEI物品列表中显示包层",
+    "--------------------------Change1--------------------------------":"",
+    "enableFacadesInJEI": false,
+    "enableFacadeRecipesInJEI_comment": "在JEI中显示支持的方块的包层配方",
+    "--------------------------Change2--------------------------------":"",
+    "enableFacadeRecipesInJEI": false,
+    "exposeInventoryToEmi_comment": "将完整的网络物品展示给EMI，可能导致性能问题",
+    "exposeInventoryToEmi": false,
+    "enableEffects": true,
+    "useTerminalUseLargeFont": false,
+    "useColoredCraftingStatus": true,
+    "PowerUnit_comment": "AE界面中显示的能量单位",
+    "PowerUnit": "ae",
+    "showDebugGuiOverlays_comment": "显示调试GUI覆盖层",
+    "showDebugGuiOverlays": false,
+    "showPlacementPreview_comment": "显示部件和包层放置预览",
+    "showPlacementPreview": true,
+    "notifyForFinishedCraftingJobs_comment": "长时间合成任务完成时显示提示",
+    "notifyForFinishedCraftingJobs": true,
+    "clearGridOnClose_comment": "关闭终端时自动清空合成/编码网格",
+    "clearGridOnClose": false,
+    "terminalMargin_comment": "调整终端大小时的垂直边距，用于为居中的物品模组搜索栏腾出空间",
+    "terminalMargin": 25
+  },
+  "terminals": {
+    "terminalStyle": "small",
+    "pinAutoCraftedItems_comment": "将玩家自动合成的物品固定在终端顶部",
+    "pinAutoCraftedItems": true
+  },
+  "search": {
+    "searchModNameInTooltips_comment": "搜索提示信息时是否包含模组名称",
+    "searchModNameInTooltips": false,
+    "useExternalSearch_comment": "用REI或JEI的搜索替换AE自带的搜索",
+    "useExternalSearch": false,
+    "clearExternalSearchOnOpen_comment": "使用外部搜索时，打开终端时清空搜索内容",
+    "clearExternalSearchOnOpen": true,
+    "syncWithExternalSearch_comment": "安装REI/JEI时，终端打开期间AE或REI/JEI的搜索文本变化时自动同步",
+    "syncWithExternalSearch": true,
+    "rememberLastSearch_comment": "记住上次搜索内容，打开终端时恢复",
+    "rememberLastSearch": true,
+    "autoFocusSearch_comment": "打开终端时自动聚焦搜索框",
+    "autoFocusSearch": false
+  },
+  "tooltips": {
+    "showCellUpgrades_comment": "在存储单元、染色器和物质炮的提示中显示已安装的升级",
+    "showCellUpgrades": true,
+    "showCellContent_comment": "在存储单元、染色器和物质炮的提示中显示内容预览",
+    "showCellContent": true,
+    "maxCellContentShown_comment": "存储单元、染色器和物质炮提示中显示的最大内容条目数",
+    "maxCellContentShown": 5,
+    "enableGuideHotkey_comment": "启用提示中的'按住按键显示指南'功能",
+    "enableGuideHotkey": true
+  }
+}

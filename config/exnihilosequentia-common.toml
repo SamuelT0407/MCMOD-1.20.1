@@ -1,0 +1,213 @@
+
+#寄生树叶配置
+[infested_leaves]
+	#树叶完全被寄生所需的秒数（默认：10）
+	#Range: > 1
+	secondsToTransformLeaves = 10
+	#寄生树叶尝试扩散的间隔游戏刻（默认：100）
+	#Range: > 1
+	ticksBetweenSpreadAttempt = 100
+	#寄生树叶扩散的几率（默认：0.3）
+	#Range: 0.001 ~ 1.0
+	spreadChance = 0.3
+
+#木桶配置
+[barrel]
+	#木桶容纳的桶数量（默认：1）
+	#Range: > 1
+	barrelNumberOfBuckets = 1
+	#木桶可接受的最高温度；水是300（默认：300）
+	#Range: > 0
+	woodBarrelMaxTemp = 300
+	#无中生有是否显示粒子效果
+	showParticles = true
+	#下界木桶是否使用下界木音效（默认：true）
+	#设为false则与普通木桶音效相同
+	netherBarrelSoundsEnabled = true
+	#每次降雨填充的流体量（默认：2）
+	#Range: > 1
+	rainFillAmount = 2
+
+	#生物生成配置
+	[barrel.mob_spawn]
+		#生成生物所需的秒数（默认：10）
+		#Range: > 1
+		secondsToSpawnMobs = 10
+
+	#堆肥配置
+	[barrel.compost]
+		#堆肥所需的秒数（默认：10）
+		#Range: > 1
+		secondsToCompost = 10
+		#开始堆肥前桶内需要的固体量（默认：1000）
+		#Range: > 1
+		maxSolidAmount = 1000
+
+	#流体转换配置
+	[barrel.fluid_transform]
+		#流体转换所需的秒数（默认：10）
+		#Range: > 1
+		secondsToTransformFluid = 10
+
+#卵石配置
+[pebble]
+	#卵石造成的半心伤害值（默认：0）
+	#Range: > 0
+	pebbleDamage = 0
+	#卵石是否可投掷（默认：true）
+	enableThrowable = true
+
+#矿石配置
+[ore]
+	#启用铂矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enablePlatinum = true
+	#启用铀矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableUranium = true
+	#启用金矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableGold = true
+	#启用银矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableSilver = true
+	#启用铜矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableCopper = true
+	#启用镍矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableNickel = true
+	#启用铁矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableIron = true
+	#允许此配置文件启用/禁用矿石（默认：false）
+	enableOreOverride = false
+	#启用铝矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableAluminum = true
+	#启用铅矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableLead = true
+	#启用锌矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableZinc = true
+	#启用锡矿碎片、块和锭（如果存在）。需要'enableOreOverride'为true（默认：true）
+	enableTin = true
+
+#钩子配置
+[crook]
+	#钩子从寄生树叶额外掉落线的最大数量（默认：3）
+	#Range: > 0
+	maxBonusStringCount = 3
+	#钩子从寄生树叶掉落线的最小数量（默认：2）
+	#Range: > 1
+	minStringCount = 2
+	#钩子模拟"破坏"树叶方块获取掉落物的次数（默认：3）
+	#Range: > 1
+	vanillaDropSimulateCount = 3
+
+#耐久度配置
+[durability]
+
+	#锤子耐久度
+	[durability.hammer]
+		#木锤耐久度（默认：128）
+		#Range: > 1
+		hammerWoodValue = 128
+		#石锤耐久度（默认：256）
+		#Range: > 1
+		hammerStoneValue = 256
+		#下界合金锤耐久度（默认：8192）
+		#Range: > 1
+		hammerNetheriteValue = 8192
+		#铁锤耐久度（默认：512）
+		#Range: > 1
+		hammerIronValue = 512
+		#钻石锤耐久度（默认：4096）
+		#Range: > 1
+		hammerDiamondValue = 4096
+		#金锤耐久度（默认：64）
+		#Range: > 1
+		hammerGoldValue = 64
+
+	#钩子耐久度
+	[durability.crook]
+		#钻石钩耐久度（默认：2048）
+		#Range: > 1
+		crookDiamondValue = 2048
+		#铁钩耐久度（默认：512）
+		#Range: > 1
+		crookIronValue = 512
+		#骨钩耐久度（默认：256）
+		#Range: > 1
+		crookBoneValue = 256
+		#石钩耐久度（默认：256）
+		#Range: > 1
+		crookStoneValue = 256
+		#金钩耐久度（默认：64）
+		#Range: > 1
+		crookGoldValue = 64
+		#花岗岩钩耐久度（默认：256）
+		#Range: > 1
+		crookGraniteValue = 256
+		#下界合金钩耐久度（默认：8192）
+		#Range: > 1
+		crookNetheriteValue = 8192
+		#安山岩钩耐久度（默认：256）
+		#Range: > 1
+		crookAndesiteValue = 256
+		#闪长岩钩耐久度（默认：256）
+		#Range: > 1
+		crookDioriteValue = 256
+		#木钩耐久度（默认：128）
+		#Range: > 1
+		crookWoodValue = 128
+
+	#筛网耐久度
+	[durability.mesh]
+		#下界合金筛网耐久度（仅当enableMeshDurability为true时有效）（默认：2031）
+		#Range: > 1
+		meshNetheriteValue = 2031
+		#钻石筛网耐久度（仅当enableMeshDurability为true时有效）（默认：1561）
+		#Range: > 1
+		meshDiamondValue = 1561
+		#铁筛网耐久度（仅当enableMeshDurability为true时有效）（默认：250）
+		#Range: > 1
+		meshIronValue = 250
+		#线筛网耐久度（仅当enableMeshDurability为true时有效）（默认：59）
+		#Range: > 1
+		meshStringValue = 59
+		#绿宝石筛网耐久度（仅当enableMeshDurability为true时有效）（默认：1561）
+		#Range: > 1
+		meshEmeraldValue = 1561
+		#燧石筛网耐久度（仅当enableMeshDurability为true时有效）（默认：131）
+		#Range: > 1
+		meshFlintValue = 131
+
+#坩埚配置
+[crucible]
+	#熔化操作之间的游戏刻间隔（默认：20）
+	#Range: > 1
+	ticksBetweenMelts = 20
+	#坩埚容纳的桶数量（默认：4）
+	#Range: > 1
+	crucibleNumberOfBuckets = 4
+	#下界坩埚是否使用下界木音效（默认：true）
+	#设为false则与普通木坩埚音效相同
+	netherCrucibleSoundsEnabled = true
+
+	#木坩埚配置
+	[crucible.wood]
+		#木坩埚使用的加热速率（不受下方热源影响）（默认：2）
+		#Range: > 1
+		woodHeatRate = 2
+
+#筛子配置
+[sieve]
+	#筛子会获得所有低于当前筛网等级的结果（默认：true）
+	flattenSieveRecipes = true
+	#筛沙一个方块所需的点击次数（默认：10）
+	#Range: 1 ~ 10
+	maxSieveClicks = 10
+	#筛网有耐久度可损坏，但不可堆叠（默认：false）
+	enableMeshDurability = false
+	#下界筛子是否使用下界木音效（默认：true）
+	#设为false则与普通木筛子音效相同
+	netherSieveSoundsEnabled = true
+	#筛网可堆叠但没有耐久度（默认：64）
+	#Range: 1 ~ 64
+	meshStackSize = 64
+	#筛子尝试激活周围其他筛子的半径（默认：2）
+	#Range: 0 ~ 5
+	sieveRange = 2
+

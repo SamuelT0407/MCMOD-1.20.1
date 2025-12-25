@@ -1,0 +1,67 @@
+
+#动物生成设置
+["Animal Spawn Settings"]
+	#熊最低生成Y高度
+	#Range: -2032 ~ 2032
+	bear_min_y = -64
+	#熊生成维度黑名单
+	bear_dimensions = []
+	#食人鱼最低生成Y高度
+	#Range: -2032 ~ 2032
+	piranha_min_y = -64
+	#熊最高生成Y高度
+	#Range: -2032 ~ 2032
+	bear_max_y = 319
+	#老鼠最高生成Y高度
+	#Range: -2032 ~ 2032
+	rat_max_y = 319
+	#野狗最高生成Y高度
+	#Range: -2032 ~ 2032
+	wild_dog_max_y = 319
+	#食人鱼生成维度黑名单
+	piranha_dimensions = []
+	#野狗生成维度黑名单
+	wild_dog_dimensions = []
+	#熊是否只在白天生成
+	bear_only_day_spawns = true
+	#野狗最低生成Y高度
+	#Range: -2032 ~ 2032
+	wild_dog_min_y = -64
+	#食人鱼最高生成Y高度
+	#Range: -2032 ~ 2032
+	piranha_max_y = 319
+	#老鼠最低生成Y高度
+	#Range: -2032 ~ 2032
+	rat_min_y = -64
+	#老鼠生成维度黑名单
+	rat_dimensions = []
+
+#动物攻击设置
+["Animal Attack Settings"]
+	#野狗是否攻击怪物
+	wild_dog_should_attack_monsters = false
+	#老鼠是否攻击所有生物（除老鼠外）
+	rat_should_attack_all = false
+	#食人鱼是否攻击所有生物（除食人鱼外）
+	piranha_should_attack_all = false
+	#野狗是否攻击所有生物（除野狗外）
+	wild_dog_should_attack_all = false
+	#老鼠偷窃物品几率（数字越大几率越低）
+	#Range: > 0
+	rat_stealing_chance = 10
+	#食人鱼破坏船只几率
+	#Range: > 0
+	piranha_chance_to_damage_boats = 30
+	#食人鱼是否攻击怪物
+	piranha_should_attack_monsters = false
+	#老鼠是否攻击怪物
+	rat_should_attack_monsters = false
+	#熊是否攻击怪物
+	bear_should_attack_monsters = false
+	#老鼠是否偷窃物品
+	rat_should_steal = true
+	#食人鱼碰撞时是否破坏船只
+	piranha_should_damage_boats = true
+	#熊是否攻击所有生物（除熊外）
+	bear_should_attack_all = false
+

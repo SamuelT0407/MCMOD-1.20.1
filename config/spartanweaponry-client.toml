@@ -1,0 +1,39 @@
+
+[general]
+	#需要重启游戏！设为true以移除任何不可合成武器的不可合成提示（红色高亮显示）。对希望更改配方的整合包制作者很有用。
+	force_disable_uncraftable_tooltips = false
+
+[integration]
+	#设为true以完全禁用与Shoulder Surfing Reloaded的集成
+	disable_shoulder_surfing_integration = false
+
+[hud]
+	#设为true以禁用弩的新准星（可视化显示精准度），改用默认准星；否则设为false
+	disable_new_crosshairs_crossbow = false
+	#设为true以禁用投掷武器的新准星（显示蓄力），改用默认准星；否则设为false
+	disable_new_crosshairs_throwing_weapons = false
+	#设为true以强制使用弩和投掷武器的兼容模式准星。如果新准星被禁用则此项无效
+	force_compatibility_crosshairs = false
+
+	[hud.quiver]
+		#设置箭袋HUD元素的对齐位置
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		quiver_hud_alignment = "BOTTOM_CENTER"
+		#设置箭袋HUD元素相对于对齐点在X轴上的偏移量
+		#Range: -400 ~ 400
+		quiver_hud_offset_x = -138
+		#设置箭袋HUD元素相对于对齐点在Y轴上的偏移量
+		#Range: -400 ~ 400
+		quiver_hud_offset_y = 65
+
+	[hud.oil_uses]
+		#设置淬毒次数HUD元素的对齐位置
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		oil_uses_alignment = "CENTER"
+		#设置淬毒次数HUD元素相对于对齐点在X轴上的偏移量
+		#Range: -400 ~ 400
+		oil_uses_hud_offset_x = 0
+		#设置淬毒次数HUD元素相对于对齐点在Y轴上的偏移量
+		#Range: -400 ~ 400
+		oil_uses_hud_offset_y = 0
+

@@ -1,0 +1,30 @@
+
+[General]
+	# 反转提取物品时Shift键的行为
+	invertShift = false
+	# 反转抽屉上的左键和右键操作
+	invertClick = false
+
+[Integration]
+	# 如果存在WAILA，启用扩展数据显示
+	enableWaila = true
+	# 如果存在The One Probe，启用扩展数据显示
+	enableTheOneProbe = true
+
+[Render]
+	# 物品标签停止渲染的距离（方块）
+	labelRenderDistance = 20.0
+	#
+	# 数量数字停止渲染的距离（方块）
+	quantityRenderDistance = 10.0
+	#
+	# 数量数字开始淡出的距离（方块）
+	quantityFadeDistance = 20.0
+
+	# 框架抽屉特定的渲染设置。
+	[Render.FramedDrawers]
+		#
+		# 尝试在半透明渲染通道上渲染"非不透明"材料。
+		# 这可能会导致伪影，特别是在"正面"使用非不透明材料时。
+		renderTranslucentMaterials = true
+

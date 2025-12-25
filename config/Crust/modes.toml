@@ -1,0 +1,84 @@
+# crust:modes.toml
+# 此配置文件包含控制Crust添加的“模式”的选项。Crust模式的示例包括磁铁模式、
+# 超速模式和不死模式。
+#
+# 此配置用于服务器端设置。客户端偏好设置需通过/crustmode命令或Crust的额外
+# 库存按钮（client_extra_inv_buttons.toml）进行请求。
+
+
+# 分类：通用
+# 适用于Crust添加模式的通用选项。
+
+# 子分类：op_level
+# 启用/禁用Crust各模式所需的操作员等级（即权限等级）。可通过设置极高等级（如5级）禁用任意模式。
+# 原版操作员等级对应：
+  #   0 - 聊天/私聊权限，可访问有限信息
+  #   1 - 可绕过出生点保护
+  #   2 - 可使用作弊功能，可访问作弊相关信息
+  #   3 - 可封禁/白名单玩家，“版主”权限
+  #   4 - 全权限，服务器管理权限
+  #  * 需重启服务器生效 *
+
+    # <整数> 范围：任意值，默认：0
+    general.op_level.magnet = 0
+    # <整数> 范围：任意值，默认：2
+    general.op_level.undying = 2
+    # <整数> 范围：任意值，默认：2
+    general.op_level.unbreaking = 2
+    # <整数> 范围： 任意值，默认值：2
+    general.op_level.uneating = 2
+    # <整数> 范围：任意值，默认值：2
+    general.op_level.super_vision = 2
+    # <整数> 范围：任意值，默认值：2
+    general.op_level.super_speed = 2
+    # <整数> 范围：任意值，默认值：2
+    general.op_level.destroy_on_pickup = 2
+
+  # 子类别：默认
+  # Crust 各种模式初始应用于玩家的默认设置。请注意这些模式设置将
+  #   无论操作员级别如何均被应用；若玩家无权启用/禁用该模式，则将
+  #   被强制使用此处分配的设置。
+
+    # 磁力模式的最大作用范围（方块数）。若设为0，磁力模式默认关闭。
+    # <数字> 范围：≥ 0.0，默认值：0.0
+    general.default.magnet = 0.0
+    # <布尔值> 有效值：{ true, false }，默认值：false
+    general.default.undying = false
+    # <布尔值> 有效值：{ true, false }，默认：false
+    general.default.unbreaking = false
+    # 当食物值低于此阈值（半截鸡腿）时，非进食模式将恢复饥饿值。若设为0，则默认关闭非进食模式。
+    # <整数> 范围：0 ~ 20，默认值：0
+    general.default.uneating = 0
+    # <布尔值> 有效值：{ true, false }，默认值：false
+    general.default.super_vision = false
+    # 冲刺时应用的速度加成系数。若设为1，则默认关闭超速模式。
+    # <数字> 范围：≥ 1.0，默认值：1.0
+    general.default.super_speed = 1.0
+    # <布尔值> 有效值：{ true, false }，默认值：false
+    general.default.destroy_on_pickup = false
+
+
+# 类别：magnet_mode
+# 适用于Crust磁铁模式的选项。
+
+  # 磁吸模式允许的最大作用范围（方块数）。最大范围为客户端偏好设置。
+  # <数字> 范围：≥ 0.0，默认值：10.0
+  magnet_mode.max_range_limit = 10.0
+  # 磁吸模式拉动物品的最大速度（方块/秒）。物品距玩家越近速度越快，
+  #   在玩家最大范围内降至0米/秒。
+  # <数字> 范围：≥ 0.0，默认：10.0
+  magnet_mode.max_speed = 10.0
+  # 新掉落物品被磁铁模式吸引前的延迟时间（滴答数）。
+  # 设置较低值会导致物品在拾取延迟结束前持续飞舞。默认值
+  #  可避免原版物品飞舞现象，但多数物品仅有10的拾取延迟。
+  # <整数> 范围：≥ 0，默认：40
+  magnet_mode.delay = 40
+
+
+# 分类：超速模式
+# 适用于Crust超速模式的选项。
+
+  # 超速模式允许的最高速度倍数上限。实际速度由客户端优先级决定。
+  # 警告：过高的速度倍数可能破坏游戏物理系统。
+  # <数字> 范围：≥ 1.0，默认：12.0
+  super_speed_mode.speed_limit = 12.0

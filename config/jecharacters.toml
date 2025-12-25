@@ -1,0 +1,28 @@
+
+[General]
+	#检查器使用的键盘布局
+	#Allowed Values: QUANPIN, DAQIAN, XIAOHE, ZIRANMA, SOUGOU, GUOBIAO, MICROSOFT, PINYINPP, ZIGUANG
+	enumKeyboard = "QUANPIN"
+	#设为true以启用模糊拼音 zh <=> z
+	enableFZh2z = true
+	#设为true以启用模糊拼音 sh <=> s
+	enableFSh2s = true
+	#设为true以启用模糊拼音 ch <=> c
+	enableFCh2c = true
+	#设为true以启用模糊拼音 ang <=> an
+	enableFAng2an = true
+	#设为true以启用模糊拼音 ing <=> in
+	enableFIng2in = true
+	#设为true以启用模糊拼音 eng <=> en
+	enableFEng2en = true
+	#设为true以启用模糊拼音 u <=> v
+	enableFU2v = true
+	#设为false以禁用进入世界时的聊天消息
+	enableChat = false
+	#设为true以禁用JEI的搜索标记分割
+	enableQuote = false
+
+[Utilities]
+	#设为true以打印详细调试消息
+	enableVerbose = false
+

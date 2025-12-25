@@ -1,0 +1,5 @@
+{
+  "jei.tooltip.lookupHistory.disable": "Hide JEI Lookup History",
+  "jei.tooltip.lookupHistory.enable": "Show JEI Lookup History",
+  "jei.tooltip.lookupHistory.usage": "Shows a list of the ingredients recently used for looking up recipes."
+}

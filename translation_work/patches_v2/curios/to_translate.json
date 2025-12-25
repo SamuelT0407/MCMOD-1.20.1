@@ -1,0 +1,7 @@
+{
+  "commands.curios.drop.success": "[待翻译] Dropped items in slot %s for %s",
+  "commands.curios.dropAll.success": "[待翻译] Dropped items in all slots for %s",
+  "commands.curios.replace.success": "[待翻译] Replaced slot %s for %s with %s",
+  "gui.curios.page": "[待翻译] Page %d / %d",
+  "gui.curios.toggle.cosmetics": "[待翻译] Toggle Cosmetics"
+}

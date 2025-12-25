@@ -1,0 +1,75 @@
+
+#机器能量消耗配置。此配置从服务器同步到客户端。
+[usage]
+	#每操作刻的能量消耗（焦耳）。
+	enrichmentChamber = "50"
+	#每操作刻的能量消耗（焦耳）。
+	osmiumCompressor = "100"
+	#每操作刻的能量消耗（焦耳）。
+	combiner = "50"
+	#每操作刻的能量消耗（焦耳）。
+	crusher = "50"
+	#每操作刻的能量消耗（焦耳）。
+	metallurgicInfuser = "50"
+	#每操作刻的能量消耗（焦耳）。
+	purificationChamber = "200"
+	#每操作刻的能量消耗（焦耳）。
+	energizedSmelter = "50"
+	#每操作刻的能量消耗（焦耳）。
+	digitalMiner = "1000"
+	#每操作刻的能量消耗（焦耳）。
+	electricPump = "100"
+	#每次充电操作可传输的能量（焦耳）。
+	chargePad = "1024000"
+	#每操作刻的能量消耗（焦耳）。
+	rotaryCondensentrator = "50"
+	#每操作刻的能量消耗（焦耳）。
+	oxidationChamber = "200"
+	#每操作刻的能量消耗（焦耳）。
+	chemicalInfuser = "200"
+	#每操作刻的能量消耗（焦耳）。
+	chemicalInjectionChamber = "400"
+	#每操作刻的能量消耗（焦耳）。
+	precisionSawmill = "50"
+	#每操作刻的能量消耗（焦耳）。
+	chemicalDissolutionChamber = "400"
+	#每操作刻的能量消耗（焦耳）。
+	chemicalWasher = "200"
+	#每操作刻的能量消耗（焦耳）。
+	chemicalCrystallizer = "400"
+	#每操作刻的能量消耗（焦耳）。
+	seismicVibrator = "50"
+	#每操作刻的能量消耗（焦耳）。
+	pressurizedReactionBase = "5"
+	#每操作刻的能量消耗（焦耳）。
+	fluidicPlenisher = "100"
+	#每操作刻的能量消耗（焦耳）。
+	laser = "10000"
+	#每操作刻的能量消耗（焦耳）。
+	formulaicAssemblicator = "100"
+	#每操作刻的能量消耗（焦耳）。
+	modificationStation = "100"
+	#每操作刻的能量消耗（焦耳）。
+	isotopicCentrifuge = "200"
+	#每操作刻的能量消耗（焦耳）。
+	nutritionalLiquifier = "200"
+	#每操作刻的能量消耗（焦耳）。
+	antiprotonicNucleosynthesizer = "100000"
+	#每操作刻的能量消耗（焦耳）。
+	pigmentExtractor = "200"
+	#每操作刻的能量消耗（焦耳）。
+	pigmentMixer = "200"
+	#每操作刻的能量消耗（焦耳）。
+	paintingMachine = "100"
+	#每区块每刻的能量消耗（焦耳）。
+	dimensionalStabilizer = "5000"
+
+	#传送器
+	[usage.teleporter]
+		#传送的基础焦耳成本。
+		teleporterBase = "1000"
+		#传送期间每单位移动距离的焦耳消耗 - sqrt(xDiff^2 + yDiff^2 + zDiff^2)。
+		teleporterDistance = "10"
+		#跨维度传送的额外固定成本。距离仍会影响能量成本，基于维度比例最小化。
+		teleporterDimensionPenalty = "10000"
+

@@ -1,0 +1,565 @@
+[dagger]
+	# 禁用所有匕首 (Daggers) 的合成配方。
+	disable = false
+	# 匕首的攻击速度。
+	# 范围: 0.0 ~ 4.0
+	speed = 2.5
+	# 匕首的基础伤害。
+	# 范围: 0.1 ~ 100.0
+	base_damage = 2.5
+	# 匕首的伤害倍率。
+	# 范围: 0.1 ~ 10.0
+	damage_multiplier = 1.0
+
+[parrying_dagger]
+	# 禁用所有格挡匕首 (Parrying Daggers) 的合成配方。
+	disable = false
+	# 格挡匕首的攻击速度。
+	speed = 2.5
+	# 格挡匕首的基础伤害。
+	base_damage = 2.5
+	# 格挡匕首的伤害倍率。
+	damage_multiplier = 1.0
+
+[longsword]
+	# 禁用所有长剑 (Longswords) 的合成配方。
+	disable = false
+	# 长剑的攻击速度。
+	speed = 1.399999976158142
+	# 长剑的基础伤害。
+	base_damage = 4.5
+	# 长剑的伤害倍率。
+	damage_multiplier = 1.5
+
+[katana]
+	# 禁用所有武士刀 (Katanas) 的合成配方。
+	disable = false
+	# 武士刀的攻击速度。
+	speed = 2.0
+	# 武士刀的基础伤害。
+	base_damage = 3.5
+	# 武士刀的伤害倍率。
+	damage_multiplier = 0.5
+
+[saber]
+	# 禁用所有军刀 (Sabers) 的合成配方。
+	disable = false
+	# 军刀的攻击速度。
+	speed = 1.600000023841858
+	# 军刀的基础伤害。
+	base_damage = 3.5
+	# 军刀的伤害倍率。
+	damage_multiplier = 0.5
+
+[rapier]
+	# 禁用所有细剑 (Rapiers) 的合成配方。
+	disable = false
+	# 细剑的攻击速度。
+	speed = 2.4000000953674316
+	# 细剑的基础伤害。
+	base_damage = 2.0
+	# 细剑的伤害倍率。
+	damage_multiplier = 0.5
+
+[greatsword]
+	# 禁用所有大剑 (Greatswords) 的合成配方。
+	disable = false
+	# 大剑的攻击速度。
+	speed = 1.399999976158142
+	# 大剑的基础伤害。
+	base_damage = 4.0
+	# 大剑的伤害倍率。
+	damage_multiplier = 1.5
+
+[club]
+	# 禁用所有木棒 (Clubs) 的合成配方。
+	disable = false
+	# 木棒的攻击速度。
+	speed = 1.2999999523162842
+	# 木棒的基础伤害。
+	base_damage = 4.0
+	# 木棒的伤害倍率。
+	damage_multiplier = 1.0
+
+[cestus]
+	# 禁用所有拳套 (Cestusae) 的合成配方。
+	disable = false
+	# 拳套的攻击速度。
+	speed = 3.5
+	# 拳套的基础伤害。
+	base_damage = 2.0
+	# 拳套的伤害倍率。
+	damage_multiplier = 0.5
+
+[battle_hammer]
+	# 禁用所有战锤 (Battle Hammers) 的合成配方。
+	disable = false
+	# 战锤的攻击速度。
+	speed = 0.800000011920929
+	# 战锤的基础伤害。
+	base_damage = 5.0
+	# 战锤的伤害倍率。
+	damage_multiplier = 2.0
+
+[warhammer]
+	# 禁用所有破甲锤 (Warhammers) 的合成配方。
+	disable = false
+	# 破甲锤的攻击速度。
+	speed = 1.100000023841858
+	# 破甲锤的基础伤害。
+	base_damage = 4.0
+	# 破甲锤的伤害倍率。
+	damage_multiplier = 1.5
+
+[spear]
+	# 禁用所有长矛 (Spears) 的合成配方。
+	disable = false
+	# 长矛的攻击速度。
+	speed = 1.399999976158142
+	# 长矛的基础伤害。
+	base_damage = 5.5
+	# 长矛的伤害倍率。
+	damage_multiplier = 0.5
+
+[halberd]
+	# 禁用所有长柄斧 (Halberds) 的合成配方。
+	disable = false
+	# 长柄斧的攻击速度。
+	speed = 1.2000000476837158
+	# 长柄斧的基础伤害。
+	base_damage = 5.0
+	# 长柄斧的伤害倍率。
+	damage_multiplier = 1.5
+
+[pike]
+	# 禁用所有锋矛 (Pikes) 的合成配方。
+	disable = false
+	# 锋矛的攻击速度。
+	speed = 1.399999976158142
+	# 锋矛的基础伤害。
+	base_damage = 4.0
+	# 锋矛的伤害倍率。
+	damage_multiplier = 1.0
+
+[lance]
+	# 禁用所有骑士长枪 (Lances) 的合成配方。
+	disable = false
+	# 骑士长枪的攻击速度。
+	speed = 1.0
+	# 骑士长枪的基础伤害。
+	base_damage = 4.0
+	# 骑士长枪的伤害倍率。
+	damage_multiplier = 1.0
+
+[longbow]
+	# 禁用所有长弓 (Longbows) 的合成配方。
+	disable = false
+
+[heavy_crossbow]
+	# 禁用所有重弩 (Heavy Crossbows) 的合成配方。
+	disable = false
+
+[throwing_knife]
+	# 禁用所有投刀 (Throwing Knives) 的合成配方。
+	disable = false
+	# 投刀的攻击速度。
+	speed = 2.5
+	# 投刀的基础伤害。
+	base_damage = 1.5
+	# 投刀的伤害倍率。
+	damage_multiplier = 1.0
+	# 投刀所需的蓄力时间（游戏刻）。
+	# 范围: 1 ~ 1000
+	charge_ticks = 5
+
+[tomahawk]
+	# 禁用所有印第安战斧 (Tomahawks) 的合成配方。
+	disable = false
+	# 印第安战斧的攻击速度。
+	speed = 0.8999999761581421
+	# 印第安战斧的基础伤害。
+	base_damage = 2.0
+	# 印第安战斧的伤害倍率。
+	damage_multiplier = 1.5
+	# 印第安战斧所需的蓄力时间（游戏刻）。
+	charge_ticks = 8
+
+[javelin]
+	# 禁用所有标枪 (Javelins) 的合成配方。
+	disable = false
+	# 标枪的攻击速度。
+	speed = 1.2000000476837158
+	# 标枪的基础伤害。
+	base_damage = 1.5
+	# 标枪的伤害倍率。
+	damage_multiplier = 1.0
+	# 标枪所需的蓄力时间（游戏刻）。
+	charge_ticks = 10
+
+[boomerang]
+	# 禁用所有回旋镖 (Boomerangs) 的合成配方。
+	disable = false
+	# 回旋镖的攻击速度。
+	speed = 2.0
+	# 回旋镖的基础伤害。
+	base_damage = 4.0
+	# 回旋镖的伤害倍率。
+	damage_multiplier = 1.0
+	# 回旋镖所需的蓄力时间（游戏刻）。
+	charge_ticks = 5
+
+[battleaxe]
+	# 禁用所有战斧 (Battleaxes) 的合成配方。
+	disable = false
+	# 战斧的攻击速度。
+	speed = 1.0
+	# 战斧的基础伤害。
+	base_damage = 4.0
+	# 战斧的伤害倍率。
+	damage_multiplier = 2.0
+
+[flanged_mace]
+	# 禁用所有翼型锤 (Flanged Maces) 的合成配方。
+	disable = false
+	# 翼型锤的攻击速度。
+	speed = 1.2000000476837158
+	# 翼型锤的基础伤害。
+	base_damage = 3.0
+	# 翼型锤的伤害倍率。
+	damage_multiplier = 1.5
+
+[glaive]
+	# 禁用所有偃月刀 (Glaives) 的合成配方。
+	disable = false
+	# 偃月刀的攻击速度。
+	speed = 1.0
+	#偃月刀的基础伤害。
+	base_damage = 4.0
+	# 偃月刀的伤害倍率。
+	damage_multiplier = 1.5
+
+[quarterstaff]
+	# 禁用所有长棍 (Quarterstaves) 的合成配方。
+	disable = false
+	# 长棍的攻击速度。
+	speed = 1.399999976158142
+	# 长棍的基础伤害。
+	base_damage = 3.0
+	# 长棍的伤害倍率。
+	damage_multiplier = 1.5
+
+[scythes]
+	# 禁用所有镰刀 (Scythes) 的合成配方。
+	disable = false
+	# 镰刀的攻击速度。
+	speed = 1.0
+	# 镰刀的基础伤害。
+	base_damage = 5.0
+	# 镰刀的伤害倍率。
+	damage_multiplier = 1.0
+
+[copper]
+	# 铜制武器的基础伤害
+	base_damage = 1.5
+	# 铜制武器的耐久度
+	durability = 200
+	# 设置为 true 以禁用铜制武器
+	disable = false
+
+[tin]
+	# 锡制武器的基础伤害
+	base_damage = 1.75
+	# 锡制武器的耐久度
+	durability = 180
+	# 设置为 true 以禁用锡制武器
+	disable = false
+
+[bronze]
+	# 青铜制武器的基础伤害
+	base_damage = 2.0
+	# 青铜制武器的耐久度
+	durability = 320
+	# 设置为 true 以禁用青铜制武器
+	disable = false
+
+[steel]
+	# 钢制武器的基础伤害
+	base_damage = 2.5
+	# 钢制武器的耐久度
+	durability = 480
+	# 设置为 true 以禁用钢制武器
+	disable = false
+
+[silver]
+	# 银制武器的基础伤害
+	base_damage = 1.5
+	# 银制武器的耐久度
+	durability = 48
+	# 设置为 true 以禁用银制武器
+	disable = false
+
+[electrum]
+	# 琥珀金制武器的基础伤害
+	base_damage = 2.0
+	# 琥珀金制武器的耐久度
+	durability = 180
+	# 设置为 true 以禁用琥珀金制武器
+	disable = false
+
+[lead]
+	# 铅制武器的基础伤害
+	base_damage = 2.0
+	# 铅制武器的耐久度
+	durability = 240
+	# 设置为 true 以禁用铅制武器
+	disable = false
+
+[nickel]
+	# 镍制武器的基础伤害
+	base_damage = 2.0
+	# 镍制武器的耐久度
+	durability = 200
+	# 设置为 true 以禁用镍制武器
+	disable = false
+
+[invar]
+	# 因瓦合金制武器的基础伤害
+	base_damage = 2.25
+	# 因瓦合金制武器的耐久度
+	durability = 440
+	# 设置为 true 以禁用因瓦合金制武器
+	disable = false
+
+[constantan]
+	# 康铜制武器的基础伤害
+	base_damage = 2.25
+	# 康铜制武器的耐久度
+	durability = 300
+	# 设置为 true 以禁用康铜制武器
+	disable = false
+
+[platinum]
+	# 铂制武器的基础伤害
+	base_damage = 3.5
+	# 铂制武器的耐久度
+	durability = 1024
+	# 设置为 true 以禁用铂制武器
+	disable = false
+
+[aluminum]
+	# 铝制武器的基础伤害
+	base_damage = 2.125
+	# 铝制武器的耐久度
+	durability = 400
+	# 设置为 true 以禁用铝制武器
+	disable = false
+
+[explosives]
+	# 禁用所有爆炸相关物品的合成配方
+	disable_recipe = false
+	# 禁用此模组中爆炸物（如动态炸药和爆炸箭）的地形破坏。会被“mobGriefing”游戏规则覆盖。
+	disable_terrain_damage = false
+	# 动态炸药 (Dynamite) 爆炸所需的时长（游戏刻）
+	fuse_ticks_dynamite = 60
+	# 动态炸药的爆炸强度
+	explosion_strength_dynamite = 2.0
+
+[projectiles]
+	# 禁用所有新箭矢的合成配方。
+	disable_new_arrow_recipes = false
+	# 禁用铜箭和铜弩箭的合成配方。
+	disable_copper_ammo_recipes = false
+	# 禁用钻石箭和钻石弩箭的合成配方。
+	disable_diamond_ammo_recipes = false
+	# 禁用下界合金箭和下界合金弩箭的合成配方。
+	disable_netherite_ammo_recipes = false
+	# 禁用此模组中所有类型的箭袋和弩箭袋
+	disable_quiver_recipes = false
+	# 黑名单中的弓将无法从箭袋中自动提取箭矢。使用弓的注册 ID 添加，例如 "minecraft:bow"
+	quiver_bow_blacklist = ["botania:crystal_bow", "iceandfire:dragonbone_bow"]
+
+	[projectiles.wood_arrow]
+		# 木箭的基础伤害
+		base_damage = 0.20000000298023224
+		# 木箭的射程倍率
+		range_multiplier = 1.5
+
+	[projectiles.copper_arrow]
+		# 铜箭的基础伤害
+		base_damage = 2.5
+		# 铜箭的射程倍率
+		range_multiplier = 0.8500000238418579
+
+	[projectiles.iron_arrow]
+		# 铁箭的基础伤害
+		base_damage = 3.0
+		# 铁箭的射程倍率
+		range_multiplier = 0.75
+
+	[projectiles.diamond_arrow]
+		# 钻石箭的基础伤害
+		base_damage = 3.5
+		# 钻石箭的射程倍率
+		range_multiplier = 1.25
+
+	[projectiles.netherite_arrow]
+		# 下界合金箭的基础伤害
+		base_damage = 4.0
+		# 下界合金箭的射程倍率
+		range_multiplier = 1.25
+
+	[projectiles.bolt]
+		# 弩箭的基础伤害
+		base_damage = 4.0
+		# 弩箭的射程倍率
+		range_multiplier = 1.0
+		# 弩箭的护甲穿透系数
+		armor_piercing_factor = 0.25
+
+	[projectiles.copper_bolt]
+		# 铜弩箭的基础伤害
+		base_damage = 3.5
+		# 铜弩箭的射程倍率
+		range_multiplier = 1.0
+		# 铜弩箭的护甲穿透系数
+		armor_piercing_factor = 0.125
+
+	[projectiles.diamond_bolt]
+		# 钻石弩箭的基础伤害
+		base_damage = 5.0
+		# 钻石弩箭的射程倍率
+		range_multiplier = 1.0
+		# 钻石弩箭的护甲穿透系数
+		armor_piercing_factor = 0.5
+
+	[projectiles.netherite_bolt]
+		# 下界合金弩箭的基础伤害
+		base_damage = 5.5
+		# 下界合金弩箭的射程倍率
+		range_multiplier = 1.0
+		# 下界合金弩箭的护甲穿透系数
+		armor_piercing_factor = 0.5
+
+	[projectiles.explosive]
+		# 爆炸箭的基础伤害
+		base_damage = 2.0
+		# 爆炸箭的射程倍率
+		range_multiplier = 1.0
+
+[loot]
+	# 设置为 false 以禁用通过战利品表注入在村庄武器匠箱子中生成铁制武器
+	add_iron_weapons_to_village_blacksmith = true
+	# 设置为 false 以禁用通过战利品表注入在村庄制箭师箱子中生成长弓和重弩相关的战利品
+	add_bow_and_crossbow_loot_to_village_fletcher = true
+	# 设置为 false 以禁用通过战利品表注入在末地城箱子中生成钻石武器
+	add_diamond_weapons_to_end_city = true
+	# 除困难和极限难度外，僵尸生成时携带铁制近战武器的几率
+	zombie_with_melee_spawn_chance_normal = 0.05000000074505806
+	# 困难或极限难度下，僵尸生成时携带铁制近战武器的几率
+	zombie_with_melee_spawn_chance_hard = 0.25
+	# 设置为 true 以禁用生成携带此模组武器的僵尸
+	disable_spawning_zombie_with_weapon = false
+	# 除困难和极限难度外，骷髅生成时携带各种长弓的几率
+	skeleton_with_longbow_spawn_chance_normal = 0.05000000074505806
+	# 困难或极限难度下，骷髅生成时携带各种长弓的几率
+	skeleton_with_longbow_spawn_chance_hard = 0.25
+	# 设置为 true 以禁用生成携带此模组长弓的骷髅
+	disable_spawning_skeleton_with_longbow = false
+	# 除困难和极限难度外，猪灵和猪灵蛮兵生成时携带金制近战武器的几率
+	piglin_with_melee_spawn_chance_normal = 0.05000000074505806
+	# 困难或极限难度下，猪灵和猪灵蛮兵生成时携带金制近战武器的几率
+	piglin_with_melee_spawn_chance_hard = 0.25
+	# 设置为 true 以禁用生成携带此模组武器的猪灵或猪灵蛮兵
+	disable_spawning_piglin_with_weapon = false
+	# 除困难和极限难度外，凋灵骷髅生成时携带石制近战武器的几率
+	wither_skeleton_with_melee_spawn_chance_normal = 0.05000000074505806
+	# 困难或极限难度下，凋灵骷髅生成时携带石制近战武器的几率
+	wither_skeleton_with_melee_spawn_chance_hard = 0.25
+	# 设置为 true 以禁用生成携带此模组武器的凋灵骷髅
+	disable_spawning_wither_skeleton_with_weapon = false
+	# 设置为 true 以禁用使用此模组中带有“斩首 (Decapitate)”特质的武器掉落新的生物头颅。
+	disable_new_head_drops = false
+
+[trading]
+	# 设置为 true 以禁用村民（武器匠和制箭师）交易此模组中的武器
+	disable = false
+
+[traits]
+
+	[traits.damage_bonus]
+		# 修改“躯干伤害加成”武器特质的倍率值
+		# 范围: 1.0 ~ 50.0
+		chest_multiplier = 2.0
+		# 修改“头部伤害加成”武器特质的倍率值
+		head_multiplier = 1.5
+		# 修改“骑乘伤害加成”武器特质的倍率值
+		riding_multiplier = 2.0
+		# 修改“投掷伤害加成”武器特质的倍率值
+		throw_multiplier = 2.0
+		# 修改标枪专用的“投掷伤害加成”倍率值
+		throw_javelin_multiplier = 3.0
+		# 修改“无护甲伤害加成”武器特质的倍率值
+		unarmored_multiplier = 3.0
+		# 如果设置为 true，任何检查护甲的伤害加成仅在目标怪物的总护甲值低于阈值时生效
+		check_armor_value = false
+		# 在未装备任何护甲的情况下，允许任何检查护甲的伤害加成生效的最大护甲值
+		max_armor_value = 1.0
+		# 修改“亡灵伤害加成”武器特质的倍率值
+		undead_multiplier = 1.5
+		# 修改“背刺伤害加成”武器特质的倍率值
+		backstab_multiplier = 3.0
+
+	[traits.damage_absorption]
+		# 修改“伤害吸收”武器特质吸收伤害的百分比
+		# 范围: 0.0 ~ 1.0
+		damage_absorption_factor = 0.25
+
+	[traits.reach]
+		# 修改带有“延伸 I”特质的武器触及范围
+		# 范围: 5.0 ~ 15.0
+		reach1_value = 6.0
+		# 修改带有“延伸 II”特质的武器触及范围
+		reach2_value = 7.0
+
+	[traits.sweep]
+		# 修改带有“横扫 II”特质的武器在横扫攻击时对敌人造成的伤害系数
+		sweep2_percentage = 0.5
+		# 修改带有“横扫 III”特质的武器在横扫攻击时对敌人造成的伤害系数
+		sweep3_percentage = 1.0
+
+	[traits.armor_pierce]
+		# 修改带有“护甲穿透”特质的武器无视护甲的伤害百分比
+		# 范围: 0.0 ~ 100.0
+		percentage = 50.0
+
+	[traits.quick_strike]
+		# 调整使用“快速攻击”特质武器的受击无敌帧 (hurt resistance ticks)
+		# 范围: 10 ~ 20
+		hurt_resistance_ticks = 14
+
+	[traits.decapitate]
+		# 调整带有“斩首”特质武器掉落头颅的概率百分比
+		# 范围: 0.0 ~ 100.0
+		skull_drop_percentage = 25.0
+
+[oil]
+	# 设置为 true 以禁用磨刀油的合成配方
+	disable_oil_recipes = false
+	# 普通磨刀油在效果消失前的最大使用次数
+	oil_uses_normal = 20
+	# 持久磨刀油在效果消失前的最大使用次数
+	oil_uses_long = 30
+	# 普通磨刀油造成的伤害修正
+	oil_damage_modifier_normal = 0.20000000298023224
+	# 强效磨刀油造成的伤害修正
+	oil_damage_modifier_strong = 0.4000000059604645
+	# 基于原始药水效果的药水磨刀油持续时间修正
+	potion_oil_duration_modifier = 0.25
+	# 禁止制作成磨刀油的药水黑名单。默认情况下只有负面效果药水可制成油。
+	potion_oil_blacklist = []
+	# 允许制作成磨刀油的药水白名单。
+	potion_oil_whitelist = []
+
+[jei]
+	# 设置为 true 以在 JEI 中强制显示禁用的物品，即使它们无法被合成。对自定义配方的整合包作者很有用。
+	force_show_disabled_items = false

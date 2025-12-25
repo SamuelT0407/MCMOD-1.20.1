@@ -1,0 +1,12 @@
+
+#模组通用设置
+[general]
+	#使用玩家列表来启用全知锁定效果
+	whiteListUsedOmniscient = false
+	#使用玩家列表来生成感知源
+	whiteListUsedSenses = false
+	#启用全知锁定效果的玩家列表
+	whitelistOmniscientTargettedPlayers = "Corosus, SomeDude"
+	#为其生成感知源的玩家列表
+	whitelistSenses = "Corosus, SomeDude"
+

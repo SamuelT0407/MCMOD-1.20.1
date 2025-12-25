@@ -1,0 +1,23 @@
+#如果你希望烤箱只接受烹饪油作为燃料，请设为true（需要Pam's Harvestcraft）
+ovenRequiresCookingOil = false
+#如果不希望在配方书中用特殊图标标记原料，请设为false
+showIngredientIcon = true
+#罐中奶牛每刻产生的牛奶量
+cowJarMilkPerTick = 1
+#Ex Compressum兼容。压缩罐中奶牛每刻产奶量的倍数
+compressedCowJarMilkMultiplier = 9.0
+#如果你希望水槽需要管道输入水而非提供无限水，请设为true
+sinkRequiresWater = false
+#如果你希望禁止烤箱自动化（管道等将无法插入/提取），请设为true
+disallowOvenAutomation = false
+#烹饪烤箱的烹饪时间倍数。数值越大烹饪越慢
+ovenCookTimeMultiplier = 1.0
+#再次烤已烤的面包会变成木炭（仅当没有其他添加吐司的模组时）。设为false禁用
+allowVeryToastedBread = true
+#如果为true，可以用铁砧砸牛将其压入牛奶罐
+cowJarEnabled = true
+#启用此项将使厨房柜台拥有两倍的存储空间
+largeCounters = false
+#烹饪烤箱的燃料倍数。数值越大燃料持续越久，1.0是熔炉默认值
+ovenFuelTimeMultiplier = 0.33000001311302185
+

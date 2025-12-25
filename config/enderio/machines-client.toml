@@ -1,0 +1,17 @@
+
+[blocks]
+	#真空箱的范围框颜色
+	vacuumChestRangeColor = "0000FF"
+	#经验真空的范围框颜色
+	vacuumXpRangeColor = "00FF00"
+	#动力刷怪笼的范围框颜色
+	poweredSpawnerRangeColor = "FF0000"
+	#排水器的范围框颜色
+	drainRangeColor = "FFA500"
+	#厌恶方尖碑的范围框颜色
+	aversionRangeColor = "8B0000"
+
+[ioconfig]
+	#邻居透明度 [0-1]
+	neighbourTransparency = 0.4
+

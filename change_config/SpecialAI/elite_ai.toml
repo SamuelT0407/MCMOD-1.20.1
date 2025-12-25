@@ -1,0 +1,436 @@
+# specialai:elite_ai.toml
+# 此配置文件包含精英 AI 模式的选项。精英 AI 会赋予怪物数值加成、特定装备，
+# 并允许这些“精英”生物在战斗中执行极具威胁的特定动作。
+# 通常情况下：更改精英 AI 的授权、属性和装备选项仅对新生成的实体有效。
+# 除非另有说明，所有其他选项更改都会立即影响现有实体（甚至是正在运行的客户端）。
+
+  # 有关可用精英 AI 模式的更多信息，请参阅文件底部的附录。
+
+  # 实体列表（Entity List）字段格式：[ "命名空间:实体类型 值1 值2 ...", ... ]
+  #   实体列表是实体类型的数组。某些列表会指定与每个实体类型关联的数值。
+  #   实体类型由其在注册表中的键定义，通常遵循“命名空间:实体名称”模式。
+  #   可以使用 'default' 代替具体的实体注册键，为所有实体提供默认值。
+  #   默认情况下，条目匹配其指定类型的所有派生实体。例如 '~minecraft:zombie'。
+  #   可以使用星号 '*' 匹配属于 X 命名空间的所有条目。例如 'minecraft:*' 将匹配所有原版条目。
+  #   此处也可以使用实体类型标签。要声明标签，请以 '#' 开头。
+  #   优先级顺序：具体条目 > 标签条目 > 命名空间条目 > 默认值
+
+  # 环境列表（Environment List）字段格式：[ "值 环境1 条件1 & 环境2 条件2 & ...", ... ]
+  #   环境列表是环境条目的数组。每个条目包含一个数值，后跟必须满足的环境条件。
+  #   环境条件按列出的顺序进行测试，并选择第一个匹配的条目。
+  #   有关每个可用环境条件的说明，请参阅文件底部。
+
+
+# Category: general (常规选项)
+# 自定义精英 AI 系统及影响所有精英 AI 模式的选项。
+
+  # 可以获得随机精英 AI 模式的生物列表及其获得几率。
+  # 实体类型后的额外数值是该类型实体生成时携带精英 AI 的几率（0.0 到 1.0）。
+  # 你可以为每个实体指定多个几率——每个几率都会单独判定，多个 AI 效果可以叠加。
+  # 以这种方式应用的 AI 模式是你在下方特定类别中直接应用的 AI 之外的额外补充。
+  # <实体列表> 格式: [ "命名空间:实体类型 几率1 几率2 ...", ... ]
+  # -------------------Change--------------------
+  general.entities.whitelist = [
+    # 原版
+    "minecraft:zombie 0.04",
+    "minecraft:skeleton 0.1 0.02",
+    "minecraft:stray 0.1 0.02",
+    "minecraft:wither_skeleton 0.1 0.02",
+    "minecraft:piglin 0.04 0.04 0.02",
+    "minecraft:zombified_piglin 0.04 0.04 0.02",
+    "minecraft:piglin_brute 0.5 0.01 0.01",
+    "minecraft:vindicator 0.05",
+    "minecraft:pillager 0.05",
+
+    # 冰火传说 (Ice and Fire) - 亡灵军团
+    "iceandfire:dread_thrall 0.05",
+    "iceandfire:dread_ghoul 0.05",
+    "iceandfire:dread_knight 0.1",
+
+    # 暮色森林 (Twilight Forest)
+    "twilightforest:armored_giant 0.2",    # 巨人本就很强，再加精英更有挑战
+    "twilightforest:minotaur 0.05",        # 牛头人
+    "twilightforest:redcap 0.05",          # 红帽哥布林
+    "twilightforest:skeleton_druid 0.1",   # 骷髅德鲁伊
+    "twilightforest:knight_phantom 0.1",   # 幻影骑士
+
+    # Mowzie's Mobs
+    "mowziesmobs:foliaath 0.05",           # 弗叶草
+    "mowziesmobs:barakoana 0.05",          # 太阳之子
+
+    # Alex's Mobs
+    "alexsmobs:skelewag 0.1",              # 骷髅海盗
+
+    # Immersive Engineering
+    "immersiveengineering:fusilier 0.05",  # 步枪手
+    "immersiveengineering:commando 0.05"   # 突击队
+  ]
+  # <实体列表> 黑名单: []
+  general.entities.blacklist = []
+
+  # 权重（Weights）:
+  # 以下选项是为上述列表中的实体分配随机精英 AI 时，每个模式被选中的权重。权重越高越常见。
+  # 权重为 0 的精英 AI 永远不会被随机选中，但仍可以通过下方特定类别的列表或 NBT 编辑来应用。
+  # <数值> 范围: ≥ 0.0
+  general.weight.leap.base = 200.0        # 跃击
+  general.weight.jump.base = 100.0        # 高跳
+  general.weight.sprint.base = 200.0      # 冲刺
+  general.weight.slam.base = 50.0         # 猛击
+  general.weight.barrage.base = 50.0      # 弹幕
+  general.weight.charge.base = 100.0      # 冲锋
+  general.weight.thief.base = 25.0        # 小偷
+  general.weight.shaman.base = 50.0       # 萨满
+  general.weight.spawner.base = 25.0      # 刷怪笼
+  general.weight.throw_ally.base = 100.0  # 投掷盟友
+  general.weight.throw_enemy.base = 25.0  # 投掷敌人
+
+  # 权重异常（Weight Exceptions）:
+  # 当满足特定环境条件时，分配随机精英 AI 的特殊权重。
+  # <环境列表> 格式: [ "值 条件1 状态1 & 条件2 状态2 & ...", ... ], 默认: []
+  general.weight.leap.exceptions = []
+  general.weight.jump.exceptions = []
+  general.weight.sprint.exceptions = []
+  general.weight.slam.exceptions = []
+  general.weight.barrage.exceptions = []
+  general.weight.charge.exceptions = []
+  general.weight.thief.exceptions = []
+  general.weight.shaman.exceptions = []
+  general.weight.spawner.exceptions = []
+  general.weight.throw_ally.exceptions = []
+  general.weight.throw_enemy.exceptions = []
+
+  # 如果为 true，偏向“近战”的精英 AI 模式会将实体手持的远程武器替换为金剑。
+  # 注意：可以为每个 AI 模式单独开启或关闭此项（见下文）。
+  general.prefer_melee_enabled = true
+  # 如果为 true，精英 AI 模式将被允许向实体应用属性修改器（如增加血量、攻击等）。
+  general.attribute_modifiers_enabled = true
+  # 如果为 true，精英 AI 模式将被允许替换实体的现有装备。
+  # 这些装备旨在让玩家从视觉上区分精英怪物，禁用此项可能会导致难以识别敌人的 AI 类型。
+  general.equipment_replacement_enabled = true
+
+
+# Category: leap (跃击)
+# 自定义 Leap 精英 AI 模式。该模式使实体像蜘蛛一样向目标快速跃击。
+
+  # 直接给予此 AI 的生物列表（独立于上述随机几率）。
+  leap.entities.whitelist = []
+  leap.entities.blacklist = []
+
+  # 是否偏向近战武器。
+  leap.prefer_melee = true
+
+  # 属性修改器（Attribute Modifiers）:
+  # 值为 0 时禁用。增加项（added）使用加法，提升项（increased）使用百分比乘法。
+  leap.modifier.added_follow_range = 0.0
+  leap.modifier.added_max_health = 0.0
+  leap.modifier.increased_max_health = 0.0
+  leap.modifier.added_knockback_resistance = 0.0
+  leap.modifier.added_armor = 0.0
+  leap.modifier.added_armor_toughness = 0.0
+  leap.modifier.added_damage = 0.0
+  leap.modifier.increased_damage = 0.0
+  leap.modifier.added_knockback = 1.0     # 增加击退
+  leap.modifier.increased_speed = 0.1     # 增加 10% 移速
+
+  # 激活此 AI 所需与目标的最小/最大距离（米/方块）。
+  leap.range.min = 2.0
+  leap.range.max = 6.0
+
+  # 冷却时间（刻，20刻 = 1秒）。
+  leap.cooldown.min = 20
+  leap.cooldown.max = 40
+
+  # 跳跃速度。Forward 为水平速度，Upward 为垂直速度。
+  leap.jump_speed.forward = 16.0
+  leap.jump_speed.upward = 8.0
+
+
+# Category: jump (高跳)
+# 远距离发起跳跃，无视掉落伤害。
+
+  jump.entities.whitelist = []
+  jump.entities.blacklist = []
+  jump.prefer_melee = false
+
+  jump.modifier.added_knockback = 0.0
+  jump.modifier.increased_speed = 0.0
+
+  jump.range.min = 6.0
+  jump.range.max = 12.0
+
+  jump.cooldown.min = 60
+  jump.cooldown.max = 100
+
+  jump.jump_speed.forward = 28.0
+  jump.jump_speed.upward = 20.0
+
+  # 羽毛靴（Feather Boots）的掉落几率。负值禁用，大于 1 防止掉落时损坏。
+  jump.feather_boots.drop_chance = 0.085
+  # 靴子上落轻（羽落）附魔的等级。
+  jump.feather_boots.enchant = 4
+
+
+# Category: sprint (冲刺)
+# 远距离时向目标全速冲刺。
+
+  sprint.entities.whitelist = []
+  sprint.entities.blacklist = []
+  sprint.prefer_melee = false
+
+  # 激活最小距离。
+  sprint.range.min = 12.0
+  # 激活时的移速倍率。玩家疾跑跳约为 1.65。
+  sprint.run_speed = 1.7
+  # 停止冲刺的距离范围。
+  sprint.end_range.min = 3.0
+  sprint.end_range.max = 6.0
+
+  # 跑鞋（Running Boots）掉落几率。
+  sprint.running_boots.drop_chance = 0.085
+  # 跑鞋提供的移速加成系数。
+  sprint.running_boots.modifier = 0.15
+
+
+# Category: slam (猛击)
+# 周期性触发爆炸性猛击。
+
+  slam.entities.whitelist = []
+  slam.entities.blacklist = []
+  slam.prefer_melee = false
+
+  slam.modifier.added_knockback_resistance = 0.5
+  slam.modifier.added_armor = 10.0
+
+  slam.range.min = 0.0
+  slam.range.max = 4.0
+
+  slam.cooldown.min = 60
+  slam.cooldown.max = 100
+
+  # 猛击爆炸威力。恶魂火球为 1，爬行者为 3，TNT 为 4。
+  slam.slam_power = 2.25
+  # 触发后的前摇蓄力时间（刻）。
+  slam.charge_up_duration = 20
+
+  # 手持斧头的掉落几率和材质。
+  slam.axe.drop_chance = 0.085
+  slam.axe.type = "iron"
+  slam.axe.enchant_chance = 0.1
+  slam.axe.enchant_level = 30
+  slam.axe.allow_treasure_enchants = true
+
+
+# Category: barrage (弹幕)
+# 周期性蓄力并快速发射一连串箭矢。
+
+  barrage.entities.whitelist = []
+  barrage.entities.blacklist = []
+  barrage.prefer_melee = false
+
+  barrage.modifier.added_max_health = 20.0
+
+  barrage.range.min = 5.0
+  barrage.range.max = 16.0
+
+  barrage.cooldown.min = 100
+  barrage.cooldown.max = 160
+
+  # 箭矢基础伤害和精准度（Variance 越高越不准）。
+  barrage.arrow_damage = 3.0
+  barrage.arrow_variance = 20.0
+  # 弹幕中每支箭的间隔。
+  barrage.shot_time = 5
+  # 前摇时间和持续射击时间。
+  barrage.charge_up_duration = 30
+  barrage.shooting_duration = 60
+
+  # 发射器“头盔”的掉落几率。
+  barrage.dispenser.drop_chance = 0.0
+
+
+# Category: charge (冲锋)
+# 蓄力后快速向前撞击，具有强力击退。撞墙会进入眩晕状态。
+
+  charge.entities.whitelist = []
+  charge.entities.blacklist = []
+  charge.prefer_melee = false
+
+  charge.modifier.added_max_health = 20.0
+  charge.modifier.added_knockback_resistance = 0.5
+
+  charge.range.min = 6.0
+  charge.range.max = 16.0
+
+  charge.cooldown.min = 80
+  charge.cooldown.max = 140
+
+  charge.charging_speed = 28.0      # 冲锋速度
+  charge.knockback_speed = 120.0    # 击退目标的速度
+  charge.self_damage = 5.0          # 撞墙自损伤害
+
+  charge.charge_up_duration = 30    # 前摇
+  charge.charging_duration = 20     # 冲锋时长
+  charge.stunned_duration = 60      # 撞墙眩晕时长
+
+  # 冲锋者头盔掉落几率。
+  charge.charger_helmet.drop_chance = 0.085
+  charge.charger_helmet.enchant_level = 30
+  charge.charger_helmet.allow_treasure_enchants = true
+
+
+# Category: thief (小偷)
+# 偷取玩家物品后隐身逃跑。
+
+  thief.entities.whitelist = []
+  thief.entities.blacklist = []
+  thief.prefer_melee = false
+
+  thief.modifier.increased_speed = 0.1
+
+  thief.move_speed = 1.2            # 靠近偷窃时的速度倍率
+  thief.avoid_range = 16.0          # 逃跑避开玩家的范围
+  thief.avoid_speed.walk = 1.0      # 远距离逃跑速度
+  thief.avoid_speed.run = 1.2       # 近距离逃跑速度
+
+  # 允许偷取的插槽。 hotbar (快捷栏), main (主背包), armor (装备栏)。
+  thief.valid_slots = "hotbar_and_armor"
+  thief.steal_damage = 1.0          # 偷窃时造成的伤害
+  thief.invisibility_duration = 60  # 偷完后的隐身时长
+
+  # 偷窃 AI 是否必须清空主手。
+  thief.empty_hand = true
+  # 小偷帽（Thief's Caps）掉落几率。
+  thief.thief_helmet.drop_chance = 0.085
+  thief.thief_helmet.modifier = 0.15
+
+
+# Category: shaman (萨满)
+# 治疗并增强附近的盟友。
+
+  shaman.entities.whitelist = []
+  shaman.entities.blacklist = []
+  shaman.prefer_melee = false
+
+  shaman.aura_range = 16.0          # 光环范围
+  shaman.heal_amount = 2.0          # 每脉冲回复血量（半颗心为单位）
+  shaman.extinguish = true          # 是否为盟友灭火
+
+  # 光环提供的效果等级。负值禁用。
+  shaman.strength_potency = 0       # 力量
+  shaman.resistance_potency = 0     # 抗性提升
+  shaman.speed_potency = -1         # 速度
+  shaman.slow_falling = false       # 缓降
+  shaman.fire_resistance = true     # 抗火
+  shaman.water_breathing = false    # 水下呼吸
+
+  # 骨头“大棒”和南瓜灯“面具”的掉落几率。
+  shaman.bone.drop_chance = 0.085
+  shaman.jack_o_lantern.drop_chance = 0.085
+
+
+# Category: spawner (刷怪笼)
+# 使怪物像刷怪笼一样不断召唤同类。
+
+  spawner.entities.whitelist = []
+  spawner.entities.blacklist = []
+  spawner.prefer_melee = false
+
+  spawner.modifier.added_max_health = 20.0
+  spawner.modifier.added_knockback_resistance = 0.5
+  spawner.modifier.added_armor = 10.0
+  spawner.modifier.added_armor_toughness = 10.0
+  spawner.modifier.increased_speed = -0.3
+
+  # 以下设置保存于 NBT 中，类似于原版刷怪笼。
+  spawner.range = 16                # 激活范围
+  spawner.cooldown.initial = 20     # 初始冷却
+  spawner.cooldown.min = 200        # 最小波动间隔
+  spawner.cooldown.max = 800        # 最大波动间隔
+
+  spawner.spawn_count = 4           # 每次生成的数量
+  spawner.spawn_range = 4           # 生成半径
+  spawner.max_nearby_entities = 6   # 附近同类上限
+
+  # 是否在头上佩戴刷怪笼头盔。
+  spawner.spawner_helmet = true
+
+
+# Category: throw_ally (投掷盟友)
+# 将附近的盟友扔向目标。
+
+  throw_ally.entities.whitelist = []
+  throw_ally.entities.blacklist = []
+  throw_ally.prefer_melee = false
+
+  throw_ally.modifier.increased_speed = 0.1
+
+  throw_ally.throw_range.min = 3.0
+  throw_ally.throw_range.max = 10.0
+  throw_ally.ally_range.min = 6.0   # 只会投掷距离目标超过 6 米的盟友
+
+  throw_ally.cooldown.min = 60
+  throw_ally.cooldown.max = 100
+
+  throw_ally.speed_to_ally = 1.3    # 跑向盟友的速度
+  throw_ally.speed_to_target = 1.1  # 扛着盟友跑向目标的速度
+
+  throw_ally.throw_speed.forward = 20.0
+  throw_ally.throw_speed.upward = 8.4
+
+
+# Category: throw_enemy (投掷敌人)
+# 抓住目标并将其扔向自己的盟友。
+
+  throw_enemy.entities.whitelist = []
+  throw_enemy.entities.blacklist = []
+  throw_enemy.prefer_melee = false
+
+  throw_enemy.modifier.added_knockback_resistance = 0.5
+
+  throw_enemy.throw_range.min = 3.0
+  throw_enemy.throw_range.max = 10.0
+  throw_enemy.carry_range = 8.0     # 投掷前的最大携带距离
+
+  throw_enemy.cooldown.min = 100
+  throw_enemy.cooldown.max = 160
+
+  throw_enemy.speed_to_target = 1.3 # 跑向敌人的速度
+  throw_enemy.speed_to_ally = 1.1   # 抓着敌人跑向盟友的速度
+
+  # 如果目标在被扔出前挣脱，允许尝试重新抓取的次数。
+  throw_enemy.re_grabs.min = 0
+  throw_enemy.re_grabs.max = 3
+
+  throw_enemy.throw_speed.forward = 20.0
+  throw_enemy.throw_speed.upward = 8.4
+
+  # 力量头盔（Helmets of Strength）掉落几率及攻击力加成。
+  throw_enemy.helmet_of_strength.drop_chance = 0.085
+  throw_enemy.helmet_of_strength.modifier = 1.0
+
+
+# 附录:
+# 精英 AI 模式说明（定性描述基于默认值，修改配置后可能改变）。
+
+  # leap (跃击): 短距离快速跳跃，类似蜘蛛。高击退，高移速。偏向近战。
+  # jump (高跳): 中远距离发起高跳。装备羽毛靴。
+  # sprint (冲刺): 远距离时极速奔跑，穿红色跑鞋。
+  # slam (猛击): 近距离造成爆炸猛击。高护甲，高抗击退。装备斧头。
+  # barrage (弹幕): 发射连发箭矢。高血量。头部戴有发射器。
+  # charge (冲锋): 直线快速撞击，带眩晕机制。高血量，高抗击退。穿黄色头盔。
+  # thief (小偷): 偷窃并隐身逃跑。高移速，戴黑色小偷帽。
+  # shaman (萨满): 群体治疗与增益，自带骨棒和南瓜头。
+  # spawner (刷怪笼): 召唤同类。极高防御和血量，但移速降低。
+  # throw_ally (投掷盟友): 将队友当做投掷物扔出。
+  # throw_enemy (投掷敌人): 抓住玩家或敌人扔向远处。
+
+# 环境条件说明（用于 Environment List 条目）:
+# 可用的条件包括：
+#   "dimension_type (!)namespace:dimension_type_name" (维度类型)
+#   "biome_tag (!)#namespace:biome_tag" (群系标签)
+#   "y op value" (高度判定，例如 y < 63)
+#   "position (!)state" (例如 is_in_water, can_see_sky, is_near_village)
+#   "difficulty op value" (区域难度，0.0 到 6.75)
+#   "weather (!)type" (例如 clear, rain, thunder)
+#   "moon_phase (!)phase" (月相，例如 full, new)
+#   "day_time (!)time" (时间段，day, night 等)

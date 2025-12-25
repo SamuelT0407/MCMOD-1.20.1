@@ -1,0 +1,38 @@
+
+[Deposits]
+	#禁用特定类型的大型矿脉
+	#允许值: NONE(不禁用), VANILLA(原版), CUSTOM(自定义), ALL(全部)
+	disabledDeposits = "NONE"
+	#应用于所有矿脉的大小倍数
+	#Range: 0.0 ~ 10.0
+	globalSizeMultiplier = 1.0
+	#应用于所有矿脉的生成率倍数
+	#Range: 0.0 ~ 10.0
+	globalSpawnRateMultiplier = 1.0
+
+[Veins]
+	#禁用所有由原版噪声生成器生成的大型矿脉
+	disableVanillaLargeVeins = false
+	#禁用特定类型的小型矿脉
+	#允许值: NONE, VANILLA, CUSTOM, MODDED, ALL, ALL_BUT_CUSTOM, ALL_BUT_VANILLA, ALL_BUT_MODDED
+	disabledVeins = "NONE"
+
+[Indicators]
+	#启用/禁用所有地表指示物（用于指示地下矿脉的花朵等）
+  #----------Change----------
+	enabled = false
+	#如果启用且维度有天花板（如下界），指示物将只生成在天花板顶部表面
+	alwaysOnCeiling = false
+
+[Features]
+	#禁用世界中指定特征的生成
+	#格式: ["modID:feature1", "modID:feature2"]
+	#要禁用指定模组的所有生成特征，使用 "modID:*"
+	#要查看可用特征，使用 '/place feature' 命令
+	#
+	disabledFeatures = []
+
+[Stripper]
+	#在卸载已剥离的区块前自动恢复其原状以防止数据丢失
+	dressUnloadedChunks = true
+

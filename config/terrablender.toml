@@ -1,0 +1,18 @@
+#通用设置
+general = {}
+
+#生成设置
+[generation_settings]
+	#使用TerraBlender的各模组在主世界的生物群系区域大小
+	#Range: 2-6
+	overworld_region_size = 3
+	#下界中原版生物群系区域的权重
+	#Range: 0-2147483647
+	vanilla_nether_region_weight = 10
+	#使用TerraBlender的各模组在下界的生物群系区域大小
+	#Range: 2-6
+	nether_region_size = 2
+	#主世界中原版生物群系区域的权重
+	#Range: 0-2147483647
+	vanilla_overworld_region_weight = 10
+

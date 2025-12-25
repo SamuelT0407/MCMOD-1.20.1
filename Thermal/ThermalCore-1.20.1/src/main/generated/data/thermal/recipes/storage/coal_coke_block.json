@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "forge:coal_coke"
+    },
+    "I": {
+      "item": "thermal:coal_coke"
+    }
+  },
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "result": {
+    "item": "thermal:coal_coke_block"
+  },
+  "show_notification": true
+}

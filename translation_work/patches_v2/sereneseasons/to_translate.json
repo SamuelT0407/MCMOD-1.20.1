@@ -1,0 +1,23 @@
+{
+  "desc.sereneseasons.day_counter": "[待翻译] Day %s/%s",
+  "desc.sereneseasons.early_autumn": "[待翻译] Early Autumn",
+  "desc.sereneseasons.early_dry": "[待翻译] Early Dry",
+  "desc.sereneseasons.early_spring": "[待翻译] Early Spring",
+  "desc.sereneseasons.early_summer": "[待翻译] Early Summer",
+  "desc.sereneseasons.early_wet": "[待翻译] Early Wet",
+  "desc.sereneseasons.early_winter": "[待翻译] Early Winter",
+  "desc.sereneseasons.late_autumn": "[待翻译] Late Autumn",
+  "desc.sereneseasons.late_dry": "[待翻译] Late Dry",
+  "desc.sereneseasons.late_spring": "[待翻译] Late Spring",
+  "desc.sereneseasons.late_summer": "[待翻译] Late Summer",
+  "desc.sereneseasons.late_wet": "[待翻译] Late Wet",
+  "desc.sereneseasons.late_winter": "[待翻译] Late Winter",
+  "desc.sereneseasons.mid_autumn": "[待翻译] Mid Autumn",
+  "desc.sereneseasons.mid_dry": "[待翻译] Mid Dry",
+  "desc.sereneseasons.mid_spring": "[待翻译] Mid Spring",
+  "desc.sereneseasons.mid_summer": "[待翻译] Mid Summer",
+  "desc.sereneseasons.mid_wet": "[待翻译] Mid Wet",
+  "desc.sereneseasons.mid_winter": "[待翻译] Mid Winter",
+  "desc.sereneseasons.tropical_day_counter": "[待翻译]  (%s/%s)",
+  "gamerule.doSeasonCycle": "[待翻译] Advance seasonal cycle"
+}

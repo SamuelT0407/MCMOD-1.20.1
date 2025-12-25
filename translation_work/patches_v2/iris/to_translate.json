@@ -1,0 +1,7 @@
+{
+  "iris.keybind.wireframe": "[待翻译] Wireframe (SP only)",
+  "iris.load.failure.generic": "[待翻译] Oculus encountered an issue trying to load the shader; please report this to Oculus developers. ",
+  "iris.load.failure.shader": "[待翻译] The shaderpack failed to load! Please report the error to the shader developer. ",
+  "options.iris.colorSpace": "[待翻译] Color Space",
+  "options.iris.colorSpace.sodium_tooltip": "[待翻译] The color space to transform the screen to. Works on top of shader packs. Use SRGB if unsure."
+}

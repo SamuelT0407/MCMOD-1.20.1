@@ -1,0 +1,610 @@
+{
+  "tconstruct:tools/materials_and_you": {
+    "criteria": {
+      "crafted_book": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/upgrade_tank": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/auto_lubricator": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/one_stack_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/cut_copper_stairs_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/cut_copper_slab_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/illumination_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "mekanism:root": {
+    "criteria": {
+      "automatic": "2025-12-24 05:35:11 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/remote_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/paraffin_wax_to_block": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/personal_key_cofh": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/gas_generator": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/acacia_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "iceandfire:iceandfire/root": {
+    "criteria": {
+      "tick": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/priority_key": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/weathered_cut_copper_slab_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/oil_can": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/petcoke_items_to_block": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/copper_block_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "biomesoplenty:biomesoplenty/root": {
+    "criteria": {
+      "maple_woods": "2025-12-24 05:35:21 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/cherry_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_lanterino": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "betterdungeons:root": {
+    "criteria": {
+      "always": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/gold_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_lantern": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/molotov_wool": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/flarestack": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/birch_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/void_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/fill_level_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/asphalt": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/lanterino": {
+    "criteria": {
+      "has_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/exposed_cut_copper_stairs_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "betterdeserttemples:root": {
+    "criteria": {
+      "always": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/paraffin_wax_block_to_items": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/oak_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/oxidized_cut_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/emerald_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/obsidian_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/iron_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/toolupgrade_drill_lube": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_lantern": {
+    "criteria": {
+      "has_double_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/upgrade_paddles": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/exposed_cut_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/petcoke_block_to_items": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/upgrade_icebreaker": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/asphalt2": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/diamond_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/asphalt_slab": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/remote_group_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "mowziesmobs:root": {
+    "criteria": {
+      "custom_test_name": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_puller": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_lanterino": {
+    "criteria": {
+      "has_double_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/crimson_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/torcherino": {
+    "criteria": {
+      "has_torch": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/seismic_survey_tool": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/shroud_key": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/portability_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/lantern": {
+    "criteria": {
+      "has_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/molotov_fabric": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_torcherino_to_compressed": {
+    "criteria": {
+      "has_double_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_key": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/exposed_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/weathered_cut_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/min_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/asphalt_stair": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2025-12-24 05:39:44 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/candle": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/speedboat": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/keyring": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/weathered_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/exposed_cut_copper_slab_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/oxidized_cut_copper_stairs_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "create_connected:root": {
+    "criteria": {
+      "0": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/personal_key": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/cut_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/projector": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "biomesoplenty:biomesoplenty/all_biomes": {
+    "criteria": {
+      "maple_woods": "2025-12-24 05:35:21 +0800",
+      "spider_nest": "2025-12-24 05:37:58 +0800"
+    },
+    "done": false
+  },
+  "storagedrawers:recipes/storagedrawers/warped_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/jungle_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/max_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/upgrade_rudders": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_torcherino_to_single": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/bamboo_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/mangrove_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "tconstruct:internal/starting_book": {
+    "criteria": {
+      "tick": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/ersatz_leather": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/oxidized_cut_copper_slab_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/redstone_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/spruce_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/weathered_cut_copper_stairs_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_torcherino": {
+    "criteria": {
+      "has_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "farmersdelight:main/root": {
+    "criteria": {
+      "seeds": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/quantify_key": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/dark_oak_trim": {
+    "criteria": {
+      "has_planks": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_torcherino": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/oxidized_copper_paraffin_waxed": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "immersivepetroleum:recipes/misc/upgrade_reinforced_hull": {
+    "criteria": {
+      "has_the_recipe": "2025-12-24 05:35:10 +0800"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/balance_fill_upgrade": {
+    "criteria": {
+      "has_template": "2025-12-24 05:35:19 +0800"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

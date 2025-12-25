@@ -1,0 +1,41 @@
+
+[World]
+
+	[World.Features]
+
+		[World.Features."Oil Sand"]
+			#此特征是否在世界中自然生成（油砂）
+			Enable = true
+
+		[World.Features.Silver]
+			#此特征是否在世界中自然生成（银矿）
+			Enable = true
+
+		[World.Features.Lead]
+			#此特征是否在世界中自然生成（铅矿）
+			Enable = true
+
+		[World.Features.Nickel]
+			#此特征是否在世界中自然生成（镍矿）
+			Enable = true
+
+		[World.Features."Rubberwood Trees"]
+			#此特征是否在世界中自然生成（橡胶树）
+			Enable = true
+
+		[World.Features.Cinnabar]
+			#此特征是否在世界中自然生成（朱砂矿）
+			Enable = true
+
+		[World.Features.Sulfur]
+			#此特征是否在世界中自然生成（硫磺矿）
+			Enable = true
+
+		[World.Features.Tin]
+			#此特征是否在世界中自然生成（锡矿）
+			Enable = true
+
+		[World.Features.Niter]
+			#此特征是否在世界中自然生成（硝石矿）
+			Enable = true
+

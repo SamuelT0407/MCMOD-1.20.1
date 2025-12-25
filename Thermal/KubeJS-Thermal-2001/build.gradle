@@ -1,0 +1,193 @@
+plugins {
+	id "dev.architectury.loom" version "1.4-SNAPSHOT"
+	id 'maven-publish'
+	id "me.shedaniel.unified-publishing" version "0.1.+"
+}
+
+// apply from: 'https://files.latmod.com/public/markdown-git-changelog.gradle' // Disabled - host unavailable
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+def ENV = System.getenv()
+version = "${mod_version}-build.${ENV.GITHUB_RUN_NUMBER ?: '9999'}"
+archivesBaseName = project.mod_name
+group = project.mod_package
+
+loom {
+	silentMojangMappingsLicense()
+
+	forge {
+		mixinConfig "kubejs-thermal.mixins.json"
+	}
+}
+
+repositories {
+	maven {
+		url "https://maven.architectury.dev/"
+		content {
+			includeGroup "me.shedaniel"
+		}
+	}
+
+	maven {
+		url "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
+
+	maven {
+		url "https://maven.saps.dev/releases"
+		content {
+			includeGroup "dev.latvian.mods"
+			includeGroup "dev.ftb.mods"
+		}
+	}
+
+	maven {
+		url "https://maven.latvian.dev/releases"
+		content {
+			includeGroup "dev.latvian.mods"
+		}
+	}
+
+	maven {
+		url "https://maven.creeperhost.net/"
+		content {
+			includeGroup "com.teamcofh"
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+
+	forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+
+	modImplementation("curse.maven:jei-238222:${jei_file}")
+
+	modImplementation("dev.latvian.mods:kubejs-forge:${rootProject.kubejs_version}")
+
+	modImplementation("curse.maven:cofh-core-69162:${cofh_core_file}")
+	modImplementation("curse.maven:thermal-foundation-222880:${thermal_foundation_file}")
+	modImplementation("curse.maven:thermal-expansion-69163:${thermal_expansion_file}")
+	modImplementation("curse.maven:thermal-cultivation-271835:${thermal_cultivation_file}")
+	modImplementation("curse.maven:thermal-locomotion-406959:${thermal_locomotion_file}")
+	modImplementation("curse.maven:thermal-innovation-291737:${thermal_innovation_file}")
+	modImplementation("curse.maven:thermal-dynamics-227443:${thermal_dynamics_file}")
+
+	modImplementation("com.teamcofh:thermal_core:1.20.1-11.+")
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("META-INF/mods.toml") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release = 17
+}
+
+java {
+	withSourcesJar()
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}" }
+	}
+
+	manifest {
+		attributes([
+				"Specification-Title"     : project.mod_id,
+				"Specification-Vendor"    : project.mod_author,
+				"Specification-Version"   : "1",
+				"Implementation-Title"    : project.name,
+				"Implementation-Version"  : version,
+				"Implementation-Vendor"   : project.mod_author,
+				"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+		])
+	}
+
+	archiveClassifier.set "dev"
+}
+
+publishing {
+	publications {
+		mavenForge(MavenPublication) {
+			artifactId = rootProject.archivesBaseName
+			from components.java
+		}
+	}
+
+	repositories {
+		if (ENV.LOCAL_MAVEN) {
+			maven {
+				url = "file://${ENV.LOCAL_MAVEN}"
+			}
+		}
+
+		if (ENV.SAPS_TOKEN) {
+			maven {
+				url "https://maven.saps.dev/minecraft"
+				credentials {
+					username = "latvian"
+					password = "${ENV.SAPS_TOKEN}"
+				}
+			}
+		}
+
+		if (ENV.MAVEN_TOKEN) {
+			maven {
+				url "https://maven.latvian.dev/releases"
+				credentials {
+					username = "lat"
+					password = "${ENV.MAVEN_TOKEN}"
+				}
+			}
+		}
+	}
+}
+
+unifiedPublishing {
+	project {
+		releaseType = "${ENV.RELEASE_TYPE ?: 'release'}"
+		gameVersions = [
+				rootProject.minecraft_version
+		]
+		gameLoaders = ["forge"]
+		displayName = "$mod_name Forge $project.version"
+		// changelog = getGitChangelog()  // Disabled - external script unavailable
+		mainPublication remapJar
+
+		relations {
+			depends {
+				curseforge = modrinth = "kubejs"
+            }
+            depends {
+                curseforge = modrinth = "thermal-expansion"
+            }
+		}
+
+		if (ENV.CURSEFORGE_KEY) {
+			curseforge {
+				token = ENV.CURSEFORGE_KEY
+				id = project.curseforge_id
+			}
+		}
+
+		if (ENV.MODRINTH_TOKEN) {
+			modrinth {
+				token = ENV.MODRINTH_TOKEN
+				id = project.modrinth_id
+				version = "$project.version"
+			}
+		}
+	}
+}

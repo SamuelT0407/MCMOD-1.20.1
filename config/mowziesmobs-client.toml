@@ -1,0 +1,19 @@
+
+[client]
+	#开关灯笼发光效果，某些着色器可能会显示不佳。
+	glow_effect = true
+	#开关乌姆武萨纳脚印效果，可能会降低性能。
+	umvuthana_footprints = true
+	#在某些怪物攻击和技能期间启用相机抖动。
+	do_camera_shake = true
+	#在Boss战期间播放Boss战斗主题曲。
+	play_boss_music = true
+	#使用自定义Boss血条纹理，如果Boss有的话。
+	custom_boss_bar = true
+	#使用自定义玩家动画。
+	custom_player_anims = true
+	#设为true以在第一人称视角模式下隐藏你自己的第三人称玩家动画。这对于在第一人称渲染第三人称模型的模组很有用，因为一些Mowzie's Mobs的第三人称动画可能会挡住相机。
+	hide_player_anims_in_first_person = false
+	#播放乌姆武萨纳鹤治疗声音。如果在乌姆武提Boss战期间鹤出现时遇到崩溃，请关闭此选项。
+	crane_heal_sounds = true
+

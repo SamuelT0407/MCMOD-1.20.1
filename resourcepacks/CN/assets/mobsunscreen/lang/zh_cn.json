@@ -1,0 +1,8 @@
+{
+  "text.autoconfig.mobsunscreen.option.general": "常规设置",
+  "text.autoconfig.mobsunscreen.option.general.mobs": "生物列表",
+  "text.autoconfig.mobsunscreen.option.general.mods": "模组列表",
+  "text.autoconfig.mobsunscreen.option.general.printIDs": "打印ID",
+  "text.autoconfig.mobsunscreen.option.general.protectAllMobs": "保护所有生物",
+  "text.autoconfig.mobsunscreen.title": "生物防晒"
+}

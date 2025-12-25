@@ -1,0 +1,7 @@
+
+[gui]
+	#按下导航按钮时启用按钮声音
+	enableButtonSound = true
+	#启用Modern UI调试
+	enableGuiDebug = false
+

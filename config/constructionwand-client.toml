@@ -1,0 +1,16 @@
+
+#这是ConstructionWand的客户端配置。
+#如果你不熟悉Forge的新客户端/服务器配置分离机制，让我解释一下：
+#客户端配置存储在/config文件夹中，只包含图形和按键绑定等客户端特定设置。
+#模组行为在服务器配置中配置，它是世界特定的，因此位于
+#/saves/myworld/serverconfig文件夹中。如果你想更改所有
+#新世界的服务器配置，请复制/defaultconfigs文件夹中的配置文件。
+[keys]
+	#OPTKEY的按键代码（默认：左Ctrl）。在https://www.glfw.org/docs/3.3/group__keys.html查找按键代码
+	#Range: 0 ~ 350
+	OptKey = 341
+	#按SNEAK+OPTKEY而不是SNEAK来更改魔杖模式/方向锁定
+	ShiftOpt = false
+	#按SNEAK+OPTKEY而不是SNEAK来打开魔杖GUI
+	ShiftOptGUI = true
+

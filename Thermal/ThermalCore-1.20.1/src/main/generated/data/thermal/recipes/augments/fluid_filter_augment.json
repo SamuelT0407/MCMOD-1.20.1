@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "thermal:flag",
+      "flag": "filter_augments"
+    }
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:ingots/signalum"
+    },
+    "c": {
+      "tag": "forge:nuggets/copper"
+    }
+  },
+  "pattern": [
+    " c ",
+    "cSc",
+    " c "
+  ],
+  "result": {
+    "item": "thermal:fluid_filter_augment"
+  },
+  "show_notification": true
+}

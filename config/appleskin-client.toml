@@ -1,0 +1,24 @@
+
+[client]
+	#如果为true，显示你当前手持食物可恢复的饥饿值（如果showSaturationHudOverlay为true则还显示饱和度）
+	showFoodValuesHudOverlay = true
+	#如果为true，将你的食物消耗显示为饥饿条后面的进度条
+	showFoodExhaustionHudUnderlay = true
+	#闪烁图标在最可见点的透明度值（1.0 = 完全不透明，0.0 = 完全透明）
+	#Range: 0.0 ~ 1.0
+	maxHudOverlayFlashAlpha = 0.65
+	#如果为true，生命值/饥饿值覆盖层会抖动以匹配Minecraft的图标动画
+	showVanillaAnimationsOverlay = true
+	#如果为true，在F3调试覆盖层中添加一行显示你的饥饿值、饱和度和消耗等级
+	showFoodStatsInDebugOverlay = true
+	#如果为true，在按住SHIFT时在食物提示中显示饥饿值和饱和度值
+	showFoodValuesInTooltip = true
+	#如果为true，自动在食物提示中显示饥饿值和饱和度值（无需按住SHIFT）
+	showFoodValuesInTooltipAlways = true
+	#如果为true，在生命条上显示食物可恢复的预估生命值
+	showFoodHealthHudOverlay = true
+	#如果为true，在饥饿条上显示你当前的饱和度等级
+	showSaturationHudOverlay = true
+	#如果为true，为副手中的食物启用饥饿/饱和度/生命值覆盖层
+	showFoodValuesHudOverlayWhenOffhand = true
+

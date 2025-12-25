@@ -1,0 +1,11 @@
+
+#客户端设置
+[client]
+	#排序按钮显示的位置，帮助解决与其他模组控件的冲突
+	#Allowed Values: TITLE_LINE_RIGHT, BELOW_UPGRADES, BELOW_UPGRADE_TABS, HIDDEN
+	sortButtonsPosition = "TITLE_LINE_RIGHT"
+	#在GUI中点击自定义按钮时是否播放点击声音
+	playButtonSound = true
+	#是否由Mouse Tweaks模组处理背包中的滚动（如果整合包中有该模组）
+	mouseTweaksScrollEnabled = true
+

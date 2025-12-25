@@ -1,0 +1,8 @@
+{
+  "help.securitycraft.incognito_mask.info": "隐身面具是一种可用于测试SecurityCraft方块所有权机制的物品。如果玩家佩戴了这种面具，该玩家拥有的方块将不再识别他们为所有者。这意味着所有这些方块都会表现得像是非所有者在与它们交互，而列有该玩家的白名单和黑名单模块也会忽略他们。如果在铁砧中将面具重命名，佩戴者的所有方块和列表模块将表现得像是以该名字命名的玩家在尝试使用方块。",
+  "item.securitycraft.incognito_mask": "隐身面具",
+  "messages.securitycraft:frame.error": "尝试显示摄像头画面时发生意外错误。这很可能是由模组不兼容导致的。更多信息可在游戏日志中找到。",
+  "messages.securitycraft:frame.forceloadingLimitReached": "此维度的监控画面区块强制加载上限已达到，因此此监控画面无法在其周围加载额外的区块。如果这些区块尚未加载，可能会导致显示问题。",
+  "messages.securitycraft:notEnoughKeyPanels": "您需要%s个按键面板才能转换此方块！",
+  "messages.securitycraft:security_camera.camera_reset_detected": "检测到摄像头实体在摄像头安装后%s毫秒重置。如果此时间间隔非常短，可能是模组不兼容导致的。更多信息可在游戏日志中找到。"
+}

@@ -1,0 +1,213 @@
+# specialai:general.toml
+# 此配置包含模组中多个杂项功能的选项，包括：动物、反应、骑乘和破门。
+
+  # 实体列表字段：通用格式 = [ "命名空间:实体类型 值1 值2 ...", ... ]
+  #   实体列表是实体类型的数组。某些实体列表为每个实体类型指定多个关联值。
+  #   实体类型通过实体注册表中的键定义，通常遵循'命名空间:实体名称'的模式。
+  #   可使用'default'代替实体类型注册键为所有实体提供默认值。
+  #   列表条目默认匹配任何派生自（即基于）其实体类型的实体。例如'~minecraft:zombie'。
+  #     派生规则没有固定标准，即使在原版中也是如此，但希望模组添加的怪物会扩展其基础怪物。
+  #   可使用星号'*'匹配属于X命名空间的所有注册条目。例如'minecraft:*'将匹配所有原版条目。
+  #   也可在此使用实体类型标签。要声明标签，以'#'开头，后跟标签路径的其余部分。
+  #   标签示例：'#minecraft:beehive_inhabitors'
+  #       优先级顺序：特定条目 > 标签条目 > 命名空间条目 > 默认值
+
+  # 方块列表字段：通用格式 = [ "命名空间:方块名称[属性1=值1,...]", ... ]
+  #   方块列表是方块和部分方块状态的数组。
+  #   方块通过方块注册表中的键定义，通常遵循'命名空间:方块名称'的模式。
+  #   可使用星号'*'匹配属于X命名空间的所有方块。例如'minecraft:*'将匹配所有原版方块。
+  #   也可在此使用方块标签。要声明标签，以'#'开头，后跟标签路径的其余部分。
+  #   标签示例：'#minecraft:beehive_inhabitors'
+  #   列表条目默认匹配任何方块状态。可通过指定属性来缩小要匹配的方块状态范围。
+  #     方块状态属性的语法与命令相同。任何未指定的属性将匹配任何值。
+  #     例如'minecraft:beehive[honey_level=5]'将匹配任何满蜂蜜的蜂箱，无论朝向。
+  #   注意标签和命名空间条目不关心方块状态；它们只关心基础方块。
+  #       优先级顺序：特定条目 > 标签条目 > 命名空间条目
+
+
+# 类别：animals（动物）
+# 自定义通常被动的生物的选项。
+
+  # 变为"中立"（像狼一样）的被动生物列表（按实体类型注册ID）。
+  # 实体类型后的附加值是该类型实体生成时带有此AI的几率（0.0到1.0）。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  animals.depacify_entities.whitelist = [
+    "minecraft:chicken 1.0",
+    "minecraft:cow 1.0",
+    "minecraft:pig 1.0",
+    "minecraft:sheep 1.0",
+    "minecraft:rabbit 1.0",
+    "minecraft:strider 1.0",
+    "minecraft:squid 1.0",
+    "minecraft:cod 1.0",
+    "minecraft:salmon 1.0",
+    "minecraft:tropical_fish 1.0"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  animals.depacify_entities.blacklist = []
+
+  # 变为"敌对"（像怪物一样）的中立生物（包括已脱敏的）列表。
+  # 实体类型后的附加值是该类型实体生成时带有此AI的几率（0.0到1.0）。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  animals.aggressive_entities.whitelist = [
+    "minecraft:cow 0.04",
+    "minecraft:rabbit 0.02",
+    "minecraft:strider 0.02",
+    "minecraft:squid 1.0",
+    "minecraft:cod 0.02",
+    "minecraft:salmon 0.04"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  animals.aggressive_entities.blacklist = []
+
+  # 如果为true，被动生物会寻找并吃掉地上用于繁殖它们的物品。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  animals.eat_breeding_items = true
+  # 生物寻找繁殖物品时的触及范围（从脚部位置）。玩家触及范围约为4.5。在范围内时，物品会被缓慢"吸"向被动生物。
+  # <数值> 范围：≥ 0.0，默认：2.0
+  animals.eating_reach = 2.0
+  # 如果为true，当生物吃地上的繁殖物品时，它们会恢复生命值（像狼一样）。需要启用"eat_breeding_items"选项才能生效。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  animals.eating_heals = true
+  # 生物每次从找到的食物堆叠中消耗一个物品的冷却时间（游戏刻）。
+  # <整数> 范围：≥ 0，默认：2
+  animals.eating_cooldown = 2
+
+
+# 类别：reaction_ai（反应AI）
+# 自定义反应行为的选项。
+
+  # 会尝试躲避即将爆炸的TNT和苦力怕的生物列表。
+  # 实体类型后的附加值是逃跑时的移动速度倍数。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：≥ 0.0
+  reaction_ai.avoid_explosions.whitelist = [
+    "default 1.4"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  reaction_ai.avoid_explosions.blacklist = []
+
+  # 被攻击时会向附近同类生物求援的生物列表。致命一击不会触发（见下文）。
+  # 实体类型后的附加值是该类型实体生成时带有此AI的几率（0.0到1.0）。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  reaction_ai.call_for_help.whitelist = [
+    "default 1.0"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  reaction_ai.call_for_help.blacklist = []
+  # 受到致命一击时会求援的生物列表及发生几率。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  reaction_ai.call_for_help_on_death.whitelist = [
+    "default 0.1"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  reaction_ai.call_for_help_on_death.blacklist = []
+
+  # 会尝试侧身躲避射向它们的箭矢的生物列表。
+  # 实体类型后的附加值是该类型实体生成时带有此AI的几率（0.0到1.0），后面是拥有此AI的实体尝试闪避的几率（每支箭判定一次）。
+  # <实体列表> 格式：[ "命名空间:实体类型 值1 值2", ... ]
+  #    值范围：0.0 ~ 1.0
+  reaction_ai.dodge_arrows.whitelist = [
+    "minecraft:skeleton 1.0 0.5",
+    "minecraft:stray 1.0 0.5",
+    "minecraft:wither_skeleton 1.0 0.5",
+    "default 0.2 0.5"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  reaction_ai.dodge_arrows.blacklist = []
+
+
+# 类别：jockeys（骑乘）
+# 与哪些生物应充当骑手或坐骑相关的选项。
+
+  # 可被普通大小骑手骑乘的生物列表（并非所有实体都能被其骑手控制）。
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  jockeys.mount_entities.whitelist = [
+    "minecraft:spider",
+    "minecraft:skeleton_horse",
+    "minecraft:zombie_horse",
+    "minecraft:sheep",
+    "minecraft:cow",
+    "minecraft:polar_bear",
+    "minecraft:horse",
+    "minecraft:donkey",
+    "minecraft:mule",
+    "~minecraft:llama",
+    "minecraft:hoglin"
+  ]
+  # 可被小型骑手或幼年普通大小骑手骑乘的生物列表（并非所有实体都能被其骑手控制）。
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  jockeys.mount_entities.small_list = [
+    "minecraft:chicken",
+    "minecraft:rabbit",
+    "minecraft:cave_spider"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  jockeys.mount_entities.blacklist = []
+
+  # 可骑乘普通大小坐骑的生物列表及获得骑手AI的几率。注意实体必须启用基于任务的AI。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  jockeys.rider_entities.whitelist = [
+    "minecraft:skeleton 0.1",
+    "minecraft:stray 0.1",
+    "minecraft:wither_skeleton 0.1",
+    "minecraft:zombie 0.05",
+    "minecraft:creeper 0.05",
+    "minecraft:witch 0.05",
+    "minecraft:piglin 0.1",
+    "minecraft:piglin_brute 0.1"
+  ]
+  # 只能骑乘小型坐骑或幼年普通大小坐骑的生物列表及获得骑手AI的几率。注意实体必须启用基于任务的AI。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  jockeys.rider_entities.small_list = []
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  jockeys.rider_entities.blacklist = []
+
+
+# 类别：door_breaking（破门）
+# 自定义破门行为的选项。
+
+  # 可获得破门AI的生物列表（注意实体必须启用基于任务的AI）。
+  # 实体类型后的附加值是该类型实体生成时带有此AI的几率（0.0到1.0）。
+  # <实体列表> 格式：[ "命名空间:实体类型 值", ... ]
+  #    值范围：0.0 ~ 1.0
+  door_breaking.entities.whitelist = [
+    "minecraft:zombie 1.0",
+    "minecraft:creeper 1.0"
+  ]
+  # <实体列表> 格式：[ "命名空间:实体类型", ... ]
+  door_breaking.entities.blacklist = []
+
+  # 如果为true，生物只会在追逐攻击目标时破门。禁用此项通常会导致生物为了到达它们作为空闲破坏或摆弄行为目标的方块（如火把或箱子）而冲进你的房子。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  door_breaking.require_target = true
+  # 如果为true，生物只会破坏它们有工具可以采集的门。
+  # 例如，它们只有在有镐时才会破坏铁门。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  door_breaking.require_tools = true
+
+  # 如果为true，生物破坏的门会掉落物品。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  door_breaking.leave_drops = true
+
+  # 生物破门的方块破坏速度倍数，相对于玩家的方块破坏速度。
+  # <数值> 范围：≥ 0.0，默认：0.33
+  door_breaking.break_speed = 0.33
+  # 如果为true，苦力怕在遇到挡路的门时会使用它们最擅长的方法。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  door_breaking.mad_creepers = true
+
+  # 如果为true，破门AI会自动将所有派生自原版门、栅栏门和活板门的方块作为目标。
+  # <布尔值> 有效值：{ true, false }，默认：true
+  door_breaking.targets.auto_target_doors = true
+  # 可被破门AI破坏的方块列表。
+  # <方块列表> 格式：[ "命名空间:方块名称[属性]", ... ]
+  door_breaking.targets.whitelist = []
+  # <方块列表> 格式：[ "命名空间:方块名称[属性]", ... ]
+  door_breaking.targets.blacklist = []

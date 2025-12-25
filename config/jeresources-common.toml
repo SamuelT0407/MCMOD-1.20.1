@@ -1,0 +1,19 @@
+#每列物品数
+#Range: 1 ~ 4
+itemsPerColumn = 4
+#每行物品数
+#Range: 1 ~ 4
+itemsPerRow = 4
+#启用DIY数据
+diyData = true
+#显示开发数据
+showDevData = false
+#附魔黑名单
+enchantsBlacklist = ["flimflam", "soulBound"]
+#隐藏的标签页
+hiddenTabs = []
+#维度黑名单
+dimensionsBlacklist = [-11]
+#禁用战利品管理器重载
+disableLootManagerReloading = false
+

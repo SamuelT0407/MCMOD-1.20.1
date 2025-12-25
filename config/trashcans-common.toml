@@ -1,0 +1,4 @@
+# 允许值: true, false - 默认值: false
+# 是否允许销毁核废料
+allowVoidingNuclearWaste = false
+

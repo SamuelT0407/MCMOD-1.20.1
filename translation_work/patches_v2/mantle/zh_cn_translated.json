@@ -1,0 +1,6 @@
+{
+  "command.mantle.item.not_found": "未知物品'%s'",
+  "command.mantle.remove_recipes": "成功在%s秒内移除了%s个配方。运行 /reload 以激活位于%s的数据包",
+  "command.mantle.remove_recipes.preset_not_found": "配方移除预设'%s'缺失或无效。请查看日志获取更多信息。",
+  "item.mantle.book.click_to_open": "右键点击打开"
+}

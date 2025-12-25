@@ -1,0 +1,21 @@
+{
+  "block.laserio.laser_connector_advanced": "[待翻译] Advanced Laser Connector",
+  "item.laserio.card_cloner": "[待翻译] Card Cloner",
+  "item.laserio.filter_nbt": "[待翻译] NBT Filter",
+  "laserio.tooltip.item.card.Filter": "[待翻译] Filter: ",
+  "laserio.tooltip.item.card.None": "[待翻译] None",
+  "laserio.tooltip.item.card.Overclockers": "[待翻译] Overclockers: ",
+  "laserio.tooltip.item.card.mode.SENSOR": "[待翻译] Sensor",
+  "screen.laserio.alpha": "[待翻译] Alpha",
+  "screen.laserio.and": "[待翻译] And",
+  "screen.laserio.apply": "[待翻译] Apply",
+  "screen.laserio.blue": "[待翻译] Blue",
+  "screen.laserio.channel": "[待翻译] Channel: ",
+  "screen.laserio.green": "[待翻译] Green",
+  "screen.laserio.or": "[待翻译] Or",
+  "screen.laserio.red": "[待翻译] Red",
+  "screen.laserio.redstonechannel": "[待翻译] Redstone Channel: ",
+  "screen.laserio.sensor": "[待翻译] Sensor",
+  "screen.laserio.settings": "[待翻译] Settings",
+  "screen.laserio.wrench": "[待翻译] Wrench Alpha"
+}

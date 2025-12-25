@@ -1,0 +1,6 @@
+#556 minecraft:beach
+#67B biomesoplenty:grassland
+#4F1 minecraft:ocean
+#482 biomesoplenty:overgrown_greens
+#5FF minecraft:river
+#204 biomesoplenty:rocky_shrubland

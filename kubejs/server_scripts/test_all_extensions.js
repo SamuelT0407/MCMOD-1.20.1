@@ -1,0 +1,1146 @@
+// priority: 0
+// ===================================================
+// KubeJS 扩展测试配方 - 详细注释版
+// 每个配方都标注: [机器名称] 输入材料 → 输出材料
+// ===================================================
+
+ServerEvents.recipes(event => {
+    console.info('===== 开始加载扩展测试配方 =====')
+
+    // ╔════════════════════════════════════════════════╗
+    // ║  1. CREATE 机械动力                            ║
+    // ╚════════════════════════════════════════════════╝
+    console.info('Loading Create recipes...')
+
+    // ─────────────────────────────────────────────────
+    // [动力冲压机+工作盆] 9个煤炭块 → 1个钻石
+    // ─────────────────────────────────────────────────
+    event.recipes.create.compacting(
+        'minecraft:diamond',           // 输出: 钻石 x1
+        '9x minecraft:coal_block'      // 输入: 煤炭块 x9
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力冲压机+工作盆+加热] 金块 + 远古残骸 → 下界合金碎片
+    // ─────────────────────────────────────────────────
+    event.recipes.create.compacting(
+        'minecraft:netherite_scrap',              // 输出: 下界合金碎片 x1
+        ['minecraft:gold_block', 'minecraft:ancient_debris']  // 输入: 金块 + 远古残骸
+    ).heated()  // 需要加热
+
+    // ─────────────────────────────────────────────────
+    // [动力冲压机+工作盆+超级加热] 3个凋灵骷髅头 + 灵魂沙 → 下界之星
+    // ─────────────────────────────────────────────────
+    event.recipes.create.compacting(
+        'minecraft:nether_star',                    // 输出: 下界之星 x1
+        ['3x minecraft:wither_skeleton_skull', 'minecraft:soul_sand']  // 输入: 凋灵骷髅头x3 + 灵魂沙
+    ).superheated()  // 需要超级加热
+
+    // ─────────────────────────────────────────────────
+    // [动力冲压机+工作盆] 岩浆 → 水
+    // ─────────────────────────────────────────────────
+    event.recipes.create.compacting(
+        Fluid.of('minecraft:water', 1000),  // 输出: 水 1000mB
+        Fluid.of('minecraft:lava', 1000)    // 输入: 岩浆 1000mB
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力冲压机+工作盆] 砂砾  → 燧石 + 10%几率钻石
+    // ─────────────────────────────────────────────────
+    event.recipes.create.compacting([
+      "minecraft:flint",
+      Item.of("diamond").withChance(0.1)],
+      "minecraft:gravel"
+    )
+
+    // ─────────────────────────────────────────────────
+    // [粉碎轮] 铁矿石 → 粗铁 (50%几率额外1个)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.crushing(
+        ['minecraft:raw_iron', Item.of('minecraft:raw_iron').withChance(0.5)],  // 输出: 粗铁x1 + 50%几率额外x1
+        'minecraft:iron_ore'  // 输入: 铁矿石
+    ).processingTime(200)  // 处理时间200tick
+
+    // ─────────────────────────────────────────────────
+    // [动力锯] 橡木原木 → 橡木木板 x6
+    // ─────────────────────────────────────────────────
+    event.recipes.create.cutting(
+        '6x minecraft:oak_planks',  // 输出: 橡木木板 x6
+        'minecraft:oak_log'         // 输入: 橡木原木
+    ).processingTime(100)
+
+    // ─────────────────────────────────────────────────
+    // [机械手] 小麦 + 牛奶桶 → 蛋糕
+    // ─────────────────────────────────────────────────
+    event.recipes.create.deploying(
+        'minecraft:cake',                          // 输出: 蛋糕
+        ['minecraft:wheat', 'minecraft:milk_bucket']  // 输入: 小麦 + 牛奶桶(机械手持有)
+    )
+
+    // ─────────────────────────────────────────────────
+    // [机械手] 机械齿轮 + 橡木原木 → 大齿轮（不消耗物品）
+    // ─────────────────────────────────────────────────
+    event.recipes.create.deploying(
+      'create:large_cogwheel',
+      ['create:cogwheel','minecraft:oak_planks']
+    ).keepHeldItem()
+
+    // ─────────────────────────────────────────────────
+    // [分液池] 水桶 → 水(1000mB) + 空桶
+    // ─────────────────────────────────────────────────
+    event.recipes.create.emptying(
+        [Fluid.of('minecraft:water', 1000), 'minecraft:bucket'],  // 输出: 水1000mB + 空桶
+        'minecraft:water_bucket'  // 输入: 水桶
+    )
+
+    // ─────────────────────────────────────────────────
+    // [注液器] 海绵 + 水(1000mB) → 湿海绵
+    // ─────────────────────────────────────────────────
+    event.recipes.create.filling(
+        'minecraft:wet_sponge',  // 输出: 湿海绵
+        ['minecraft:sponge', Fluid.of('minecraft:water', 1000)]  // 输入: 海绵 + 水1000mB
+    )
+
+    // ─────────────────────────────────────────────────
+    // [鼓风机洗涤] 沙砾 → 铁粒 (10%几率金粒)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.splashing(
+        ['minecraft:iron_nugget', Item.of('minecraft:gold_nugget').withChance(0.1)],  // 输出: 铁粒 + 10%金粒
+        'minecraft:gravel'  // 输入: 沙砾
+    )
+
+    // ─────────────────────────────────────────────────
+    // [鼓风机缠魂] 罂粟 → 凋灵玫瑰 (灵魂火上方)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.haunting(
+        'minecraft:wither_rose',  // 输出: 凋灵玫瑰
+        'minecraft:poppy'         // 输入: 罂粟
+    )
+
+    // ─────────────────────────────────────────────────
+    // [石磨] 骨头 → 骨粉x2 (25%几率额外1个)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.milling(
+        ['2x minecraft:bone_meal', Item.of('minecraft:bone_meal').withChance(0.25)],  // 输出: 骨粉x2 + 25%额外x1
+        'minecraft:bone'  // 输入: 骨头
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力搅拌器] 烈焰棒 → 烈焰粉x2
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mixing(
+        '2x minecraft:blaze_powder',  // 输出: 烈焰粉 x2
+        'minecraft:blaze_rod'         // 输入: 烈焰棒
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力搅拌器-加热] 圆石 + 煤炭 → 岩浆(1000mB)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mixing(
+        Fluid.of('minecraft:lava', 1000),  // 输出: 岩浆 1000mB
+        ['minecraft:cobblestone', 'minecraft:coal']  // 输入: 圆石 + 煤炭
+    ).heated()
+
+    // ─────────────────────────────────────────────────
+    // [动力搅拌器-流体酿造] 水(250mB) + 下界疣 → 粗制药水(250mB)
+    // 注意：流体和物品可以混合作为输入
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mixing(
+        Fluid.of('create:potion', 250, { Potion: 'minecraft:awkward' }),  // 输出: 粗制药水 250mB
+        [
+            Fluid.of('minecraft:water', 250),  // 输入: 水 250mB
+            'minecraft:nether_wart'             // 输入: 下界疣
+        ]
+    ).heated()
+
+    // ─────────────────────────────────────────────────
+    // [动力搅拌器-流体混合] 岩浆(500mB) + 水(500mB) → 黑曜石
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mixing(
+        'minecraft:obsidian',  // 输出: 黑曜石
+        [
+            Fluid.of('minecraft:lava', 500),   // 输入: 岩浆 500mB
+            Fluid.of('minecraft:water', 500)   // 输入: 水 500mB
+        ]
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力搅拌器-多流体输出] 蜂蜜块 → 蜂蜜(1000mB) + 蜜脾
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mixing(
+        [Fluid.of('create:honey', 1000), 'minecraft:honeycomb'],  // 输出: 蜂蜜1000mB + 蜜脾
+        'minecraft:honey_block'  // 输入: 蜂蜜块
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力冲压机+置物台] 铁锭 → 铁板
+    // ─────────────────────────────────────────────────
+    event.recipes.create.pressing(
+        'create:iron_sheet',     // 输出: 铁板
+        'minecraft:iron_ingot'   // 输入: 铁锭
+    )
+
+    // ─────────────────────────────────────────────────
+    // [砂纸] 煤炭 → 钻石 (手持砂纸右键)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.sandpaper_polishing(
+        'minecraft:diamond',  // 输出: 钻石
+        'minecraft:coal'      // 输入: 煤炭
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力合成器] 幻翼膜x12 → 鞘翅 (5x4网格)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mechanical_crafting(
+        'minecraft:elytra',  // 输出: 鞘翅
+        [
+            ' P P ',
+            'PPPPP',
+            'P   P',
+            'P   P'
+        ],
+        { P: 'minecraft:phantom_membrane' }  // P = 幻翼膜
+    )
+
+    // ─────────────────────────────────────────────────
+    // [动力合成器] 铁锭x9 + 铁栏杆x9 → 生成器 (9x9网格)
+    // ─────────────────────────────────────────────────
+    event.recipes.create.mechanical_crafting(
+      'minecraft:spawner', //输出
+      [
+        "IBIBIBIBI",
+        "B       B",
+        "I       I",
+        "B       B",
+        "I       I",
+        "B       B",
+        "I       I",
+        "B       B",
+        "IBIBIBIBI"],
+      {
+        I:"minecraft:iron_ingot", //铁锭
+        B:"minecraft:iron_bars" //铁栏杆
+      }
+    )
+
+    // ─────────────────────────────────────────────────
+    // [序列组装] Create 的核心配方类型
+    // 多个机器按顺序处理同一物品，最终产出成品
+    // 半成品 = 中间状态的物品 (推荐使用 create:incomplete_precision_mechanism)
+    // ─────────────────────────────────────────────────
+
+    // 定义半成品 (可选但推荐，方便统一管理)
+    const incomplete = 'create:incomplete_precision_mechanism'
+
+    // 示例1: 橡木原木 → 泥土(10%) 或 橡木木板(90%)
+    // 经过: 机械手放草方块 → 动力锯切割 → 注液水 → 辊压
+    event.recipes.create.sequenced_assembly(
+        [
+            Item.of('minecraft:dirt').withChance(0.1),       // 10% 产出泥土
+            Item.of('minecraft:oak_planks').withChance(0.9)  // 90% 产出橡木木板
+        ],
+        'minecraft:oak_log',  // 输入物品
+        [
+            // 步骤1: 机械手放置草方块 (不消耗)
+            event.recipes.create.deploying(incomplete, [incomplete, 'minecraft:grass_block']).keepHeldItem(),
+            // 步骤2: 动力锯切割
+            event.recipes.create.cutting(incomplete, incomplete),
+            // 步骤3: 注液1000mB水
+            event.recipes.create.filling(incomplete, [incomplete, Fluid.of('minecraft:water', 1000)]),
+            // 步骤4: 辊压
+            event.recipes.create.pressing(incomplete, incomplete)
+        ]
+    )
+    .transitionalItem(incomplete)  // 指定半成品
+    .loops(1)                      // 循环10次
+
+    // 示例2: 自定义精密构件配方
+    // 金锭 → 自定义精密构件 (经过3次循环)
+    event.recipes.create.sequenced_assembly(
+        'create:precision_mechanism',  // 输出: 精密构件
+        'minecraft:gold_ingot',        // 输入: 金锭
+        [
+            // 步骤1: 机械手放置时钟
+            event.recipes.create.deploying(incomplete, [incomplete, 'minecraft:clock']),
+            // 步骤2: 机械手放置指南针
+            event.recipes.create.deploying(incomplete, [incomplete, 'minecraft:compass']),
+            // 步骤3: 辊压
+            event.recipes.create.pressing(incomplete, incomplete)
+        ]
+    )
+    .transitionalItem(incomplete)
+    .loops(3)
+
+    console.info('Create recipes loaded!')
+
+    // ╔════════════════════════════════════════════════╗
+    // ║  2. THERMAL 热力膨胀                           ║
+    // ╚════════════════════════════════════════════════╝
+    console.info('Loading Thermal recipes...')
+
+    // ─────────────────────────────────────────────────
+    // [红石熔炉] 生牛肉 → 熟牛排
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.furnace(
+        'minecraft:cooked_beef',  // 输出: 熟牛排
+        'minecraft:beef'          // 输入: 生牛肉
+    )
+
+    // ─────────────────────────────────────────────────
+    // [锯木机] 橡木原木 → 橡木木板x6 (25%几率获得木棍)
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.sawmill(
+        ['6x minecraft:oak_planks', Item.of('minecraft:stick').withChance(0.25)],  // 输出: 木板x6 + 25%木棍
+        'minecraft:oak_log'  // 输入: 橡木原木
+    )
+
+    // ─────────────────────────────────────────────────
+    // [磨粉机] 烈焰棒 → 烈焰粉x2 (50%几率额外1个)
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.pulverizer(
+        ['2x minecraft:blaze_powder', Item.of('minecraft:blaze_powder').withChance(0.5)],
+        'minecraft:blaze_rod'  // 输入: 烈焰棒
+    )
+
+    // ─────────────────────────────────────────────────
+    // [感应炉] 粗铁 → 铁锭x2
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.smelter(
+        '2x minecraft:iron_ingot',  // 输出: 铁锭x2
+        'minecraft:raw_iron'        // 输入: 粗铁
+    )
+
+    // ─────────────────────────────────────────────────
+    // [离心分离机] 蜂蜜块 → 蜂蜜瓶 + 蜜脾
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.centrifuge(
+        ['minecraft:honey_bottle', 'minecraft:honeycomb'],  // 输出: 蜂蜜瓶 + 蜜脾
+        'minecraft:honey_block'  // 输入: 蜂蜜块
+    )
+
+    // ─────────────────────────────────────────────────
+    // [多驱冲压机] 使用不同模具的示例
+    // 语法: press(输出, [输入物品, 模具])
+    // ─────────────────────────────────────────────────
+
+    // 板模具: 铁锭 → 铁板
+    event.recipes.thermal.press(
+        'thermal:iron_plate',
+        'minecraft:iron_ingot'
+    )
+
+    // 齿轮模具: 4个铁锭 → 铁齿轮
+    event.recipes.thermal.press(
+        'thermal:iron_gear',
+        ['4x minecraft:iron_ingot', 'thermal:press_gear_die']  // 4个铁锭 + 齿轮模具
+    )
+
+    // 硬币模具: 铁粒 → 铁硬币 (如果有)
+    event.recipes.thermal.press(
+        'thermal:iron_coin',
+        ['minecraft:iron_nugget', 'thermal:press_coin_die']
+    )
+
+    // 打包模具: 4个铁锭 → 铁活板门
+    event.recipes.thermal.press(
+        'minecraft:iron_trapdoor',
+        ['4x minecraft:iron_ingot', 'thermal:press_packing_2x2_die']  // 4个铁锭 + 打包模具
+    )
+
+    // 打包模具: 9个铁锭 → 铁块
+    event.recipes.thermal.press(
+        'minecraft:iron_block',
+        ['9x minecraft:iron_ingot', 'thermal:press_packing_3x3_die']  // 9个铁锭 + 打包模具
+    )
+
+    // 拆包模具: 铁块 → 9个铁锭
+    event.recipes.thermal.press(
+        '9x minecraft:iron_ingot',
+        ['minecraft:iron_block', 'thermal:press_unpacking_die']  // 铁块 + 拆包模具
+    )
+
+    // ─────────────────────────────────────────────────
+    // [熔岩炉] 雪球 → 水(250mB)
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.crucible(
+        Fluid.of('minecraft:water', 250),  // 输出: 水 250mB
+        'minecraft:snowball'               // 输入: 雪球
+    )
+
+    // ─────────────────────────────────────────────────
+    // [极速冷冻机] 水(1000mB) → 冰块
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.chiller(
+        'minecraft:ice',                    // 输出: 冰块
+        Fluid.of('minecraft:water', 1000)   // 输入: 水 1000mB
+    )
+
+    // ─────────────────────────────────────────────────
+    // [流体罐装机] 玻璃瓶 + 蜂蜜(250mB) → 蜂蜜瓶
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.bottler(
+        'minecraft:honey_bottle',  // 输出: 蜂蜜瓶
+        ['minecraft:glass_bottle', Fluid.of('create:honey', 250)]  // 输入: 玻璃瓶 + 蜂蜜250mB
+    )
+
+    // ─────────────────────────────────────────────────
+    // [有机灌注机] 小麦种子 → 小麦x2 (10%几率额外种子) 消耗水200mB
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.insolator(
+        ['2x minecraft:wheat', Item.of('minecraft:wheat_seeds').withChance(0.1)],
+        'minecraft:wheat_seeds'  // 输入: 小麦种子
+    ).water(200)  // 消耗水 200mB
+
+    // ─────────────────────────────────────────────────
+    // [流体精炼机] 原油(1000mB) → 重油(400mB) + 轻油(300mB) + 沥青(固体副产物)
+    // 流体输入 → 多流体输出 + 固体副产物
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.refinery(
+        [
+            Fluid.of('thermal:heavy_oil', 400),    // 输出1: 重油 400mB
+            Fluid.of('thermal:light_oil', 300),    // 输出2: 轻油 300mB
+            Item.of('thermal:tar').withChance(0.5) // 输出3: 沥青 (50%几率) 固体副产物
+        ],
+        Fluid.of('thermal:crude_oil', 1000)  // 输入: 原油 1000mB
+    ).energy(8000)
+
+    // ─────────────────────────────────────────────────
+    // [药水酿造机] 粗制药水(1000mB) + 蜘蛛眼 → 剧毒药水(1000mB)
+    // 流体+物品输入 → 流体输出 (主要用于酿造药水)
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.brewer(
+        Fluid.of('minecraft:potion', 1000, { Potion: 'minecraft:poison' }),  // 输出: 剧毒药水 1000mB
+        [
+            Fluid.of('minecraft:potion', 1000, { Potion: 'minecraft:awkward' }),  // 输入: 粗制药水 1000mB
+            'minecraft:spider_eye'  // 输入: 蜘蛛眼
+        ]
+    )
+
+    // ─────────────────────────────────────────────────
+    // [结晶器] 木板 + 水(200mB) → 金晶体 (110%几率=必出+10%额外)
+    // 物品+流体输入 → 物品输出
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.crystallizer(
+        Item.of('mekanism:crystal_gold').withChance(1.1),  // 输出: 金晶体 (110%几率)
+        ['minecraft:oak_planks', Fluid.of('minecraft:water', 200)]  // 输入: 木板 + 水
+    )
+
+    // ─────────────────────────────────────────────────
+    // [热解炉] 锯末x8 → 氢气(25mB)
+    // 物品输入 → 流体输出
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.pyrolyzer(
+        Fluid.of('mekanism:hydrogen', 25),  // 输出: 氢气 25mB
+        Item.of('#forge:sawdust', 8)        // 输入: 锯末 x8
+    ).energy(1000)
+
+    // ═══════════════════════════════════════════════════
+    // 催化剂 (Catalyst) - 提升机器效率
+    // .primaryMod - 主产物倍率
+    // .secondaryMod - 副产物倍率
+    // .energyMod - 能耗倍率 (小于1表示省电)
+    // .minChance - 最小消耗几率
+    // .useChance - 消耗几率
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [磨粉机催化剂] 红石粉: 产物x1.5, 能耗x0.8, 30%消耗率
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.pulverizer_catalyst('minecraft:redstone')
+        .primaryMod(1.5)     // 主产物 x1.5
+        .secondaryMod(1.5)   // 副产物 x1.5
+        .energyMod(0.8)      // 能耗 x0.8 (省20%电)
+        .minChance(0.10)     // 最低消耗率 10%
+        .useChance(0.3)      // 消耗几率 30%
+
+    // ─────────────────────────────────────────────────
+    // [感应炉催化剂] 钻石: 产物x2, 能耗x0.8
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.smelter_catalyst('minecraft:diamond')
+        .primaryMod(2.0)
+        .secondaryMod(2.0)
+        .energyMod(0.8)
+        .minChance(0.1)
+        .useChance(0.3)
+
+    // ─────────────────────────────────────────────────
+    // [有机灌注机催化剂] 骨粉: 产物x1.5
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.insolator_catalyst('minecraft:bone_meal')
+        .primaryMod(1.5)
+        .secondaryMod(1.5)
+        .energyMod(1.0)
+        .minChance(0.1)
+        .useChance(0.5)
+
+    // ═══════════════════════════════════════════════════
+    // 燃料注册 (Fuel) - 各种能源炉的燃料
+    // .energy(RF) - 产生的能量
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [斯特林能源炉] 固体燃料 → 电力
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.stirling_fuel('minecraft:coal_block').energy(160000)
+    event.recipes.thermal.stirling_fuel('minecraft:blaze_rod').energy(24000)
+
+    // ─────────────────────────────────────────────────
+    // [压缩能源炉] 流体燃料 → 电力
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.compression_fuel(Fluid.of('mekanism:ethene', 100)).energy(100000)
+
+    // ─────────────────────────────────────────────────
+    // [热力能源炉] 热流体 → 电力
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.magmatic_fuel(Fluid.of('minecraft:lava', 100)).energy(50000)
+
+    // ─────────────────────────────────────────────────
+    // [通货能源炉] 货币/金属 → 电力
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.numismatic_fuel('minecraft:gold_ingot').energy(40000)
+
+    // ─────────────────────────────────────────────────
+    // [珠宝能源炉] 宝石 → 电力
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.lapidary_fuel('minecraft:emerald').energy(50000)
+    event.recipes.thermal.lapidary_fuel('minecraft:diamond').energy(80000)
+
+    // ─────────────────────────────────────────────────
+    // [饕餮能源炉] 食物 → 电力
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.gourmand_fuel('minecraft:golden_apple').energy(64000)
+
+    // ═══════════════════════════════════════════════════
+    // 树汁提取器 (Tree Extractor) - 新 API
+    //
+    // tree_extractor → 只匹配自然生长的树叶 (persistent: false)
+    // tree_extractor_any → 匹配所有树叶（包括手动放置）
+    //
+    // .sapling('sapling_id') → 环境检查（树苗能否在原木位置生存）
+    // .sapling('') → 跳过环境检查
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [树汁提取器] 测试1: 暮色森林彩虹橡树 (检查自然树)
+    // 使用 tree_extractor = 只匹配自然生长的树叶
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.tree_extractor(
+        Fluid.of('thermal:resin', 15),
+        'twilightforest:twilight_oak_log',
+        'twilightforest:rainbow_oak_leaves'
+    )
+    .sapling('twilightforest:rainbow_oak_sapling')
+
+    // ─────────────────────────────────────────────────
+    // [树汁提取器] 测试2: 暮色森林空心橡树 (匹配所有树叶)
+    // 使用 tree_extractor_any = 匹配所有树叶，包括手动放置的
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.tree_extractor(
+        Fluid.of('thermal:resin', 30),
+        'twilightforest:twilight_oak_log',
+        'twilightforest:twilight_oak_leaves'
+    )
+    .min_height(3)
+    .max_height(100)
+    .min_leaves(5)
+    .max_leaves(500)
+
+    // ─────────────────────────────────────────────────
+    // [树汁提取器] 测试3: 原版橡树 (完整示例)
+    // 对比 Thermal 原版配方效果
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.tree_extractor(
+        Fluid.of('thermal:resin', 15),
+        'minecraft:oak_log',
+        'minecraft:oak_leaves'
+    )
+    .sapling('minecraft:oak_sapling')
+    .min_height(4)
+    .max_height(10)
+    .min_leaves(16)
+    .max_leaves(24)
+
+    // ─────────────────────────────────────────────────
+    // [树汁提取器加速] 有机堆肥: 1.5倍输出, 持续8个循环
+    // ─────────────────────────────────────────────────
+    event.recipes.thermal.tree_extractor_boost(
+        'farmersdelight:organic_compost',
+        1.5,
+        8
+    )
+
+    // ─────────────════════════════════════════════════════
+    // 岩石生成器 (Rock Gen) - 使用 event.custom
+    // 左槽固定是岩浆 (minecraft:lava)
+    // adjacent = 右槽流体
+    // below = 底部方块 (可选)
+    // result = 输出物品
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [岩石生成器] 岩浆 + 女巫水 + 荧石 → 末地石
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'thermal:rock_gen',
+        adjacent: 'exnihilosequentia:witch_water',  // 右槽: 女巫水
+        below: 'minecraft:glowstone',                // 底部: 荧石块
+        result: Item.of('minecraft:end_stone')       // 输出: 末地石
+    }).id('kubejs:rockgen_endstone')
+
+    // ─────────────────────────────────────────────────
+    // [岩石生成器] 岩浆 + 女巫水 + 红石块 → 下界岩
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'thermal:rock_gen',
+        adjacent: 'exnihilosequentia:witch_water',  // 右槽: 女巫水
+        below: 'minecraft:redstone_block',           // 底部: 红石块
+        result: Item.of('minecraft:netherrack')      // 输出: 下界岩
+    }).id('kubejs:rockgen_netherrack')
+
+    // ─────────────────────────────────────────────────
+    // [岩石生成器] 岩浆 + 水 → 圆石 (基础配方，无底部方块)
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'thermal:rock_gen',
+        adjacent: 'minecraft:water',                 // 右槽: 水
+        result: Item.of('minecraft:cobblestone')     // 输出: 圆石
+    }).id('kubejs:rockgen_cobblestone')
+
+    console.info('Thermal recipes loaded!')
+
+    // ╔════════════════════════════════════════════════╗
+    // ║  3. MEKANISM 通用机械                          ║
+    // ╚════════════════════════════════════════════════╝
+    console.info('Loading Mekanism recipes...')
+
+    // ═══════════════════════════════════════════════════
+    // 基础物品加工机器 (物品 → 物品)
+    // crushing, enriching, smelting 使用相同的语法
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [粉碎机] 圆石 → 沙砾x2
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.crushing(
+        '2x minecraft:gravel',     // 输出: 沙砾x2
+        'minecraft:cobblestone'    // 输入: 圆石
+    )
+
+    // ─────────────────────────────────────────────────
+    // [富集仓] 荧石块 → 荧石粉x4
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.enriching(
+        '4x minecraft:glowstone_dust',  // 输出: 荧石粉x4
+        'minecraft:glowstone'           // 输入: 荧石块
+    )
+
+    // ─────────────────────────────────────────────────
+    // [电力熔炼炉] 粗铁 → 铁锭
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.smelting(
+        'minecraft:iron_ingot',  // 输出: 铁锭
+        'minecraft:raw_iron'     // 输入: 粗铁
+    )
+
+    // ─────────────────────────────────────────────────
+    // [融合机] 圆石 + 藤蔓 → 苔石
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.combining(
+        'minecraft:mossy_cobblestone',  // 输出: 苔石
+        'minecraft:cobblestone',        // 输入1: 圆石
+        'minecraft:vine'                // 输入2: 藤蔓
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 精密锯木机 (Sawing)
+    // 支持主输出和副产物
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [精密锯木机] 橡木原木 → 橡木木板x6
+    // sawing(输入, 主输出, 副产物?)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.sawing(
+        'minecraft:oak_log',        // 输入: 橡木原木
+        '6x minecraft:oak_planks'   // 主输出: 橡木木板x6
+    )
+
+    // ─────────────────────────────────────────────────
+    // [精密锯木机+副产物] 白桦原木 → 木板x6 + 锯末(25%几率)
+    // sawing(输入, 主输出, 副产物) - 副产物是第三个参数
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.sawing(
+        'minecraft:birch_log',                            // 输入
+        '6x minecraft:birch_planks',                      // 主输出
+        Item.of('mekanism:sawdust').withChance(0.25)      // 副产物 (25%几率)
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 物品+气体 → 物品 类机器
+    // compressing, purifying, injecting 使用相同的语法
+    // 气体使用 {gas: 'id', amount: 数量} 格式
+    // 注意: amount 有 200 倍乘数! amount: 1 = 200mB
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [锇压缩机] 粗铁 + 氢气(200mB) → 铁碎片
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.compressing(
+        'mekanism:shard_iron',            // 输出
+        'minecraft:raw_iron',             // 物品输入
+        {gas: 'mekanism:hydrogen', amount: 1}
+    )
+
+    // ─────────────────────────────────────────────────
+    // [提纯仓] 粗铁 + 氧气(200mB) → 铁碎块
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.purifying(
+        'mekanism:clump_iron',            // 输出
+        'minecraft:raw_iron',             // 物品输入
+        {gas: 'mekanism:oxygen', amount: 1}
+    )
+
+    // ─────────────────────────────────────────────────
+    // [化学压射仓] 粗铁 + 氯化氢(200mB) → 铁碎片
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.injecting(
+        'mekanism:shard_iron',            // 输出
+        'minecraft:raw_iron',             // 物品输入
+        {gas: 'mekanism:hydrogen_chloride', amount: 1}
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 冶金灌注机 (Metallurgic Infusing)
+    // 物品 + 灌注类型 → 物品
+    //
+    // 灌注类型 ID:
+    //   mekanism:redstone - 红石 (红石粉=10, 红石块=90)
+    //   mekanism:carbon   - 碳 (煤炭/木炭=10, 煤炭块=90)
+    //   mekanism:diamond  - 钻石 (钻石粉=10)
+    //   mekanism:refined_obsidian - 强化黑曜石
+    //   mekanism:gold     - 金 (金粉=10)
+    //   mekanism:tin      - 锡 (锡粉=10)
+    //   mekanism:bio      - 生物 (生物燃料=5)
+    //   mekanism:fungi    - 真菌 (蘑菇=10)
+    //
+    // 两种指定方式:
+    //   {tag: '...', amount: N}        - 使用标签匹配 (推荐,更灵活)
+    //   {infuse_type: '...', amount: N} - 精确指定灌注类型ID
+    //
+    // amount 是直接单位，无乘数！1 amount = 1 单位灌注
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [冶金灌注机] 方式1: 使用 tag (标签)
+    // 铁锭 + 红石灌注(10单位) → 富集铁
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.metallurgic_infusing(
+        'mekanism:enriched_iron',         // 输出
+        'minecraft:iron_ingot',           // 物品输入
+        {tag: 'mekanism:redstone', amount: 10}
+    )
+
+    // ─────────────────────────────────────────────────
+    // [冶金灌注机] 方式2: 使用 infuse_type (精确ID)
+    // 煤炭 + 碳灌注(10单位) → 富集碳
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.metallurgic_infusing(
+        'mekanism:enriched_carbon',       // 输出
+        'minecraft:coal',                 // 物品输入
+        {infuse_type: 'mekanism:carbon', amount: 10}  // 碳灌注类型ID
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 化学处理 - 气体转换类
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [化学氧化机] 硫粉 → 二氧化硫(100mB)
+    // 物品 → 气体
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.oxidizing(
+        'mekanism:dust_sulfur',           // 物品输入
+        {gas: 'mekanism:sulfur_dioxide', amount: 100}  // 气体输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [太阳能中子活化器] 核废料 → 钚
+    // 气体 → 气体 (需要阳光)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.activating(
+        {gas: 'mekanism:nuclear_waste', amount: 1},  // 气体输入
+        {gas: 'mekanism:plutonium', amount: 1}       // 气体输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [同位素离心机] 核废料 → 钚
+    // 气体 → 气体
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.centrifuging(
+        {gas: 'mekanism:nuclear_waste', amount: 1},  // 气体输入
+        {gas: 'mekanism:plutonium', amount: 1}       // 气体输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [化学灌注室] 氢气 + 氯气 → 氯化氢
+    // 气体 + 气体 → 气体
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.chemical_infusing(
+        {gas: 'mekanism:hydrogen_chloride', amount: 1},  // 气体输出
+        {gas: 'mekanism:hydrogen', amount: 1},           // 左气体输入
+        {gas: 'mekanism:chlorine', amount: 1}            // 右气体输入
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 流体处理类
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [电解分离器] 水 → 氢气 + 氧气
+    // 流体 → 两种气体
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.separating(
+        Fluid.of('minecraft:water', 2),              // 流体输入
+        {gas: 'mekanism:hydrogen', amount: 2},       // 左气体输出
+        {gas: 'mekanism:oxygen', amount: 1}          // 右气体输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [热力蒸馏控制器] 水 → 盐水
+    // 流体 → 流体 (需要太阳热量)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.evaporating(
+        Fluid.of('minecraft:water', 10),    // 流体输入
+        Fluid.of('mekanism:brine', 1)       // 流体输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [旋转式气液转换机] 水 ⇌ 蒸汽
+    // 需要修改 KubeJS Mekanism 插件添加 GasStack 类型包装器
+    // 才能支持链式方法，暂时跳过
+    // ─────────────────────────────────────────────────
+    // event.recipes.mekanism.rotary()
+    //     .decondensentrating(
+    //         Fluid.of('minecraft:water', 10),
+    //         'mekanism:steam'
+    //     )
+
+    // ═══════════════════════════════════════════════════
+    // 矿石处理 - 污泥系统
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [化学溶解室] 粗铁 + 硫酸 → 脏铁污泥
+    // 物品 + 气体 → 污泥
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.dissolution(
+        {slurry: 'mekanism:dirty_iron', amount: 1000},   // 污泥输出
+        {gas: 'mekanism:sulfuric_acid', amount: 1},      // 气体输入
+        'minecraft:raw_iron'                              // 物品输入
+    )
+
+    // ─────────────────────────────────────────────────
+    // [化学清洗机] 脏铁污泥 + 水 → 洁净铁污泥
+    // 污泥 + 流体 → 洁净污泥
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.washing(
+        Fluid.of('minecraft:water', 5),                  // 流体输入
+        {slurry: 'mekanism:dirty_iron', amount: 1},      // 脏污泥输入
+        {slurry: 'mekanism:clean_iron', amount: 1}       // 洁净污泥输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [化学结晶器] 洁净铁污泥 → 铁晶体
+    // 化学物质 → 物品
+    // chemical_type: gas, infusion, pigment, slurry
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.crystallizing(
+        'slurry',                            // 化学类型
+        'mekanism:crystal_iron',             // 物品输出
+        {slurry: 'mekanism:clean_iron', amount: 200}  // 污泥输入
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 能量与转换
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [能量转换] 红石粉 → 10000 焦耳
+    // 物品 → 能量 (用于能量方块)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.energy_conversion(
+        'minecraft:redstone',     // 物品输入
+        10000                     // 能量输出 (J)
+    )
+
+    // ─────────────────────────────────────────────────
+    // [气体转换] 煤炭 → 氢气
+    // 物品 → 气体 (用于物品直接转气体)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.gas_conversion(
+        'minecraft:coal',                    // 物品输入
+        {gas: 'mekanism:hydrogen', amount: 1}  // 气体输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [灌注类型转换] 红石粉 → 红石灌注
+    // 物品 → 灌注类型 (用于冶金灌注机)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.infusion_conversion(
+        'minecraft:redstone',     // 物品输入
+        {infuse_type: 'mekanism:redstone', amount: 10}  // 灌注类型输出
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 核合成机 (Nucleosynthesizing)
+    // 物品 + 反物质 → 物品, 需要大量能量
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [核合成机] 煤炭 + 反物质 → 钻石
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.nucleosynthesizing(
+        'minecraft:coal',                    // 物品输入
+        {gas: 'mekanism:antimatter', amount: 4},  // 反物质输入
+        'minecraft:diamond'                  // 物品输出
+    ).duration(1000)  // 持续时间 (tick)
+
+    // ═══════════════════════════════════════════════════
+    // 加压反应室 (Pressurized Reaction Chamber)
+    // 物品 + 气体 + 流体 → 物品 + 气体
+    // 最复杂的多输入多输出机器
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [加压反应室] 生物燃料 + 氢气 + 水 → 底物 + 乙烯
+    // reaction(物品输入, 气体输入, 流体输入, 物品输出, 气体输出, 持续时间, 能耗)
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.reaction(
+        'mekanism:bio_fuel',                          // 物品输入
+        {gas: 'mekanism:hydrogen', amount: 100},      // 气体输入
+        Fluid.of('minecraft:water', 10),              // 流体输入
+        'mekanism:substrate',                         // 物品输出
+        {gas: 'mekanism:ethene', amount: 100},        // 气体输出
+        100,                                          // 持续时间 (tick)
+        1000                                          // 能耗 (J)
+    )
+
+    // ═══════════════════════════════════════════════════
+    // 颜料系统 (Pigment System)
+    // ═══════════════════════════════════════════════════
+
+    // ─────────────────────────────────────────────────
+    // [颜料提取机] 红色染料 → 红色颜料
+    // 物品 → 颜料
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.pigment_extracting(
+        'minecraft:red_dye',      // 物品输入
+        {pigment: 'mekanism:red', amount: 1024}  // 颜料输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [颜料混合机] 红色颜料 + 蓝色颜料 → 紫色颜料
+    // 颜料 + 颜料 → 颜料
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.pigment_mixing(
+        {pigment: 'mekanism:red', amount: 1},    // 左颜料输入
+        {pigment: 'mekanism:blue', amount: 1},   // 右颜料输入
+        {pigment: 'mekanism:purple', amount: 2}  // 颜料输出
+    )
+
+    // ─────────────────────────────────────────────────
+    // [喷涂机] 白色羊毛 + 红色颜料 → 红色羊毛
+    // 物品 + 颜料 → 物品
+    // ─────────────────────────────────────────────────
+    event.recipes.mekanism.painting(
+        'minecraft:white_wool',                   // 物品输入
+        {pigment: 'mekanism:red', amount: 256},   // 颜料输入
+        'minecraft:red_wool'                      // 物品输出
+    )
+
+    console.info('Mekanism recipes loaded!')
+
+    // ╔════════════════════════════════════════════════╗
+    // ║  4. IMMERSIVE ENGINEERING 沉浸工程             ║
+    // ╚════════════════════════════════════════════════╝
+    console.info('Loading Immersive Engineering recipes...')
+
+    // ─────────────────────────────────────────────────
+    // [粉碎机] 圆石 → 沙砾 (10%几率额外沙子) 耗能2400RF
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:crusher',
+        input: { item: 'minecraft:cobblestone' },
+        result: { item: 'minecraft:gravel' },
+        secondaries: [{ output: { item: 'minecraft:sand' }, chance: 0.1 }],
+        energy: 2400
+    })
+
+    // ─────────────────────────────────────────────────
+    // [金属压缩机] 铁锭 + 板模具 → 铁板 耗能2400RF
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        input: { item: 'minecraft:iron_ingot' },
+        mold: 'immersiveengineering:mold_plate',
+        result: { item: 'immersiveengineering:plate_iron' },
+        energy: 2400
+    })
+
+    // ─────────────────────────────────────────────────
+    // [合金窑] 铜锭 + 铁锭 → 康铜锭 时间200tick
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:alloy',
+        input0: { item: 'minecraft:copper_ingot' },
+        input1: { item: 'minecraft:iron_ingot' },
+        result: { item: 'immersiveengineering:ingot_constantan' },
+        time: 200
+    })
+
+    // ─────────────────────────────────────────────────
+    // [高炉] 铁锭 → 钢锭 + �ite渣 时间1200tick
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:blast_furnace',
+        input: { item: 'minecraft:iron_ingot' },
+        result: { item: 'immersiveengineering:ingot_steel' },
+        slag: { item: 'immersiveengineering:slag' },
+        time: 1200
+    })
+
+    // ─────────────────────────────────────────────────
+    // [焦炉] 煤�ite → 焦煤 + 杂酚油(500mB) 时间1800tick
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:coke_oven',
+        input: { item: 'minecraft:coal' },
+        result: { item: 'immersiveengineering:coal_coke' },
+        creosote: 500,
+        time: 1800
+    })
+
+    // ─────────────────────────────────────────────────
+    // [榨汁机] 甜菜根 → 甜菜种子 + 植物油(80mB) 耗能6400RF
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:squeezer',
+        input: { item: 'minecraft:beetroot' },
+        result: { item: 'minecraft:beetroot_seeds' },
+        fluid: { fluid: 'immersiveengineering:plantoil', amount: 80 },
+        energy: 6400
+    })
+
+    // ─────────────────────────────────────────────────
+    // [发酵罐] 甘蔗 → 纸 + 乙醇(80mB) 耗能6400RF
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:fermenter',
+        input: { item: 'minecraft:sugar_cane' },
+        result: { item: 'minecraft:paper' },
+        fluid: { fluid: 'immersiveengineering:ethanol', amount: 80 },
+        energy: 6400
+    })
+
+    console.info('Immersive Engineering recipes loaded!')
+
+    // ╔════════════════════════════════════════════════╗
+    // ║  5. TCONSTRUCT JS 匠魂                         ║
+    // ╚════════════════════════════════════════════════╝
+    console.info('Loading TConstruct JS recipes...')
+
+    const { tconstruct } = event.recipes
+
+    // ─────────────────────────────────────────────────
+    // [冶炼炉-合金] 熔融铜(108mB) + 熔融锡(36mB) → 熔融青铜(144mB)
+    // ─────────────────────────────────────────────────
+    tconstruct.alloy(
+        Fluid.of('tconstruct:molten_bronze', 144),
+        [
+            Fluid.of('tconstruct:molten_copper', 108),
+            Fluid.of('tconstruct:molten_tin', 36)
+        ],
+        760  // 温度
+    )
+
+    // ─────────────────────────────────────────────────
+    // [浇铸台] 熔融铁(144mB) + 铸件 → 铁锭
+    // ─────────────────────────────────────────────────
+    tconstruct.casting_table(
+        'minecraft:iron_ingot',
+        Fluid.of('tconstruct:molten_iron', 144),
+        'tconstruct:ingot_cast'
+    ).cast_consumed(false).cooling_time(1.0)
+
+    // ─────────────────────────────────────────────────
+    // [浇铸盆] 熔融铁(1296mB) → 铁块 (无需铸件)
+    // ─────────────────────────────────────────────────
+    tconstruct.casting_basin(
+        'minecraft:iron_block',
+        Fluid.of('tconstruct:molten_iron', 1296)
+    ).cooling_time(1.0)
+
+    // ─────────────────────────────────────────────────
+    // [冶炼炉-燃料] 岩浆(50mB) = 100tick持续时间
+    // melting_fuel 需要使用 event.custom() 因为需要 rate 字段
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'tconstruct:melting_fuel',
+        fluid: { fluid: 'minecraft:lava', amount: 50 },
+        duration: 100,
+        temperature: 1000,
+        rate: 1  // 必须参数！熔化速率
+    })
+
+    console.info('TConstruct JS recipes loaded!')
+
+    // ╔════════════════════════════════════════════════╗
+    // ║  6. 原版配方                                    ║
+    // ╚════════════════════════════════════════════════╝
+    console.info('Loading vanilla recipes...')
+
+    // ─────────────────────────────────────────────────
+    // [工作台-有序] 煤炭 + 木棍 → 火把x4
+    // ─────────────────────────────────────────────────
+    event.shaped(
+        '4x minecraft:torch',
+        ['C', 'S'],
+        { C: 'minecraft:coal', S: 'minecraft:stick' }
+    ).id('kubejs:test_torch')
+
+    // ─────────────────────────────────────────────────
+    // [工作台-无序] 骨头 → 骨粉x4
+    // ─────────────────────────────────────────────────
+    event.shapeless(
+        '4x minecraft:bone_meal',
+        ['minecraft:bone']
+    ).id('kubejs:test_bonemeal')
+
+    // ─────────────────────────────────────────────────
+    // [熔炉] 沙子 → 玻璃 (+0.1经验)
+    // ─────────────────────────────────────────────────
+    event.smelting('minecraft:glass', 'minecraft:sand').xp(0.1)
+
+    // ─────────────────────────────────────────────────
+    // [高炉] 粗铁 → 铁锭 (+0.7经验)
+    // ─────────────────────────────────────────────────
+    event.blasting('minecraft:iron_ingot', 'minecraft:raw_iron').xp(0.7)
+
+    // ─────────────────────────────────────────────────
+    // [烟熏炉] 生牛肉 → 熟牛排 (+0.35经验)
+    // ─────────────────────────────────────────────────
+    event.smoking('minecraft:cooked_beef', 'minecraft:beef').xp(0.35)
+
+    // ─────────────────────────────────────────────────
+    // [营火] 生鲑鱼 → 熟鲑鱼
+    // ─────────────────────────────────────────────────
+    event.campfireCooking('minecraft:cooked_salmon', 'minecraft:salmon')
+
+    // ─────────────────────────────────────────────────
+    // [切石机] 石头 → 石砖x4
+    // ─────────────────────────────────────────────────
+    event.stonecutting('4x minecraft:stone_bricks', 'minecraft:stone')
+
+    console.info('Vanilla recipes loaded!')
+    console.info('===== 所有扩展测试配方加载完成 =====')
+})

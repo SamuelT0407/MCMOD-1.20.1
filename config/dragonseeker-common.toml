@@ -1,0 +1,149 @@
+
+#基础寻龙器
+[basic_dragonseeker]
+	#在此距离内，靠近龙不会增加探测几率。默认: 100
+	#Range: 1 ~ 500
+	"Basic: optimalDistance" = 100
+	#检测龙的最大距离。应大于optimalDistance，但不大于渲染距离。默认: 200
+	#Range: 1 ~ 500
+	"Basic: maxDistance" = 200
+	#最小探测几率。未检测到龙时正向探测的几率，即误报率。默认: .12
+	#Range: 0.0 ~ 1.0
+	"Basic: minPingChance" = 0.12
+	#最大探测几率。龙在optimalDistance内时正向探测的几率。默认: .8
+	#Range: 0.0 ~ 1.0
+	"Basic: maxPingChance" = 0.8
+	#在此半径内，探测属性不会改变。越小越容易定位龙的位置。默认: 200
+	#Range: 1 ~ 500
+	"Basic: pingCapRadius" = 200
+	#控制距离与探测属性关系的数学属性。越高越容易定位龙的位置。默认: 1.5
+	#Range: 1.0 ~ 5.0
+	"Basic: sigPower" = 1.5
+	#无龙时探测声音的最小音量。默认: .05
+	#Range: 0.0 ~ 1.0
+	"Basic: minVol" = 0.05
+	#在探测上限半径内时的最大音量。默认: .05
+	#Range: 0.0 ~ 1.0
+	"Basic: maxVol" = 0.05
+	#未检测到龙时的音调。默认: .5
+	#Range: 0.0 ~ 1.0
+	"Basic: minPitch" = 0.5
+	#检测到龙时的音调。默认: .8
+	#Range: 0.0 ~ 1.0
+	"Basic: maxPitch" = 0.8
+	#是否检测死亡的龙。默认: true
+	"Basic: detectsCorpses" = true
+	#是否检测驯服的龙。默认: true
+	"Basic: detectsTame" = true
+
+#史诗寻龙器
+[epic_dragonseeker]
+	#在此距离内，靠近龙不会增加探测几率。默认: 150
+	#Range: 1 ~ 500
+	"Epic: optimalDistance" = 150
+	#检测龙的最大距离。默认: 225
+	#Range: 1 ~ 500
+	"Epic: maxDistance" = 225
+	#最小探测几率（误报率）。默认: .08
+	#Range: 0.0 ~ 1.0
+	"Epic: minPingChance" = 0.08
+	#最大探测几率。默认: .9
+	#Range: 0.0 ~ 1.0
+	"Epic: maxPingChance" = 0.9
+	#探测上限半径。默认: 125
+	#Range: 1 ~ 500
+	"Epic: pingCapRadius" = 125
+	#信号强度指数。默认: 1.5
+	#Range: 1.0 ~ 5.0
+	"Epic: sigPower" = 1.5
+	#最小音量。默认: .05
+	#Range: 0.0 ~ 1.0
+	"Epic: minVol" = 0.05
+	#最大音量。默认: .4
+	#Range: 0.0 ~ 1.0
+	"Epic: maxVol" = 0.4
+	#未检测音调。默认: .5
+	#Range: 0.0 ~ 1.0
+	"Epic: minPitch" = 0.5
+	#检测到音调。默认: .8
+	#Range: 0.0 ~ 1.0
+	"Epic: maxPitch" = 0.8
+	#是否检测尸体。默认: true
+	"Epic: detectsCorpses" = true
+	#是否检测驯服的龙。默认: false
+	"Epic: detectsTame" = false
+
+#传奇寻龙器
+[legendary_dragonseeker]
+	#最佳距离。默认: 200
+	#Range: 1 ~ 500
+	"Legendary: optimalDistance" = 200
+	#最大检测距离。默认: 250
+	#Range: 1 ~ 500
+	"Legendary: maxDistance" = 250
+	#最小探测几率。默认: .04
+	#Range: 0.0 ~ 1.0
+	"Legendary: minPingChance" = 0.04
+	#最大探测几率。默认: .95
+	#Range: 0.0 ~ 1.0
+	"Legendary: maxPingChance" = 0.95
+	#探测上限半径。默认: 100
+	#Range: 1 ~ 500
+	"Legendary: pingCapRadius" = 100
+	#信号强度指数。默认: 2.5
+	#Range: 1.0 ~ 5.0
+	"Legendary: sigPower" = 2.5
+	#最小音量。默认: .05
+	#Range: 0.0 ~ 1.0
+	"Legendary: minVol" = 0.05
+	#最大音量。默认: .7
+	#Range: 0.0 ~ 1.0
+	"Legendary: maxVol" = 0.7
+	#未检测音调。默认: .5
+	#Range: 0.0 ~ 1.0
+	"Legendary: minPitch" = 0.5
+	#检测到音调。默认: .8
+	#Range: 0.0 ~ 1.0
+	"Legendary: maxPitch" = 0.8
+	#是否检测尸体。默认: false
+	"Legendary: detectsCorpses" = false
+	#是否检测驯服的龙。默认: false
+	"Legendary: detectsTame" = false
+
+#神级寻龙器
+[mythic_dragonseeker]
+	#最佳距离。默认: 500
+	#Range: 1 ~ 500
+	"Godly: optimalDistance" = 500
+	#最大检测距离。默认: 500
+	#Range: 1 ~ 500
+	"Godly: maxDistance" = 500
+	#最小探测几率（无误报）。默认: 0
+	#Range: 0.0 ~ 1.0
+	"Godly: minPingChance" = 0.0
+	#最大探测几率（100%）。默认: 1
+	#Range: 0.0 ~ 1.0
+	"Godly: maxPingChance" = 1.0
+	#探测上限半径（精确定位）。默认: 0
+	#Range: 1 ~ 500
+	"Godly: pingCapRadius" = 1
+	#信号强度指数。默认: 3.5
+	#Range: 1.0 ~ 5.0
+	"Godly: sigPower" = 3.5
+	#最小音量。默认: .05
+	#Range: 0.0 ~ 1.0
+	"Godly: minVol" = 0.05
+	#最大音量。默认: 1
+	#Range: 0.0 ~ 1.0
+	"Godly: maxVol" = 1.0
+	#未检测音调。默认: .5
+	#Range: 0.0 ~ 1.0
+	"Godly: minPitch" = 0.5
+	#检测到音调。默认: 1
+	#Range: 0.0 ~ 1.0
+	"Godly: maxPitch" = 1.0
+	#是否检测尸体。默认: false
+	"Godly: detectsCorpses" = false
+	#是否检测驯服的龙。默认: false
+	"Godly: detectsTame" = false
+

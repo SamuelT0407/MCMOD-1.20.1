@@ -1,0 +1,7 @@
+{
+  "iris.keybind.wireframe": "线框模式（仅单人）",
+  "iris.load.failure.generic": "Oculus在尝试加载着色器时遇到问题，请向Oculus开发者报告此问题。",
+  "iris.load.failure.shader": "着色器包加载失败！请向着色器开发者报告此错误。",
+  "options.iris.colorSpace": "色彩空间",
+  "options.iris.colorSpace.sodium_tooltip": "将屏幕转换到的色彩空间。在着色器包之上生效。如不确定请使用SRGB。"
+}

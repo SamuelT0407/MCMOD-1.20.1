@@ -1,0 +1,23 @@
+
+[general]
+	#疲劳导致脱水和口渴条下降的阈值
+	exhaustion_threshold = 8.0
+
+[drink_options]
+	#用手喝水恢复的水分值
+	hand_drinking_hydration = 0.1
+	#用手喝水恢复的口渴值
+	hand_drinking_thirst = 1
+
+[toggles]
+	#口渴时禁止疾跑
+	thirst_prevent_sprint = true
+	#口渴时禁止生命回复
+	thirst_prevent_health_regen = true
+	#启用或禁用口渴系统
+	enable_thirst = true
+	#装水壶时是否消耗水源方块
+	remove_source_blocks = false
+	#启用或禁用用手喝水
+	enable_hand_drinking = false
+

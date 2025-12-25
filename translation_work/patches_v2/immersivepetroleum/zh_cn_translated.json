@@ -1,0 +1,15 @@
+{
+  "fluid_type.immersivepetroleum.benzol": "苯",
+  "fluid_type.immersivepetroleum.petroleum_gas": "石油气",
+  "gui.immersivepetroleum.derrick.msg.not_enough_power": "电力不足",
+  "gui.immersivepetroleum.derrick.settings.derrickishere": "中心（井架）",
+  "gui.immersivepetroleum.derrick.settings.pipe.normal": "普通管道 §7（点击切换）§r",
+  "gui.immersivepetroleum.derrick.settings.pipe.perforated": "穿孔管道 §7（点击切换）§r",
+  "gui.immersivepetroleum.derrick.settings.pipe.perforated_fixed": "穿孔管道 §c（固定）§r",
+  "gui.immersivepetroleum.dirs.east": "东",
+  "gui.immersivepetroleum.dirs.north": "北",
+  "gui.immersivepetroleum.dirs.south": "南",
+  "gui.immersivepetroleum.dirs.west": "西",
+  "item.immersivepetroleum.benzol_bucket": "苯桶",
+  "item.immersivepetroleum.petroleum_gas_bucket": "石油气桶"
+}

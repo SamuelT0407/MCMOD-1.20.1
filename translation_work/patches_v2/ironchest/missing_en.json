@@ -1,0 +1,17 @@
+{
+  "block.ironchest.trapped_copper_chest": "Trapped Copper Chest",
+  "block.ironchest.trapped_crystal_chest": "Trapped Crystal Chest",
+  "block.ironchest.trapped_diamond_chest": "Trapped Diamond Chest",
+  "block.ironchest.trapped_dirt_chest": "Trapped DirtChest 9000!",
+  "block.ironchest.trapped_gold_chest": "Trapped Gold Chest",
+  "block.ironchest.trapped_iron_chest": "Trapped Iron Chest",
+  "block.ironchest.trapped_obsidian_chest": "Trapped Obsidian Chest",
+  "ironchest.container.copper_chest": "Copper Chest",
+  "ironchest.container.crystal_chest": "Crystal Chest",
+  "ironchest.container.diamond_chest": "Diamond Chest",
+  "ironchest.container.dirt_chest": "DirtChest 9000!",
+  "ironchest.container.gold_chest": "Gold Chest",
+  "ironchest.container.iron_chest": "Iron Chest",
+  "ironchest.container.obsidian_chest": "Obsidian Chest",
+  "ironchest.container.silver_chest": "Silver Chest"
+}

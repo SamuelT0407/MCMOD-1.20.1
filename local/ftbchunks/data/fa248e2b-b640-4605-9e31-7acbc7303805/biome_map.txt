@@ -1,0 +1,6 @@
+#6F6 minecraft:badlands
+#008 minecraft:desert
+#7F0 biomesoplenty:dryland
+#3B0 biomesoplenty:lush_desert
+#5FF minecraft:river
+#2B7 minecraft:warm_ocean

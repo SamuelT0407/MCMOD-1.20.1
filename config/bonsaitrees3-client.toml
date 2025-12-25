@@ -1,0 +1,3 @@
+#始终将盆栽盆中的树木渲染为物品形式。
+alwaysRenderAsItem = false
+

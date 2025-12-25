@@ -1,0 +1,264 @@
+
+#等级配置。此配置从服务器同步到客户端。
+[tier]
+
+	#能量方块
+	[tier.energy_cubes]
+		#基础能量方块可存储的最大能量(焦耳)。
+		basicStorage = "4000000"
+		#基础能量方块的输出速率(焦耳)。
+		basicOutput = "4000"
+		#高级能量方块可存储的最大能量(焦耳)。
+		advancedStorage = "16000000"
+		#高级能量方块的输出速率(焦耳)。
+		advancedOutput = "16000"
+		#精英能量方块可存储的最大能量(焦耳)。
+		eliteStorage = "64000000"
+		#精英能量方块的输出速率(焦耳)。
+		eliteOutput = "64000"
+		#终极能量方块可存储的最大能量(焦耳)。
+		ultimateStorage = "256000000"
+		#终极能量方块的输出速率(焦耳)。
+		ultimateOutput = "256000"
+		#创造能量方块可存储的最大能量(焦耳)。
+		creativeStorage = "18446744073709551615.9999"
+		#创造能量方块的输出速率(焦耳)。
+		creativeOutput = "18446744073709551615.9999"
+
+	#流体储罐
+	[tier.fluid_tanks]
+		#基础流体储罐的存储容量(mB)。
+		#Range: > 1
+		basicStorage = 32000
+		#基础流体储罐的输出速率(mB)。
+		#Range: > 1
+		basicOutput = 1000
+		#高级流体储罐的存储容量(mB)。
+		#Range: > 1
+		advancedStorage = 64000
+		#高级流体储罐的输出速率(mB)。
+		#Range: > 1
+		advancedOutput = 4000
+		#精英流体储罐的存储容量(mB)。
+		#Range: > 1
+		eliteStorage = 128000
+		#精英流体储罐的输出速率(mB)。
+		#Range: > 1
+		eliteOutput = 16000
+		#终极流体储罐的存储容量(mB)。
+		#Range: > 1
+		ultimateStorage = 256000
+		#终极流体储罐的输出速率(mB)。
+		#Range: > 1
+		ultimateOutput = 64000
+		#创造流体储罐的存储容量(mB)。
+		#Range: > 1
+		creativeStorage = 2147483647
+		#创造流体储罐的输出速率(mB)。
+		#Range: > 1
+		creativeOutput = 1073741823
+
+	#化学品储罐
+	[tier.chemical_tanks]
+		#基础化学品储罐的存储容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		basicStorage = 64000
+		#基础化学品储罐的输出速率(mB)。
+		#Range: 1 ~ 9223372036854775807
+		basicOutput = 1000
+		#高级化学品储罐的存储容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		advancedStorage = 256000
+		#高级化学品储罐的输出速率(mB)。
+		#Range: 1 ~ 9223372036854775807
+		advancedOutput = 16000
+		#精英化学品储罐的存储容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		eliteStorage = 1024000
+		#精英化学品储罐的输出速率(mB)。
+		#Range: 1 ~ 9223372036854775807
+		eliteOutput = 128000
+		#终极化学品储罐的存储容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		ultimateStorage = 8192000
+		#终极化学品储罐的输出速率(mB)。
+		#Range: 1 ~ 9223372036854775807
+		ultimateOutput = 512000
+		#创造化学品储罐的存储容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		creativeStorage = 9223372036854775807
+		#创造化学品储罐的输出速率(mB)。
+		#Range: 1 ~ 9223372036854775807
+		creativeOutput = 4611686018427387903
+
+	#储物箱
+	[tier.bins]
+		#基础储物箱可存储的物品数量。
+		#Range: > 1
+		basicStorage = 4096
+		#高级储物箱可存储的物品数量。
+		#Range: > 1
+		advancedStorage = 8192
+		#精英储物箱可存储的物品数量。
+		#Range: > 1
+		eliteStorage = 32768
+		#终极储物箱可存储的物品数量。
+		#Range: > 1
+		ultimateStorage = 262144
+		#创造储物箱可存储的物品数量。
+		#Range: > 1
+		creativeStorage = 2147483647
+
+	#感应
+	[tier.induction]
+		#基础感应单元可存储的最大能量(焦耳)。
+		basicStorage = "8000000000"
+		#高级感应单元可存储的最大能量(焦耳)。
+		advancedStorage = "64000000000"
+		#精英感应单元可存储的最大能量(焦耳)。
+		eliteStorage = "512000000000"
+		#终极感应单元可存储的最大能量(焦耳)。
+		ultimateStorage = "4000000000000"
+		#基础感应供应器可输出或接受的最大能量(焦耳)。
+		basicOutput = "256000"
+		#高级感应供应器可输出或接受的最大能量(焦耳)。
+		advancedOutput = "2048000"
+		#精英感应供应器可输出或接受的最大能量(焦耳)。
+		eliteOutput = "16384000"
+		#终极感应供应器可输出或接受的最大能量(焦耳)。
+		ultimateOutput = "131072000"
+
+	#传输器
+	[tier.transmitters]
+
+		#通用电缆
+		[tier.transmitters.energy]
+			#每根基础通用电缆的内部缓冲(焦耳)。
+			basicCapacity = "8000"
+			#每根高级通用电缆的内部缓冲(焦耳)。
+			advancedCapacity = "128000"
+			#每根精英通用电缆的内部缓冲(焦耳)。
+			eliteCapacity = "1024000"
+			#每根终极通用电缆的内部缓冲(焦耳)。
+			ultimateCapacity = "8192000"
+
+		#机械管道
+		[tier.transmitters.fluid]
+			#基础机械管道的容量(mB)。
+			#Range: > 1
+			basicCapacity = 2000
+			#基础机械管道的抽取速率(mB/t)。
+			#Range: > 1
+			basicPullAmount = 250
+			#高级机械管道的容量(mB)。
+			#Range: > 1
+			advancedCapacity = 8000
+			#高级机械管道的抽取速率(mB/t)。
+			#Range: > 1
+			advancedPullAmount = 1000
+			#精英机械管道的容量(mB)。
+			#Range: > 1
+			eliteCapacity = 32000
+			#精英机械管道的抽取速率(mB/t)。
+			#Range: > 1
+			elitePullAmount = 8000
+			#终极机械管道的容量(mB)。
+			#Range: > 1
+			ultimateCapacity = 128000
+			#终极机械管道的抽取速率(mB/t)。
+			#Range: > 1
+			ultimatePullAmount = 32000
+
+		#加压导管
+		[tier.transmitters.chemical]
+			#基础加压导管的容量(mB)。
+			#Range: 1 ~ 9223372036854775807
+			basicCapacity = 4000
+			#基础加压导管的抽取速率(mB/t)。
+			#Range: 1 ~ 9223372036854775807
+			basicPullAmount = 750
+			#高级加压导管的容量(mB)。
+			#Range: 1 ~ 9223372036854775807
+			advancedCapacity = 16000
+			#高级加压导管的抽取速率(mB/t)。
+			#Range: 1 ~ 9223372036854775807
+			advancedPullAmount = 2000
+			#精英加压导管的容量(mB)。
+			#Range: 1 ~ 9223372036854775807
+			eliteCapacity = 256000
+			#精英加压导管的抽取速率(mB/t)。
+			#Range: 1 ~ 9223372036854775807
+			elitePullAmount = 64000
+			#终极加压导管的容量(mB)。
+			#Range: 1 ~ 9223372036854775807
+			ultimateCapacity = 1024000
+			#终极加压导管的抽取速率(mB/t)。
+			#Range: 1 ~ 9223372036854775807
+			ultimatePullAmount = 256000
+
+		#物流传输器
+		[tier.transmitters.items]
+			#基础物流传输器的物品吞吐率(物品/半秒)。
+			#Range: > 1
+			basicPullAmount = 1
+			#基础物流传输器的5倍传输速度(m/s)。
+			#Range: > 1
+			basicSpeed = 5
+			#高级物流传输器的物品吞吐率(物品/半秒)。
+			#Range: > 1
+			advancedPullAmount = 16
+			#高级物流传输器的5倍传输速度(m/s)。
+			#Range: > 1
+			advancedSpeed = 10
+			#精英物流传输器的物品吞吐率(物品/半秒)。
+			#Range: > 1
+			elitePullAmount = 32
+			#精英物流传输器的5倍传输速度(m/s)。
+			#Range: > 1
+			eliteSpeed = 20
+			#终极物流传输器的物品吞吐率(物品/半秒)。
+			#Range: > 1
+			ultimatePullAmount = 64
+			#终极物流传输器的5倍传输速度(m/s)。
+			#Range: > 1
+			ultimateSpeed = 50
+
+		#热力导管
+		[tier.transmitters.heat]
+			#基础热力导管的导热值。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			basicInverseConduction = 5.0
+			#基础热力导管的热容量。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			basicHeatCapacity = 1.0
+			#基础热力导管的隔热值。
+			#Range: 0.0 ~ 1.7976931348623157E308
+			basicInsulation = 10.0
+			#高级热力导管的导热值。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			advancedInverseConduction = 5.0
+			#高级热力导管的热容量。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			advancedHeatCapacity = 1.0
+			#高级热力导管的隔热值。
+			#Range: 0.0 ~ 1.7976931348623157E308
+			advancedInsulation = 400.0
+			#精英热力导管的导热值。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			eliteInverseConduction = 5.0
+			#精英热力导管的热容量。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			eliteHeatCapacity = 1.0
+			#精英热力导管的隔热值。
+			#Range: 0.0 ~ 1.7976931348623157E308
+			eliteInsulation = 8000.0
+			#终极热力导管的导热值。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			ultimateInverseConduction = 5.0
+			#终极热力导管的热容量。
+			#Range: 1.0 ~ 1.7976931348623157E308
+			ultimateHeatCapacity = 1.0
+			#终极热力导管的隔热值。
+			#Range: 0.0 ~ 1.7976931348623157E308
+			ultimateInsulation = 100000.0
+

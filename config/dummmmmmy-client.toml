@@ -1,0 +1,41 @@
+
+#许多外观相关的设置在这里
+[visuals]
+	#要编辑伤害数字颜色，你需要手动编辑配置文件
+	#假人摆动的幅度（度），与造成的伤害相关。默认=0.75
+	#Range: 0.0 ~ 2.0
+	animation_intensity = 0.75
+	#显示心形而不是伤害数值？（1心 = 2点伤害）
+	show_hearths = false
+	#在实体上显示伤害数字
+	damage_numbers = true
+	#以全亮度显示粒子
+	full_bright_damage_numbers = true
+	#暴击应该如何显示
+	#Allowed Values: OFF, COLOR, COLOR_AND_MULTIPLIER
+	crit_mode = "COLOR_AND_MULTIPLIER"
+	#造成伤害时显示干草粒子
+	hay_particles = true
+	#假人使用的皮肤
+	#Allowed Values: DEFAULT, ORIGINAL, ALTERNATIVE, DUNGEONS
+	texture = "DEFAULT"
+
+	#在此添加自定义颜色（十六进制格式）以与你的伤害类型关联。这是一个从伤害来源ID到颜色的映射，你可以为每种类型添加新条目
+	[visuals.damage_type_colors]
+		"minecraft:wind_charge" = "#00BEF3FF"
+		"#dummmmmmy:is_fire" = "#00FF7700"
+		"dummmmmmy:critical" = "#00FF0000"
+		"#minecraft:is_drowning" = "#001898E3"
+		"minecraft:dragon_breath" = "#00E600FF"
+		"#dummmmmmy:is_thorn" = "#000FA209"
+		"minecraft:generic" = "#00FFFFFF"
+		"#minecraft:is_lightning" = "#00FFF200"
+		"#dummmmmmy:is_explosion" = "#00FFBB29"
+		"#minecraft:witch_resistant_to" = "#00844CE7"
+		"minecraft:sonic_boom" = "#00074550"
+		"#dummmmmmy:is_cold" = "#0009D2FF"
+		"#dummmmmmy:is_wither" = "#00666666"
+		"dummmmmmy:true" = "#00910038"
+		"attributeslib:bleeding" = "#00810A0A"
+		"minecraft:trident" = "#0000FF9D"
+

@@ -1,0 +1,8 @@
+{
+  "config.jade.plugin_bonsaitrees3.bonsaipot": "Bonsai Pot",
+  "gui.bonsaitrees3.label.jei.upgrade.bees": "Pollinate and get fruit drops",
+  "gui.bonsaitrees3.label.jei.upgrade.energy": "Insert batteries to boost growth rate",
+  "jade.bonsaitrees3.bonsaipot.growing": "Growing: %d%%",
+  "jei.bonsaitrees3.requiresBees": "Requires a Bee Hive upgrade",
+  "jei.bonsaitrees3.requiresUpgrade": "Requires one of these upgrades:"
+}

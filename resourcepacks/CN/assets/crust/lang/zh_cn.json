@@ -1,0 +1,114 @@
+{
+  "effect.crust.vulnerability": "易伤",
+  "effect.crust.weight": "负重",
+
+  "menu.crust.config.open_folder": "打开文件夹",
+  "menu.crust.config.save_changes": "保存修改",
+  "menu.crust.config.discard_changes": "舍弃修改",
+
+  "menu.crust.config.select.mod.title": "模组配置...",
+  "menu.crust.config.select.file.title": "%s 配置...",
+  "menu.crust.config.select.file.subtitle": "文件夹: %s",
+
+  "menu.crust.config.file.title": "%s 配置: %s",
+  "menu.crust.config.file.subtitle": "文件: %s",
+
+  "inventory.buttons.fullheal.tooltip": "完全恢复",
+  "inventory.buttons.cleareffects.tooltip": "清除所有药水效果",
+  "inventory.buttons.destroyonpointer.tooltip": "销毁指针上的物品",
+  "inventory.buttons.killall.tooltip": "杀死所有实体",
+  "inventory.buttons.netherportal.tooltip": "创建一个下界传送门",
+  "inventory.buttons.endportal.tooltip": "创建一个末地传送门",
+
+  "inventory.buttons.day.tooltip": "将时间设为白天",
+  "inventory.buttons.night.tooltip": "将时间设为夜晚",
+  "inventory.buttons.toggleday.tooltip": "切换白天/夜晚",
+
+  "inventory.buttons.weatherclear.tooltip": "清除天气",
+  "inventory.buttons.weatherrain.tooltip": "将天气设为下雨",
+  "inventory.buttons.weatherstorm.tooltip": "将天气设为雷雨",
+  "inventory.buttons.togglerain.tooltip": "切换晴天/下雨",
+
+  "inventory.buttons.gamemode.tooltip": "切换游戏模式",
+  "inventory.buttons.magnetmode.tooltip": "切换磁铁模式",
+  "inventory.buttons.multiminemode.tooltip": "切换连锁采集模式",
+  "inventory.buttons.godmode.tooltip": "切换无敌模式",
+  "inventory.buttons.supervisionmode.tooltip": "切换超级视野模式",
+  "inventory.buttons.superspeedmode.tooltip": "切换超速模式",
+  "inventory.buttons.nopickupmode.tooltip": "切换“拾取即销毁”模式",
+
+  "commands.crustclean.pointer.success": "已为 %s 销毁指针上的物品",
+  "commands.crustclean.pointer.failure": "%s 的指针上没有物品",
+
+  "commands.crustclean.single.success": "已将 %s 的物品栏重置为初始状态",
+  "commands.crustclean.multiple.success": "已将 %s 名玩家的物品栏重置为初始状态",
+
+  "commands.crustmode.query.success": "%s 当前激活的模式有: %s",
+
+  "commands.crustmode.disable.single.success": "已为 %2$s 禁用 \"%1$s\" 模式",
+  "commands.crustmode.disable.multiple.success": "已为 %2$s 名玩家禁用 \"%1$s\" 模式",
+  "commands.crustmode.enable.single.success": "已为 %2$s 开启 \"%1$s\" 模式",
+  "commands.crustmode.enable.multiple.success": "已为 %2$s 名玩家开启 \"%1$s\" 模式",
+
+  "commands.crustportal.success": "已在 [%2$s, %3$s, %4$s] 放置 \"%1$s\" 传送门",
+  "commands.crustportal.portaltype.failure": "找不到该类型的传送门",
+  "commands.crustportal.dimension.failure": "当前维度无法创建该传送门",
+  "commands.crustportal.failure": "找不到有效的传送门放置位置",
+
+  "commands.crustrecover.single.all.success": "已使 %s 完全恢复",
+  "commands.crustrecover.multiple.all.success": "已使 %s 个实体完全恢复",
+  "commands.crustrecover.single.health.success": "已恢复 %s 的生命值",
+  "commands.crustrecover.multiple.health.success": "已恢复 %s 个实体的生命值",
+  "commands.crustrecover.single.hunger.success": "已恢复 %s 的饥饿值",
+  "commands.crustrecover.multiple.hunger.success": "已恢复 %s 个实体的饥饿值",
+  "commands.crustrecover.single.effects.success": "已清除 %s 的负面效果",
+  "commands.crustrecover.multiple.effects.success": "已清除 %s 个实体的负面效果",
+
+  "key.categories.crust": "Crust 模组",
+
+  "key.crust.configs": "打开配置编辑器",
+  "key.crust.equip": "装备物品",
+
+  "key.categories.crust.buttons": "Crust 新增物品栏按钮",
+
+  "key.crust.buttons.fullheal": "完全恢复",
+  "key.crust.buttons.cleareffects": "清除所有效果",
+  "key.crust.buttons.destroyonpointer": "销毁指针上的物品",
+  "key.crust.buttons.killall": "杀死所有非玩家生物",
+  "key.crust.buttons.netherportal": "放置下界传送门",
+  "key.crust.buttons.endportal": "放置末地传送门",
+
+  "key.crust.buttons.day": "白天",
+  "key.crust.buttons.night": "夜晚",
+  "key.crust.buttons.toggleday": "切换白天/夜晚",
+
+  "key.crust.buttons.weatherclear": "晴天",
+  "key.crust.buttons.weatherrain": "开始下雨",
+  "key.crust.buttons.weatherstorm": "开始雷雨",
+  "key.crust.buttons.togglerain": "切换下雨",
+
+  "key.crust.buttons.gamemode": "切换游戏模式 (也可尝试 F3+F4)",
+  "key.crust.buttons.magnetmode": "切换磁铁模式",
+  "key.crust.buttons.multiminemode": "切换连锁采集",
+  "key.crust.buttons.godmode": "切换无敌模式",
+  "key.crust.buttons.supervisionmode": "切换超级视野",
+  "key.crust.buttons.superspeedmode": "切换超速模式",
+  "key.crust.buttons.nopickupmode": "切换拾取即销毁",
+
+  "key.crust.buttons.custom1": "自定义按钮 1",
+  "key.crust.buttons.custom2": "自定义按钮 2",
+  "key.crust.buttons.custom3": "自定义按钮 3",
+  "key.crust.buttons.custom4": "自定义按钮 4",
+  "key.crust.buttons.custom5": "自定义按钮 5",
+  "key.crust.buttons.custom6": "自定义按钮 6",
+  "key.crust.buttons.custom7": "自定义按钮 7",
+  "key.crust.buttons.custom8": "自定义按钮 8",
+  "key.crust.buttons.custom9": "自定义按钮 9",
+  "key.crust.buttons.custom10": "自定义按钮 10",
+  "key.crust.buttons.custom11": "自定义按钮 11",
+  "key.crust.buttons.custom12": "自定义按钮 12",
+  "key.crust.buttons.custom13": "自定义按钮 13",
+  "key.crust.buttons.custom14": "自定义按钮 14",
+  "key.crust.buttons.custom15": "自定义按钮 15",
+  "key.crust.buttons.custom16": "自定义按钮 16"
+}

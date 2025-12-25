@@ -1,0 +1,284 @@
+
+#装备配置。此配置从服务器同步到客户端。
+[gear]
+
+	#原子分解器设置
+	[gear.atomic_disassembler]
+		#原子分解器基础能量(焦耳)消耗。（乘以速度因子）
+		energyUsage = "10"
+		#使用原子分解器作为武器的能量成本(焦耳)。
+		energyUsageWeapon = "2000"
+		#原子分解器连锁采矿的最大方块数。
+		#Range: 2 ~ 1000000
+		miningCount = 128
+		#启用原子分解器的"慢速"模式。
+		slowMode = true
+		#启用原子分解器的"快速"模式。
+		fastMode = true
+		#启用原子分解器的"连锁采矿"模式。
+		veinMining = false
+		#原子分解器无能量时的额外攻击伤害。（值为半心数）
+		#Range: 0 ~ 1000
+		minDamage = 4
+		#原子分解器有至少energyUsageWeapon能量时的额外攻击伤害。（值为半心数）
+		#Range: 1 ~ 10000
+		maxDamage = 20
+		#原子分解器的攻击速度。
+		#Range: -4.0 ~ 100.0
+		attackSpeed = -2.4
+		#原子分解器可容纳的最大能量(焦耳)。
+		maxEnergy = "1000000"
+		#原子分解器每刻可接受的能量(焦耳)。
+		chargeRate = "5000"
+
+	#配置器设置
+	[gear.configurator]
+		#配置器可容纳的最大能量(焦耳)。
+		maxEnergy = "60000"
+		#配置器每刻可接受的能量(焦耳)。
+		chargeRate = "300"
+		#使用配置器配置机器的能量消耗(焦耳)。
+		energyPerConfigure = "400"
+		#配置器在清空模式下从机器弹出每个物品的能量成本(焦耳)。
+		energyPerItem = "8"
+
+	#电力弓设置
+	[gear.electric_bow]
+		#电力弓可容纳的最大能量(焦耳)。
+		maxEnergy = "120000"
+		#电力弓每刻可接受的能量(焦耳)。
+		chargeRate = "600"
+		#使用电力弓的能量成本(焦耳)。
+		energyUsage = "120"
+		#电力弓火焰模式激活时的能量成本(焦耳)。
+		energyUsageFire = "1200"
+
+	#能量板设置
+	[gear.energy_tablet]
+		#能量板可容纳的最大能量(焦耳)。
+		maxEnergy = "1000000"
+		#能量板每刻可接受的能量(焦耳)。
+		chargeRate = "5000"
+
+	#火焰喷射器设置
+	[gear.flamethrower]
+		#火焰喷射器气体储罐容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		maxGas = 24000
+		#火焰喷射器每刻可接受的氢气量。
+		#Range: 1 ~ 9223372036854775807
+		fillRate = 16
+		#火焰喷射器如果无法熔炼物品是否可以销毁物品。
+		destroyItems = true
+
+	#自由奔跑器设置
+	[gear.free_runner]
+		#使用自由奔跑器减少摔落伤害的能量成本/倍数(焦耳)。能量成本 = 摔落伤害 * freeRunnerFallEnergyCost。（1摔落伤害=1半心）
+		fallEnergyCost = "50"
+		#自由奔跑器有足够能量时可吸收的摔落伤害百分比。
+		#Range: 0.0 ~ 1.0
+		fallDamageReductionRatio = 1.0
+		#自由奔跑器可容纳的最大能量(焦耳)。
+		maxEnergy = "64000"
+		#自由奔跑器每刻可接受的能量(焦耳)。
+		chargeRate = "320"
+
+		#装甲自由奔跑器设置
+		[gear.free_runner.armored]
+			#装甲自由奔跑器的护甲值
+			#Range: > 0
+			armor = 3
+			#装甲自由奔跑器的韧性值。
+			#Range: 0.0 ~ 3.4028234663852886E38
+			toughness = 2.0
+			#装甲自由奔跑器的击退抗性值。
+			#Range: 0.0 ~ 3.4028234663852886E38
+			knockbackResistance = 0.0
+
+	#喷气背包设置
+	[gear.jetpack]
+		#喷气背包气体储罐容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		maxGas = 24000
+		#喷气背包每刻可接受的氢气量。
+		#Range: 1 ~ 9223372036854775807
+		fillRate = 16
+
+		#装甲喷气背包设置
+		[gear.jetpack.armored]
+			#装甲喷气背包的护甲值。
+			#Range: > 0
+			armor = 8
+			#装甲喷气背包的韧性值。
+			#Range: 0.0 ~ 3.4028234663852886E38
+			toughness = 2.0
+			#装甲喷气背包的击退抗性值。
+			#Range: 0.0 ~ 3.4028234663852886E38
+			knockbackResistance = 0.0
+
+	#网络读取器设置
+	[gear.network_reader]
+		#网络读取器可容纳的最大能量(焦耳)。
+		maxEnergy = "60000"
+		#网络读取器每刻可接受的能量(焦耳)。
+		chargeRate = "300"
+		#每次网络读取的能量消耗(焦耳)。
+		energyUsage = "400"
+
+	#便携式传送器设置
+	[gear.portable_teleporter]
+		#便携式传送器可容纳的最大能量(焦耳)。
+		maxEnergy = "1000000"
+		#便携式传送器每刻可接受的能量(焦耳)。
+		chargeRate = "5000"
+		#玩家在便携式传送器中点击传送按钮后传送前的延迟(刻)。
+		#Range: 0 ~ 6000
+		delay = 0
+
+	#潜水罐设置
+	[gear.scuba_tank]
+		#潜水罐气体储罐容量(mB)。
+		#Range: 1 ~ 9223372036854775807
+		maxGas = 24000
+		#潜水罐气体储罐每刻可接受的氧气量。
+		#Range: 1 ~ 9223372036854775807
+		fillRate = 16
+
+	#地震读取器设置
+	[gear.seismic_reader]
+		#地震读取器可容纳的最大能量(焦耳)。
+		maxEnergy = "12000"
+		#地震读取器每刻可接受的能量(焦耳)。
+		chargeRate = "60"
+		#使用地震读取器所需的能量消耗(焦耳)。
+		energyUsage = "250"
+
+	#水壶设置
+	[gear.canteen]
+		#水壶可存储的最大营养膏量。
+		#Range: > 1
+		maxStorage = 64000
+		#营养膏可转移到水壶的速率。
+		#Range: > 1
+		transferRate = 128
+
+	#元工具设置
+	[gear.mekatool]
+		#元工具基础能量(焦耳)消耗。（乘以速度因子）
+		energyUsage = "10"
+		#元工具精准采集能量(焦耳)消耗。（乘以速度因子）
+		energyUsageSilk = "100"
+		#使用元工具造成4点伤害的能量成本(焦耳)。
+		energyUsageWeapon = "2000"
+		#使用元工具传送10格的能量成本(焦耳)。
+		energyUsageTeleport = "1000"
+		#玩家使用元工具可传送的最大距离。
+		#Range: 3 ~ 1024
+		maxTeleportReach = 100
+		#元工具不消耗能量时的基础额外伤害。
+		#Range: 0 ~ 100000
+		baseDamage = 4
+		#元工具的攻击速度。
+		#Range: -4.0 ~ 100.0
+		attackSpeed = -2.4
+		#元工具有能量但无升级时的效率。
+		#Range: 0.1 ~ 100.0
+		baseEfficiency = 4.0
+		#元工具无任何升级时的能量容量(焦耳)。按升级二次方增长。
+		baseEnergyCapacity = "16000000"
+		#元工具每刻可接受的能量(焦耳)。按升级二次方增长。
+		chargeRate = "100000"
+		#使用元工具作为锄头的能量成本(焦耳)。
+		energyUsageHoe = "10"
+		#使用元工具作为铲子铺路和熄灭营火的能量成本(焦耳)。
+		energyUsageShovel = "10"
+		#使用元工具作为斧头去皮原木、刮除或除蜡的能量成本(焦耳)。
+		energyUsageAxe = "10"
+		#使用元工具剪实体的能量成本(焦耳)。
+		energyUsageShearEntity = "10"
+		#启用元工具的"扩展连锁采矿"模式。（允许连锁采矿所有东西而非仅矿石/原木）
+		extendedMining = true
+
+	#元套装设置
+	[gear.mekasuit]
+		#元套装物品无任何升级时的能量容量(焦耳)。按升级二次方增长。
+		baseEnergyCapacity = "16000000"
+		#元套装每刻可接受的能量(焦耳)。按升级二次方增长。
+		chargeRate = "100000"
+		#元套装增加0.1跳跃动量时的能量消耗(焦耳)。
+		baseJumpEnergyUsage = "1000"
+		#元套装使用鞘翅单元飞行时每秒的能量消耗(焦耳)。
+		elytraEnergyUsage = "32000"
+		#元套装减轻药水效果时的能量消耗(焦耳)。
+		energyUsagePotionTick = "40000"
+		#通过吸入净化单元减少魔法伤害的能量成本/倍数(焦耳)。能量成本 = 魔法伤害 * energyUsageMagicPrevent。（1魔法伤害=1半心）。
+		energyUsageMagicReduce = "1000"
+		#元套装靴子减少摔落伤害的能量成本/倍数(焦耳)。能量成本 = 摔落伤害 * freeRunnerFallEnergyCost。（1摔落伤害=1半心）
+		energyUsageFall = "50"
+		#元套装增加0.1冲刺动量时的能量消耗(焦耳)。
+		energyUsageSprintBoost = "100"
+		#元套装通过重力调制飞行时每刻的能量消耗(焦耳)。
+		energyUsageGravitationalModulation = "1000"
+		#每刻为背包物品充电的速率(焦耳)。
+		inventoryChargeRate = "10000"
+		#头盔每刻太阳能充电速率(焦耳)，每安装一个升级。
+		solarRechargingRate = "500"
+		#元套装每刻使用夜视增强的能量消耗(焦耳)。
+		energyUsageVisionEnhancement = "500"
+		#元套装每刻使用静水斥力的能量消耗(焦耳)。
+		energyUsageHydrostaticRepulsion = "500"
+		#元套装每半食物营养注射的能量消耗(焦耳)。
+		energyUsageNutritionalInjection = "20000"
+		#元套装每单位伤害的能量消耗(焦耳)。
+		energyUsageDamage = "100000"
+		#元套装每刻吸引单个物品的能量消耗(焦耳)。
+		energyUsageItemAttraction = "250"
+		#重力调制单元使用时是否产生振动。
+		gravitationalVibrations = true
+		#营养注射单元可存储的最大营养膏量。
+		#Range: > 1
+		nutritionalMaxStorage = 128000
+		#营养膏可转移到营养注射单元的速率。
+		#Range: > 1
+		nutritionalTransferRate = 256
+		#喷气背包单元可存储的最大氢气量。
+		#Range: 1 ~ 9223372036854775807
+		jetpackMaxStorage = 48000
+		#氢气可转移到喷气背包单元的速率。
+		#Range: 1 ~ 9223372036854775807
+		jetpackTransferRate = 256
+		#元套装头盔的护甲值。
+		#Range: > 0
+		helmetArmor = 3
+		#元套装胸甲的护甲值。
+		#Range: > 0
+		bodyArmorArmor = 8
+		#元套装护腿的护甲值。
+		#Range: > 0
+		pantsArmor = 6
+		#元套装靴子的护甲值。
+		#Range: > 0
+		bootsArmor = 3
+		#元套装的韧性值。
+		#Range: 0.0 ~ 3.4028234663852886E38
+		toughness = 3.0
+		#元套装的击退抗性值。
+		#Range: 0.0 ~ 3.4028234663852886E38
+		knockbackResistance = 0.10000000149011612
+
+		[gear.mekasuit.damage_absorption]
+			#元套装靴子有足够能量时可吸收的摔落伤害百分比。
+			#Range: 0.0 ~ 1.0
+			fallDamageReductionRatio = 1.0
+			#元套装头盔带净化单元有足够能量时可吸收的魔法伤害百分比。
+			#Range: 0.0 ~ 1.0
+			magicDamageReductionRatio = 1.0
+			#元套装有足够能量且装备全套时，可吸收的其他非明确支持且不穿透护甲的伤害类型百分比。
+			#注意：可通过在damageReductionRatio配置中添加伤害类型条目来支持特定伤害类型。
+			#Range: 0.0 ~ 1.0
+			unspecifiedDamageReductionRatio = 1.0
+			#表示元套装有足够能量且装备全套时，可吸收的不同伤害类型百分比的映射。
+			#值范围[0.0, 1.0]。
+			#参见#mekainsm:mekasuit_always_supported伤害类型标签以允许穿透护甲的伤害被阻挡。
+			damageReductionRatio = ["minecraft:cactus,1.0", "minecraft:cramming,1.0", "minecraft:dragon_breath,1.0", "minecraft:dry_out,1.0", "minecraft:fall,1.0", "minecraft:falling_anvil,1.0", "minecraft:falling_block,1.0", "minecraft:falling_stalactite,1.0", "minecraft:fly_into_wall,1.0", "minecraft:freeze,1.0", "minecraft:generic,1.0", "minecraft:hot_floor,1.0", "minecraft:in_fire,1.0", "minecraft:in_wall,1.0", "minecraft:lava,1.0", "minecraft:lightning_bolt,1.0", "minecraft:on_fire,1.0", "minecraft:sonic_boom,0.75", "minecraft:stalagmite,1.0", "minecraft:sweet_berry_bush,1.0", "minecraft:wither,1.0"]
+

@@ -1,0 +1,15 @@
+
+[General]
+	#将所有找到的生物ID打印到控制台，会导致刷屏
+	printIDs = false
+	#保护所有生物免受火焰伤害
+	protectAllMobs = false
+	#保护这些模组的生物免受火焰伤害（任何具有这些命名空间的生物）
+	mods = ["iceandfire"]
+	#保护这些生物免受火焰伤害（任何具有这些ID的生物，格式namespace:name）
+	mobs = [
+		"minecraft:zombie", "minecraft:drowned", "minecraft:skeleton", "minecraft:stray",
+		"minecraft:zombie_villager", "minecraft:phantom",
+		"alexsmobs:skelewag", "alexsmobs:dread_lich"
+	]
+

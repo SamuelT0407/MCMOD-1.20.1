@@ -1,0 +1,13 @@
+
+[general]
+	#将使用此库的所有模组的动态资源包合并为单个包
+	merge_dynamic_resource_packs = true
+	#当只有地图标记更改时阻止将地图纹理上传到GPU。可能提高性能
+	lazy_map_upload = true
+	#使用Mipmap渲染地图纹理。从远处看以及在地图册或类似地图中使用时大幅改善外观。设为0则像原版一样没有Mipmap
+	#Range: 0 ~ 4
+	maps_mipmap = 3
+	#修复Minecraft实体着色使其与方块使用完全相同的着色。（上面1，北面0.8，西面0.6，下面0.5）。这意味着如果你有一个模型并用方块实体渲染器或实体渲染它，它将与通过烘焙模型渲染的外观相同。使用NO_GUI将阻止它改变GUI中渲染的物品，以防你不喜欢那个外观。注意与Figura模组有已知的兼容性问题。与该模组一起使用时请保持TRUE或FALSE
+	#Allowed Values: FALSE, NO_GUI, TRUE
+	consistent_entity_renderer_shading = "NO_GUI"
+

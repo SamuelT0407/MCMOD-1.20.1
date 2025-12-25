@@ -1,0 +1,18 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": {
+    "Name": "twilightforest:twilight_oak_log"
+  },
+  "leaves": {
+    "Name": "twilightforest:rainbow_oak_leaves"
+  },
+  "sapling": "twilightforest:rainbow_oak_sapling",
+  "min_height": 1,
+  "max_height": 20,
+  "min_leaves": 1,
+  "max_leaves": 100,
+  "result": {
+    "fluid": "thermal:resin",
+    "amount": 15
+  }
+}

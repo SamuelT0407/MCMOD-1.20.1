@@ -1,0 +1,37 @@
+
+[scarecrow]
+	#给假人装备南瓜使其充当稻草人
+	#所有动物实体都会被吓跑。在此添加未包含的额外实体
+	mobs_whitelist = [""]
+	#不会被吓跑的动物实体
+	mobs_blacklist = [""]
+	#吓跑半径
+	#Range: 0 ~ 100
+	scare_radius = 12
+
+[general]
+	#DPS消息是动态更新还是仅在每次解析后出现？
+	#允许值: DYNAMIC(动态), STATIC(静态), OFF(关闭)
+	DPS_mode = "DYNAMIC"
+	#启用此项可防止攻击假人时装备受损
+	disable_equipment_damage = true
+	#使戴着玩家头颅的假人被怪物作为目标
+	dummy_decoy = false
+	#使假人被击中时掉落经验。训练万岁！取决于造成的伤害
+	#Range: 0.0 ~ 100.0
+	xp_per_damage_on_hit = 0.0
+	#Boss血条颜色
+	#允许值: PINK(粉色), BLUE(蓝色), RED(红色), GREEN(绿色), YELLOW(黄色), PURPLE(紫色), WHITE(白色)
+	boss_health_color = "YELLOW"
+	#假人在Boss模式（佩戴旗帜）时的生命值
+	#Range: 1 ~ 1000
+	boss_health = 200
+
+[mobs_damage_numbers]
+	#显示受到伤害的来源
+	#允许值: ALL_ENTITIES(所有实体), ALL_PLAYERS(所有玩家), LOCAL_PLAYER(本地玩家), NONE(无)
+	damage_mode = "NONE"
+	#显示治疗的来源
+	#允许值: ALL_ENTITIES(所有实体), ALL_PLAYERS(所有玩家), LOCAL_PLAYER(本地玩家), NONE(无)
+	healing_mode = "NONE"
+

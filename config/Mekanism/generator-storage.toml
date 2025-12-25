@@ -1,0 +1,14 @@
+
+#发电机能量存储配置。此配置从服务器同步到客户端。
+[storage]
+	#基础能量存储（焦耳）。
+	heatGenerator = "160000"
+	#基础能量存储（焦耳）。
+	bioGenerator = "160000"
+	#基础能量存储（焦耳）。
+	solarGenerator = "96000"
+	#基础能量存储（焦耳）。
+	advancedSolarGenerator = "200000"
+	#基础能量存储（焦耳）。
+	windGenerator = "200000"
+

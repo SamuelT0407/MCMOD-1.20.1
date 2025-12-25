@@ -1,0 +1,26 @@
+
+#仅客户端设置，主要与渲染相关
+[client]
+	#启用Forge将所有区块更新排队到区块更新线程。
+	#可能会显著提高FPS，但也可能导致奇怪的渲染延迟。
+	#不推荐用于没有大量可用核心的计算机。
+	alwaysSetupTerrainOffThread = false
+	#实验性：启用Forge方块渲染管线 - 修复自定义模型的光照问题。
+	experimentalForgeLightPipelineEnabled = false
+	#启用时，Forge将显示加载期间发生的任何警告。
+	showLoadWarnings = true
+	#设为true以使用组合的DEPTH_STENCIL附件而不是两个单独的附件。
+	useCombinedDepthStencilAttachment = false
+	#[已弃用] 不再有任何作用，IPv6地址将始终被压缩
+	compressLanIPv6Addresses = true
+	#在方块模型烘焙期间，手动计算所有面的法线。
+	#这是Forge在31.0到47.1版本之间的默认行为。
+	#可能导致原版渲染和Forge渲染之间的差异。
+	#仅对包含非轴对齐面的方块产生差异。
+	#你需要重新加载资源包才能看到效果。
+	calculateAllNormals = false
+	#启用时，将使用稍微偏置的Direction#getNearest计算来防止45度角面的法线争用。
+	stabilizeDirectionGetNearest = true
+	#启用时，Forge将允许实时降低Mipmap级别。这是原版的默认行为。如果你遇到使用低于8x8纹理的资源包的问题，请使用此选项。
+	allowMipmapLowering = false
+

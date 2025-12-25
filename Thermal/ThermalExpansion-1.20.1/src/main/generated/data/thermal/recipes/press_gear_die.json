@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "forge:plates/invar"
+    },
+    "X": {
+      "tag": "forge:gears/diamond"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PXP",
+    " P "
+  ],
+  "result": {
+    "item": "thermal:press_gear_die"
+  },
+  "show_notification": true
+}

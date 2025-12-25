@@ -1,0 +1,5 @@
+{
+  "gui.libnonymous.label.button.redstone.tooltip.ignore": "[待翻译] Ignore nearby redstone signals",
+  "gui.libnonymous.label.button.redstone.tooltip.rejected": "[待翻译] Prevent running with a nearby redstone signal",
+  "gui.libnonymous.label.button.redstone.tooltip.required": "[待翻译] Only run with a nearby redstone signal"
+}

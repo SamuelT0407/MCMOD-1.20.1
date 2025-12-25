@@ -1,0 +1,15 @@
+{
+  "fluid_type.immersivepetroleum.benzol": "[待翻译] Benzol",
+  "fluid_type.immersivepetroleum.petroleum_gas": "[待翻译] Petroleum Gas",
+  "gui.immersivepetroleum.derrick.msg.not_enough_power": "[待翻译] Not enough Power",
+  "gui.immersivepetroleum.derrick.settings.derrickishere": "[待翻译] Center (Derrick)",
+  "gui.immersivepetroleum.derrick.settings.pipe.normal": "[待翻译] Normal Pipe §7(Click to Change)§r",
+  "gui.immersivepetroleum.derrick.settings.pipe.perforated": "[待翻译] Perforated Pipe §7(Click to Change)§r",
+  "gui.immersivepetroleum.derrick.settings.pipe.perforated_fixed": "[待翻译] Perforated Pipe §c(Fixed)§r",
+  "gui.immersivepetroleum.dirs.east": "[待翻译] East",
+  "gui.immersivepetroleum.dirs.north": "[待翻译] North",
+  "gui.immersivepetroleum.dirs.south": "[待翻译] South",
+  "gui.immersivepetroleum.dirs.west": "[待翻译] West",
+  "item.immersivepetroleum.benzol_bucket": "[待翻译] Bucket of Benzol",
+  "item.immersivepetroleum.petroleum_gas_bucket": "[待翻译] Bucket of Petroleum Gas"
+}

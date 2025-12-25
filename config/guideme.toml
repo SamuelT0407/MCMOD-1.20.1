@@ -1,0 +1,17 @@
+
+[guides]
+	#永远不为你当前的语言加载翻译的指南页面。
+	ignoreTranslatedGuides = false
+	#找不到配方时（例如被数据包隐藏）永远不在指南中显示错误。
+	hideMissingRecipeErrors = false
+
+[gui]
+	#为指南屏幕调整GUI缩放以修复Minecraft在GUI缩放1和3时的字体问题。
+	adaptiveScaling = true
+	#打开指南时使用屏幕的全部宽度。
+	fullWidthLayout = true
+
+[debug]
+	#在鼠标悬停时在GUI中显示调试覆盖层。
+	showDebugGuiOverlays = false
+

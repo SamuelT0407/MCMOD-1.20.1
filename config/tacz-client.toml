@@ -1,0 +1,59 @@
+
+[key]
+	#设为true以按住右键瞄准
+	HoldToAim = true
+	#设为true以按住匍匐键匍匐
+	HoldToCrawl = true
+	#当枪械为空时尝试自动装弹
+	AutoReload = false
+
+[render]
+	#是否对激光束应用淡出效果。关闭此项可能在某些着色器下提高激光性能。
+	EnableLaserFadeOut = true
+	#显示低模的距离，0表示始终显示
+	#Range: > 0
+	GunLodRenderDistance = 0
+	#弹孔粒子的存在时间，单位为刻
+	#Range: > 0
+	BulletHoleParticleLife = 400
+	#渲染弹孔粒子时淡出的阈值
+	#Range: 0.0 ~ 1.0
+	BulletHoleParticleFadeThreshold = 0.98
+	#持枪时的准星
+	#Allowed Values: EMPTY, DOT_1, CIRCLE_1, CIRCLE_2, CIRCLE_3, CROSS_1, CROSS_2, CROSS_3, CROSS_4, CROSS_5, CROSS_6, LINE_1, LINE_2, LINE_3, SQUARE_1, SQUARE_2, SQUARE_3, SQUARE_4, SQUARE_5, SQUARE_6, TRIDENT_1, TRIDENT_2
+	CrosshairType = "DOT_1"
+	#命中标记的起始位置
+	#Range: -1024.0 ~ 1024.0
+	HitMarketStartPosition = 4.0
+	#是否显示爆头的碰撞箱
+	HeadShotDebugHitbox = false
+	#是否显示枪械HUD
+	GunHUDEnable = true
+	#是否显示击杀数量
+	KillAmountEnable = true
+	#击杀数量的显示持续时间，单位为秒
+	#Range: 0.0 ~ 1.7976931348623157E308
+	KillAmountDurationSecond = 3.0
+	#目标的最远渲染距离，包括矿车类型
+	#Range: > 0
+	TargetRenderDistance = 128
+	#是否渲染第一人称子弹轨迹
+	FirstPersonBulletTracerEnable = true
+	#禁用屏幕中央的交互HUD文字
+	DisableInteractHudText = false
+	#伤害计数器重置的最大时间
+	#Range: > 10
+	DamageCounterResetTime = 2000
+	#持枪时禁用移动速度属性的FOV效果
+	DisableMovementAttributeFov = true
+	#启用高级提示时在提示中显示TACZ ID
+	EnableTaczIdInTooltip = true
+
+[Zoom]
+	#缩放的屏幕距离系数，使用MDV标准，默认为MDV133
+	#Range: 0.0 ~ 3.0
+	ScreenDistanceCoefficient = 1.33
+	#缩放灵敏度乘以此系数
+	#Range: 0.0 ~ 2.0
+	ZoomSensitivityBaseMultiplier = 1.0
+

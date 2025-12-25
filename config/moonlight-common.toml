@@ -1,0 +1,9 @@
+
+[general]
+	#资源重载完成后从模组动态包中清除动态模型和纹理。这可以节省一些内存。如果注意到包加载不一致请关闭
+	clear_dynamic_resources = false
+	#仅用于调试目的。开启一些调试功能如更多日志或blocktypes_debug.txt，文件可在~/.minecraft/debug/dynamic_registry_dump找到...
+	extra_debug = false
+	#启用此项将列出每个BlockTypes的子类。BlockTypes的子类列表也将通过EXTRA_DEBUG在同一文件中。注意：要启用此项，必须同时启用EXTRA_DEBUG。
+	extra_children_debug = false
+

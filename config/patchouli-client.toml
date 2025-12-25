@@ -1,0 +1,16 @@
+#设为true会禁用所有书籍的进度锁定，使所有条目始终可见。配置标志：advancements_disabled
+disableAdvancementLocking = false
+#禁用进度锁定的书籍ID粒度列表，例如 [ "botania:lexicon" ]。配置标志：advancements_disabled_<bookid>
+noAdvancementBooks = []
+#启用测试模式。默认情况下这不会做任何事，但如果你愿意可以在书籍中使用此配置标志。配置标志：testing_mode
+testingMode = false
+#设为书籍ID以使其出现在玩家背包中，替换配方书。
+inventoryButtonBook = ""
+#设为true以使用Shift键而不是Ctrl键进行背包快速查找功能。
+useShiftForQuickLookup = false
+#设置文本溢出的处理方式：让文本溢出页面、截断溢出的文本，或调整大小以适应。更改后需要重新登录。
+#Allowed Values: OVERFLOW, TRUNCATE, RESIZE
+textOverflowMode = "RESIZE"
+#快速查找键需要按下多少刻才能打开书籍
+quickLookupTime = 10
+

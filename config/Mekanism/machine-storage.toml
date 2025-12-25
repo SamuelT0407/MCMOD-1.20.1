@@ -1,0 +1,76 @@
+
+#机器能量存储配置。此配置从服务器同步到客户端。
+[storage]
+	#基础能量存储（焦耳）。
+	enrichmentChamber = "20000"
+	#基础能量存储（焦耳）。
+	osmiumCompressor = "80000"
+	#基础能量存储（焦耳）。
+	combiner = "40000"
+	#基础能量存储（焦耳）。
+	crusher = "20000"
+	#基础能量存储（焦耳）。
+	metallurgicInfuser = "20000"
+	#基础能量存储（焦耳）。
+	purificationChamber = "80000"
+	#基础能量存储（焦耳）。
+	energizedSmelter = "20000"
+	#基础能量存储（焦耳）。
+	digitalMiner = "50000"
+	#基础能量存储（焦耳）。
+	electricPump = "40000"
+	#基础能量存储（焦耳）。
+	chargePad = "2048000"
+	#基础能量存储（焦耳）。
+	rotaryCondensentrator = "20000"
+	#基础能量存储（焦耳）。
+	oxidationChamber = "80000"
+	#基础能量存储（焦耳）。
+	chemicalInfuser = "80000"
+	#基础能量存储（焦耳）。
+	chemicalInjectionChamber = "160000"
+	#基础能量存储（焦耳）。
+	electrolyticSeparator = "160000"
+	#基础能量存储（焦耳）。
+	precisionSawmill = "20000"
+	#基础能量存储（焦耳）。
+	chemicalDissolutionChamber = "160000"
+	#基础能量存储（焦耳）。
+	chemicalWasher = "80000"
+	#基础能量存储（焦耳）。
+	chemicalCrystallizer = "160000"
+	#基础能量存储（焦耳）。
+	seismicVibrator = "20000"
+	#基础能量存储（焦耳）。
+	pressurizedReactionBase = "2000"
+	#基础能量存储（焦耳）。
+	fluidicPlenisher = "40000"
+	#基础能量存储（焦耳）。
+	laser = "2000000"
+	#基础能量存储（焦耳）。
+	laserAmplifier = "5000000000"
+	#基础能量存储（焦耳）。
+	laserTractorBeam = "5000000000"
+	#基础能量存储（焦耳）。
+	formulaicAssemblicator = "40000"
+	#基础能量存储（焦耳）。
+	teleporter = "5000000"
+	#基础能量存储（焦耳）。
+	modificationStation = "40000"
+	#基础能量存储（焦耳）。
+	isotopicCentrifuge = "80000"
+	#基础能量存储（焦耳）。
+	nutritionalLiquifier = "40000"
+	#基础能量存储（焦耳）。也定义了最大处理速率。
+	antiprotonicNucleosynthesizer = "1000000000"
+	#基础能量存储（焦耳）。
+	pigmentExtractor = "40000"
+	#基础能量存储（焦耳）。
+	pigmentMixer = "80000"
+	#基础能量存储（焦耳）。
+	paintingMachine = "40000"
+	#基础能量存储（焦耳）。也定义了最大输出速率。
+	spsPort = "1000000000"
+	#基础能量存储（焦耳）。
+	dimensionalStabilizer = "40000"
+

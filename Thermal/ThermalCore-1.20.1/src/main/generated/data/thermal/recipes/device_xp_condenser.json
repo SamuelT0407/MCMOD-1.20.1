@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "thermal:flag",
+      "flag": "device_xp_condenser"
+    }
+  ],
+  "key": {
+    "C": {
+      "item": "thermal:xp_crystal"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "I": {
+      "tag": "forge:ingots/silver"
+    },
+    "P": {
+      "item": "thermal:redstone_servo"
+    },
+    "X": {
+      "tag": "forge:gears/lapis"
+    }
+  },
+  "pattern": [
+    "IXI",
+    "GCG",
+    "IPI"
+  ],
+  "result": {
+    "item": "thermal:device_xp_condenser"
+  },
+  "show_notification": true
+}

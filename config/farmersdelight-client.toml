@@ -1,0 +1,10 @@
+
+#客户端设置
+[client]
+	#当玩家拥有滋养效果时，饥饿条是否应有镀金覆盖层？
+	nourishmentHungerOverlay = true
+	#当玩家拥有舒适效果时，生命条是否应有银色光泽？
+	comfortHealthOverlay = true
+	#餐食和饮品的提示是否应显示它们提供的效果？
+	foodEffectTooltip = true
+

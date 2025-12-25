@@ -1,0 +1,114 @@
+{
+  "effect.crust.vulnerability": "Vulnerability",
+  "effect.crust.weight": "Weight",
+
+  "menu.crust.config.open_folder": "Open Folder",
+  "menu.crust.config.save_changes": "SAVE Changes",
+  "menu.crust.config.discard_changes": "DISCARD Changes",
+
+  "menu.crust.config.select.mod.title": "Mod Configs...",
+  "menu.crust.config.select.file.title": "%s Configs...",
+  "menu.crust.config.select.file.subtitle": "Folder: %s",
+
+  "menu.crust.config.file.title": "%s Config: %s",
+  "menu.crust.config.file.subtitle": "File: %s",
+
+  "inventory.buttons.fullheal.tooltip": "Full recover",
+  "inventory.buttons.cleareffects.tooltip": "Clear all potion effects",
+  "inventory.buttons.destroyonpointer.tooltip": "Destroy item on cursor",
+  "inventory.buttons.killall.tooltip": "Kill all entities",
+  "inventory.buttons.netherportal.tooltip": "Create a Nether portal",
+  "inventory.buttons.endportal.tooltip": "Create an End portal",
+
+  "inventory.buttons.day.tooltip": "Set time to day",
+  "inventory.buttons.night.tooltip": "Set time to night",
+  "inventory.buttons.toggleday.tooltip": "Toggle time to day or night",
+
+  "inventory.buttons.weatherclear.tooltip": "Clear weather",
+  "inventory.buttons.weatherrain.tooltip": "Set weather to rain",
+  "inventory.buttons.weatherstorm.tooltip": "Set weather to thunder",
+  "inventory.buttons.togglerain.tooltip": "Toggle weather to clear or rain",
+
+  "inventory.buttons.gamemode.tooltip": "Toggle game mode",
+  "inventory.buttons.magnetmode.tooltip": "Toggle magnet mode",
+  "inventory.buttons.multiminemode.tooltip": "Toggle multi-mine mode",
+  "inventory.buttons.godmode.tooltip": "Toggle god mode",
+  "inventory.buttons.supervisionmode.tooltip": "Toggle super vision mode",
+  "inventory.buttons.superspeedmode.tooltip": "Toggle super speed mode",
+  "inventory.buttons.nopickupmode.tooltip": "Toggle destroy-on-pickup mode",
+
+  "commands.crustclean.pointer.success": "Destroyed item on pointer for %s",
+  "commands.crustclean.pointer.failure": "%s has no item on pointer",
+
+  "commands.crustclean.single.success": "Reset %s to starting inventory",
+  "commands.crustclean.multiple.success": "Reset %s players to starting inventory",
+
+  "commands.crustmode.query.success": "Active modes for %s: %s",
+
+  "commands.crustmode.disable.single.success": "Disabled \"%s\" mode for %s",
+  "commands.crustmode.disable.multiple.success": "Disabled \"%s\" mode for %s players",
+  "commands.crustmode.enable.single.success": "Enabled \"%s\" mode for %s",
+  "commands.crustmode.enable.multiple.success": "Enabled \"%s\" mode for %s players",
+
+  "commands.crustportal.success": "Placed \"%s\" portal at [%s, %s, %s]",
+  "commands.crustportal.portaltype.failure": "Portal type not found",
+  "commands.crustportal.dimension.failure": "Invalid dimension for portal",
+  "commands.crustportal.failure": "Could not find valid portal position",
+
+  "commands.crustrecover.single.all.success": "Fully recovered %s",
+  "commands.crustrecover.multiple.all.success": "Fully recovered %s entities",
+  "commands.crustrecover.single.health.success": "Recovered health of %s",
+  "commands.crustrecover.multiple.health.success": "Recovered health of %s entities",
+  "commands.crustrecover.single.hunger.success": "Recovered hunger of %s",
+  "commands.crustrecover.multiple.hunger.success": "Recovered hunger of %s entities",
+  "commands.crustrecover.single.effects.success": "Cleared negative effects from %s",
+  "commands.crustrecover.multiple.effects.success": "Cleared negative effects from %s entities",
+
+  "key.categories.crust": "Crust",
+
+  "key.crust.configs": "Open Config Editor",
+  "key.crust.equip": "Equip item",
+
+  "key.categories.crust.buttons": "Crust's Added Inventory Buttons",
+
+  "key.crust.buttons.fullheal": "Fully Recover",
+  "key.crust.buttons.cleareffects": "Clear All Effects",
+  "key.crust.buttons.destroyonpointer": "Destroy Item On Pointer",
+  "key.crust.buttons.killall": "Kill All Non-Players",
+  "key.crust.buttons.netherportal": "Place Nether Portal",
+  "key.crust.buttons.endportal": "Place End Portal",
+
+  "key.crust.buttons.day": "Day Time",
+  "key.crust.buttons.night": "Night Time",
+  "key.crust.buttons.toggleday": "Toggle Day/Night",
+
+  "key.crust.buttons.weatherclear": "Clear Weather",
+  "key.crust.buttons.weatherrain": "Start Rainstorm",
+  "key.crust.buttons.weatherstorm": "Start Thunderstorm",
+  "key.crust.buttons.togglerain": "Toggle Rain",
+
+  "key.crust.buttons.gamemode": "Toggle Game Mode (Also try F3+F4)",
+  "key.crust.buttons.magnetmode": "Toggle Magnet Mode",
+  "key.crust.buttons.multiminemode": "Toggle Multi-Mine",
+  "key.crust.buttons.godmode": "Toggle God Mode",
+  "key.crust.buttons.supervisionmode": "Toggle Super Vision",
+  "key.crust.buttons.superspeedmode": "Toggle Super Speed",
+  "key.crust.buttons.nopickupmode": "Toggle Destroy-On-Pickup",
+
+  "key.crust.buttons.custom1": "Custom Button 1",
+  "key.crust.buttons.custom2": "Custom Button 2",
+  "key.crust.buttons.custom3": "Custom Button 3",
+  "key.crust.buttons.custom4": "Custom Button 4",
+  "key.crust.buttons.custom5": "Custom Button 5",
+  "key.crust.buttons.custom6": "Custom Button 6",
+  "key.crust.buttons.custom7": "Custom Button 7",
+  "key.crust.buttons.custom8": "Custom Button 8",
+  "key.crust.buttons.custom9": "Custom Button 9",
+  "key.crust.buttons.custom10": "Custom Button 10",
+  "key.crust.buttons.custom11": "Custom Button 11",
+  "key.crust.buttons.custom12": "Custom Button 12",
+  "key.crust.buttons.custom13": "Custom Button 13",
+  "key.crust.buttons.custom14": "Custom Button 14",
+  "key.crust.buttons.custom15": "Custom Button 15",
+  "key.crust.buttons.custom16": "Custom Button 16"
+}

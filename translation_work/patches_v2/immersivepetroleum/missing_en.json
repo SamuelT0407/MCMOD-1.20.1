@@ -1,0 +1,15 @@
+{
+  "fluid_type.immersivepetroleum.benzol": "Benzol",
+  "fluid_type.immersivepetroleum.petroleum_gas": "Petroleum Gas",
+  "gui.immersivepetroleum.derrick.msg.not_enough_power": "Not enough Power",
+  "gui.immersivepetroleum.derrick.settings.derrickishere": "Center (Derrick)",
+  "gui.immersivepetroleum.derrick.settings.pipe.normal": "Normal Pipe §7(Click to Change)§r",
+  "gui.immersivepetroleum.derrick.settings.pipe.perforated": "Perforated Pipe §7(Click to Change)§r",
+  "gui.immersivepetroleum.derrick.settings.pipe.perforated_fixed": "Perforated Pipe §c(Fixed)§r",
+  "gui.immersivepetroleum.dirs.east": "East",
+  "gui.immersivepetroleum.dirs.north": "North",
+  "gui.immersivepetroleum.dirs.south": "South",
+  "gui.immersivepetroleum.dirs.west": "West",
+  "item.immersivepetroleum.benzol_bucket": "Bucket of Benzol",
+  "item.immersivepetroleum.petroleum_gas_bucket": "Bucket of Petroleum Gas"
+}

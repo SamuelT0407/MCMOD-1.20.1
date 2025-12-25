@@ -1,0 +1,6 @@
+
+#通用设置
+[common]
+	#开启/关闭添加到各种原版箱子战利品表的背包战利品
+	chestLootEnabled = true
+

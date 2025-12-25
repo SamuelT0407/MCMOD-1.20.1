@@ -1,0 +1,5 @@
+{
+  "jei.tooltip.lookupHistory.disable": "隐藏JEI查询历史",
+  "jei.tooltip.lookupHistory.enable": "显示JEI查询历史",
+  "jei.tooltip.lookupHistory.usage": "显示最近查看配方时使用的物品列表。"
+}

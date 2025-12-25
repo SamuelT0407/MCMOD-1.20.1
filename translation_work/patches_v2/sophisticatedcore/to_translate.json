@@ -1,0 +1,18 @@
+{
+  "gui.sophisticatedcore.status.cannot_deposit_item": "[待翻译] Could not deposit %s into any storage",
+  "gui.sophisticatedcore.status.cannot_deposit_items": "[待翻译] Could not deposit any items into storage",
+  "gui.sophisticatedcore.status.cannot_restock_full_stack": "[待翻译] Stack %s is already full",
+  "gui.sophisticatedcore.status.cannot_restock_full_stacks": "[待翻译] All stacks are already full",
+  "gui.sophisticatedcore.status.cannot_restock_item": "[待翻译] Could not restock %s from any storage",
+  "gui.sophisticatedcore.status.cannot_restock_items": "[待翻译] Could not restock any items from storage",
+  "gui.sophisticatedcore.status.deposited_item": "[待翻译] Deposited %s into storage",
+  "gui.sophisticatedcore.status.deposited_items": "[待翻译] Deposited %s items into storage",
+  "gui.sophisticatedcore.status.matching_items_found": "[待翻译] Item type found in %s locations.",
+  "gui.sophisticatedcore.status.matching_stacks_found": "[待翻译] Exact item found in %s locations.",
+  "gui.sophisticatedcore.status.no_matching_items_found": "[待翻译] No exact item or item type found",
+  "gui.sophisticatedcore.status.no_storage_in_range": "[待翻译] No storage was found in range",
+  "gui.sophisticatedcore.status.restocked_item": "[待翻译] Restocked %s from storage",
+  "gui.sophisticatedcore.status.restocked_items": "[待翻译] Restocked %s items from storage",
+  "keybind.sophisticatedcore.deposit_item": "[待翻译] Deposit Item into Storage/Backpack",
+  "keybind.sophisticatedcore.restock_item": "[待翻译] Restock Item from Storage/Backpack"
+}

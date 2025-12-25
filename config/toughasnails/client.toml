@@ -1,0 +1,11 @@
+
+[gui]
+    #口渴叠加层左侧相对于默认位置的偏移量。
+    thirst_left_offset = 0
+    #温度叠加层左侧相对于默认位置的偏移量。
+    temperature_left_offset = 0
+    #温度叠加层顶部相对于默认位置的偏移量。
+	temperature_top_offset = 0
+    #口渴叠加层顶部相对于默认位置的偏移量。
+    thirst_top_offset = 0
+

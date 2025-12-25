@@ -1,0 +1,23 @@
+
+#仅客户端设置，主要与渲染相关
+[client]
+	#设为true以启用饰品渲染
+	renderCurios = true
+	#设为true以启用Curios GUI按钮
+	enableButton = true
+	#Curios GUI按钮的X偏移
+	#Range: -100 ~ 100
+	buttonXOffset = 0
+	#Curios GUI按钮的Y偏移
+	#Range: -100 ~ 100
+	buttonYOffset = 0
+	#创造模式Curios GUI按钮的X偏移
+	#Range: -100 ~ 100
+	creativeButtonXOffset = 0
+	#创造模式Curios GUI按钮的Y偏移
+	#Range: -100 ~ 100
+	creativeButtonYOffset = 0
+	#Curios GUI按钮的角落位置
+	#Allowed Values: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+	buttonCorner = "TOP_LEFT"
+

@@ -1,0 +1,9 @@
+
+#.
+#修改Create对地形的影响
+[worldgen]
+	#.
+	#.
+	#阻止Create添加的所有世界生成生效
+	disableWorldGen = false
+

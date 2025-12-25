@@ -1,0 +1,7 @@
+#若非DISABLE，则启用Mantle心跳渲染器，该渲染器通过改变颜色而非垂直堆叠来显示心跳。
+#WITH_MAX将在生命值条后方显示彩色容器中的最大生命值。NO_MAX仅显示生命值条
+#若为DISABLE，则使用Forge心跳渲染器。
+#模组作者注意：此配置不兼容您的心跳渲染器，取消RenderGameOverlayEvent.Pre事件即可阻止我们的逻辑运行
+#有效值：DISABLE, NO_MAX, WITH_MAX
+heartRenderer = “WITH_MAX”
+

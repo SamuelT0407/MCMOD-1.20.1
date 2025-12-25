@@ -1,0 +1,8 @@
+
+#通用设置
+[general]
+	#不应转移到饰品槽的物品（格式：'modid:item'）
+	blacklisted_items = []
+	#被诅咒的物品是否应该转移回饰品槽（true=转移被诅咒物品，false=不转移）
+	transfer_cursed_items = false
+

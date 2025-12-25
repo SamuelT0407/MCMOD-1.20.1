@@ -1,0 +1,12 @@
+
+[general]
+	#如果为true，citadel在服务器上追踪实体属性（冻结、石化生物等）。设为false可解决一些服务器卡顿，但可能破坏某些功能。
+	"Track Entities" = true
+	#如果为true，跳过关于使用数据包的警告。
+	"Skip Datapack Warnings" = true
+	#生成的实体数量乘以此数字。0=区块生成时不添加实体，2=区块生成时添加两倍实体。对于添加大量生物（尤其是动物）到生成列表的模组很有用。
+	#Range: 0.0 ~ 100000.0
+	chunkGenSpawnModifier = 1.0
+	#如果为true，愚人节内容可以在愚人节显示。
+	"April Fools Content" = true
+

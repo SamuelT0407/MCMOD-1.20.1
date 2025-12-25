@@ -1,0 +1,29 @@
+#早期窗口高度
+earlyWindowHeight = 530
+#启用Forge全局版本检查
+versionCheck = true
+#是否控制窗口。禁用此项会禁用新GL功能，对依赖它们的模组可能有影响。
+earlyWindowControl = true
+#早期窗口帧缓冲缩放
+earlyWindowFBScale = 1
+#早期窗口提供器
+earlyWindowProvider = "fmlearlywindow"
+#早期窗口宽度
+earlyWindowWidth = 925
+#早期窗口启动时最大化
+earlyWindowMaximized = false
+#服务器的默认配置路径
+defaultConfigPath = "defaultconfigs"
+#禁用客户端优化DFU - 服务器上已禁用
+disableOptimizedDFU = true
+#跳过特定GL版本，可能对有问题的显卡驱动有帮助
+earlyWindowSkipGLVersions = []
+#是否在首次尝试时记录帮助消息以辅助故障排除。此设置应在成功启动后自动禁用
+earlyWindowLogHelpMessage = false
+#早期初始化并行处理的最大线程数，-1基于处理器数量
+maxThreads = -1
+#松鼠？
+earlyWindowSquir = false
+#是否在早期窗口显示CPU使用率
+earlyWindowShowCPU = false
+

@@ -1,0 +1,8 @@
+{
+  "config.jade.plugin_bonsaitrees3.bonsaipot": "[待翻译] Bonsai Pot",
+  "gui.bonsaitrees3.label.jei.upgrade.bees": "[待翻译] Pollinate and get fruit drops",
+  "gui.bonsaitrees3.label.jei.upgrade.energy": "[待翻译] Insert batteries to boost growth rate",
+  "jade.bonsaitrees3.bonsaipot.growing": "[待翻译] Growing: %d%%",
+  "jei.bonsaitrees3.requiresBees": "[待翻译] Requires a Bee Hive upgrade",
+  "jei.bonsaitrees3.requiresUpgrade": "[待翻译] Requires one of these upgrades:"
+}

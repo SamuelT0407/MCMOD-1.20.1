@@ -1,0 +1,9 @@
+
+[GridColors]
+	#普通管道颜色。（十六进制RGB）
+	normal_pipe_color = "A5A5A5"
+	#穿孔管道颜色。（十六进制RGB）
+	perforated_pipe_color = "54FF54"
+	#固定穿孔管道颜色。（十六进制RGB）
+	fixed_perforated_pipe_color = "FF515A"
+

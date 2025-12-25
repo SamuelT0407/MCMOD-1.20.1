@@ -1,0 +1,130 @@
+
+#客户端配置。此配置仅存在于客户端
+[client]
+	#为喷气背包/防毒面具/火焰喷射器/辐射播放声音（所有玩家）。
+	enablePlayerSounds = true
+	#如果启用，机器在运行时播放声音。
+	enableMachineSounds = true
+	#如果启用，尝试强制所有径向菜单文本为白色。
+	whiteRadialText = false
+	#是否在节日（如：圣诞节和新年）播放节日问候和彩蛋。
+	holidays = true
+	#调整通用机械声音的基础音量。< 1更柔和，更高更响亮。
+	#Range: 0.0 ~ 10.0
+	baseSoundVolume = 1.0
+	#如果为true，不将电缆/管道/导管渲染为透明，也不渲染它们的内容物。
+	opaqueTransmitters = false
+	#允许蹲下 + 滚轮来更改物品模式。
+	allowModeScroll = true
+	#如果为true，将HUD文本对齐和指南针渲染移到屏幕右侧，并将MekaSuit模块渲染移到左侧。
+	reverseHUD = false
+	#HUD上显示文本的缩放比例。
+	#Range: 0.25 ~ 1.0
+	hudScale = 0.6
+	#在游戏过程中启用物品信息HUD
+	enableHUD = true
+	#物品耐久显示中能量的颜色。
+	energyColor = 3997338
+	#由通用机械添加的方块实体渲染器可渲染的范围，例如多方块结构的内容。原版默认大多数方块的TER渲染范围为64，但信标和末地折跃门使用256的范围。
+	#Range: 1 ~ 1024
+	terRange = 256
+
+	#粒子配置
+	[client.particle]
+		#设为false以防止加载多方块结构时的粒子刷屏（将改为显示通知消息）。
+		enableMultiblockFormationParticles = true
+		#机器活动时显示粒子。
+		machineEffects = true
+		#辐射粒子距玩家可生成的距离（方块）。
+		#Range: 2 ~ 64
+		radiationParticleRadius = 30
+		#渲染辐射效果时生成的粒子数量（按辐射等级缩放）。
+		#Range: 0 ~ 1000
+		radiationParticleCount = 100
+		#当磁力吸引单元拉取物品时显示闪电。
+		magneticAttraction = true
+		#为各种AOE工具行为（如翻地、剥皮和连锁挖矿）显示闪电。
+		toolAOE = true
+
+	#GUI配置
+	[client.gui]
+		#MekaSuit使用的HUD透明度。
+		#Range: 0.0 ~ 1.0
+		hudOpacity = 0.4000000059604645
+		#MekaSuit使用的HUD颜色（RGB）。
+		#Range: 0 ~ 16777215
+		hudColor = 4257264
+		#MekaSuit使用的警告HUD元素颜色（RGB）。
+		#Range: 0 ~ 16777215
+		hudWarningColor = 16768335
+		#MekaSuit使用的危险HUD元素颜色（RGB）。
+		#Range: 0 ~ 16777215
+		hudDangerColor = 16726076
+		#MekaSuit HUD的视觉抖动，在移动玩家头部时可见。数值越大 = 抖动越多。
+		#Range: 1.0 ~ 100.0
+		hudJitter = 6.0
+		#穿戴MekaSuit时显示精美的指南针。
+		mekaSuitHelmetCompass = true
+
+		#上次窗口位置。通常这些值不应手动修改。
+		[client.gui.window]
+
+			[client.gui.window.color]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.confirmation]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.crafting0]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.crafting1]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.crafting2]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.mekaSuitHelmet]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.rename]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.skinSelect]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.sideConfig]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.transporterConfig]
+				x = 2147483647
+				y = 2147483647
+
+			[client.gui.window.upgrade]
+				x = 2147483647
+				y = 2147483647
+
+	#QIO配置
+	[client.qio]
+		#在QIO物品查看器中查看物品时的排序策略。
+		#Allowed Values: NAME, SIZE, MOD
+		itemViewerSortType = "NAME"
+		#在QIO物品查看器中查看物品时的排序方向。
+		#Allowed Values: ASCENDING, DESCENDING
+		itemViewerSortDirection = "ASCENDING"
+		#QIO物品查看器水平方向显示的槽位数。
+		#Range: 8 ~ 16
+		itemViewerSlotsX = 8
+		#QIO物品查看器垂直方向显示的槽位数。
+		#Range: 2 ~ 48
+		itemViewerSlotsY = 4
+

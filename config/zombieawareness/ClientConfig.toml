@@ -1,0 +1,7 @@
+
+#通用模组设置
+[general]
+    #-渲染血液
+    client_renderBlood = true
+    #-调试视觉感知
+    client_debugSensesVisual = false

@@ -1,0 +1,32 @@
+{
+  "_comment": "Items",
+  "item.animalium.wild_dog_pelt": "野狗皮",
+  "item.animalium.wild_dog_pelt_boots": "野狗皮靴子",
+  "item.animalium.bear_meat": "生熊肉",
+  "item.animalium.bear_meat_cooked": "熟熊肉",
+  "item.animalium.bear_claw": "熊爪",
+  "item.animalium.bear_claw_paxel": "熊爪全能工具",
+  "item.animalium.rat_meat": "生老鼠肉",
+  "item.animalium.rat_meat_cooked": "熟老鼠肉",
+  "item.animalium.piranha_steak": "生食人鱼肉排",
+  "item.animalium.piranha_steak_cooked": "熟食人鱼肉排",
+  "item.animalium.piranha_spawn_egg": "食人鱼生成蛋",
+  "item.animalium.wild_dog_spawn_egg": "野狗生成蛋",
+  "item.animalium.bear_spawn_egg": "棕熊生成蛋",
+  "item.animalium.bear_tamed_spawn_egg": "中立棕熊生成蛋",
+  "item.animalium.rat_spawn_egg": "老鼠生成蛋",
+
+  "_comment": "Tool Tips",
+  "tooltip.wild_dog_pelt_boots": "跳得更高，跑得更快",
+  "tooltip.bear_claw_paxel": "原初多功能工具",
+
+  "_comment": "Creative Tabs",
+  "creativeTab.animalium": "Animalium",
+
+  "_comment": "Entities",
+  "entity.animalium.piranha": "食人鱼",
+  "entity.animalium.wild_dog": "野狗",
+  "entity.animalium.bear": "棕熊",
+  "entity.animalium.bear_tamed": "中立棕熊",
+  "entity.animalium.rat": "老鼠"
+}

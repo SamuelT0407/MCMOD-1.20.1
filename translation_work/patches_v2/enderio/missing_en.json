@@ -1,0 +1,18 @@
+{
+  "block.enderio.aversion_obelisk": "Aversion Obelisk",
+  "gui.enderio.conduit.priority": "Priority",
+  "gui.enderio.conduit_probe.message.copied": "Copied data: %s",
+  "gui.enderio.conduit_probe.message.pasted": "Pasted data: %s",
+  "gui.enderio.conduit_probe.mode.switched": "Switched conduit probe mode to %s",
+  "item.enderio.conduit.chemical.multi": "Allows multiple chemical types to be transported on the same line",
+  "item.enderio.conduit_probe": "Conduit Probe",
+  "item.enderio.entity_filter": "Soul Filter",
+  "keybinding.enderio.category": "EnderIO",
+  "keybinding.enderio.probe_mode": "Change Probe Mode",
+  "tooltip.enderio.conduit.fluid.multi": "Allows multiple fluids to be transported on the same line",
+  "tooltip.enderio.conduit.fluid.rate": "Transfer Rate %s mB/t",
+  "tooltip.enderio.conduit_probe.mode": "Mode: %s",
+  "tooltip.enderio.conduit_probe.mode.contains_copied": "Contains copied conduit data:",
+  "tooltip.enderio.conduit_probe.mode.copy_paste": "Copy/Paste",
+  "tooltip.enderio.conduit_probe.mode.probe": "Probe"
+}

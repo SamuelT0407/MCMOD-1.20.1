@@ -1,0 +1,93 @@
+#蕨类生长频率。数值越大生长越慢
+#Range: 1 ~ 1000000
+fernTickRate = 2
+#自动配置版本值。如果值<最大值，某些配置值可能被替换
+#Range: 1 ~ 1
+version = 1
+
+["Generation Config"]
+	#是否自然生成地狱船
+	generateHellShips = true
+	#是否自然生成化石矿石
+	generateFossils = true
+	#是否自然生成冻土矿石
+	generatePermafrost = true
+	#是否自然生成火山岩
+	generateVolcanicRock = true
+	#是否自然生成摩艾石像
+	generateMoai = true
+	#是否自然生成火山群系
+	generateVolcanoBiome = true
+	#火山群系权重。数值越大越常见
+	#Range: 1 ~ 10000
+	volcanoBiomeRarity = 7
+
+["Spawn Config"]
+	#焦油史莱姆是否在焦油坑自然生成
+	spawnTarSlimes = true
+	#焦油史莱姆生成稀有度。数值越大越稀有
+	#Range: 1 ~ 100000000
+	tarSlimesSpawnRate = 75
+	#通过鱼卵物品生成的鱼是否永不消失
+	fishArePersistent = true
+
+["Mob Config"]
+	#双脊龙是否有羽毛
+	featheredDilo = false
+	#角鼻龙是否有羽毛
+	featheredCerato = false
+	#橡树龙是否有羽毛
+	featheredDryo = false
+	#恐龙是否可通过手喂食物治愈
+	healingDinos = true
+	#恐龙是否有饥饿值
+	enableHunger = true
+	#恐龙是否会饿死
+	enableStarvation = false
+	#恐龙是否应该繁殖
+	breedingDinos = true
+	#恐龙是否产生物品蛋而非实体
+	eggsLikeChickens = false
+	#鞭子是否可用于驯服某些恐龙
+	whipToTameDino = true
+	#飞行生物能飞到的最大高度
+	#Range: 1 ~ 512
+	flyingTargetMaxHeight = 128
+	#哺乳动物怀孕时长（游戏刻，10000刻≈8分钟）
+	#Range: 1 ~ 1000000000
+	pregnancyDuration = 10000
+	#某些恐龙是否可破坏硬度低于设定值的方块
+	dinosBreakBlocks = true
+	#方块不被破坏所需的最小硬度。默认是铁(5)。0.4足以破坏树叶和玻璃但破坏不了泥土
+	#Range: 0.0 ~ 100.0
+	blockBreakHardness = 5.0
+	#食草恐龙是否可以吃植物方块
+	dinosEatBlocks = true
+	#恐龙是否可以吃非原版生物
+	dinosEatModdedMobs = true
+	#原版动物是否会逃离危险恐龙
+	animalsFearDinos = true
+	#阿努是否可以放置方块
+	anuBlockPlacing = true
+	#阿努比斯战士是否可在一段时间后再次生成
+	anubiteHasCooldown = false
+	#阿努比斯战士重生所需时间（游戏刻，72000刻=1小时）
+	#Range: 1200 ~ 1000000000
+	anubiteCooldown = 72000
+
+["Machine Config"]
+	#培养皿损坏的几率（百分比）
+	#Range: 0 ~ 100
+	cultureVatFailChance = 10
+	#机器是否需要能量运行
+	machinesRequireEnergy = false
+	#机器最大存储能量
+	#Range: 1 ~ 1000000
+	machineMaxEnergy = 1000
+	#机器每刻最大传输能量
+	#Range: 1 ~ 1000000
+	machineTransferRate = 10
+	#机器每刻消耗能量
+	#Range: 1 ~ 1000000
+	machineEnergyUsage = 1
+

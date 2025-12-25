@@ -1,0 +1,20 @@
+#.
+#当屏幕上有文字时减慢思索场景速度。
+comfyReading = false
+#.
+#在思索视图中显示额外信息并更频繁地重新加载场景脚本。
+editingMode = false
+
+#.
+#放置辅助设置
+[placementAssist]
+	#.
+	#当显示辅助放置目标相对于准星位置时应使用什么指示器
+	#选择'NONE'完全禁用指示器
+	#Allowed Values: TEXTURE, TRIANGLE, NONE
+	indicatorType = "TEXTURE"
+	#.
+	#通过此倍数更改指示器的大小
+	#Range: 0.0 ~ 3.4028234663852886E38
+	indicatorScale = 1.0
+

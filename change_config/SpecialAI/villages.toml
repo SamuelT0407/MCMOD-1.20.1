@@ -1,0 +1,116 @@
+# specialai:villages.toml
+# 此配置文件包含控制村庄微调、村民行为和声望系统的各种选项。
+
+  # 方块列表（Block List）字段格式：[ "命名空间:方块名[属性1=值1,...]", ... ]
+  # 注册表条目-数值列表（Registry entry-value list）字段格式：[ "命名空间:注册名 数值1 数值2 ...", ... ]
+  # 实体列表（Entity List）字段格式：[ "命名空间:实体类型 数值1 数值2 ...", ... ]
+  # 优先级顺序：具体条目 > 标签条目 > 命名空间条目 > 默认值
+
+
+# Category: behavior_tweaks (行为微调)
+# 村民杂项 AI 微调选项。
+
+  # 如果玩家与村民的声望低于或等于此值，村民将拒绝交易。
+  # <整数> 默认: -100
+  behavior_tweaks.refuse_trade_rep = -100
+
+
+# Category: reputation (声望)
+# 声望获取与损失的选项。
+
+  # 当玩家在村庄内破坏这些方块时，可能会激怒或取悦附近的村民。
+  # 每个条目中的数值决定了声望的变化量。负值为降低声望，正值为增加声望。
+  # 注意：破坏方块只会影响“次要负面”或“次要正面”声望，两者的上限均为 200。
+  # <注册表条目-数值列表> 默认包含：干草块(-2)、箱子(-5)、熔炉(-4)、木桶(-4)、门(-3)等。
+  reputation.reputation_changing_blocks = [
+    "minecraft:hay_block -2.0",
+    "minecraft:chest -5.0",
+    "minecraft:furnace -4.0",
+    "minecraft:barrel -4.0",
+    "minecraft:tall_grass 0.0",
+    "minecraft:grass 0.0",
+    "minecraft:fern 0.0",
+    "#minecraft:doors -3.0",
+    "#minecraft:flowers 0.0",
+    "default -1.0"
+  ]
+  # 如果玩家与村民的声望大于或等于此值，当玩家在村庄内破坏原本会降低声望的方块时，目击的村民将不再在意。
+  # <整数> 默认: 100
+  reputation.break_block_threshold = 100
+
+  # 当玩家在村庄内杀死这些实体时，可能会激怒或取悦附近的村民。
+  # 杀死村民在原版中已经会造成重大的声望损失，此处无法覆盖该设定。
+  # 注意：杀死生物只会影响“次要负面/正面”声望（上限 200）。
+  # <实体列表> 默认包含：杀猫(-20)、牛/羊/猪(-5)、铁傀儡(-40)、击杀僵尸(+4)、击杀袭击者(+15)等。
+  reputation.reputation_changing_creatures = [
+    "minecraft:cat -20.0",
+    "minecraft:cow -5.0",
+    "minecraft:sheep -5.0",
+    "minecraft:pig -5.0",
+    "minecraft:chicken -3.0",
+    "minecraft:horse -15.0",
+    "minecraft:iron_golem -40.0",
+    "minecraft:wandering_trader -40.0",
+    "minecraft:zombie 4.0",
+    "minecraft:skeleton 3.0",
+    "minecraft:creeper 5.0",
+    "minecraft:enderman 2.0",
+    "minecraft:spider 2.0",
+    "minecraft:slime 1.0",
+    "minecraft:vex 1.0",
+    "#minecraft:raiders 15.0"
+  ]
+  # 如果玩家与村民的声望大于或等于此值，当玩家在村庄内杀死原本会降低声望的生物时，目击者将不再在意。
+  # <整数> 默认: 190
+  reputation.kill_creature_threshold = 190
+
+  # 如果小于 0，玩家踩坏耕地会激怒附近的农民村民，并损失指定数量的声望。
+  # 注意：农民对踩坏耕地行为非常反感，即使发生在村庄外也会导致其不悦。
+  # <整数> 范围: -200 ~ 0, 默认: -4
+  reputation.trample_farmland_anger = -4
+
+
+# Category: villager_names (村民姓名)
+# 用于随机生成村民姓名的名称和头衔组件。
+
+  # 如果为 false，以下所有选项均失效，SpecialAI 将不再为村民生成随机名称。
+  # <布尔值> 默认: true
+  #------------------Change------------------
+  villager_names.master_toggle = false
+
+  # 生成村民随机姓名时选用的名称组件列表。
+  villager_names.base_name_components = [
+    "grab", "thar", "ger", "ald", "mas", "on", "o", "din", "thor", "jon", "ath", "an", "burb", "en", "a", "e", "i", "u", "hab", "bloo", "ena", "dit", "aph", "ern", "bor", "dav", "id", "toast", "son", "dottir", "for", "wen", "lob", "ed", "die", "van", "y", "zap", "ear", "ben", "don", "bran", "gro", "jen", "bob", "ette", "ere", "man", "qua", "bro", "cree", "per", "skel", "ton", "zom", "bie", "wolf", "end", "er", "pig", "sil", "ver", "fish", "cow", "chic", "ken", "sheep", "lla", "rab", "bit", "squid", "hell", "scrub", "loaf", "bonk", "clonk", "bink", "guy", "gal", "wool", "flo", "fee", "fi", "fo", "fum", "green", "blue", "red", "seed", "wheat", "boat", "rod", "poke", "bow"
+  ]
+  # 决定村民姓名由多少个组件构成的随机判定。
+  # 例如，如果列表中有 5 个数字，姓名可能由 1-5 个组件组成。
+  # 每个数字代表增加一个新组件的几率（1 为 1/1 必出，64 为 1/64 几率）。
+  # <整数列表> 默认: [ "1", "1", "4", "16", "64" ]
+  villager_names.component_rolls = [ "1", "1", "4", "16", "64" ]
+
+  # 可能添加到村民名字前的头衔（前缀）。
+  # <字符串列表> 默认: [ "Mc", "Mac" ]
+  villager_names.name_prefixes = [ "Mc", "Mac" ]
+  # 名字中出现上述前缀的几率。
+  # <数值> 默认: 0.01
+  villager_names.name_prefix_chance = 0.01
+
+  # 村民职业及其关联的职称列表。
+  # 你可以在此修改现有职业头衔，或为其他模组的职业添加新头衔。
+  # 当村民获得新职业时，会从中随机抽取一个职称。多次添加同一个职称会提高其被抽中的频率。
+  # 格式: [ "职业名称 职称1 职称2 ...", ... ]
+  villager_names.villager_job_titles = [
+    "minecraft:cleric 牧师 司铎 神父 传道者 牧师 拉比 祭司 治愈者 说书人 神秘使 附魔师 占卜师 预言家 先知 圣徒 贤者 长者",
+    "minecraft:butcher 屠夫 肉商 斩肉人 牛屠夫 羊屠夫 猎鸡人 猎兔手",
+    "minecraft:librarian 图书管理员 馆长 装订工 书商 编目员 研究员 记录员 档案保管员",
+    "minecraft:nitwit 傻子 笨蛋 呆子 呆瓜 混蛋 笨蛋 哲学家 白日梦者 流浪汉",
+    "minecraft:fisherman 渔夫 钓鱼者 垂钓者 鱼商 航海员 舵手 船长 卖鱼郎",
+    "minecraft:weaponsmith 武器匠 铸剑师 武器商人 武器大师 武器专家 剑客匠人 剑术大师",
+    "minecraft:cartographer 制图师 地图绘制者 探险家 拓荒者 勘测员 绘图员 冒险家 领路人 先驱",
+    "minecraft:fletcher 矢匠 制弓匠 箭矢商人 射手 弓箭专家 制箭师",
+    "minecraft:farmer 农民 园丁 种子商 农学家 园艺家 园林师 地景师",
+    "minecraft:toolsmith 工具匠 工具制造者 工具商人 工具专家 工匠 技工",
+    "minecraft:shepherd 牧羊人 牧场主 牧民 牧工 牛倌 羊倌 畜牧师",
+    "minecraft:armorer 护甲匠 盔甲师 铁甲匠 护甲商人 护甲大师 铠甲工 盾牌匠",
+    "minecraft:leatherworker 皮革匠 制革师 皮革商人 剥皮手 皮靴匠 皮件专家"
+  ]

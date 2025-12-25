@@ -1,0 +1,53 @@
+#是否启用时运升级？
+enableFortuneUpgrade = true
+#是否启用效率升级？
+enableEfficiencyUpgrade = true
+#是否启用漏斗升级？
+enableHoppingUpgrade = true
+#是否启用自动砍伐升级？
+enableAutoCuttingUpgrade = true
+#是否启用Forge能量升级？
+enableForgeEnergyUpgrade = true
+#是否启用授粉升级？
+enablePollinatingUpgrade = true
+#自动砍伐是否对斧头升级造成耐久损耗
+# ----------------Change----------------
+autoCuttingDamagesItems = true
+#斧头升级每砍伐一棵树受到耐久损耗的几率
+#Range: 0.0 ~ 1.0
+# ----------------Change----------------
+autoCuttingDamageChance = 1.0
+#是否在JEI中显示掉落几率
+showChanceInJEI = true
+#附魔等级是否累加而非取最高？（即'4个时运III = 时运XII'？）
+sumEnchantmentLevels = true
+#掉落物：每级时运附魔额外掷骰次数
+#Range: 0 ~ 64
+extraRollsPerFortuneLevel = 1
+#掉落物：每级时运附魔成功掉落的额外几率
+#Range: 0.0 ~ 1.0
+extraChancePerFortuneLevel = 0.05
+#是否允许对盆栽使用骨粉促进生长？
+allowBonemeal = true
+#骨粉成功促进生长的几率
+#Range: 0.0 ~ 1.0
+bonemealSuccessChance = 0.45
+#尝试向下方物品栏插入物品失败后的等待刻数
+#Range: 20 ~ 1200
+hoppingCooldown = 60
+#自动砍伐树木失败后的等待刻数
+#Range: 20 ~ 1200
+cuttingCooldown = 60
+#盆栽完全长成所需的最小刻数
+#Range: > 1
+minimumRequiredTicks = 10
+#可以修改以通过倍数影响所有树木的生长时间
+#Range: 0.0 ~ 2.147483647E9
+requiredTicksModifier = 1.0
+#每刻从升级物品提取的最大Forge能量
+#Range: > 0
+maximumExtractedEnergyPerTick = 60
+#每单位提取的Forge能量加快树木生长的比例（例如：1.0 + 60fe/刻 * 0.005 = 1.3倍速度）
+#Range: 0.0 ~ 1.7976931348623157E308
+extraGrowthRatioPerFE = 0.005
+

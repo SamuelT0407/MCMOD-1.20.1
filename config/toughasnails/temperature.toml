@@ -1,0 +1,59 @@
+
+[general]
+	#消耗物品获得的加热或冷却效果持续时间
+	consumable_effect_duration = 1200
+	#玩家体温变化后延迟改变体温的游戏刻数
+	temperature_change_delay = 500
+	#受玩家体温修正影响时延迟改变体温的游戏刻数
+	player_temperature_change_delay = 125
+	#内置体温修正器的应用顺序
+	temperature_modifier_order = ["player_modifiers", "item_modifier", "armor_modifier", "internal_modifier"]
+	#冰冻或过热时延迟受到伤害的游戏刻数
+	extremity_damage_delay = 500
+	#消耗加热或冷却物品后延迟改变体温的游戏刻数
+	internal_temperature_change_delay = 20
+	#穿戴护甲时延迟改变体温的游戏刻数
+	armor_temperature_change_delay = 50
+	#手持物品时延迟改变体温的游戏刻数
+	handheld_temperature_change_delay = 375
+	#重生时是否获得气候宽容效果
+	climate_clemency_respawning = false
+	#气候宽容效果的持续时间（游戏刻）
+	climate_clemency_duration = 6000
+	#从极端温度恢复时延迟改变体温的游戏刻数
+	extremity_rebound_temperature_change_delay = 250
+
+[altitude]
+	#高于此Y坐标温度会下降
+	temperature_drop_altitude = 160
+	#低于此Y坐标温度会上升
+	temperature_rise_altitude = -32
+	#高于此Y坐标会应用环境修正
+	environmental_modifier_altitude = 50
+
+[immersion]
+	#玩家接触水、雨或雪后保持潮湿的游戏刻数
+	wet_ticks = 40
+	#在细雪中时温度变化量
+	powdered_snow_temperature_change = -2
+	#下雪时温度变化量
+	snow_temperature_change = -1
+	#潮湿时温度变化量
+	wet_temperature_change = -1
+	#着火时温度变化量
+	on_fire_temperature_change = 2
+
+[blocks]
+	#构成靠近热源或冷源的距离
+	near_heat_cool_proximity = 8
+
+[toggles]
+	#启用或禁用温度系统
+	enable_temperature = true
+
+[time]
+	#夜间原本温度为热时的温度变化量
+	night_hot_temperature_change = -2
+	#夜间原本温度不热时的温度变化量
+	night_temperature_change = -1
+

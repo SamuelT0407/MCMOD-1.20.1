@@ -1,0 +1,5 @@
+
+[general]
+	#向流浪商人的交易池中添加各种BOP资源。
+	wandering_trader_trades = true
+

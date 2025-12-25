@@ -1,0 +1,26 @@
+#重要提示:
+#这只是通用配置。它不包含IE所有可调整的值。
+#所有机器修改器、矿石生成、回溯生成功能和大多数其他可调整值已移至immersiveengineering-server.toml。
+#该文件是单世界配置，意味着你需要进入'saves/<世界名称>/serverconfig'来调整它。这些更改只会应用于该世界。
+#然后你可以把该配置文件放入'defaultconfigs'文件夹，使其自动应用于之后生成的所有新世界。
+#这对许多人来说可能很困惑，但这是一种新的合理配置处理方式，因为服务器配置在多人游戏时会同步。
+importantInfo = true
+#IE处理结果应来自的首选Mod ID列表，即你希望铜来自哪个模组。
+#这影响挖掘机挖出的矿石，以及那些没有关联IE物品的粉碎配方。此列表按优先级排序。
+preferredOres = ["immersiveengineering", "minecraft"]
+
+[debug]
+
+	[debug.wires]
+		#启用电线网络的详细日志。这对开发者追踪电线相关问题很有用。
+		enableWireLogger = false
+		#每次交互后对电线网络运行完整性检查。如果电线网络不完整，这会导致相当多的卡顿和大量日志输出。仅在IE开发者要求时启用。
+		validateNets = false
+
+#IE已集成兼容的所有模组列表
+#将任何值设为false可禁用相应兼容
+[compat]
+	theoneprobe = true
+	curios = true
+	computercraft = true
+

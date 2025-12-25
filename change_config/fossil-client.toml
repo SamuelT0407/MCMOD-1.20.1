@@ -1,0 +1,6 @@
+#如果为true，启用自定义主菜单
+# ----------------Change----------------
+customMainMenu = false
+#如果为true，骷髅头盔和远古头盔应像原版南瓜一样渲染覆盖层
+helmetOverlays = true
+

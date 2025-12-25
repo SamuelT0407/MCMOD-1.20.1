@@ -1,0 +1,7 @@
+{
+  "commands.curios.drop.success": "Dropped items in slot %s for %s",
+  "commands.curios.dropAll.success": "Dropped items in all slots for %s",
+  "commands.curios.replace.success": "Replaced slot %s for %s with %s",
+  "gui.curios.page": "Page %d / %d",
+  "gui.curios.toggle.cosmetics": "Toggle Cosmetics"
+}

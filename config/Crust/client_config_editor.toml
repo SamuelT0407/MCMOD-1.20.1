@@ -1,0 +1,41 @@
+# crust:client_config_editor.toml
+# 游戏内配置编辑器客户端偏好设置。
+
+# Category: main_menu_button
+# 用于修改主菜单中游戏内配置编辑器按钮的选项。
+
+  # 设置为false可隐藏主菜单中的配置编辑器按钮。
+  # <Boolean> 有效值：{ true, false }，默认值：true
+  main_menu_button.enabled = true
+
+  # 配置编辑器按钮的锚点位置。即相对于屏幕或原生菜单按钮的定位方式。
+  # <枚举> 有效值：{ “screen_top”, “top”, “center”, “bottom”, ‘screen_bottom’ }，默认：“bottom”
+  main_menu_button.anchor.vertical = “bottom”
+main_menu_button.anchor.horizontal = “left”
+
+  # 配置编辑器按钮相对于锚点的偏移位置，单位为GUI像素。负值使按钮向左上移动，正值使按钮向右下移动。
+  # <整数> 范围：任意值，默认值：-56
+  main_menu_button.offset.vertical = -56
+  main_menu_button.offset.horizontal = -4
+
+
+# 类别：pause_menu_button
+# 用于修改暂停菜单中游戏内配置编辑器按钮的选项。
+
+  # 设置为false可隐藏游戏内配置编辑器按钮。
+  # 无论是否显示按钮，您均可在选项中为编辑器分配热键。
+  # <布尔型> 有效值：{ true, false }，默认值：true
+  pause_menu_button.enabled = true
+
+  # 配置编辑器按钮的锚点位置。即相对于屏幕或原版菜单按钮的定位位置。
+  # <枚举型> 有效值：{ “screen_top”, “top”, “center”, “bottom”, “screen_bottom” }，默认：‘bottom’
+  pause_menu_button.anchor.vertical = “bottom”
+  pause_menu_button.anchor.horizontal = “left”
+
+  # 配置编辑器按钮相对于锚定位置的偏移量，单位为GUI像素。负值使按钮向左上移动，正值使按钮向右下移动。
+  # <Integer> 范围：任意值，默认值：-44
+  pause_menu_button.offset.vertical = -44
+  pause_menu_button.offset.horizontal = -4
+
+
+通过DeepL.com（免费版）翻译

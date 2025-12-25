@@ -1,0 +1,18 @@
+{
+  "gui.sophisticatedcore.status.cannot_deposit_item": "无法将%s存入任何存储",
+  "gui.sophisticatedcore.status.cannot_deposit_items": "无法将任何物品存入存储",
+  "gui.sophisticatedcore.status.cannot_restock_full_stack": "堆叠%s已满",
+  "gui.sophisticatedcore.status.cannot_restock_full_stacks": "所有堆叠都已满",
+  "gui.sophisticatedcore.status.cannot_restock_item": "无法从任何存储补货%s",
+  "gui.sophisticatedcore.status.cannot_restock_items": "无法从存储补货任何物品",
+  "gui.sophisticatedcore.status.deposited_item": "已将%s存入存储",
+  "gui.sophisticatedcore.status.deposited_items": "已将%s件物品存入存储",
+  "gui.sophisticatedcore.status.matching_items_found": "在%s个位置找到物品类型。",
+  "gui.sophisticatedcore.status.matching_stacks_found": "在%s个位置找到完全相同的物品。",
+  "gui.sophisticatedcore.status.no_matching_items_found": "未找到完全相同的物品或物品类型",
+  "gui.sophisticatedcore.status.no_storage_in_range": "范围内未找到存储",
+  "gui.sophisticatedcore.status.restocked_item": "已从存储补货%s",
+  "gui.sophisticatedcore.status.restocked_items": "已从存储补货%s件物品",
+  "keybind.sophisticatedcore.deposit_item": "将物品存入存储/背包",
+  "keybind.sophisticatedcore.restock_item": "从存储/背包补货物品"
+}

@@ -1,0 +1,17 @@
+
+[Tooltips]
+	#如果为TRUE，只包含单个附魔的附魔书将在提示中添加附魔描述。
+	"Show Enchantment Descriptions" = true
+	#如果为TRUE，物品将与各种关键词关联，有助于在JEI等各种菜单中搜索。
+	"Show Item Descriptions" = true
+	#如果为TRUE且启用了高级提示（F3+H），标签将尽可能添加到物品提示中。
+	"Show Item Tags" = true
+	#如果为TRUE，CoFH物品将始终显示完整详情（充能状态等），无需按住Shift。
+	"Always Show Item Details" = false
+	#如果为TRUE，CoFH物品将显示提示按住Shift查看完整详情（充能状态等）的消息。这不会改变行为，只是是否显示提示消息。
+	"Show 'Hold Shift for Details' Message" = true
+	#如果为TRUE，某些CoFH粒子将动态发光。
+	"Dynamically Light Particles" = true
+	#如果为TRUE，某些粒子在极佳图形下将使用风格化图形管线。
+	"Stylized Graphics" = true
+

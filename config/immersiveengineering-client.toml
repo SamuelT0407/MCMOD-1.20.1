@@ -1,0 +1,56 @@
+#禁用某些动态渲染模型（TESR）的大部分光照代码。可能会提高FPS。
+#影响炮塔和园艺钟罩
+disableFancyTESR = false
+#显示各种方块的文本覆盖层，例如电容器或泵的配置
+showTextOverlay = true
+#设置工程师手册的GUI缩放比例。这使用与原版GUI缩放相同的数字，因此受限于游戏内可用的最大值。
+#Range: 1 ~ 32
+manualGuiScale = 4
+#如果你视力不好，请设为true。工程师手册将切换为粗体和更深的文字以提高可读性。
+badEyesight = false
+#设为false以将手册中的流体配方改为使用桶的小数而非分数
+fluidFractions = true
+#控制物品提示是否应包含物品的标签名称。这些提示仅在高级提示模式下可见（F3+H）
+tagTooltips = true
+#增加某些方块实体（特别是风车）仍可见的距离。这是一个倍数，所以设为1是默认渲染距离，设为2是双倍距离，以此类推。
+#Range: 0.0 ~ 1.7976931348623157E308
+increasedTileRenderdistance = 1.5
+#设为false以隐藏手册中的更新新闻
+showUpdateNews = true
+#允许左轮手枪和其他IE物品在第三人称中正确持握。这使用核心模组。如果与其他动画模组冲突可以禁用。
+fancyItemHolding = true
+#设为false以禁用模板缓冲区。这在较老的GPU上可能是必要的。
+stencilBufferEnabled = true
+#不应被护耳器消音的声音列表。添加到此列表需要了解正确的声音资源名称。
+earDefenders_SoundBlacklist = []
+#使用VBO渲染某些方块。这比通常的渲染快得多，
+#但可能无法与其他模组的视觉效果正确配合
+enableVBO = true
+
+#设置所有IE电线类型RGB颜色的选项
+[wire_colors]
+	#铜线颜色
+	#Range: > -2147483648
+	copper = 11758655
+	#琥珀金线颜色
+	#Range: > -2147483648
+	electrum = 15573061
+	#钢线颜色
+	#Range: > -2147483648
+	steel = 7303023
+	#结构绳颜色
+	#Range: > -2147483648
+	structure_rope = 9862765
+	#结构钢线颜色
+	#Range: > -2147483648
+	structure_steel = 7303023
+	#红石线颜色
+	#Range: > -2147483648
+	redstone = 16723759
+	#绝缘铜线颜色
+	#Range: > -2147483648
+	copper_insulated = 16445918
+	#绝缘琥珀金线颜色
+	#Range: > -2147483648
+	electrum_insulated = 10323322
+

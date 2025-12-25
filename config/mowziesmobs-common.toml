@@ -1,0 +1,411 @@
+[tools_and_abilities]
+	# 使用“超新星 (supernova)”能力的冷却代价（单位：分钟）。
+	# 范围: > 0
+	supernova_cost = 60
+
+	[tools_and_abilities.suns_blessing]
+		# “太阳的祝福 (Sun's Blessing)”效果的持续时间（单位：分钟）。
+		# 范围: > 0
+		suns_blessing_duration = 60
+		# 太阳祝福状态下的攻击力倍率。
+		# 范围: 0.0 ~ 1.79...
+		suns_blessing_attack_multiplier = 1.0
+		# 使用“烈阳射线 (solar beam)”能力的冷却代价（单位：分钟）。
+		# 范围: > 0
+		solar_beam_cost = 5
+
+	[tools_and_abilities.wrought_helm]
+		# 设置为 true 时，铁甲将军头盔 (Wrought Helm) 将拥有有限的耐久度。
+		breakable = false
+
+		[tools_and_abilities.wrought_helm.armor_config]
+			# 护甲伤害减免倍率。参考原版 Wiki 了解护甲减免机制。
+			damage_reduction_multiplier = 1.0
+			# 护甲韧性倍率。参考原版 Wiki 了解护甲韧性机制。
+			toughness_multiplier = 1.0
+
+	[tools_and_abilities.axe_of_a_thousand_metals]
+		# 设置为 true 时，千钉之斧 (Axe of a Thousand Metals) 将拥有有限的耐久度。
+		breakable = false
+
+		[tools_and_abilities.axe_of_a_thousand_metals.tool_config]
+			# 工具攻击伤害
+			attack_damage = 9.0
+			# 工具攻击速度
+			attack_speed = 0.8999999761581421
+
+	[tools_and_abilities.sol_visage]
+		# 设置为 true 时，太阳面具 (Sol Visage) 将拥有有限的耐久度。
+		breakable = false
+		# 玩家使用太阳面具一次能召唤的 Umvuthana 追随者最大数量。
+		# 范围: 0 ~ 300
+		max_followers = 10
+
+		[tools_and_abilities.sol_visage.armor_config]
+			# 护甲伤害减免倍率。
+			damage_reduction_multiplier = 1.0
+			# 护甲韧性倍率。
+			toughness_multiplier = 1.0
+
+	[tools_and_abilities.ice_crystal]
+		# 寒冰晶体 (ice crystal) 造成的所有伤害倍率。
+		attack_multiplier = 1.0
+		# 设置为 true 时，寒冰晶体将拥有有限耐久，且在物品栏中不会自动恢复。
+		breakable = false
+		# 寒冰晶体耐久度
+		durability = 600
+		# 冻结持续时间（单位：游戏刻/Ticks，同时也适用于霜咬攻击）
+		freeze_duration = 50
+
+	[tools_and_abilities.umvuthana_mask]
+		[tools_and_abilities.umvuthana_mask.armor_config]
+			# 护甲伤害减免倍率。
+			damage_reduction_multiplier = 1.0
+			# 护甲韧性倍率。
+			toughness_multiplier = 1.0
+
+	[tools_and_abilities.geomancerArmor]
+		[tools_and_abilities.geomancerArmor.armor_config]
+			# 护甲伤害减免倍率。
+			damage_reduction_multiplier = 1.0
+			# 护甲韧性倍率。
+			toughness_multiplier = 1.0
+
+	[tools_and_abilities.spear]
+		[tools_and_abilities.spear.tool_config]
+			# 长矛攻击伤害
+			attack_damage = 5.0
+			# 长矛攻击速度
+			attack_speed = 1.600000023841858
+
+	[tools_and_abilities.naga_fang_dagger]
+		# 中毒效果的持续时间（单位：游戏刻，20 Ticks = 1秒）。
+		poison_duration = 40
+		# 背刺（从背后攻击）时的伤害倍率。
+		backstab_damage_mult = 2.0
+
+		[tools_and_abilities.naga_fang_dagger.tool_config]
+			# 纳迦毒牙匕首攻击伤害
+			attack_damage = 3.0
+			# 纳迦毒牙匕首攻击速度
+			attack_speed = 2.0
+
+	[tools_and_abilities.blowgun]
+		# 吹箭中毒效果的持续时间（单位：游戏刻）。
+		poison_duration = 40
+		# 吹箭/飞镖造成的所有伤害倍率。
+		attack_damage = 1.0
+
+	[tools_and_abilities.earthrend_gauntlet]
+		# 裂地拳套造成的所有伤害倍率。
+		attack_multiplier = 1.0
+		# 设置为 true 时，裂地拳套将拥有有限耐久，且在物品栏中不会自动恢复。
+		breakable = false
+		# 裂地拳套耐久度
+		durability = 400
+		# 设置为 false 将禁用裂地拳套的“隧道挖掘”能力。
+		enable_tunneling = true
+
+		[tools_and_abilities.earthrend_gauntlet.tool_config]
+			# 裂地拳套基础攻击伤害
+			attack_damage = 6.0
+			# 裂地拳套攻击速度
+			attack_speed = 1.2000000476837158
+
+	[tools_and_abilities.sculptor_staff]
+		# 雕塑家之杖造成的所有伤害倍率。
+		attack_multiplier = 1.0
+
+		[tools_and_abilities.sculptor_staff.tool_config]
+			# 雕塑家之杖基础攻击伤害
+			attack_damage = 3.0
+			# 雕塑家之杖攻击速度
+			attack_speed = 1.0
+
+[mobs]
+
+	[mobs.frostmaw]
+		# 是否显示霜咬 (Frostmaw) 的 Boss 血条
+		has_boss_bar = true
+		# 霜咬在睡眠时是否会恢复生命值
+		heals_out_of_battle = true
+		# 是否允许玩家偷取霜咬手中的寒冰晶体（需要特定手段！）
+		stealable_ice_crystal = true
+		# 玩家在附近重生时，霜咬是否重置生命值（防止利用重生点死磨 Boss）
+		reset_health_when_respawn = true
+
+		[mobs.frostmaw.biome_config]
+			# 除非通过数据包 (Datapack) 添加，否则 Boss 不会在模组生物群系或非主世界群系生成。
+			# 格式说明：用逗号分隔表示同时满足，用“!”表示排除。
+			biome_tags = ["forge:is_snowy,!minecraft:is_ocean,!minecraft:is_river,!minecraft:is_beach,!minecraft:is_forest,!minecraft:is_taiga"]
+			# 无论标签如何，强制允许生成的群系白名单
+			biome_whitelist = []
+			# 无论标签如何，强制禁止生成的群系黑名单
+			biome_blacklist = []
+
+		[mobs.frostmaw.generation_config]
+			# 结构/生物生成的最大区块间隔（数值越小生成越频繁）
+			# 注意：现在请使用数据包进行控制
+			generation_distance = 25
+			# 生成的最小区块间隔
+			generation_separation = 8
+			# 生成位置的最大高度 (-65 表示忽略)
+			height_max = 100.0
+			# 生成位置的最小高度
+			height_min = 50.0
+			# 生成时将避开的结构名称
+			avoid_structures = ["minecraft:villages", "minecraft:pillager_outposts"]
+
+		[mobs.frostmaw.combat_config]
+			# 缩放生物总生命值
+			health_multiplier = 1.0
+			# 缩放生物攻击伤害
+			attack_multiplier = 1.0
+
+	[mobs.umvuthi]
+		# 是否显示太阳酋长 (Umvuthi) 的 Boss 血条
+		has_boss_bar = true
+		# 脱离战斗后是否恢复生命值
+		heals_out_of_battle = true
+		# 交换太阳祝福所需的物品 ID
+		trade_which_item = "minecraft:gold_block"
+		# 交换太阳祝福所需的物品数量
+		trade_how_many = 7
+		# 玩家在附近重生时是否重置生命值
+		reset_health_when_respawn = true
+
+		[mobs.umvuthi.biome_config]
+			biome_tags = ["minecraft:is_savanna"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.umvuthi.generation_config]
+			generation_distance = 25
+			generation_separation = 8
+			height_max = 100.0
+			height_min = 50.0
+			avoid_structures = ["minecraft:villages", "minecraft:pillager_outposts"]
+
+		[mobs.umvuthi.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.ferrous_wroughtnaut]
+		# 是否显示铁甲将军 (Ferrous Wroughtnaut) 的 Boss 血条
+		has_boss_bar = true
+		# 处于非活动状态时是否恢复生命值
+		heals_out_of_battle = true
+		# 玩家在附近重生时是否重置生命值
+		reset_health_when_respawn = true
+
+		[mobs.ferrous_wroughtnaut.biome_config]
+			biome_tags = ["!minecraft:is_ocean"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.ferrous_wroughtnaut.generation_config]
+			generation_distance = 15
+			generation_separation = 5
+			height_max = 50.0
+			height_min = 20.0
+			avoid_structures = []
+
+		[mobs.ferrous_wroughtnaut.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.sculptor]
+		# 雕塑家挑战塔的高度（单位：方块）
+		test_height = 60
+		# 完成雕塑家挑战的时间限制（秒）
+		test_time_limit = 400
+		# 脱离战斗后是否恢复生命值
+		heals_out_of_battle = true
+		# 是否显示 Boss 血条
+		has_boss_bar = true
+		# 开启挑战所需的交换物品
+		trade_which_item = "mowziesmobs:bluff_rod"
+		# 开启挑战所需的交换物品数量
+		trade_how_many = 1
+		# 玩家获胜并领取奖励后，雕塑家是否消失
+		disappear_after_reward = true
+
+		[mobs.sculptor.biome_config]
+			biome_tags = ["forge:is_peak"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.sculptor.generation_config]
+			generation_distance = 25
+			generation_separation = 8
+			height_max = 200.0
+			height_min = 120.0
+			avoid_structures = []
+
+		[mobs.sculptor.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.grottol]
+		[mobs.grottol.biome_config]
+			biome_tags = ["!forge:is_mushroom"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.grottol.spawn_config]
+			# 生成率（数值越小生成越少，0 为禁用）
+			spawn_rate = 2
+			# 每次生成的最小数量
+			min_group_size = 1
+			# 每次生成的最大数量
+			max_group_size = 1
+			# 生成成功的概率（1.0 为正常，用于设置极端稀有生物）
+			extra_rarity = 1.0
+			# 允许生成的维度名称
+			dimensions = ["minecraft:overworld"]
+			# 允许在其上生成的方块 ID 列表
+			allowed_blocks = []
+			# 允许在其上生成的方块标签列表
+			allowed_block_tags = ["minecraft:base_stone_overworld"]
+			# 最大生成高度
+			height_max = 16
+			# 最小生成高度
+			height_min = -65
+			# 是否仅在黑暗中生成（类似于僵尸/骷髅）
+			needs_darkness = true
+			# 是否必须露天生成
+			needs_see_sky = false
+			# 是否必须在非露天地带生成
+			needs_cant_see_sky = true
+			# 避开的结构名称
+			avoid_structures = []
+
+		[mobs.grottol.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.lantern]
+		[mobs.lantern.biome_config]
+			biome_tags = ["minecraft:is_forest,mowziesmobs:is_magical,!forge:is_snowy"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.lantern.spawn_config]
+			spawn_rate = 5
+			min_group_size = 2
+			max_group_size = 4
+			extra_rarity = 1.0
+			dimensions = ["minecraft:overworld"]
+			allowed_blocks = []
+			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:leaves", "minecraft:logs"]
+			height_max = -65
+			height_min = 60
+			needs_darkness = true
+			needs_see_sky = false
+			needs_cant_see_sky = false
+			avoid_structures = []
+
+		[mobs.lantern.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.umvuthana]
+		# 追随者狩猎小组的生物群系设置
+		[mobs.umvuthana.biome_config]
+			biome_tags = ["minecraft:is_savanna"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.umvuthana.spawn_config]
+			spawn_rate = 5
+			min_group_size = 1
+			max_group_size = 1
+			extra_rarity = 1.0
+			dimensions = ["minecraft:overworld"]
+			allowed_blocks = []
+			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:sand"]
+			height_max = -65
+			height_min = 60
+			needs_darkness = false
+			needs_see_sky = false
+			needs_cant_see_sky = false
+			avoid_structures = ["minecraft:villages", "minecraft:pillager_outposts", "mowziesmobs:umvuthana_groves"]
+
+		[mobs.umvuthana.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.naga]
+		[mobs.naga.biome_config]
+			biome_tags = ["minecraft:is_beach,minecraft:is_mountain", "minecraft:is_beach,minecraft:is_hill"]
+			biome_whitelist = ["minecraft:stony_shore"]
+			biome_blacklist = []
+
+		[mobs.naga.spawn_config]
+			spawn_rate = 20
+			min_group_size = 1
+			max_group_size = 2
+			extra_rarity = 1.0
+			dimensions = ["minecraft:overworld"]
+			allowed_blocks = []
+			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:base_stone_overworld"]
+			height_max = -65
+			height_min = 68
+			needs_darkness = true
+			needs_see_sky = true
+			needs_cant_see_sky = false
+			avoid_structures = ["minecraft:villages", "minecraft:pillager_outposts"]
+
+		[mobs.naga.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.foliaath]
+		[mobs.foliaath.biome_config]
+			biome_tags = ["minecraft:is_jungle"]
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.foliaath.spawn_config]
+			spawn_rate = 70
+			min_group_size = 1
+			max_group_size = 4
+			extra_rarity = 1.0
+			dimensions = ["minecraft:overworld"]
+			allowed_blocks = []
+			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:leaves", "minecraft:logs"]
+			height_max = -65
+			height_min = 60
+			needs_darkness = true
+			needs_see_sky = false
+			needs_cant_see_sky = false
+			avoid_structures = ["minecraft:villages", "minecraft:pillager_outposts"]
+
+		[mobs.foliaath.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0
+
+	[mobs.bluff]
+		[mobs.bluff.biome_config]
+			biome_tags = []
+			biome_whitelist = []
+			biome_blacklist = []
+
+		[mobs.bluff.spawn_config]
+			spawn_rate = 10
+			min_group_size = 2
+			max_group_size = 3
+			extra_rarity = 1.0
+			dimensions = ["minecraft:overworld"]
+			allowed_blocks = []
+			allowed_block_tags = []
+			height_max = -65
+			height_min = -65
+			needs_darkness = true
+			needs_see_sky = false
+			needs_cant_see_sky = true
+			avoid_structures = []
+
+		[mobs.bluff.combat_config]
+			health_multiplier = 1.0
+			attack_multiplier = 1.0

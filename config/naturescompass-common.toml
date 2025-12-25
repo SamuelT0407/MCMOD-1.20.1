@@ -1,0 +1,18 @@
+
+[General]
+	#允许创造模式、管理员或作弊模式的玩家传送到定位的生物群系
+	allowTeleport = true
+	#允许玩家在HUD上查看定位结构的精确坐标和距离，而非仅依赖指南针指向的方向
+	displayCoordinates = true
+	#群系大小 * 半径修正 = 最大搜索半径。提高此值会增加搜索精度，但可能使过程更消耗资源
+	#Range: 0 ~ 1000000
+	radiusModifier = 2500
+	#群系大小 * 采样间距修正 = 采样间距。降低此值会增加搜索精度，但会使过程更消耗资源
+	#Range: 0 ~ 1000000
+	sampleSpaceModifier = 16
+	#指南针无法搜索的生物群系列表，使用资源位置指定。通配符*可匹配任意数量字符，?可匹配单个字符。例如: ["minecraft:savanna", "minecraft:desert", "minecraft:*ocean*"]
+	biomeBlacklist = []
+	#搜索生物群系时采样的最大次数
+	#Range: 0 ~ 1000000
+	maxSamples = 50000
+

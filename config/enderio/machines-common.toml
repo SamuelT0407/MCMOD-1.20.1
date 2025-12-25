@@ -1,0 +1,164 @@
+
+[energy]
+
+	[energy.alloySmelter]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 20
+		#每个原版熔炼物品消耗的能量（uI）
+		#Range: > 1
+		vanillaItemEnergy = 1500
+
+	[energy.crafter]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#合成配方的能量消耗（uI）
+		#Range: > 1
+		usage = 3200
+
+	[energy.impulseHopper]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 16
+
+	[energy.poweredSpawner]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 100000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 20
+
+	[energy.sagMill]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 20
+
+	[energy.slicer]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 100000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 30
+
+	[energy.soulBinder]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 128000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 60
+
+	[energy.stirlingGenerator]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#每机器刻执行的基础"燃烧刻"数
+		#Range: 0.001 ~ 1.7976931348623157E308
+		burnSpeed = 0.375
+		#基础效率百分比，用于确定燃烧时间
+		#Range: 1 ~ 200
+		fuelEfficiencyBase = 80
+		#每电容等级的效率增加
+		#Range: 1 ~ 200
+		fuelEfficiencyStep = 20
+		#基础发电量（uI/t）
+		#Range: > 1
+		generation = 40
+
+	[energy.paintingMachine]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 30
+		#每次喷漆操作所需能量
+		#Range: > 1
+		energyCost = 2400
+
+	[energy.photovoltaicCellRates]
+		#无雨无雷正午时的发电率
+		#Range: > 1
+		energetic = 4
+		#Range: > 1
+		pulsating = 16
+		#Range: > 1
+		vibrant = 64
+
+	[energy.capacitor_bank_capacity]
+		#电容库容量
+		#Range: > 1
+		basic = 500000
+		#Range: > 1
+		advanced = 2000000
+		#Range: > 1
+		vibrant = 4000000
+
+	[energy.wiredCharger]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 128000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 30
+
+	[energy.soul_engine]
+		#Range: > 1
+		capacity = 100000
+		#灵魂引擎基础燃烧速率
+		#Range: > 1
+		burnSpeed = 1
+		#发电量百分比增加
+		#Range: 0.001 ~ 1.7976931348623157E308
+		generation = 1.0
+
+	[energy.drain]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 10
+
+	[energy.aversion]
+		#基础能量容量（uI）
+		#Range: > 1
+		capacity = 64000
+		#基础能量消耗（uI/t）
+		#Range: > 1
+		usage = 10
+
+[enchanter]
+	#青金石成本为附魔等级乘以此值
+	lapisCostFactor = 3.0
+	#附魔的最终经验成本乘以此值。设为0.5可减半成本，设为2可加倍成本
+	levelCostFactor = 0.75
+	#附魔台所有配方的基础等级成本
+	baseLevelCost = 2
+
+[poweredSpawner]
+	#刷怪笼生成的生物数量
+	#Range: > 0
+	spawn_amount = 4
+	#范围内达到此数量的实体将关闭动力刷怪笼
+	#Range: > 0
+	maxentities = 2
+	#动力刷怪笼生成实体的方式。可选项：'ENTITYPE'生成与灵魂瓶相同类型的实体。'COPY'生成灵魂瓶中生物的精确副本
+	#允许值: ENTITYTYPE, COPY
+	"Spawn Type" = "ENTITYTYPE"
+	#刷怪笼效率开始下降前的最大数量
+	#Range: > 0
+	maxspawners = 10
+

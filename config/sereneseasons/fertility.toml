@@ -1,0 +1,14 @@
+
+[general]
+	#作物是否受季节影响
+	seasonal_crops = true
+	#作物在非当季时的行为
+	#0 = 生长缓慢
+	#1 = 无法生长
+	#2 = 尝试生长时被破坏
+	out_of_season_crop_behavior = 0
+	#非当季作物在地下能够正常生长的最大高度
+	underground_fertility_level = 48
+	#是否在作物上显示适宜生长季节的提示。注意：仅适用于已列出的作物
+	crop_tooltips = true
+

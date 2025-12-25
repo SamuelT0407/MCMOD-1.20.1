@@ -1,0 +1,24 @@
+#使蝉安静，适用于有声音库问题或觉得它们烦人的用户。
+silentCicadas = false
+#当蝉在你头上时使其安静。如果上面的选项已设为true，此选项不会有任何效果。
+silentCicadasOnHead = false
+#控制模组的各种效果是否在第一人称视角下渲染。如果觉得它们分散注意力可以关闭。
+firstPersonEffects = true
+#在物品模型上旋转战利品头颅。完全不影响性能。给那些不喜欢乐趣的人。
+rotateTrophyHeadsGui = true
+#安装Optifine时禁用提醒屏幕。
+disableOptifineNagScreen = false
+#禁用生物群系被锁定时出现的提示消息。如果你不熟悉进度系统，不建议这样做。
+disableLockedBiomeToasts = false
+#在准星上方渲染一个小勾号或叉号，显示是否已喂给任务羊那个颜色的羊毛。如果觉得它突兀可以关闭。
+questRamWoolIndicator = true
+#在云朵方块下方渲染降水效果。-1表示与通用配置同步。
+#如果性能不佳，请将此设置为较低的数字，或设置为0关闭它
+#Range: > -1
+cloudBlockPrecipitationDistance = -1
+#暮色森林巨人应使用的玩家UUID皮肤列表。
+#如果留空，巨人将显示为与查看它们的玩家相同的外观。
+giantSkinUUIDs = []
+#定义极光着色器效果将出现在哪些生物群系中。留空列表以禁用效果。
+auroraBiomes = ["twilightforest:glacier"]
+

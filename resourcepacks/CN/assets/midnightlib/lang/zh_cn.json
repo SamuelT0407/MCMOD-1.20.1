@@ -1,0 +1,14 @@
+{
+  "midnightlib.curseforge": "CurseForge",
+  "midnightlib.midnightconfig.background_texture": "配置界面背景纹理",
+  "midnightlib.midnightconfig.config_screen_list": "启用配置界面列表",
+  "midnightlib.midnightconfig.enum.ConfigButton.FALSE": "§c否",
+  "midnightlib.midnightconfig.enum.ConfigButton.MODMENU": "§bModMenu",
+  "midnightlib.midnightconfig.enum.ConfigButton.TRUE": "§a是",
+  "midnightlib.midnightconfig.title": "MidnightLib配置",
+  "midnightlib.modrinth": "Modrinth",
+  "midnightlib.overview.title": "MidnightConfig概览",
+  "midnightlib.wiki": "Wiki",
+  "modmenu.descriptionTranslation.midnightlib": "Team MidnightDust模组的通用库。\\n提供配置API、与其他模组的自动集成、通用工具和装饰品。",
+  "modmenu.summaryTranslation.midnightlib": "Team MidnightDust模组的通用库。"
+}
