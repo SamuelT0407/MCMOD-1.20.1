@@ -968,62 +968,79 @@ ServerEvents.recipes(event => {
     console.info('Loading Immersive Engineering recipes...')
 
     // ─────────────────────────────────────────────────
-    // [粉碎机] 圆石 → 沙砾 (10%几率额外沙子) 耗能2400RF
+    // [粉碎机] 圆石 → 沙砾 (10%几率额外沙子)
+    // 使用 event.custom 确保兼容性
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:crusher',
-        input: { item: 'minecraft:cobblestone' },
         result: { item: 'minecraft:gravel' },
-        secondaries: [{ output: { item: 'minecraft:sand' }, chance: 0.1 }],
-        energy: 2400
-    })
+        input: { item: 'minecraft:cobblestone' },
+        secondaries: [{ chance: 0.1, output: { item: 'minecraft:sand' } }],
+        energy: 6000
+    }).id('kubejs:crusher_cobblestone')
 
     // ─────────────────────────────────────────────────
-    // [金属压缩机] 铁锭 + 板模具 → 铁板 耗能2400RF
+    // [金属冲压机] 铁锭 + 板模具 → 铁板
+    // metal_press(output, input, mold) 或 metal_press(output, input, mold, energy)
+    // mold: plate, gear, rod, bullet_casing, wire, packing_4, packing_9, unpacking
     // ─────────────────────────────────────────────────
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        input: { item: 'minecraft:iron_ingot' },
-        mold: 'immersiveengineering:mold_plate',
-        result: { item: 'immersiveengineering:plate_iron' },
-        energy: 2400
-    })
+    event.recipes.immersiveengineering.metal_press(
+        'immersiveengineering:plate_iron',                     // 输出: 铁板
+        'minecraft:iron_ingot',                                // 输入: 铁锭
+        'immersiveengineering:mold_plate'                      // 模具: 板模具
+    )
 
     // ─────────────────────────────────────────────────
-    // [合金窑] 铜锭 + 铁锭 → 康铜锭 时间200tick
+    // [合金窑] 铜锭 + 铁锭 → 康铜锭
+    // alloy(output, input1, input2) 或 alloy(output, input1, input2, time)
     // ─────────────────────────────────────────────────
-    event.custom({
-        type: 'immersiveengineering:alloy',
-        input0: { item: 'minecraft:copper_ingot' },
-        input1: { item: 'minecraft:iron_ingot' },
-        result: { item: 'immersiveengineering:ingot_constantan' },
-        time: 200
-    })
+    event.recipes.immersiveengineering.alloy(
+        'immersiveengineering:ingot_constantan',               // 输出: 康铜锭
+        'minecraft:copper_ingot',                              // 输入1: 铜锭
+        'minecraft:iron_ingot',                                // 输入2: 铁锭
+        200                                                    // 时间: 200tick
+    )
 
     // ─────────────────────────────────────────────────
-    // [高炉] 铁锭 → 钢锭 + �ite渣 时间1200tick
+    // [高炉] 铁锭 → 钢锭 + 矿渣
+    // blast_furnace(output, input)
+    // blast_furnace(output, input, slag)
+    // blast_furnace(output, input, slag, time) - 注: 1.18.2+ time参数可能不生效
+    // 1200tick = 60秒
     // ─────────────────────────────────────────────────
-    event.custom({
-        type: 'immersiveengineering:blast_furnace',
-        input: { item: 'minecraft:iron_ingot' },
-        result: { item: 'immersiveengineering:ingot_steel' },
-        slag: { item: 'immersiveengineering:slag' },
-        time: 1200
-    })
+    event.recipes.immersiveengineering.blast_furnace(
+        'immersiveengineering:ingot_steel',                    // 输出: 钢锭
+        'minecraft:iron_ingot',                                // 输入: 铁锭
+        'immersiveengineering:slag',                           // 副产物: 矿渣
+        1200                                                   // 时间: 1200tick
+    )
 
     // ─────────────────────────────────────────────────
-    // [焦炉] 煤�ite → 焦煤 + 杂酚油(500mB) 时间1800tick
+    // [高炉燃料] 焦煤块可作为高炉燃料
+    // blast_furnace_fuel(input, time)
     // ─────────────────────────────────────────────────
-    event.custom({
-        type: 'immersiveengineering:coke_oven',
-        input: { item: 'minecraft:coal' },
-        result: { item: 'immersiveengineering:coal_coke' },
-        creosote: 500,
-        time: 1800
-    })
+    event.recipes.immersiveengineering.blast_furnace_fuel(
+        'immersiveengineering:coke',                           // 输入: 焦煤
+        1200                                                   // 燃烧时间: 1200tick
+    )
 
     // ─────────────────────────────────────────────────
-    // [榨汁机] 甜菜根 → 甜菜种子 + 植物油(80mB) 耗能6400RF
+    // [焦炉] 煤炭 → 焦煤 + 杂酚油(500mB)
+    // coke_oven(output, input)
+    // coke_oven(output, input, creosote)
+    // coke_oven(output, input, creosote, time)
+    // ─────────────────────────────────────────────────
+    event.recipes.immersiveengineering.coke_oven(
+        'immersiveengineering:coal_coke',                      // 输出: 焦煤
+        'minecraft:coal',                                      // 输入: 煤炭
+        500,                                                   // 杂酚油产量: 500mB
+        1800                                                   // 时间: 1800tick
+    )
+
+    // ─────────────────────────────────────────────────
+    // [榨汁机] 甜菜根 → 植物油(80mB) + 甜菜种子
+    // 注意: 使用 event.custom 以确保兼容性
+    // 流体输出使用 fluid 对象，物品输出使用 result 对象
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:squeezer',
@@ -1031,10 +1048,11 @@ ServerEvents.recipes(event => {
         result: { item: 'minecraft:beetroot_seeds' },
         fluid: { fluid: 'immersiveengineering:plantoil', amount: 80 },
         energy: 6400
-    })
+    }).id('kubejs:squeezer_beetroot')
 
     // ─────────────────────────────────────────────────
-    // [发酵罐] 甘蔗 → 纸 + 乙醇(80mB) 耗能6400RF
+    // [发酵罐] 甘蔗 → 乙醇(80mB) + 纸
+    // 注意: 使用 event.custom 以确保兼容性
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:fermenter',
@@ -1042,7 +1060,233 @@ ServerEvents.recipes(event => {
         result: { item: 'minecraft:paper' },
         fluid: { fluid: 'immersiveengineering:ethanol', amount: 80 },
         energy: 6400
-    })
+    }).id('kubejs:fermenter_sugar_cane')
+
+    // ─────────────────────────────────────────────────
+    // [电弧炉] 铁矿石 + 添加剂 → 钢锭x2 + 矿渣
+    // 使用 event.custom 以确保正确的 JSON 格式
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        results: [{ item: 'immersiveengineering:ingot_steel', count: 2 }],
+        input: { item: 'minecraft:raw_iron' },
+        additives: [{ item: 'immersiveengineering:coal_coke' }],
+        slag: { item: 'immersiveengineering:slag' },
+        time: 200,
+        energy: 102400
+    }).id('kubejs:arc_furnace_steel')
+
+    // ─────────────────────────────────────────────────
+    // [电弧炉-无添加剂] 粗铁 → 铁锭x2
+    // 注意: 必须有 additives 数组，即使为空
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        results: [{ item: 'minecraft:iron_ingot', count: 2 }],
+        input: { item: 'minecraft:raw_iron' },
+        additives: [],  // 必须有这个键
+        time: 100,
+        energy: 51200
+    }).id('kubejs:arc_furnace_raw_iron')
+
+    // ─────────────────────────────────────────────────
+    // [工程师蓝图] blueprint(output, inputs[], blueprint)
+    // Blueprint 类型说明:
+    //   - components   : 合成用零件蓝图 (制作各种机械零件)
+    //   - molds        : 金属冲压蓝图 (制作金属冲压模具)
+    //   - bullet       : 弹药蓝图 (制作左轮手枪弹药)
+    //   - specialBullet: 特殊弹药蓝图 (制作特殊效果弹药)
+    //   - bannerpatterns: 旗帜图案蓝图 (制作工程师旗帜图案)
+    //   - electrode    : 电极蓝图 (制作电弧炉电极)
+    // ─────────────────────────────────────────────────
+
+    // 1. 合成用零件蓝图 - 机械零件
+    event.recipes.immersiveengineering.blueprint(
+        'immersiveengineering:component_iron',                 // 输出: 铁机械零件
+        ['2x minecraft:iron_ingot', 'minecraft:copper_ingot'], // 输入: 铁锭x2 + 铜锭
+        'components'                                           // 蓝图类型: 制作零件
+    )
+
+    // 2. molds 蓝图 - 金属冲压
+    event.recipes.immersiveengineering.blueprint(
+        'immersiveengineering:mold_plate',                     // 输出: 板模具
+        ['3x immersiveengineering:plate_steel'],               // 输入: 钢板x3
+        'molds'                                                // 蓝图类型: 制作模具
+    )
+
+    // 3. bullet 蓝图 - 弹药
+    event.recipes.immersiveengineering.blueprint(
+        '2x immersiveengineering:casull',                      // 输出: 卡萨尔弹药x2
+        [
+            'immersiveengineering:empty_casing',               // 空弹壳
+            'minecraft:gunpowder',                              // 火药
+            'minecraft:iron_nugget'                             // 铁粒
+        ],
+        'bullet'                                               // 蓝图类型: 弹药
+    )
+
+    // 4. specialBullet 蓝图 - 特殊弹药
+    event.recipes.immersiveengineering.blueprint(
+        'immersiveengineering:firework',                       // 输出: 烟花弹
+        [
+            'immersiveengineering:empty_casing',               // 空弹壳
+            'minecraft:firework_rocket'                         // 烟花火箭
+        ],
+        'specialBullet'                                        // 蓝图类型: 特殊弹药
+    )
+
+    // 5. bannerpatterns 蓝图 - 旗帜图案
+    // 注意: 旗帜图案物品ID可能因版本而异，请在游戏内用 /kubejs hand 确认
+    // IE 1.20 中旗帜图案可能叫 hammer_banner_pattern 或类似名称
+    event.recipes.immersiveengineering.blueprint(
+        'minecraft:paper',                                      // 输出: 临时使用纸张测试
+        ['minecraft:paper', 'immersiveengineering:hammer'],     // 输入: 纸 + 工程师锤
+        'bannerpatterns'                                        // 蓝图类型: 旗帜图案
+    )
+
+    // 6. electrode 蓝图 - 电极
+    event.recipes.immersiveengineering.blueprint(
+        'immersiveengineering:graphite_electrode',             // 输出: 石墨电极
+        ['8x immersiveengineering:coal_coke'],                 // 输入: 焦煤x8
+        'electrode'                                            // 蓝图类型: 电极
+    )
+
+    // ─────────────────────────────────────────────────
+    // [灘装机] 桶 + 水(1000mB) → 水桶
+    // 注意: IE 流体输入必须使用标签 (tag) 格式
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:bottling_machine',
+        results: [{ item: 'minecraft:water_bucket' }],
+        fluid: { tag: 'minecraft:water', amount: 1000 },  // 使用 tag 而不是 fluid
+        input: { item: 'minecraft:bucket' }
+    }).id('kubejs:bottling_water_bucket')
+
+    // ─────────────────────────────────────────────────
+    // [园艺玻璃罩] 小麦种子 + 泥土 → 小麦
+    // 使用 event.custom 以确保兼容性
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:cloche',
+        results: [
+            { item: 'minecraft:wheat' },
+            { item: 'minecraft:wheat_seeds' }
+        ],
+        input: { item: 'minecraft:wheat_seeds' },
+        soil: { item: 'minecraft:dirt' },
+        time: 800,
+        render: { type: 'crop', block: 'minecraft:wheat' }
+    }).id('kubejs:cloche_wheat')
+
+    // ─────────────────────────────────────────────────
+    // [园艺玻璃罩-树苗] 橡木树苗 + 泥土 → 橡木原木
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:cloche',
+        results: [
+            { item: 'minecraft:oak_log' },
+            { item: 'minecraft:oak_sapling' }
+        ],
+        input: { item: 'minecraft:oak_sapling' },
+        soil: { item: 'minecraft:dirt' },
+        time: 1200,
+        render: { type: 'generic', block: 'minecraft:oak_sapling' }
+    }).id('kubejs:cloche_oak')
+
+    // ─────────────────────────────────────────────────
+    // [肥料] 骨粉作为园艺玻璃罩的肥料，1.25倍催化效率
+    // fertilizer(input) 或 fertilizer(input, growthModifier)
+    // ─────────────────────────────────────────────────
+    event.recipes.immersiveengineering.fertilizer(
+        'minecraft:bone_meal',                                  // 输入: 骨粉
+        1.25                                                    // 催化效率: 1.25倍
+    )
+
+    // ─────────────────────────────────────────────────
+    // [混合器] 沙子x4 + 沙砾x4 + 水(500mB) → 混凝土
+    // 注意: IE 流体输入必须使用标签 (tag) 格式
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:mixer',
+        result: { fluid: 'immersiveengineering:concrete', amount: 500 },
+        fluid: { tag: 'minecraft:water', amount: 500 },  // 使用 tag 而不是 fluid
+        inputs: [
+            { count: 4, item: 'minecraft:sand' },
+            { count: 4, item: 'minecraft:gravel' }
+        ],
+        energy: 3200
+    }).id('kubejs:mixer_concrete')
+
+    // ─────────────────────────────────────────────────
+    // [精炼厂] 植物油 + 乙醇 → 生物柴油
+    // 注意: IE 流体输入必须使用标签 (tag) 格式
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:refinery',
+        result: { fluid: 'immersiveengineering:biodiesel', amount: 16 },
+        input0: { tag: 'forge:plantoil', amount: 8 },  // 使用 tag
+        input1: { tag: 'forge:ethanol', amount: 8 },   // 使用 tag
+        energy: 80
+    }).id('kubejs:refinery_biodiesel')
+
+    // ─────────────────────────────────────────────────
+    // [精炼厂-带催化剂] 使用催化剂提高效率
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:refinery',
+        result: { fluid: 'immersiveengineering:biodiesel', amount: 20 },
+        input0: { tag: 'forge:plantoil', amount: 8 },  // 使用 tag
+        input1: { tag: 'forge:ethanol', amount: 8 },   // 使用 tag
+        catalyst: { item: 'minecraft:blaze_powder' },
+        energy: 80
+    }).id('kubejs:refinery_biodiesel_catalyst')
+
+    // ─────────────────────────────────────────────────
+    // [锯木机] 橡木原木 → 橡木木板x6 + 锯末
+    // 使用 event.custom 以确保正确的 JSON 格式
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:sawmill',
+        result: { item: 'minecraft:oak_planks', count: 6 },
+        input: { item: 'minecraft:oak_log' },
+        stripped: { item: 'minecraft:stripped_oak_log' },
+        secondaries: [
+            { stripping: true, output: { item: 'immersiveengineering:dust_wood' } },
+            { stripping: false, output: { item: 'minecraft:stick' } }
+        ],
+        energy: 1600
+    }).id('kubejs:sawmill_oak_log')
+
+    // ─────────────────────────────────────────────────
+    // [锯木机-简单] 木板 → 木棍
+    // 注意: 必须有 secondaries 数组，即使为空
+    // ─────────────────────────────────────────────────
+    event.custom({
+        type: 'immersiveengineering:sawmill',
+        result: { item: 'minecraft:stick', count: 4 },
+        input: { tag: 'minecraft:planks' },
+        secondaries: [],  // 必须有这个键
+        energy: 800
+    }).id('kubejs:sawmill_planks')
+
+    // ─────────────────────────────────────────────────
+    // [热传导发电机] 岩浆块作为热源 (1500开尔文)
+    // thermoelectric_source(heat_source, tempKelvin)
+    // 温度 > 300K = 热源, < 300K = 冷源
+    // 两者温差越大，发电效率越高
+    // ─────────────────────────────────────────────────
+    event.recipes.immersiveengineering.thermoelectric_source(
+        'minecraft:magma_block',                                // 方块: 岩浆块
+        1500                                                    // 温度: 1500开尔文 (热源)
+    )
+
+    // ─────────────────────────────────────────────────
+    // [热传导发电机] 蓝冰作为冷源 (50开尔文)
+    // ─────────────────────────────────────────────────
+    event.recipes.immersiveengineering.thermoelectric_source(
+        'minecraft:blue_ice',                                   // 方块: 蓝冰
+        50                                                      // 温度: 50开尔文 (冷源)
+    )
 
     console.info('Immersive Engineering recipes loaded!')
 
