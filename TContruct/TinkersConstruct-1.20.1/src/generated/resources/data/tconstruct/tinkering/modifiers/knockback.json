@@ -1,0 +1,24 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "tconstruct:knockback",
+      "allow": "projectile",
+      "each_level": 0.5
+    },
+    {
+      "type": "tconstruct:attribute",
+      "attribute": "minecraft:generic.attack_knockback",
+      "each_level": 1.0,
+      "operation": "addition",
+      "slots": [
+        "mainhand",
+        "feet",
+        "legs",
+        "chest",
+        "head"
+      ]
+    }
+  ],
+  "tooltip_display": "always"
+}

@@ -1,0 +1,14 @@
+1.0.4
+- Fix stat modifier parameter order
+
+1.0.3
+- Add optional
+
+1.0.2
+- Fix crash on cooling time
+
+1.0.1
+- recipe helper refactor
+
+1.0.0
+- Initial release

@@ -1038,7 +1038,7 @@ ServerEvents.recipes(event => {
     )
 
     // ─────────────────────────────────────────────────
-    // [榨汁机] 甜菜根 → 植物油(80mB) + 甜菜种子
+    // [工业挤压机] 甜菜根 → 植物油(80mB) + 甜菜种子
     // 注意: 使用 event.custom 以确保兼容性
     // 流体输出使用 fluid 对象，物品输出使用 result 对象
     // ─────────────────────────────────────────────────
@@ -1063,15 +1063,18 @@ ServerEvents.recipes(event => {
     }).id('kubejs:fermenter_sugar_cane')
 
     // ─────────────────────────────────────────────────
-    // [电弧炉] 铁矿石 + 添加剂 → 钢锭x2 + 矿渣
-    // 使用 event.custom 以确保正确的 JSON 格式
+    // [电弧炉] 粗铁 + 焦煤 → 钢锭x2 + 矿渣 + 50%额外钢锭
+    // secondaries: 副产物数组，包含 output 和 chance
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:arc_furnace',
-        results: [{ item: 'immersiveengineering:ingot_steel', count: 2 }],
+        results: [{ item: 'immersiveengineering:ingot_steel', count: 2 }],  // 100%掉2个
         input: { item: 'minecraft:raw_iron' },
         additives: [{ item: 'immersiveengineering:coal_coke' }],
         slag: { item: 'immersiveengineering:slag' },
+        secondaries: [
+            { output: { item: 'immersiveengineering:ingot_steel' }, chance: 0.5 }  // 50%额外1个
+        ],
         time: 200,
         energy: 102400
     }).id('kubejs:arc_furnace_steel')
@@ -1152,13 +1155,13 @@ ServerEvents.recipes(event => {
     )
 
     // ─────────────────────────────────────────────────
-    // [灘装机] 桶 + 水(1000mB) → 水桶
+    // [灌装机] 桶 + 水(1000mB) → 水桶
     // 注意: IE 流体输入必须使用标签 (tag) 格式
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:bottling_machine',
         results: [{ item: 'minecraft:water_bucket' }],
-        fluid: { tag: 'minecraft:water', amount: 1000 },  // 使用 tag 而不是 fluid
+        fluid: { tag: 'forge:water/water', amount: 1000 },
         input: { item: 'minecraft:bucket' }
     }).id('kubejs:bottling_water_bucket')
 
@@ -1203,16 +1206,17 @@ ServerEvents.recipes(event => {
     )
 
     // ─────────────────────────────────────────────────
-    // [混合器] 沙子x4 + 沙砾x4 + 水(500mB) → 混凝土
+    // [搅拌器] 沙子 + 沙砾 + 水(500mB) → 液态混凝土
     // 注意: IE 流体输入必须使用标签 (tag) 格式
+    // IE 物品输入使用 IngredientWithSize 格式
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:mixer',
         result: { fluid: 'immersiveengineering:concrete', amount: 500 },
-        fluid: { tag: 'minecraft:water', amount: 500 },  // 使用 tag 而不是 fluid
+        fluid: { tag: 'forge:water/water', amount: 500 },
         inputs: [
-            { count: 4, item: 'minecraft:sand' },
-            { count: 4, item: 'minecraft:gravel' }
+            { item: 'minecraft:sand' },
+            { item: 'minecraft:gravel' }
         ],
         energy: 3200
     }).id('kubejs:mixer_concrete')
@@ -1224,7 +1228,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'immersiveengineering:refinery',
         result: { fluid: 'immersiveengineering:biodiesel', amount: 16 },
-        input0: { tag: 'forge:plantoil', amount: 8 },  // 使用 tag
+        input0: { tag: 'forge:food_oil', amount: 8 },  // 使用 tag
         input1: { tag: 'forge:ethanol', amount: 8 },   // 使用 tag
         energy: 80
     }).id('kubejs:refinery_biodiesel')
@@ -1235,7 +1239,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'immersiveengineering:refinery',
         result: { fluid: 'immersiveengineering:biodiesel', amount: 20 },
-        input0: { tag: 'forge:plantoil', amount: 8 },  // 使用 tag
+        input0: { tag: 'forge:food_oil', amount: 8 },  // 使用 tag
         input1: { tag: 'forge:ethanol', amount: 8 },   // 使用 tag
         catalyst: { item: 'minecraft:blaze_powder' },
         energy: 80
@@ -1269,74 +1273,231 @@ ServerEvents.recipes(event => {
         energy: 800
     }).id('kubejs:sawmill_planks')
 
-    // ─────────────────────────────────────────────────
-    // [热传导发电机] 岩浆块作为热源 (1500开尔文)
-    // thermoelectric_source(heat_source, tempKelvin)
-    // 温度 > 300K = 热源, < 300K = 冷源
-    // 两者温差越大，发电效率越高
-    // ─────────────────────────────────────────────────
-    event.recipes.immersiveengineering.thermoelectric_source(
-        'minecraft:magma_block',                                // 方块: 岩浆块
-        1500                                                    // 温度: 1500开尔文 (热源)
-    )
-
-    // ─────────────────────────────────────────────────
-    // [热传导发电机] 蓝冰作为冷源 (50开尔文)
-    // ─────────────────────────────────────────────────
-    event.recipes.immersiveengineering.thermoelectric_source(
-        'minecraft:blue_ice',                                   // 方块: 蓝冰
-        50                                                      // 温度: 50开尔文 (冷源)
-    )
-
     console.info('Immersive Engineering recipes loaded!')
 
     // ╔════════════════════════════════════════════════╗
-    // ║  5. TCONSTRUCT JS 匠魂                         ║
+    // ║  5. TCONSTRUCT JS 匠魂3 (1.20.1)               ║
     // ╚════════════════════════════════════════════════╝
+    // 需要安装: TConstruct JS 插件
+    // 文档: https://wiki.mango-kubejs.pages.dev/zh-tw/addons/TConstruct_JS/
     console.info('Loading TConstruct JS recipes...')
 
     const { tconstruct } = event.recipes
 
-    // ─────────────────────────────────────────────────
-    // [冶炼炉-合金] 熔融铜(108mB) + 熔融锡(36mB) → 熔融青铜(144mB)
-    // ─────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════
+    // 1. 合金 (Alloy)
+    // ══════════════════════════════════════════════════
+    // alloy(result, inputs[], temperature?)
+    // 流体量参考: 1粒=10mB, 1锭=90mB, 1宝石=100mB, 1块=810mB
+    // ──────────────────────────────────────────────────
+
+    // 青铜合金: 铜3 + 锡1 = 青铜4 (3:1比例)
+    // 标准产出: 4锭 = 360mB
     tconstruct.alloy(
-        Fluid.of('tconstruct:molten_bronze', 144),
+        Fluid.of('tconstruct:molten_bronze', 360),       // 输出: 4锭
         [
-            Fluid.of('tconstruct:molten_copper', 108),
-            Fluid.of('tconstruct:molten_tin', 36)
-        ],
-        760  // 温度
-    )
+            Fluid.of('tconstruct:molten_copper', 270),   // 铜: 3锭 = 270mB
+            Fluid.of('tconstruct:molten_tin', 90)        // 锡: 1锭 = 90mB
+        ]).temperature(500)
 
-    // ─────────────────────────────────────────────────
-    // [浇铸台] 熔融铁(144mB) + 铸件 → 铁锭
-    // ─────────────────────────────────────────────────
+    // 琥珀金合金: 金1 + 银1 = 琥珀金2 (1:1比例)
+    tconstruct.alloy(
+        Fluid.of('tconstruct:molten_electrum', 180),     // 输出: 2锭
+        [
+            Fluid.of('tconstruct:molten_gold', 90),      // 金: 1锭
+            Fluid.of('tconstruct:molten_silver', 90)     // 银: 1锭
+        ]).temperature(760)
+
+    // ══════════════════════════════════════════════════
+    // 2. 浇铸台 (Casting Table)
+    // ══════════════════════════════════════════════════
+    // casting_table(result, fluid, cast?, cast_consumed?, cooling_time?, switch_slots?)
+    // cast_consumed 默认 false (铸件不消耗)
+    // cooling_time 必填
+    // switch_slots 默认 false (是否交换槽位)
+    // ──────────────────────────────────────────────────
+
+    // 基础浇铸: 熔融铁 + 锭铸件 → 铁锭
     tconstruct.casting_table(
-        'minecraft:iron_ingot',
-        Fluid.of('tconstruct:molten_iron', 144),
-        'tconstruct:ingot_cast'
-    ).cast_consumed(false).cooling_time(1.0)
+        'minecraft:iron_ingot',                          // 输出
+        Fluid.of('tconstruct:molten_iron', 90),         // 流体 (1锭 = 90mB)
+        'tconstruct:ingot_cast'                          // 铸件
+    ).cooling_time(60)                                   // 冷却时间 (tick)
 
-    // ─────────────────────────────────────────────────
-    // [浇铸盆] 熔融铁(1296mB) → 铁块 (无需铸件)
-    // ─────────────────────────────────────────────────
+    // 使用所有可选方法
+    tconstruct.casting_table(
+        'minecraft:gold_nugget',
+        Fluid.of('tconstruct:molten_gold', 10),          // 1粒 = 10mB
+        'tconstruct:nugget_cast'
+    )
+        .cast_consumed(false)                            // 铸件不消耗
+        .cooling_time(20)                               // 冷却时间 (tick)
+        .switch_slots(false)                             // 不交换槽位
+
+    // 消耗性铸件 (如沙铸件)
+    tconstruct.casting_table(
+        'minecraft:diamond',
+        Fluid.of('tconstruct:molten_diamond', 100),
+        'tconstruct:gem_sand_cast'                       // 沙铸件
+    ).cast_consumed(true).cooling_time(80)               // 消耗铸件 + 冷却时间
+
+    // ══════════════════════════════════════════════════
+    // 3. 浇铸盆 (Casting Basin)
+    // ══════════════════════════════════════════════════
+    // casting_basin(result, fluid, cast?, cast_consumed?, cooling_time?, switch_slots?)
+    // 默认值同 casting_table
+    // ──────────────────────────────────────────────────
+
+    // 无铸件浇铸: 熔融铁(810mB) → 铁块
     tconstruct.casting_basin(
         'minecraft:iron_block',
-        Fluid.of('tconstruct:molten_iron', 1296)
-    ).cooling_time(1.0)
+        Fluid.of('tconstruct:molten_iron', 810)         // 1块 = 9锭 = 810mB
+    ).cooling_time(200)                                  // 大块物品冷却更慢
 
-    // ─────────────────────────────────────────────────
-    // [冶炼炉-燃料] 岩浆(50mB) = 100tick持续时间
-    // melting_fuel 需要使用 event.custom() 因为需要 rate 字段
-    // ─────────────────────────────────────────────────
+    // 带铸件的盆浇铸
+    tconstruct.casting_basin(
+        'minecraft:obsidian',
+        Fluid.of('minecraft:lava', 1000),
+        'minecraft:water_bucket'                         // 以水桶作为"铸件"
+    ).cast_consumed(true).cooling_time(120)              // 消耗水桶 + 冷却时间
+
+    // ══════════════════════════════════════════════════
+    // 4. 铸件复制 (Cast Duplication)
+    // ══════════════════════════════════════════════════
+    // table_duplication(cast, fluid, cooling_time?)
+    // basin_duplication(cast, fluid, cooling_time?)
+    // 用金液体复制已有铸件
+    // ──────────────────────────────────────────────────
+
+    // 浇铸台铸件复制
+    tconstruct.table_duplication(
+        'tconstruct:ingot_cast',                         // 要复制的铸件
+        Fluid.of('tconstruct:molten_gold', 90)
+    ).cooling_time(60)
+
+    // 浇铸盆铸件复制 (大型铸件)
+    tconstruct.basin_duplication(
+        'tconstruct:plate_cast',
+        Fluid.of('tconstruct:molten_gold', 180)
+    ).cooling_time(60)
+
+    // ══════════════════════════════════════════════════
+    // 5. 燃料 (Melting Fuel)
+    // ══════════════════════════════════════════════════
+    // ⚠️ 警告: TConstruct JS API 缺少 rate 字段！
+    // 使用 event.custom 并添加 rate 字段
+    // ──────────────────────────────────────────────────
+
+    // 岩浆作为燃料 (使用 event.custom)
     event.custom({
         type: 'tconstruct:melting_fuel',
         fluid: { fluid: 'minecraft:lava', amount: 50 },
         duration: 100,
         temperature: 1000,
-        rate: 1  // 必须参数！熔化速率
-    })
+        rate: 1
+    }).id('kubejs:tconstruct_fuel_lava')
+
+    // ══════════════════════════════════════════════════
+    // 6. 物品熔融 (Melting)
+    // ══════════════════════════════════════════════════
+    // melting(result, ingredient, temperature?, time?)
+    // temperature: 需要的最低温度(K)
+    // time: 熔融时间(tick)
+    // ──────────────────────────────────────────────────
+
+    // 钻石熔融 (参考官方示例)
+    tconstruct.melting(
+        Fluid.of('tconstruct:molten_diamond', 100),      // 输出: 1宝石 = 100mB
+        'minecraft:diamond'                              // 输入: 钻石
+    ).temperature(1450).time(80)                         // 1450K, 80tick
+
+    // 铁锭熔融
+    tconstruct.melting(
+        Fluid.of('tconstruct:molten_iron', 90),          // 输出: 1锭 = 90mB
+        'minecraft:iron_ingot'
+    ).temperature(800).time(60)
+
+    // 粗矿石熔融 (产出更多)
+    tconstruct.melting(
+        Fluid.of('tconstruct:molten_iron', 120),         // 1.33倍产出
+        'minecraft:raw_iron'
+    ).temperature(800).time(90)
+
+    // ══════════════════════════════════════════════════
+    // 7. 铸模成形 (Molding)
+    // ══════════════════════════════════════════════════
+    // molding_table(result, pattern, material)
+    // molding_basin(result, pattern, material)
+    // 使用模具将物品压制成型
+    // ──────────────────────────────────────────────────
+
+    // 铸模成形: 苹果 + 木棍 → 苹果 + 钻石 (参考官方示例)
+    tconstruct.molding_table('minecraft:diamond', 'minecraft:apple', 'minecraft:stick')
+
+    // ══════════════════════════════════════════════════
+    // 8. 自定义特性 (Modifiers) - 需要 startup_scripts
+    // ══════════════════════════════════════════════════
+    // 特性需要在 startup_scripts 中定义
+    // 使用 TConJSEvents.modifierRegistry 事件
+    //
+    // 示例 (放在 startup_scripts/tconstruct_modifiers.js):
+    // ──────────────────────────────────────────────────
+    /*
+    TConJSEvents.modifierRegistry((event) => {
+        // 创建空特性 (在 server_scripts 中实现逻辑)
+        event.createEmpty("kubejs:my_modifier");
+
+        // 创建完整特性
+        event.createNew("kubejs:dash", builder => {
+            // 右键使用工具时触发
+            builder.onUseTool((view, lvl, player, hand, source) => {
+                player.addItemCooldown(view.getItem(), 200 - lvl * 20);
+                player.setDeltaMovement(player.lookAngle.multiply(lvl * 2, 1, lvl * 2));
+                return true;
+            });
+        });
+
+        // 带属性修改的特性
+        event.createNew("kubejs:tough_skin", builder => {
+            builder.addToolStats((view, lvl, statsBuilder) => {
+                TinkerToolStats.DURABILITY.multiply(statsBuilder, 1 + lvl * 0.1);
+                TinkerToolStats.ATTACK_DAMAGE.add(statsBuilder, lvl * 0.5);
+            }).isSingleLevel();  // 只有一级
+        });
+
+        // 攻击时触发的特性
+        event.createNew("kubejs:poison", builder => {
+            builder.getMeleeDamage((view, lvl, context, baseDamage, finalDamage) => {
+                // 返回修改后的伤害
+                return finalDamage + lvl * 2;
+            });
+            builder.onAfterMeleeHit((view, lvl, context, damage) => {
+                // 攻击后给目标施加中毒
+                context.target.potionEffects.add("minecraft:poison", 100 * lvl, lvl - 1);
+            });
+        });
+    });
+    */
+
+    // ══════════════════════════════════════════════════
+    // 9. 工具类 (Utils) - 用于特性开发
+    // ══════════════════════════════════════════════════
+    /*
+    可用工具类:
+    - SimpleTCon: 简化匠魂操作
+    - TinkerDamageHelper: 伤害计算辅助
+    - TinkerToolStats: 工具属性常量
+      - DURABILITY (耐久)
+      - ATTACK_DAMAGE (攻击伤害)
+      - ATTACK_SPEED (攻击速度)
+      - MINING_SPEED (挖掘速度)
+      - HARVEST_TIER (挖掘等级)
+      - PROJECTILE_DAMAGE (投射物伤害)
+
+    修改属性方法:
+    - TinkerToolStats.STAT.add(statsBuilder, value)      // 加法
+    - TinkerToolStats.STAT.multiply(statsBuilder, value) // 乘法
+    */
 
     console.info('TConstruct JS recipes loaded!')
 
