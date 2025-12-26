@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "compatibleSoilTags": [
+    "end_stone"
+  ],
+  "display": {
+    "block": "minecraft:end_stone"
+  },
+  "mod": "minecraft",
+  "soil": {
+    "item": "minecraft:end_stone"
+  },
+  "tickModifier": 1.0
+}

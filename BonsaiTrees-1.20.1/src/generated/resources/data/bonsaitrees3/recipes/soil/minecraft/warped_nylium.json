@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "compatibleSoilTags": [
+    "warped"
+  ],
+  "display": {
+    "block": "minecraft:warped_nylium"
+  },
+  "mod": "minecraft",
+  "soil": {
+    "item": "minecraft:warped_nylium"
+  },
+  "tickModifier": 1.0
+}

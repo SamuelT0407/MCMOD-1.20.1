@@ -973,6 +973,14 @@ ServerEvents.recipes(event => {
     // ─────────────────────────────────────────────────
     event.custom({
         type: 'immersiveengineering:crusher',
+        input: { item: 'minecraft:coal_block' },
+        result: { item: 'minecraft:diamond' },
+        secondaries: [],
+        energy: 2400
+    }).id('kubejs:crusher_diamond')
+
+    event.custom({
+        type: 'immersiveengineering:crusher',
         result: { item: 'minecraft:gravel' },
         input: { item: 'minecraft:cobblestone' },
         secondaries: [{ chance: 0.1, output: { item: 'minecraft:sand' } }],
@@ -1394,7 +1402,7 @@ ServerEvents.recipes(event => {
         fluid: { fluid: 'minecraft:lava', amount: 50 },
         duration: 100,
         temperature: 1000,
-        rate: 1
+        rate: 10 // 1x
     }).id('kubejs:tconstruct_fuel_lava')
 
     // ══════════════════════════════════════════════════
@@ -1437,43 +1445,129 @@ ServerEvents.recipes(event => {
     // ══════════════════════════════════════════════════
     // 8. 自定义特性 (Modifiers) - 需要 startup_scripts
     // ══════════════════════════════════════════════════
-    // 特性需要在 startup_scripts 中定义
+    // ⚠️ 特性必须在 startup_scripts 中定义，不是 server_scripts！
     // 使用 TConJSEvents.modifierRegistry 事件
     //
-    // 示例 (放在 startup_scripts/tconstruct_modifiers.js):
+    // 文件位置: kubejs/startup_scripts/tconstruct_modifiers.js
     // ──────────────────────────────────────────────────
     /*
     TConJSEvents.modifierRegistry((event) => {
-        // 创建空特性 (在 server_scripts 中实现逻辑)
+
+        // ─────────────────────────────────────────────
+        // 1. 创建空特性 (只注册 ID)
+        // ─────────────────────────────────────────────
         event.createEmpty("kubejs:my_modifier");
 
-        // 创建完整特性
+        // ─────────────────────────────────────────────
+        // 2. 冲刺特性 - 右键使用工具触发
+        // ─────────────────────────────────────────────
         event.createNew("kubejs:dash", builder => {
-            // 右键使用工具时触发
             builder.onUseTool((view, lvl, player, hand, source) => {
+                // 给工具添加冷却
                 player.addItemCooldown(view.getItem(), 200 - lvl * 20);
+                // 向玩家视线方向冲刺
                 player.setDeltaMovement(player.lookAngle.multiply(lvl * 2, 1, lvl * 2));
+                return true; // 返回 true 表示成功使用
+            });
+        });
+
+        // ─────────────────────────────────────────────
+        // 3. 坚韧特性 - 修改工具基础属性
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:tough_skin", builder => {
+            builder.addToolStats((view, lvl, statsBuilder) => {
+                // 每级增加 10% 耐久
+                TinkerToolStats.DURABILITY.multiply(statsBuilder, 1 + lvl * 0.1);
+                // 每级增加 0.5 攻击伤害
+                TinkerToolStats.ATTACK_DAMAGE.add(statsBuilder, lvl * 0.5);
+            }).isSingleLevel();  // 标记为单级特性
+        });
+
+        // ─────────────────────────────────────────────
+        // 4. 毒素特性 - 攻击时触发效果
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:poison", builder => {
+            // 修改伤害值
+            builder.getMeleeDamage((view, lvl, context, baseDamage, finalDamage) => {
+                return finalDamage + lvl * 2; // 每级增加 2 点伤害
+            });
+            // 攻击后施加效果
+            builder.onAfterMeleeHit((view, lvl, context, damage) => {
+                context.livingTarget.potionEffects.add("minecraft:poison", 100 * lvl, lvl - 1);
+            });
+        });
+
+        // ─────────────────────────────────────────────
+        // 5. 速度特性 - 修改玩家属性
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:speedy", builder => {
+            builder.addAttributes((view, lvl, slot, attributes) => {
+                attributes.put(
+                    "minecraft:generic.movement_speed",
+                    builder.getAttributeModifier(
+                        "b444bae1-abde-41ed-8688-f75a469fdbf4", // UUID
+                        "speedy_modifier",                       // 名称
+                        lvl * 0.1,                              // 每级 +10% 速度
+                        "multiply_base"                          // 操作类型
+                    )
+                );
+                return attributes;
+            });
+        });
+
+        // ─────────────────────────────────────────────
+        // 6. 血怒特性 - 低血量时增加挖掘速度
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:blood_rage", builder => {
+            builder.getBreakSpeed((view, lvl, event, direction, canDrop, currentSpeed) => {
+                let entity = event.entity;
+                if (entity.health / entity.maxHealth < 0.5) {
+                    event.newSpeed = currentSpeed * (1 + lvl * 0.2); // 每级 +20%
+                }
+            });
+        });
+
+        // ─────────────────────────────────────────────
+        // 7. 吸血特性 - 治疗攻击者
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:lifesteal", builder => {
+            builder.onAfterMeleeHit((view, lvl, context, damage) => {
+                let healed = damage * 0.1 * lvl; // 每级恢复 10% 伤害
+                context.attacker.heal(healed);
+            });
+        });
+
+        // ─────────────────────────────────────────────
+        // 8. 弓箭特性 - 修改投射物
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:power_shot", builder => {
+            builder.projectileLaunch((view, lvl, shooter, projectile, arrow, modData, primary) => {
+                if (arrow) {
+                    arrow.baseDamage += lvl * 2; // 每级增加 2 点箭矢伤害
+                }
+            });
+        });
+
+        // ─────────────────────────────────────────────
+        // 9. 盔甲特性 - 反伤效果
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:thorns_plus", builder => {
+            builder.armorTakeAttacked((view, lvl, context, slot, source, damage) => {
+                let attacker = source.actual || source.immediate;
+                if (attacker) {
+                    attacker.attack(source, damage * 0.2 * lvl); // 反弹 20% 伤害
+                }
                 return true;
             });
         });
 
-        // 带属性修改的特性
-        event.createNew("kubejs:tough_skin", builder => {
+        // ─────────────────────────────────────────────
+        // 10. 盾牌特性 - 增强格挡
+        // ─────────────────────────────────────────────
+        event.createNew("kubejs:iron_wall", builder => {
             builder.addToolStats((view, lvl, statsBuilder) => {
-                TinkerToolStats.DURABILITY.multiply(statsBuilder, 1 + lvl * 0.1);
-                TinkerToolStats.ATTACK_DAMAGE.add(statsBuilder, lvl * 0.5);
-            }).isSingleLevel();  // 只有一级
-        });
-
-        // 攻击时触发的特性
-        event.createNew("kubejs:poison", builder => {
-            builder.getMeleeDamage((view, lvl, context, baseDamage, finalDamage) => {
-                // 返回修改后的伤害
-                return finalDamage + lvl * 2;
-            });
-            builder.onAfterMeleeHit((view, lvl, context, damage) => {
-                // 攻击后给目标施加中毒
-                context.target.potionEffects.add("minecraft:poison", 100 * lvl, lvl - 1);
+                TinkerToolStats.BLOCK_AMOUNT.add(statsBuilder, lvl * 3);  // 每级 +3 格挡量
+                TinkerToolStats.BLOCK_ANGLE.add(statsBuilder, lvl * 10); // 每级 +10° 格挡角度
             });
         });
     });
@@ -1483,20 +1577,74 @@ ServerEvents.recipes(event => {
     // 9. 工具类 (Utils) - 用于特性开发
     // ══════════════════════════════════════════════════
     /*
-    可用工具类:
-    - SimpleTCon: 简化匠魂操作
-    - TinkerDamageHelper: 伤害计算辅助
-    - TinkerToolStats: 工具属性常量
-      - DURABILITY (耐久)
-      - ATTACK_DAMAGE (攻击伤害)
-      - ATTACK_SPEED (攻击速度)
-      - MINING_SPEED (挖掘速度)
-      - HARVEST_TIER (挖掘等级)
-      - PROJECTILE_DAMAGE (投射物伤害)
+    ┌─────────────────────────────────────────────────────┐
+    │ TinkerToolStats - 工具属性常量                       │
+    ├──────────────────────┬──────────────────────────────┤
+    │ 通用属性             │                              │
+    │ DURABILITY           │ 耐久度                       │
+    │ USE_ITEM_SPEED       │ 使用物品速度 (蓄力等)        │
+    ├──────────────────────┼──────────────────────────────┤
+    │ 近战属性             │                              │
+    │ ATTACK_DAMAGE        │ 攻击伤害                     │
+    │ ATTACK_SPEED         │ 攻击速度                     │
+    ├──────────────────────┼──────────────────────────────┤
+    │ 挖掘属性             │                              │
+    │ MINING_SPEED         │ 挖掘速度                     │
+    │ HARVEST_TIER         │ 挖掘等级                     │
+    ├──────────────────────┼──────────────────────────────┤
+    │ 护甲属性             │                              │
+    │ ARMOR                │ 护甲值                       │
+    │ ARMOR_TOUGHNESS      │ 护甲韧性                     │
+    │ KNOCKBACK_RESISTANCE │ 击退抗性                     │
+    ├──────────────────────┼──────────────────────────────┤
+    │ 盾牌属性             │                              │
+    │ BLOCK_AMOUNT         │ 格挡伤害量                   │
+    │ BLOCK_ANGLE          │ 格挡角度 (最大180°)          │
+    ├──────────────────────┼──────────────────────────────┤
+    │ 远程属性             │                              │
+    │ DRAW_SPEED           │ 弓蓄力速度                   │
+    │ VELOCITY             │ 投射物初速度                 │
+    │ ACCURACY             │ 精准度                       │
+    │ PROJECTILE_DAMAGE    │ 投射物伤害                   │
+    │ WATER_INERTIA        │ 水下阻力                     │
+    ├──────────────────────┼──────────────────────────────┤
+    │ 钓鱼属性             │                              │
+    │ SEA_LUCK             │ 钓鱼运气                     │
+    │ LURE                 │ 钓鱼速度                     │
+    └──────────────────────┴──────────────────────────────┘
 
     修改属性方法:
-    - TinkerToolStats.STAT.add(statsBuilder, value)      // 加法
-    - TinkerToolStats.STAT.multiply(statsBuilder, value) // 乘法
+      TinkerToolStats.STAT.add(statsBuilder, value)      // 加法
+      TinkerToolStats.STAT.multiply(statsBuilder, value) // 乘法
+
+    ┌─────────────────────────────────────────────────────┐
+    │ SimpleTCon - 匠魂工具类                             │
+    ├─────────────────────────────────────────────────────┤
+    │ 特性相关:                                           │
+    │ SimpleTCon.getModifier(id)         获取特性对象     │
+    │ SimpleTCon.hasModifier(stack, id)  检查是否有特性   │
+    │ SimpleTCon.getModifierLevel(stack, id) 获取特性等级 │
+    │ SimpleTCon.getModifiersFromGame()  获取所有特性     │
+    │ SimpleTCon.getModifiersFromTag(tag) 从标签获取特性  │
+    ├─────────────────────────────────────────────────────┤
+    │ 工具相关:                                           │
+    │ SimpleTCon.getToolStack(stack)     获取 ToolStack   │
+    │ SimpleTCon.castToolStack(view)     转换为 ToolStack │
+    │ SimpleTCon.getToolInSlot(entity, slot) 获取槽位工具 │
+    ├─────────────────────────────────────────────────────┤
+    │ 材料相关:                                           │
+    │ SimpleTCon.getMaterialsInTool(tool, id) 材料数量    │
+    │ SimpleTCon.hasMaterialInTool(tool, id)  是否有材料  │
+    ├─────────────────────────────────────────────────────┤
+    │ 其他:                                               │
+    │ SimpleTCon.getTinkerData(entity, consumer) 实体数据 │
+    └─────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────────┐
+    │ TinkerDamageHelper - 伤害辅助                       │
+    ├─────────────────────────────────────────────────────┤
+    │ TinkerDamageHelper.breakTool(itemStack) 损坏工具    │
+    └─────────────────────────────────────────────────────┘
     */
 
     console.info('TConstruct JS recipes loaded!')
@@ -1551,3 +1699,41 @@ ServerEvents.recipes(event => {
     console.info('Vanilla recipes loaded!')
     console.info('===== 所有扩展测试配方加载完成 =====')
 })
+
+// ╔════════════════════════════════════════════════╗
+// ║  TODO: PONDERJS 教程动画                       ║
+// ╚════════════════════════════════════════════════╝
+// 文件位置: kubejs/client_scripts/ponder/
+// 参考: https://github.com/Lytho/PonderJS/wiki
+/*
+Ponder.registry((event) => {
+    // TODO: 添加 Ponder 教程动画
+})
+*/
+
+// ╔════════════════════════════════════════════════╗
+// ║  TODO: MORE WORLD CRAFTING 世界合成            ║
+// ╚════════════════════════════════════════════════╝
+// 参考: https://github.com/Xiaoyu-2009/more_world_crafting/wiki
+/*
+ServerEvents.recipes(event => {
+    // TODO: 添加 More World Crafting 配方
+    event.custom({
+        type: 'more_world_crafting:配方类型',
+        // 配方参数
+    })
+})
+*/
+
+// ╔════════════════════════════════════════════════╗
+// ║  TODO: KUBEJS CURIOS 饰品                      ║
+// ╚════════════════════════════════════════════════╝
+// 文件位置: kubejs/startup_scripts/
+// 参考: https://github.com/KubeJS-Mods/KubeJS-Curios
+/*
+StartupEvents.registry('item', event => {
+    // TODO: 添加 Curios 饰品物品
+    event.create('my_ring')
+        .curio('ring')
+})
+*/

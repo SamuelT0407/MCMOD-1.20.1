@@ -1,0 +1,51 @@
+{
+    "type": "bonsaitrees3:sapling",
+    "conditions": [{ "type": "forge:mod_loaded", "modid": "ecologics" }],
+    "sapling": {
+        "item": "ecologics:coconut_sapling"
+    },
+    "drops": [
+        {
+            "rolls": 1,
+            "chance": 0.05,
+            "result": {
+                "item": "ecologics:coconut_sapling"
+            }
+        },
+        {
+            "rolls": 1,
+            "chance": 0.75,
+            "result": {
+                "item": "ecologics:coconut_log"
+            }
+        },
+        {
+            "rolls": 3,
+            "chance": 0.2,
+            "result": {
+                "item": "minecraft:stick"
+            }
+        },
+        {
+            "rolls": 2,
+            "chance": 0.15,
+            "result": {
+                "item": "ecologics:coconut_leaves"
+            },
+            "requiresSilkTouch": true
+        },
+        {
+          "rolls": 1,
+          "chance": 0.05,
+          "result": {
+            "item": "ecologics:coconut"
+          },
+          "requiresBees": true
+        }
+    ],
+    "compatibleSoilTags": [
+        "dirt",
+        "grass",
+        "sand"
+    ]
+}

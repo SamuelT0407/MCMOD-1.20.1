@@ -1,0 +1,97 @@
+{
+    "type": "bonsaitrees3:sapling/undergarden/ink_mushroom",
+    "version": 3,
+    "ref": {
+      "a": {"block":"undergarden:ink_mushroom_cap"},
+      "b": {"block":"undergarden:ink_mushroom_cap"},
+      "c": {"block":"undergarden:ink_mushroom_cap"},
+      "d": {"block":"minecraft:mushroom_stem"},
+      "e": {"block":"undergarden:ink_mushroom_cap"},
+      "f": {"block":"undergarden:ink_mushroom_cap"},
+      "g": {"block":"undergarden:ink_mushroom_cap"},
+      "h": {"block":"undergarden:seeping_ink"},
+      "i": {"block":"undergarden:ink_mushroom_cap"},
+      "j": {"block":"undergarden:ink_mushroom_cap"},
+      "k": {"block":"undergarden:ink_mushroom_cap"}
+    },
+    "shape": [
+      [
+        " jfffffffg ",
+        " h   h     ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "jaaaaaaaaag",
+        "    h      ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "kaaaaaaaaae",
+        "    h     h",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "kaaaaaaaaae",
+        "  hh       ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "kaaaaaaaaae",
+        "          h",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "kaaaaaaaaae",
+        "     d     ",
+        "     d     ",
+        "     d     ",
+        "     d     "
+      ],
+      [
+        "kaaaaaaaaae",
+        "    h   h  ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "kaaaaaaaaae",
+        "h   h      ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "kaaaaaaaaae",
+        "      h    ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        "iaaaaaaaaac",
+        "           ",
+        "           ",
+        "           ",
+        "           "
+      ],
+      [
+        " ibbbbbbbc ",
+        "     h     ",
+        "           ",
+        "           ",
+        "           "
+      ]
+    ]
+  }
+  

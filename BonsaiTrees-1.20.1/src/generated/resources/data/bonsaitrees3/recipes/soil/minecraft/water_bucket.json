@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "compatibleSoilTags": [
+    "water"
+  ],
+  "display": {
+    "fluid": "minecraft:water"
+  },
+  "mod": "minecraft",
+  "soil": {
+    "item": "minecraft:water_bucket"
+  },
+  "tickModifier": 1.0
+}

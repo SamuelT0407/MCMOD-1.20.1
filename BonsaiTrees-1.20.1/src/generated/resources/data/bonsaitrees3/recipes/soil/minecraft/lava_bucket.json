@@ -1,0 +1,14 @@
+{
+  "type": "bonsaitrees3:soil",
+  "compatibleSoilTags": [
+    "lava"
+  ],
+  "display": {
+    "fluid": "minecraft:lava"
+  },
+  "mod": "minecraft",
+  "soil": {
+    "item": "minecraft:lava_bucket"
+  },
+  "tickModifier": 1.0
+}

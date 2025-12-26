@@ -15,10 +15,11 @@
 7. [Mekanism 通用机械](#7-mekanism-通用机械)
 8. [Immersive Engineering 沉浸工程](#8-immersive-engineering-沉浸工程)
 9. [TConstruct JS 匠魂](#9-tconstruct-js-匠魂)
-10. [More World Crafting 更多世界合成](#10-more-world-crafting-更多世界合成)
-11. [KubeJS Curios 饰品](#11-kubejs-curios-饰品)
-12. [高级技巧](#12-高级技巧)
-13. [常用事件列表](#13-常用事件列表)
+10. [PonderJS 教程动画](#10-ponderjs-教程动画) *(TODO)*
+11. [More World Crafting 更多世界合成](#11-more-world-crafting-更多世界合成) *(TODO)*
+12. [KubeJS Curios 饰品](#12-kubejs-curios-饰品) *(TODO)*
+13. [高级技巧](#13-高级技巧)
+14. [常用事件列表](#14-常用事件列表)
 
 ---
 
@@ -1065,114 +1066,386 @@ StartupEvents.registry('mekanism:pigment', event => {
 
 ```javascript
 ServerEvents.recipes(event => {
-    // 使用 event.custom 创建 IE 配方
+    // 部分配方使用原生 API
+    event.recipes.immersiveengineering.配方类型(...)
+
+    // 大部分配方使用 event.custom (更稳定)
     event.custom({
         type: 'immersiveengineering:配方类型',
         // 配方参数
     })
-
-    // 或使用 event.recipes.immersiveengineering (如果支持)
-})
-```
-
-### 常用配方类型
-
-```javascript
-// 粉碎机
-event.custom({
-    type: 'immersiveengineering:crusher',
-    input: { item: 'minecraft:coal_block' },
-    result: { item: 'minecraft:diamond' },
-    secondaries: [
-        { output: { item: 'minecraft:coal' }, chance: 0.1 }
-    ],
-    energy: 2400
-})
-
-// 金属压缩机
-event.custom({
-    type: 'immersiveengineering:metal_press',
-    input: { item: 'minecraft:iron_ingot' },
-    mold: { tag: 'forge:molds/plate' },
-    result: { item: 'immersiveengineering:plate_iron' },
-    energy: 2400
-})
-
-// 合金窑
-event.custom({
-    type: 'immersiveengineering:alloy',
-    input0: { item: 'minecraft:iron_ingot' },
-    input1: { item: 'minecraft:gold_ingot' },
-    result: { item: 'immersiveengineering:alloy_ingot' },
-    time: 200
-})
-
-// 高炉
-event.custom({
-    type: 'immersiveengineering:blast_furnace',
-    input: { item: 'minecraft:iron_ingot' },
-    result: { item: 'immersiveengineering:ingot_steel' },
-    slag: { item: 'immersiveengineering:slag' },
-    time: 1200
-})
-
-// 焦炉
-event.custom({
-    type: 'immersiveengineering:coke_oven',
-    input: { item: 'minecraft:coal' },
-    result: { item: 'immersiveengineering:coal_cite' },
-    creosote: 500,
-    time: 1800
-})
-
-// 精炼厂
-event.custom({
-    type: 'immersiveengineering:refinery',
-    input0: { fluid: 'minecraft:water', amount: 1000 },
-    input1: { fluid: 'immersiveengineering:creosote', amount: 500 },
-    result: { fluid: 'immersiveengineering:processed_oil', amount: 1000 },
-    energy: 80
-})
-
-// 混合器
-event.custom({
-    type: 'immersiveengineering:mixer',
-    inputs: [
-        { item: 'minecraft:sand' }
-    ],
-    fluid: { fluid: 'minecraft:water', amount: 500 },
-    result: { fluid: 'immersiveengineering:concrete', amount: 500 },
-    energy: 3200
-})
-
-// 装瓶机
-event.custom({
-    type: 'immersiveengineering:bottling_machine',
-    input: { item: 'minecraft:glass_bottle' },
-    fluid: { fluid: 'minecraft:water', amount: 250 },
-    result: { item: 'minecraft:potion' },
-    energy: 1600
-})
-
-// 发酵罐
-event.custom({
-    type: 'immersiveengineering:fermenter',
-    input: { item: 'minecraft:sugar_cane' },
-    result: { fluid: 'immersiveengineering:ethanol', amount: 80 },
-    energy: 6400
-})
-
-// 蒸馏塔
-event.custom({
-    type: 'immersiveengineering:squeezer',
-    input: { item: 'minecraft:beetroot' },
-    result: { item: 'immersiveengineering:plant_oil_bucket' },
-    fluid: { fluid: 'immersiveengineering:plant_oil', amount: 80 },
-    energy: 6400
 })
 ```
 
 ---
+
+### 粉碎机 (Crusher)
+
+```javascript
+// 无副产物
+event.custom({
+    type: 'immersiveengineering:crusher',
+    input: { item: 'minecraft:coal_block' },
+    result: { item: 'minecraft:diamond' },
+    secondaries: [],
+    energy: 2400
+}).id('kubejs:crusher_diamond')
+
+// 带副产物
+event.custom({
+    type: 'immersiveengineering:crusher',
+    result: { item: 'minecraft:gravel' },
+    input: { item: 'minecraft:cobblestone' },
+    secondaries: [{ chance: 0.1, output: { item: 'minecraft:sand' } }],
+    energy: 6000
+}).id('kubejs:crusher_cobblestone')
+```
+
+---
+
+### 金属冲压机 (Metal Press)
+
+```javascript
+// metal_press(output, input, mold)
+// mold: plate, gear, rod, bullet_casing, wire, packing_4, packing_9, unpacking
+event.recipes.immersiveengineering.metal_press(
+    'immersiveengineering:plate_iron',                     // 输出: 铁板
+    'minecraft:iron_ingot',                                // 输入: 铁锭
+    'immersiveengineering:mold_plate'                      // 模具: 板模具
+)
+```
+
+---
+
+### 合金窑 (Alloy Smelter)
+
+```javascript
+// alloy(output, input1, input2)
+// alloy(output, input1, input2, time)
+event.recipes.immersiveengineering.alloy(
+    'immersiveengineering:ingot_constantan',               // 输出: 康铜锭
+    'minecraft:copper_ingot',                              // 输入1: 铜锭
+    'minecraft:iron_ingot',                                // 输入2: 铁锭
+    200                                                    // 时间: 200tick
+)
+```
+
+---
+
+### 高炉 (Blast Furnace)
+
+```javascript
+// blast_furnace(output, input)
+// blast_furnace(output, input, slag)
+// blast_furnace(output, input, slag, time)
+event.recipes.immersiveengineering.blast_furnace(
+    'immersiveengineering:ingot_steel',                    // 输出: 钢锭
+    'minecraft:iron_ingot',                                // 输入: 铁锭
+    'immersiveengineering:slag',                           // 副产物: 矿渣
+    1200                                                   // 时间: 1200tick
+)
+```
+
+---
+
+### 高炉燃料 (Blast Furnace Fuel)
+
+```javascript
+// blast_furnace_fuel(input, time)
+event.recipes.immersiveengineering.blast_furnace_fuel(
+    'immersiveengineering:coke',                           // 输入: 焦煤
+    1200                                                   // 燃烧时间: 1200tick
+)
+```
+
+---
+
+### 焦炉 (Coke Oven)
+
+```javascript
+// coke_oven(output, input)
+// coke_oven(output, input, creosote)
+// coke_oven(output, input, creosote, time)
+event.recipes.immersiveengineering.coke_oven(
+    'immersiveengineering:coal_coke',                      // 输出: 焦煤
+    'minecraft:coal',                                      // 输入: 煤炭
+    500,                                                   // 杂酚油产量: 500mB
+    1800                                                   // 时间: 1800tick
+)
+```
+
+---
+
+### 工业挤压机 (Squeezer)
+
+```javascript
+// 使用 event.custom 以确保兼容性
+event.custom({
+    type: 'immersiveengineering:squeezer',
+    input: { item: 'minecraft:beetroot' },
+    result: { item: 'minecraft:beetroot_seeds' },
+    fluid: { fluid: 'immersiveengineering:plantoil', amount: 80 },
+    energy: 6400
+}).id('kubejs:squeezer_beetroot')
+```
+
+---
+
+### 发酵罐 (Fermenter)
+
+```javascript
+// 使用 event.custom 以确保兼容性
+event.custom({
+    type: 'immersiveengineering:fermenter',
+    input: { item: 'minecraft:sugar_cane' },
+    result: { item: 'minecraft:paper' },
+    fluid: { fluid: 'immersiveengineering:ethanol', amount: 80 },
+    energy: 6400
+}).id('kubejs:fermenter_sugar_cane')
+```
+
+---
+
+### 电弧炉 (Arc Furnace)
+
+```javascript
+// 带添加剂 + 副产物
+event.custom({
+    type: 'immersiveengineering:arc_furnace',
+    results: [{ item: 'immersiveengineering:ingot_steel', count: 2 }],  // 100%掉2个
+    input: { item: 'minecraft:raw_iron' },
+    additives: [{ item: 'immersiveengineering:coal_coke' }],
+    slag: { item: 'immersiveengineering:slag' },
+    secondaries: [
+        { output: { item: 'immersiveengineering:ingot_steel' }, chance: 0.5 }  // 50%额外1个
+    ],
+    time: 200,
+    energy: 102400
+}).id('kubejs:arc_furnace_steel')
+
+// 无添加剂 (必须有空 additives 数组)
+event.custom({
+    type: 'immersiveengineering:arc_furnace',
+    results: [{ item: 'minecraft:iron_ingot', count: 2 }],
+    input: { item: 'minecraft:raw_iron' },
+    additives: [],  // 必须有这个键
+    time: 100,
+    energy: 51200
+}).id('kubejs:arc_furnace_raw_iron')
+```
+
+---
+
+### 工程师蓝图 (Blueprint)
+
+```javascript
+// blueprint(output, inputs[], blueprint)
+// Blueprint 类型: components, molds, bullet, specialBullet, bannerpatterns, electrode
+
+// 1. 合成用零件蓝图
+event.recipes.immersiveengineering.blueprint(
+    'immersiveengineering:component_iron',                 // 输出: 铁机械零件
+    ['2x minecraft:iron_ingot', 'minecraft:copper_ingot'], // 输入: 铁锭x2 + 铜锭
+    'components'                                           // 蓝图类型
+)
+
+// 2. 金属冲压蓝图
+event.recipes.immersiveengineering.blueprint(
+    'immersiveengineering:mold_plate',                     // 输出: 板模具
+    ['3x immersiveengineering:plate_steel'],               // 输入: 钢板x3
+    'molds'                                                // 蓝图类型
+)
+
+// 3. 弹药蓝图
+event.recipes.immersiveengineering.blueprint(
+    '2x immersiveengineering:casull',                      // 输出: 卡萨尔弹药x2
+    [
+        'immersiveengineering:empty_casing',               // 空弹壳
+        'minecraft:gunpowder',                              // 火药
+        'minecraft:iron_nugget'                             // 铁粒
+    ],
+    'bullet'                                               // 蓝图类型
+)
+
+// 4. 特殊弹药蓝图
+event.recipes.immersiveengineering.blueprint(
+    'immersiveengineering:firework',                       // 输出: 烟花弹
+    [
+        'immersiveengineering:empty_casing',
+        'minecraft:firework_rocket'
+    ],
+    'specialBullet'                                        // 蓝图类型
+)
+
+// 5. 电极蓝图
+event.recipes.immersiveengineering.blueprint(
+    'immersiveengineering:graphite_electrode',             // 输出: 石墨电极
+    ['8x immersiveengineering:coal_coke'],                 // 输入: 焦煤x8
+    'electrode'                                            // 蓝图类型
+)
+
+// 6. 旗帜图案蓝图
+event.recipes.immersiveengineering.blueprint(
+    'minecraft:paper',                                      // 输出: 临时使用纸张测试
+    ['minecraft:paper', 'immersiveengineering:hammer'],     // 输入: 纸 + 工程师锤
+    'bannerpatterns'                                        // 蓝图类型: 旗帜图案
+)
+```
+
+---
+
+### 灌装机 (Bottling Machine)
+
+```javascript
+// 注意: IE 流体输入必须使用标签 (tag) 格式
+event.custom({
+    type: 'immersiveengineering:bottling_machine',
+    results: [{ item: 'minecraft:water_bucket' }],
+    fluid: { tag: 'forge:water/water', amount: 1000 },
+    input: { item: 'minecraft:bucket' }
+}).id('kubejs:bottling_water_bucket')
+```
+
+---
+
+### 园艺玻璃罩 (Cloche)
+
+```javascript
+// 农作物
+event.custom({
+    type: 'immersiveengineering:cloche',
+    results: [
+        { item: 'minecraft:wheat' },
+        { item: 'minecraft:wheat_seeds' }
+    ],
+    input: { item: 'minecraft:wheat_seeds' },
+    soil: { item: 'minecraft:dirt' },
+    time: 800,
+    render: { type: 'crop', block: 'minecraft:wheat' }
+}).id('kubejs:cloche_wheat')
+
+// 树苗
+event.custom({
+    type: 'immersiveengineering:cloche',
+    results: [
+        { item: 'minecraft:oak_log' },
+        { item: 'minecraft:oak_sapling' }
+    ],
+    input: { item: 'minecraft:oak_sapling' },
+    soil: { item: 'minecraft:dirt' },
+    time: 1200,
+    render: { type: 'generic', block: 'minecraft:oak_sapling' }
+}).id('kubejs:cloche_oak')
+```
+
+**render.type 可选值:** `crop`, `stacking`, `stem`, `generic`
+
+---
+
+### 肥料 (Fertilizer)
+
+```javascript
+// fertilizer(input)
+event.recipes.immersiveengineering.fertilizer(
+    'minecraft:bone_meal',                                  // 输入: 骨粉
+    1.25                                                    // 催化效率: 1.25倍
+)
+```
+
+---
+
+### 搅拌器 (Mixer)
+
+```javascript
+// 注意: IE 流体输入必须使用标签 (tag) 格式
+event.custom({
+    type: 'immersiveengineering:mixer',
+    result: { fluid: 'immersiveengineering:concrete', amount: 500 },
+    fluid: { tag: 'forge:water/water', amount: 500 },
+    inputs: [
+        { item: 'minecraft:sand' },
+        { item: 'minecraft:gravel' }
+    ],
+    energy: 3200
+}).id('kubejs:mixer_concrete')
+```
+
+---
+
+### 精炼厂 (Refinery)
+
+```javascript
+// 基础配方 - 注意: 流体输入必须使用标签 (tag) 格式
+event.custom({
+    type: 'immersiveengineering:refinery',
+    result: { fluid: 'immersiveengineering:biodiesel', amount: 16 },
+    input0: { tag: 'forge:food_oil', amount: 8 },
+    input1: { tag: 'forge:ethanol', amount: 8 },
+    energy: 80
+}).id('kubejs:refinery_biodiesel')
+
+// 带催化剂
+event.custom({
+    type: 'immersiveengineering:refinery',
+    result: { fluid: 'immersiveengineering:biodiesel', amount: 20 },
+    input0: { tag: 'forge:food_oil', amount: 8 },
+    input1: { tag: 'forge:ethanol', amount: 8 },
+    catalyst: { item: 'minecraft:blaze_powder' },
+    energy: 80
+}).id('kubejs:refinery_biodiesel_catalyst')
+```
+
+---
+
+### 锯木机 (Sawmill)
+
+```javascript
+// 完整配方
+event.custom({
+    type: 'immersiveengineering:sawmill',
+    result: { item: 'minecraft:oak_planks', count: 6 },
+    input: { item: 'minecraft:oak_log' },
+    stripped: { item: 'minecraft:stripped_oak_log' },
+    secondaries: [
+        { stripping: true, output: { item: 'immersiveengineering:dust_wood' } },
+        { stripping: false, output: { item: 'minecraft:stick' } }
+    ],
+    energy: 1600
+}).id('kubejs:sawmill_oak_log')
+
+// 简单配方 (必须有空 secondaries 数组)
+event.custom({
+    type: 'immersiveengineering:sawmill',
+    result: { item: 'minecraft:stick', count: 4 },
+    input: { tag: 'minecraft:planks' },
+    secondaries: [],  // 必须有这个键
+    energy: 800
+}).id('kubejs:sawmill_planks')
+```
+
+---
+
+
+
+### IE 配方速查表
+
+| 配方类型 | 主要参数 | 注意事项 |
+|----------|----------|----------|
+| `crusher` | input, result, secondaries, energy | - |
+| `metal_press` | input, mold, result, energy | mold 用标签 |
+| `alloy` | input0, input1, result, time | - |
+| `blast_furnace` | input, result, slag, time | - |
+| `coke_oven` | input, result, creosote, time | - |
+| `arc_furnace` | input, additives, results, slag, secondaries, time, energy | additives 必须存在 |
+| `fermenter` | input, result?, fluid, energy | - |
+| `squeezer` | input, result?, fluid, energy | - |
+| `refinery` | input0, input1, catalyst?, result, energy | 流体用 tag |
+| `mixer` | inputs, fluid, result, energy | 流体用 tag |
+| `bottling_machine` | input, fluid, results | 流体用 tag |
+| `sawmill` | input, result, stripped?, secondaries, energy | secondaries 必须存在 |
+| `cloche` | input, soil, results, time, render | - |
+
+
 
 ## 9. TConstruct JS 匠魂
 
@@ -1188,113 +1461,376 @@ ServerEvents.recipes(event => {
 })
 ```
 
+### 流体量参考
+
+| 单位 | 流体量 |
+|------|--------|
+| 1粒 | 10mB |
+| 1锭 | 90mB |
+| 1宝石 | 100mB |
+| 1块 | 810mB (9锭) |
+
+---
+
 ### 合金 (Alloy)
 
 ```javascript
-// 基础合金配方
+// 基础语法: alloy(result, inputs[]).temperature(温度)
 tconstruct.alloy(
-    Fluid.of('tconstruct:molten_electrum', 180),  // 输出流体
+    Fluid.of('tconstruct:molten_bronze', 360),   // 输出: 4锭
     [
-        Fluid.of('tconstruct:molten_gold', 90),    // 输入流体1
-        Fluid.of('tconstruct:molten_silver', 90)   // 输入流体2
+        Fluid.of('tconstruct:molten_copper', 270), // 铜: 3锭
+        Fluid.of('tconstruct:molten_tin', 90)      // 锡: 1锭
     ]
-)
+).temperature(500)  // 需要温度 500K
 
-// 带温度参数 (默认100)
+// 琥珀金: 金1 + 银1 = 琥珀金2
 tconstruct.alloy(
-    Fluid.of('output_fluid', amount),
-    [Fluid.of('input1', amount), Fluid.of('input2', amount)],
-    760  // 温度
-)
-```
-
-### 浇铸台配方 (Casting Table)
-
-```javascript
-tconstruct.casting_table(
-    'output_item',              // 输出物品
-    Fluid.of('fluid', amount),  // 流体输入
-    'cast_item'                 // 模具
-)
-
-// 带选项
-tconstruct.casting_table('output', Fluid.of('fluid', 90), 'cast')
-    .cast_consumed(true)   // 消耗模具
-    .cooling_time(1.5)     // 冷却时间倍率
-    .switch_slots(false)   // 交换槽位
-```
-
-### 浇铸盆配方 (Casting Basin)
-
-```javascript
-tconstruct.casting_basin(
-    'output_item',
-    Fluid.of('fluid', amount)
-)
-
-// 带模具
-tconstruct.casting_basin('output', Fluid.of('fluid', 1296), 'cast')
-    .cast_consumed(false)
-    .cooling_time(1.0)
-```
-
-### 熔化燃料 (Melting Fuel)
-
-```javascript
-tconstruct.melting_fuel(
-    100,                        // 持续时间
-    Fluid.of('minecraft:lava', 50)  // 流体
-)
-
-// 带温度
-tconstruct.melting_fuel(100, Fluid.of('fluid', amount), 1000)
-```
-
-### 物品熔化 (Melting)
-
-```javascript
-// 使用 event.custom
-event.custom({
-    type: 'tconstruct:melting',
-    ingredient: { item: 'minecraft:iron_ingot' },
-    result: { fluid: 'tconstruct:molten_iron', amount: 90 },
-    temperature: 800,
-    time: 60
-})
-```
-
-### 工具类
-
-```javascript
-// SimpleTCon - 简化的匠魂操作
-SimpleTCon.doSomething()
-
-// TinkerToolStats - 工具属性
-TinkerToolStats.getStats(itemStack)
-
-// TinkerDamageHelper - 伤害辅助
-TinkerDamageHelper.calculateDamage(...)
-```
-
-### 事件
-
-```javascript
-// 装备更换事件
-TConJSEvents.equipmentChange(event => {
-    // 当玩家装备匠魂物品时触发
-})
-
-// 修饰器注册事件
-TConJSEvents.modifierRegistry(event => {
-    // 注册自定义修饰器
-})
+    Fluid.of('tconstruct:molten_electrum', 180),
+    [
+        Fluid.of('tconstruct:molten_gold', 90),
+        Fluid.of('tconstruct:molten_silver', 90)
+    ]
+).temperature(760)
 ```
 
 ---
 
-## 10. More World Crafting 更多世界合成
+### 浇铸台 (Casting Table)
+
+```javascript
+// casting_table(result, fluid, cast?)
+// 链式调用: .cast_consumed(bool), .cooling_time(tick), .switch_slots(bool)
+
+// 基础浇铸
+tconstruct.casting_table(
+    'minecraft:iron_ingot',                   // 输出
+    Fluid.of('tconstruct:molten_iron', 90),  // 流体 (1锭=90mB)
+    'tconstruct:ingot_cast'                   // 铸件
+).cooling_time(60)                            // 冷却时间 (tick)
+
+// 完整选项
+tconstruct.casting_table(
+    'minecraft:gold_nugget',
+    Fluid.of('tconstruct:molten_gold', 10),   // 1粒=10mB
+    'tconstruct:nugget_cast'
+)
+    .cast_consumed(false)   // 铸件不消耗
+    .cooling_time(20)       // 冷却时间
+    .switch_slots(false)    // 不交换槽位
+
+// 消耗性铸件 (沙铸件)
+tconstruct.casting_table(
+    'minecraft:diamond',
+    Fluid.of('tconstruct:molten_diamond', 100),
+    'tconstruct:gem_sand_cast'
+).cast_consumed(true).cooling_time(80)
+```
+
+---
+
+### 浇铸盆 (Casting Basin)
+
+```javascript
+// casting_basin(result, fluid, cast?)
+// 链式调用同 casting_table
+
+// 无铸件浇铸
+tconstruct.casting_basin(
+    'minecraft:iron_block',
+    Fluid.of('tconstruct:molten_iron', 810)  // 1块=810mB
+).cooling_time(200)
+
+// 带铸件
+tconstruct.casting_basin(
+    'minecraft:obsidian',
+    Fluid.of('minecraft:lava', 1000),
+    'minecraft:water_bucket'
+).cast_consumed(true).cooling_time(120)
+```
+
+---
+
+### 铸件复制 (Cast Duplication)
+
+```javascript
+// table_duplication(cast, fluid).cooling_time(tick)
+// basin_duplication(cast, fluid).cooling_time(tick)
+// 用金液体复制已有铸件
+
+// 浇铸台铸件复制
+tconstruct.table_duplication(
+    'tconstruct:ingot_cast',                  // 要复制的铸件
+    Fluid.of('tconstruct:molten_gold', 90)
+).cooling_time(60)
+
+// 浇铸盆铸件复制 (大型铸件)
+tconstruct.basin_duplication(
+    'tconstruct:plate_cast',
+    Fluid.of('tconstruct:molten_gold', 180)
+).cooling_time(60)
+```
+
+---
+
+### 物品熔融 (Melting)
+
+```javascript
+// melting(result, ingredient).temperature(K).time(tick)
+
+// 钻石熔融
+tconstruct.melting(
+    Fluid.of('tconstruct:molten_diamond', 100), // 1宝石=100mB
+    'minecraft:diamond'
+).temperature(1450).time(80)
+
+// 铁锭熔融
+tconstruct.melting(
+    Fluid.of('tconstruct:molten_iron', 90),
+    'minecraft:iron_ingot'
+).temperature(800).time(60)
+
+// 粗矿石熔融 (1.33倍产出)
+tconstruct.melting(
+    Fluid.of('tconstruct:molten_iron', 120),
+    'minecraft:raw_iron'
+).temperature(800).time(90)
+```
+
+---
+
+### 燃料 (Melting Fuel)
+
+```javascript
+// 使用 event.custom 添加燃料
+event.custom({
+    type: 'tconstruct:melting_fuel',
+    fluid: { fluid: 'minecraft:lava', amount: 50 }, // 每次消耗 50mB
+    duration: 100,      // 持续 100 tick
+    temperature: 1000,  // 提供 1000°C
+    rate: 10            // 熔化速率 (rate/10 = JEI显示倍率)
+}).id('kubejs:fuel_lava')
+```
+
+**rate 参数说明:**
+| rate 值 | JEI 显示 | 效果 |
+|---------|----------|------|
+| 1 | 0.1x | 很慢 |
+| 5 | 0.5x | 较慢 |
+| 10 | 1x | 正常 |
+| 20 | 2x | 快速 |
+
+---
+
+### 铸模成形 (Molding)
+
+```javascript
+// molding_table(result, pattern, material)
+// molding_basin(result, pattern, material)
+
+tconstruct.molding_table(
+    'minecraft:diamond',    // 输出
+    'minecraft:apple',      // 模式
+    'minecraft:stick'       // 材料
+)
+```
+
+---
+
+### ⚠️ API Bug 说明
+
+以下配方类型存在问题，建议使用 JSON 数据包：
+
+| 配方类型 | 问题 | 解决方案 |
+|----------|------|----------|
+| `casting_table_potion` | result 被转为对象 | 使用 JSON 数据包 |
+| `casting_basin_potion` | result 被转为对象 | 使用 JSON 数据包 |
+| `table_filling` | container 被转为对象 | 使用 JSON 数据包 |
+| `basin_filling` | container 被转为对象 | 使用 JSON 数据包 |
+| `melting_fuel` | 缺少 rate 字段 | 使用 event.custom |
+| `molding_table/basin` | pattern 解析为空 | 可能有效，需测试 |
+
+---
+
+### 自定义特性 (Modifiers)
+
+> ⚠️ **特性必须在 `startup_scripts/` 中定义！**
+
+```javascript
+// kubejs/startup_scripts/tconstruct_modifiers.js
+
+TConJSEvents.modifierRegistry(event => {
+    // 创建空特性
+    event.createEmpty("kubejs:my_modifier");
+
+    // 创建完整特性
+    event.createNew("kubejs:dash", builder => {
+        builder.onUseTool((view, lvl, player, hand, source) => {
+            player.addItemCooldown(view.getItem(), 200 - lvl * 20);
+            player.setDeltaMovement(player.lookAngle.multiply(lvl * 2, 1, lvl * 2));
+            return true;
+        });
+    });
+
+    // 修改工具属性
+    event.createNew("kubejs:tough", builder => {
+        builder.addToolStats((view, lvl, statsBuilder) => {
+            TinkerToolStats.DURABILITY.multiply(statsBuilder, 1 + lvl * 0.1);
+            TinkerToolStats.ATTACK_DAMAGE.add(statsBuilder, lvl * 0.5);
+        }).isSingleLevel();
+    });
+
+    // 攻击效果
+    event.createNew("kubejs:poison", builder => {
+        builder.getMeleeDamage((view, lvl, ctx, base, dmg) => dmg + lvl * 2);
+        builder.onAfterMeleeHit((view, lvl, ctx, dmg) => {
+            ctx.livingTarget.potionEffects.add("minecraft:poison", 100 * lvl, lvl - 1);
+        });
+    });
+
+    // 吸血效果
+    event.createNew("kubejs:lifesteal", builder => {
+        builder.onAfterMeleeHit((view, lvl, ctx, dmg) => {
+            ctx.attacker.heal(dmg * 0.1 * lvl);
+        });
+    });
+});
+```
+
+---
+
+### 特性回调函数列表
+
+| 分类 | 函数 | 说明 |
+|------|------|------|
+| **构建** | `addToolStats` | 修改工具基础属性 |
+| | `addVolatileData` | 添加易变数据 |
+| | `validateTool` | 验证工具有效性 |
+| | `conditionalStat` | 动态条件属性 |
+| **行为** | `getRepairFactor` | 修改修复系数 |
+| | `addAttributes` | 添加玩家属性 |
+| | `getToolDamage` | 修改耐久消耗 |
+| | `processLoot` | 处理掉落物 |
+| **交互** | `onUseTool` | 右键使用 |
+| | `onInventoryTick` | 背包中每tick |
+| | `onUsingTick` | 使用中每tick |
+| | `onFinishUsing` | 使用完成 |
+| **挖掘** | `getBreakSpeed` | 修改挖掘速度 |
+| | `onAfterBreak` | 方块破坏后 |
+| **战斗** | `getMeleeDamage` | 修改近战伤害 |
+| | `onBeforeMeleeHit` | 攻击前 |
+| | `onAfterMeleeHit` | 攻击后 |
+| | `onDamageDealt` | 造成伤害后 |
+| **远程** | `projectileLaunch` | 投射物发射 |
+| | `projectileHitEntity` | 命中实体 |
+| | `projectileHitBlock` | 命中方块 |
+| **盔甲** | `modifyProtection` | 修改防护值 |
+| | `modifyDamageTaken` | 修改受伤值 |
+| | `canBlockAttacked` | 是否格挡 |
+| | `onEquip` / `onUnequip` | 装备/卸下 |
+| **显示** | `tooltipSetting` | 工具提示 |
+| | `getDurabilityRGB` | 耐久条颜色 |
+
+---
+
+### 工具属性 (TinkerToolStats)
+
+```javascript
+// 在 addToolStats 回调中使用
+builder.addToolStats((view, lvl, statsBuilder) => {
+    // 加法
+    TinkerToolStats.ATTACK_DAMAGE.add(statsBuilder, 2.0);
+    // 乘法
+    TinkerToolStats.DURABILITY.multiply(statsBuilder, 1.5);
+});
+```
+
+| 属性 | 用途 |
+|------|------|
+| `DURABILITY` | 耐久度 |
+| `ATTACK_DAMAGE` | 攻击伤害 |
+| `ATTACK_SPEED` | 攻击速度 |
+| `MINING_SPEED` | 挖掘速度 |
+| `ARMOR` | 护甲值 |
+| `ARMOR_TOUGHNESS` | 护甲韧性 |
+| `KNOCKBACK_RESISTANCE` | 击退抗性 |
+| `BLOCK_AMOUNT` | 格挡伤害量 |
+| `BLOCK_ANGLE` | 格挡角度 |
+| `DRAW_SPEED` | 弓蓄力速度 |
+| `VELOCITY` | 投射物速度 |
+| `ACCURACY` | 精准度 |
+| `PROJECTILE_DAMAGE` | 投射物伤害 |
+
+---
+
+### SimpleTCon 工具类
+
+```javascript
+// 特性
+SimpleTCon.getModifier(id)              // 获取特性对象
+SimpleTCon.hasModifier(stack, id)       // 检查是否有特性
+SimpleTCon.getModifierLevel(stack, id)  // 获取特性等级
+SimpleTCon.getModifiersFromGame()       // 获取所有特性
+
+// 工具
+SimpleTCon.getToolStack(itemStack)      // ItemStack → ToolStack
+SimpleTCon.castToolStack(view)          // IToolStackView → ToolStack
+SimpleTCon.getToolInSlot(entity, slot)  // 获取槽位工具
+
+// 材料
+SimpleTCon.getMaterialsInTool(tool, id) // 工具中材料数量
+SimpleTCon.hasMaterialInTool(tool, id)  // 是否包含材料
+```
+
+---
+
+### TConstruct 配方速查表
+
+| 配方类型 | 语法 | 链式方法 |
+|----------|------|----------|
+| `alloy` | `(result, inputs[])` | `.temperature(K)` |
+| `casting_table` | `(result, fluid, cast?)` | `.cast_consumed()`, `.cooling_time()`, `.switch_slots()` |
+| `casting_basin` | `(result, fluid, cast?)` | 同上 |
+| `table_duplication` | `(cast, fluid)` | `.cooling_time()` |
+| `basin_duplication` | `(cast, fluid)` | `.cooling_time()` |
+| `melting` | `(result, ingredient)` | `.temperature()`, `.time()` |
+| `molding_table` | `(result, pattern, material)` | - |
+| `molding_basin` | `(result, pattern, material)` | - |
+
+---
+
+## 10. PonderJS 教程动画
+
+> **前置模组**: PonderJS
+>
+> ⚠️ **TODO**: 待补充完整文档
+
+### 基础语法
+
+```javascript
+// 文件位置: kubejs/client_scripts/ponder/
+
+Ponder.registry((event) => {
+    event.create('minecraft:redstone')
+        .scene('redstone_intro', 'Redstone Introduction', (scene, util) => {
+            // TODO: 添加 Ponder 教程动画
+            scene.showBasePlate()
+            scene.idle(20)
+        })
+})
+```
+
+### 参考文档
+
+- [PonderJS Wiki](https://github.com/Lytho/PonderJS/wiki)
+
+---
+
+## 11. More World Crafting 更多世界合成
 
 > **前置模组**: more_world_crafting
+>
+> ⚠️ **TODO**: 待补充完整文档
 
 ### 基础语法
 
@@ -1314,16 +1850,18 @@ event.custom({
 
 ---
 
-## 11. KubeJS Curios 饰品
+## 12. KubeJS Curios 饰品
 
 > **前置模组**: kubejs_curios_forge
+>
+> ⚠️ **TODO**: 待补充完整文档
 
 ### 饰品槽位注册
 
 ```javascript
 // 在 startup_scripts 中注册饰品槽
 StartupEvents.init(event => {
-    // 注册饰品槽相关配置
+    // TODO: 注册饰品槽相关配置
 })
 ```
 
@@ -1350,9 +1888,13 @@ StartupEvents.registry('item', event => {
 })
 ```
 
+### 参考文档
+
+- [KubeJS Curios GitHub](https://github.com/KubeJS-Mods/KubeJS-Curios)
+
 ---
 
-## 12. 高级技巧
+## 13. 高级技巧
 
 ### 辅助函数
 
@@ -1414,7 +1956,7 @@ event.shapeless('output', ['inputs']).id('kubejs:my_recipe_manual_only')
 
 ---
 
-## 13. 常用事件列表
+## 14. 常用事件列表
 
 ### 服务器事件 (ServerEvents)
 

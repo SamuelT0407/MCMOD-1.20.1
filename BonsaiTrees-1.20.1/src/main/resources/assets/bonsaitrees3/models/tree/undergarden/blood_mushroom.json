@@ -1,0 +1,92 @@
+{
+    "type": "bonsaitrees3:sapling/undergarden/blood_mushroom",
+    "version": 3,
+    "ref": {
+      "a": {"block":"undergarden:blood_mushroom_cap"},
+      "b": {"block":"undergarden:blood_mushroom_cap"},
+      "c": {"block":"undergarden:blood_mushroom_cap"},
+      "d": {"block":"undergarden:blood_mushroom_cap"},
+      "e": {"block":"undergarden:blood_mushroom_cap"},
+      "f": {"block":"undergarden:blood_mushroom_cap"},
+      "g": {"block":"undergarden:blood_mushroom_cap"},
+      "h": {"block":"undergarden:blood_mushroom_cap"},
+      "i": {"block":"undergarden:blood_mushroom_cap"},
+      "j": {"block":"undergarden:engorged_blood_mushroom_cap"},
+      "k": {"block":"undergarden:blood_mushroom_stem"},
+      "l": {"block":"undergarden:blood_mushroom_cap"},
+      "m": {"block":"undergarden:blood_mushroom_cap"},
+      "n": {"block":"undergarden:blood_mushroom_cap"},
+      "o": {"block":"undergarden:blood_mushroom_cap"},
+      "p": {"block":"undergarden:blood_mushroom_cap"},
+      "q": {"block":"undergarden:blood_mushroom_cap"},
+      "r": {"block":"undergarden:blood_mushroom_cap"},
+      "s": {"block":"undergarden:blood_mushroom_cap"},
+      "t": {"block":"undergarden:blood_mushroom_stem"}
+    },
+    "shape": [
+      [
+        "       ",
+        " ehhhn ",
+        " jmmmo ",
+        " gmmmo ",
+        "       ",
+        "       ",
+        "       "
+      ],
+      [
+        " ehhhn ",
+        "e     n",
+        "g     o",
+        "g     o",
+        "       ",
+        "       ",
+        "       "
+      ],
+      [
+        " qdddj ",
+        "q     f",
+        "c     l",
+        "c     l",
+        "       ",
+        "       ",
+        "       "
+      ],
+      [
+        " qdddf ",
+        "q  k  f",
+        "c  k  l",
+        "c  k  l",
+        "   k   ",
+        "   k   ",
+        "   t   "
+      ],
+      [
+        " qdddf ",
+        "q     f",
+        "c     l",
+        "c     l",
+        "       ",
+        "       ",
+        "       "
+      ],
+      [
+        " psssb ",
+        "p     b",
+        "r     i",
+        "j     i",
+        "       ",
+        "       ",
+        "       "
+      ],
+      [
+        "       ",
+        " pjssb ",
+        " rajai ",
+        " raaai ",
+        "       ",
+        "       ",
+        "       "
+      ]
+    ]
+  }
+  
