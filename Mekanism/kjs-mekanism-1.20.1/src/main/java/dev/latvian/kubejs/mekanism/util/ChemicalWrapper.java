@@ -289,6 +289,21 @@ public record ChemicalWrapper<C extends Chemical<C>, S extends ChemicalStack<C>,
 				}
 			}
 			return GAS.creator().createMulti(ingredients.toArray(new ChemicalStackIngredient.GasStackIngredient[0]));
+		} else if (o instanceof Map<?, ?> || o instanceof JsonObject) {
+			var map = MapJS.of(o);
+
+			if (map != null) {
+				var id = map.get(GAS.key());
+				var amount = map.containsKey(JsonConstants.AMOUNT) ? ((Number) map.get(JsonConstants.AMOUNT)).longValue() : GAS.defaultAmount();
+
+				if (id != null) {
+					return GAS.ingredient(id.toString(), amount);
+				} else {
+					if (map.containsKey(JsonConstants.TAG)) {
+						return GAS.creator().from(GAS.tag(map.get(JsonConstants.TAG).toString()), amount);
+					}
+				}
+			}
 		}
 
         return null;

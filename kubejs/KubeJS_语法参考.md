@@ -911,13 +911,17 @@ event.recipes.mekanism.evaporating(
 )
 
 // [旋转式气液转换机] 水 ⇌ 蒸汽
-// TODO
-// event.custom({
-//     type: 'mekanism:rotary',
-//     fluidInput: { amount: 1, tag: 'minecraft:water' },
-//     gasOutput: { gas: 'mekanism:steam', amount: 1 }
-//     // 可选: gasInput 和 fluidOutput 用于双向转换
-// })
+event.recipes.mekanism.rotary()
+    .decondensentrating(
+        Fluid.of('minecraft:water', 10),      // 流体输入
+        {gas: 'mekanism:steam', amount: 100}  // 气体输出 (字符串格式)
+    )
+
+event.recipes.mekanism.rotary()
+    .condensentrating(
+        {gas: 'mekanism:steam', amount: 100},  // 气体输出 (字符串格式)
+        Fluid.of('minecraft:water', 10)        // 流体输入
+    )
 ```
 
 ### 矿石处理 - 污泥系统
@@ -948,13 +952,13 @@ event.recipes.mekanism.crystallizing(
 ### 能量与转换
 
 ```javascript
-// [能量转换] 红石粉 → 10000J (用于能量方块)
-event.recipes.mekanism.energy_conversion('minecraft:redstone', 10000)
+// [能量转换] 红石粉 → 2500J = 1kFE (用于能量方块)
+event.recipes.mekanism.energy_conversion('minecraft:redstone', 2500)
 
-// [气体转换] 红石粉 → 液态红石
+// [气体转换] 煤炭 → 氢气
 event.recipes.mekanism.gas_conversion(
-    'minecraft:redstone',
-    {gas: 'mekanism:liquid_redstone', amount: 100}
+    'minecraft:coal',
+    {gas: 'mekanism:hydrogen', amount: 1}
 )
 
 // [灌注类型转换] 红石粉 → 红石灌注 (用于冶金灌注机)
@@ -964,7 +968,7 @@ event.recipes.mekanism.infusion_conversion(
 )
 ```
 
-### 核合成机 (Nucleosynthesizing)
+### 反质子核合成机 (Nucleosynthesizing)
 
 ```javascript
 // 煤炭 + 反物质 → 钻石 (需要大量能量)
@@ -980,7 +984,7 @@ event.recipes.mekanism.nucleosynthesizing(
 最复杂的多输入多输出机器：
 
 ```javascript
-// 生物燃料 + 氢气 + 水 → 底物 + 乙烯
+// 生物燃料 + 氢气 + 水 → 基片 + 乙烯
 // reaction(物品输入, 气体输入, 流体输入, 物品输出, 气体输出, 持续时间, 能耗)
 event.recipes.mekanism.reaction(
     'mekanism:bio_fuel',                        // 物品输入
@@ -1020,21 +1024,36 @@ event.recipes.mekanism.painting(
 ### 注册自定义化学物质
 
 ```javascript
-// 在 startup_scripts 中
+// 在 startup_scripts 中添加了后，记得重启
+// priority: 0
+
 StartupEvents.registry('mekanism:gas', event => {
-    event.create('kubejs:custom_gas')
+    //注册气体（id，颜色，显示的名字）
+    event.create('flux_gas').color(0x7C4DBF).displayName('福鲁伊克斯气体') // 紫色 (AE2 Fluix)
+})
+
+StartupEvents.registry('mekanism:gas', event => {
+    event.create('custom_gas').color(0x32CD32).displayName('自定义气体') // 鲜艳的柠檬绿
 })
 
 StartupEvents.registry('mekanism:infuse_type', event => {
-    event.create('kubejs:custom_infuse')
+    event.create('custom_infuse').color(0xFF4500).displayName('自定义灌注') // 醒目的橘红色
 })
 
 StartupEvents.registry('mekanism:pigment', event => {
-    event.create('kubejs:custom_pigment')
+    event.create('custom_pigment').color(0x00BFFF).displayName('自定义色素') // 深天蓝
 })
 
 StartupEvents.registry('mekanism:slurry', event => {
-    event.create('kubejs:custom_slurry', 'dirty')  // 或 'clean', 'basic'
+    event.create('custom_slurry_dirty', 'dirty').color(0x8B4513).displayName('自定义浑浊浆液') // 浑浊的棕色
+})
+
+StartupEvents.registry('mekanism:slurry', event => {
+    event.create('custom_slurry_clean', 'clean').color(0xFFD700).displayName('自定义纯净浆液') // 纯净的金色
+})
+
+StartupEvents.registry('mekanism:slurry', event => {
+    event.create('custom_slurry_basic', 'basic').color(0xC0C0C0).displayName('自定义基础浆液') // 基础银灰色
 })
 ```
 

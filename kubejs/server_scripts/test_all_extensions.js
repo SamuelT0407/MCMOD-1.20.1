@@ -816,61 +816,63 @@ ServerEvents.recipes(event => {
 
     // ─────────────────────────────────────────────────
     // [旋转式气液转换机] 水 ⇌ 蒸汽
-    // 需要修改 KubeJS Mekanism 插件添加 GasStack 类型包装器
-    // 才能支持链式方法，暂时跳过
+    // 使用链式方法: .decondensentrating(流体输入, 气体输出)
+    //              .condensentrating(气体输入, 流体输出)
     // ─────────────────────────────────────────────────
-    // event.recipes.mekanism.rotary()
-    //     .decondensentrating(
-    //         Fluid.of('minecraft:water', 10),
-    //         'mekanism:steam'
-    //     )
+    event.recipes.mekanism.rotary()
+        .decondensentrating(
+            Fluid.of('minecraft:water', 10),      // 流体输入
+            {gas: 'mekanism:steam', amount: 100}  // 气体输出 (字符串格式)
+        )
+
+    event.recipes.mekanism.rotary()
+        .condensentrating(
+            {gas: 'mekanism:steam', amount: 100},  // 气体输出 (字符串格式)
+            Fluid.of('minecraft:water', 10)        // 流体输入
+        )
 
     // ═══════════════════════════════════════════════════
     // 矿石处理 - 污泥系统
     // ═══════════════════════════════════════════════════
 
     // ─────────────────────────────────────────────────
-    // [化学溶解室] 粗铁 + 硫酸 → 脏铁污泥
-    // 物品 + 气体 → 污泥
+    // [化学溶解室] 粗铁 + 硫酸(100mB) → 污浊铁浆液(1000mB)
+    // 物品 + 气体 → 污浊浆液
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.dissolution(
-        {slurry: 'mekanism:dirty_iron', amount: 1000},   // 污泥输出
+        {slurry: 'mekanism:dirty_iron', amount: 1000},   // 污浊浆液输出
         {gas: 'mekanism:sulfuric_acid', amount: 1},      // 气体输入
-        'minecraft:raw_iron'                              // 物品输入
+        'minecraft:raw_iron'                             // 物品输入
     )
 
     // ─────────────────────────────────────────────────
-    // [化学清洗机] 脏铁污泥 + 水 → 洁净铁污泥
-    // 污泥 + 流体 → 洁净污泥
+    // [化学清洗机] 污浊铁浆液 + 水 → 纯净铁浆液
+    // 污浊浆液 + 流体 → 纯净浆液
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.washing(
         Fluid.of('minecraft:water', 5),                  // 流体输入
-        {slurry: 'mekanism:dirty_iron', amount: 1},      // 脏污泥输入
-        {slurry: 'mekanism:clean_iron', amount: 1}       // 洁净污泥输出
+        {slurry: 'mekanism:dirty_iron', amount: 1},      // 污浊浆液输入
+        {slurry: 'mekanism:clean_iron', amount: 1}       // 纯净浆液输出
     )
 
     // ─────────────────────────────────────────────────
-    // [化学结晶器] 洁净铁污泥 → 铁晶体
+    // [化学结晶器] 纯净铁浆液 → 铁晶体
     // 化学物质 → 物品
     // chemical_type: gas, infusion, pigment, slurry
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.crystallizing(
         'slurry',                            // 化学类型
         'mekanism:crystal_iron',             // 物品输出
-        {slurry: 'mekanism:clean_iron', amount: 200}  // 污泥输入
+        {slurry: 'mekanism:clean_iron', amount: 200}  // 纯净浆液输入
     )
 
-    // ═══════════════════════════════════════════════════
-    // 能量与转换
-    // ═══════════════════════════════════════════════════
-
     // ─────────────────────────────────────────────────
-    // [能量转换] 红石粉 → 10000 焦耳
+    // [能量转换] 红石粉 → 2500 焦耳 = 1kFE
     // 物品 → 能量 (用于能量方块)
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.energy_conversion(
         'minecraft:redstone',     // 物品输入
-        10000                     // 能量输出 (J)
+        2500                      // 能量输出 (J)
     )
 
     // ─────────────────────────────────────────────────
@@ -892,17 +894,17 @@ ServerEvents.recipes(event => {
     )
 
     // ═══════════════════════════════════════════════════
-    // 核合成机 (Nucleosynthesizing)
+    // 反质子核合成机 (Nucleosynthesizing)
     // 物品 + 反物质 → 物品, 需要大量能量
     // ═══════════════════════════════════════════════════
 
     // ─────────────────────────────────────────────────
-    // [核合成机] 煤炭 + 反物质 → 钻石
+    // [反质子核合成机] 煤炭 + 反物质 → 钻石
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.nucleosynthesizing(
-        'minecraft:coal',                    // 物品输入
+        'minecraft:coal',                         // 物品输入
         {gas: 'mekanism:antimatter', amount: 4},  // 反物质输入
-        'minecraft:diamond'                  // 物品输出
+        'minecraft:diamond'                       // 物品输出
     ).duration(1000)  // 持续时间 (tick)
 
     // ═══════════════════════════════════════════════════
@@ -912,7 +914,7 @@ ServerEvents.recipes(event => {
     // ═══════════════════════════════════════════════════
 
     // ─────────────────────────────────────────────────
-    // [加压反应室] 生物燃料 + 氢气 + 水 → 底物 + 乙烯
+    // [加压反应室] 生物燃料 + 氢气 + 水 → 基片 + 乙烯
     // reaction(物品输入, 气体输入, 流体输入, 物品输出, 气体输出, 持续时间, 能耗)
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.reaction(
@@ -949,7 +951,7 @@ ServerEvents.recipes(event => {
     )
 
     // ─────────────────────────────────────────────────
-    // [喷涂机] 白色羊毛 + 红色颜料 → 红色羊毛
+    // [上色机] 白色羊毛 + 红色颜料 → 红色羊毛
     // 物品 + 颜料 → 物品
     // ─────────────────────────────────────────────────
     event.recipes.mekanism.painting(
